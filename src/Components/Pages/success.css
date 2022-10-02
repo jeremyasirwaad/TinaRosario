@@ -1,0 +1,30 @@
+.successpage{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.successpageinner{
+    width: 90%;
+    height: 600px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 150px;
+    text-align: center;
+}
+
+.successpageinner img{
+    height: auto;
+    width: 200px;
+}
+
+.successheader{
+    /* font-family: 'Great Vibes', cursive; */
+    font-size: 47px;
+    margin-bottom: 20px;
+}

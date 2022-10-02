@@ -61,8 +61,11 @@
 
 .text{
   margin: 50px;
-  font-family: 'Pacifico', cursive;
-  font-size: 30px;
+  /* font-family: 'Pacifico', cursive; */
+  /* font-family: 'Great Vibes', cursive; */
+  font-family: 'Rubik', sans-serif;
+
+  font-size: 36px;
 }
 
 

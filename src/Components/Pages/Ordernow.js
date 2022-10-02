@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Footer } from "../Footer/Footer";
 import { TextField } from "@mui/material";
+import { Navigate } from "react-router-dom";
 import FormHelperText from "@mui/material/FormHelperText";
 import "./ordernow.css";
 export const Ordernow = () => {
@@ -23,6 +24,8 @@ export const Ordernow = () => {
 	const [errorname, seterrorName] = useState(false);
 	const [erroremail, seterrorEmail] = useState(false);
 	const [errorcontact, seterrorContact] = useState(false);
+
+	const navigate = useNavigate();
 
 	const firstsubhandler = () => {
 		if (stylingfor == "") {
@@ -71,15 +74,21 @@ export const Ordernow = () => {
 				name: name,
 				email: email,
 				contact: contactno,
-				category: "Wedding"
+				category: "Wedding",
+				image: "noimgforwedding"
 			})
-		}).then((res) => {
-			if (res.ok == true) {
-				alert("Request has been noted");
-			} else {
-				alert("internal Error");
-			}
-		});
+		})
+			.then((body) => body.json())
+			.then((res) => {
+				console.log(res);
+				if (res.status == true) {
+					navigate("/ordernow/success/" + res.id)
+					// alert("Request has been noted");
+					// console.log(res);
+				} else {
+					// alert("internal Error");
+				}
+			});
 	};
 
 	return (
