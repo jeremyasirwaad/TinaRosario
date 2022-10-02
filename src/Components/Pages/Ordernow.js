@@ -7,6 +7,80 @@ import "./ordernow.css";
 export const Ordernow = () => {
 	const [stepper, setStepper] = useState(0);
 	const { type } = useParams();
+	const [stylingfor, setStylingfor] = useState("");
+	const [Fabric, setFabric] = useState("");
+	const [clothing, setClothing] = useState("");
+	const [customnote, setcustomnote] = useState("");
+
+	const [errorstylingofr, setErrorstylingofr] = useState(false);
+	const [errorfabric, seterrorFabric] = useState(false);
+	const [errorclothing, seterrorclothing] = useState(false);
+
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [contactno, setContactno] = useState("");
+
+	const [errorname, seterrorName] = useState(false);
+	const [erroremail, seterrorEmail] = useState(false);
+	const [errorcontact, seterrorContact] = useState(false);
+
+	const firstsubhandler = () => {
+		if (stylingfor == "") {
+			setErrorstylingofr(true);
+		}
+		if (Fabric == "") {
+			seterrorFabric(true);
+		}
+		if (clothing == "") {
+			seterrorclothing(true);
+		}
+		if (stylingfor == "" || Fabric == "" || clothing == "") {
+			return;
+		}
+
+		setStepper(1);
+	};
+
+	const secondhandler = () => {
+		if (name == "") {
+			seterrorName(true);
+		}
+		if (email == "") {
+			seterrorEmail(true);
+		}
+		if (contactno == "") {
+			seterrorContact(true);
+		}
+
+		if (name == "" || email == "" || contactno == "") {
+			return;
+		} else {
+			placeorder();
+		}
+	};
+
+	const placeorder = async () => {
+		const sendreq = await fetch("http://184.72.184.140:8080/formdata", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({
+				gender: stylingfor,
+				fabric: Fabric,
+				clothingChoice: clothing,
+				note: customnote,
+				name: name,
+				email: email,
+				contact: contactno,
+				category: "Wedding"
+			})
+		}).then((res) => {
+			if (res.ok == true) {
+				alert("Request has been noted");
+			} else {
+				alert("internal Error");
+			}
+		});
+	};
 
 	return (
 		<div>
@@ -36,11 +110,31 @@ export const Ordernow = () => {
 										marginBottom: "20px"
 									}}
 								>
-									<TextField label="styling for ?" color="primary" />
+									<TextField
+										error={errorstylingofr}
+										onChange={(e) => {
+											setErrorstylingofr(false);
+											setStylingfor(e.target.value);
+										}}
+										value={stylingfor}
+										label="styling for ?"
+										color="primary"
+									/>
 									<FormHelperText>Eg: Bride, Groom</FormHelperText>
 								</div>
 								<div style={{ display: "flex", flexDirection: "column" }}>
-									<TextField label="Clothing choice ?" color="primary" />
+									<TextField
+										error={errorclothing}
+										onChange={(e) => {
+											if (e.target.value != "") {
+												seterrorclothing(false);
+											}
+											setClothing(e.target.value);
+										}}
+										value={clothing}
+										label="Clothing choice ?"
+										color="primary"
+									/>
 									<FormHelperText>Eg: Lehanga, Saree, Dothi</FormHelperText>
 								</div>
 							</div>
@@ -52,10 +146,25 @@ export const Ordernow = () => {
 										marginBottom: "20px"
 									}}
 								>
-									<TextField label="Fabric" color="primary" />
+									<TextField
+										value={Fabric}
+										error={errorfabric}
+										onChange={(e) => {
+											if (e.target.value != "") {
+												seterrorFabric(false);
+											}
+											setFabric(e.target.value);
+										}}
+										label="Fabric"
+										color="primary"
+									/>
 									<FormHelperText>Eg: Silk, Satin, Linen</FormHelperText>
 								</div>
 								<TextField
+									value={customnote}
+									onChange={(e) => {
+										setcustomnote(e.target.value);
+									}}
 									color="primary"
 									id="outlined-multiline-static"
 									label="Custom Note"
@@ -69,7 +178,7 @@ export const Ordernow = () => {
 						<div
 							className="wdsubbt"
 							onClick={() => {
-								setStepper(1);
+								firstsubhandler();
 							}}
 						>
 							<span>Next</span>
@@ -103,7 +212,18 @@ export const Ordernow = () => {
 										width: "100%"
 									}}
 								>
-									<TextField label="Name" color="primary" />
+									<TextField
+										value={name}
+										error={errorname}
+										onChange={(e) => {
+											if (e.target.value != "") {
+												seterrorName(false);
+											}
+											setName(e.target.value);
+										}}
+										label="Name"
+										color="primary"
+									/>
 								</div>
 								<div
 									style={{
@@ -112,7 +232,18 @@ export const Ordernow = () => {
 										marginBottom: "20px"
 									}}
 								>
-									<TextField label="Email" color="primary" />
+									<TextField
+										error={erroremail}
+										value={email}
+										onChange={(e) => {
+											if (e.target.value != "") {
+												seterrorEmail(false);
+											}
+											setEmail(e.target.value);
+										}}
+										label="Email"
+										color="primary"
+									/>
 								</div>
 								<div
 									style={{
@@ -121,7 +252,18 @@ export const Ordernow = () => {
 										marginBottom: "20px"
 									}}
 								>
-									<TextField label="Contact" color="primary" />
+									<TextField
+										value={contactno}
+										error={errorcontact}
+										onChange={(e) => {
+											if (e.target.value != "") {
+												seterrorContact(false);
+											}
+											setContactno(e.target.value);
+										}}
+										label="Contact"
+										color="primary"
+									/>
 								</div>
 							</div>
 						</div>
@@ -145,7 +287,12 @@ export const Ordernow = () => {
 								></i>
 								<span>Back</span>
 							</div>
-							<div className="wdsubbt">
+							<div
+								className="wdsubbt"
+								onClick={() => {
+									secondhandler();
+								}}
+							>
 								<span>Place Order</span>
 								<i class="fa-solid fa-arrow-right"></i>
 							</div>
