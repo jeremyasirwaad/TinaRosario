@@ -126,3 +126,15 @@
     margin-bottom: 30px;
 
 }
+
+.ethnicinner{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("https://images.indulgexpress.com/uploads/user/imagelibrary/2022/6/10/original/a9dc66cea8030a03fcc4d973aaa8c70a.jpeg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

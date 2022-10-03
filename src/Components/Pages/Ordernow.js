@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Footer } from "../Footer/Footer";
 import { TextField } from "@mui/material";
 import { Navigate } from "react-router-dom";
+import validator from "validator";
 import FormHelperText from "@mui/material/FormHelperText";
 import "./ordernow.css";
 export const Ordernow = () => {
@@ -51,11 +52,20 @@ export const Ordernow = () => {
 		if (email == "") {
 			seterrorEmail(true);
 		}
+
+		if (!validator.isEmail(email)) {
+			seterrorEmail(true);
+		}
 		if (contactno == "") {
 			seterrorContact(true);
 		}
 
-		if (name == "" || email == "" || contactno == "") {
+		if (
+			name == "" ||
+			email == "" ||
+			contactno == "" ||
+			!validator.isEmail(email)
+		) {
 			return;
 		} else {
 			placeorder();
@@ -82,7 +92,7 @@ export const Ordernow = () => {
 			.then((res) => {
 				console.log(res);
 				if (res.status == true) {
-					navigate("/ordernow/success/" + res.id)
+					navigate("/ordernow/success/" + res.id);
 					// alert("Request has been noted");
 					// console.log(res);
 				} else {
