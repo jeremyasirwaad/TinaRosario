@@ -16,6 +16,7 @@ import { Indo } from "./Components/Pages/Indo";
 import { Ordernowindo } from "./Components/Pages/Ordernowindo";
 import Sidebar from "./Components/sidebar/Sidebar";
 import { OrderSuccess } from "./Components/Pages/OrderSuccess";
+import { About } from "./Components/About/About";
 
 function App() {
 	return (
@@ -26,6 +27,7 @@ function App() {
 				<Navbar />
 				<Routes>
 					<Route path="/" element={<Landing />}></Route>
+					<Route path="/about" element={<About />}></Route>
 					<Route path="/wedding" element={<Wedding />}></Route>
 					<Route path="/fabrics" element={<Fabrics />}></Route>
 					<Route path="/Ethnic" element={<Ethnic />}></Route>
@@ -36,7 +38,10 @@ function App() {
 					<Route path="/ordernow/Ethnic" element={<OrdernowEthinic />}></Route>
 					<Route path="/ordernow/Party" element={<Ordernowparty />}></Route>
 					<Route path="/ordernow/indo" element={<Ordernowindo />}></Route>
-					<Route path="/ordernow/success/:id" element={<OrderSuccess />}></Route>
+					<Route
+						path="/ordernow/success/:id"
+						element={<OrderSuccess />}
+					></Route>
 					<Route path="/sidebar" element={<Sidebar />}></Route>
 				</Routes>
 			</BrowserRouter>
