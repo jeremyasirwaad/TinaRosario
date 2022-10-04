@@ -195,3 +195,36 @@ background: #4C2A76;
 border-radius: 6px;
 border: none;
 }
+
+.svg1{
+    cursor: pointer;
+    transition: all 0.5s;
+
+}
+
+.svg1:hover{
+    scale: 1.1;
+
+}
+
+.svg2{
+    cursor: pointer;
+    transition: all 0.5s;
+
+}
+
+.svg2:hover{
+    scale: 1.1;
+
+}
+
+.svg3{
+    cursor: pointer;
+    transition: all 0.5s;
+
+}
+
+.svg3:hover{
+    scale: 1.1;
+
+}

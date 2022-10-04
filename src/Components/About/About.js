@@ -91,6 +91,7 @@ export const About = () => {
 			</div>
 			<div className="abtussmallcaro">
 				<svg
+					className="svg1"
 					width="400"
 					height="220"
 					viewBox="0 0 424 283"
@@ -215,6 +216,7 @@ export const About = () => {
 					</defs>
 				</svg>
 				<svg
+					className="svg2"
 					width="384"
 					height="283"
 					viewBox="0 0 454 363"
@@ -356,6 +358,7 @@ export const About = () => {
 					</defs>
 				</svg>
 				<svg
+					className="svg3"
 					width="400"
 					height="220"
 					viewBox="0 0 424 283"
