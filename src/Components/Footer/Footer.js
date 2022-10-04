@@ -7,10 +7,7 @@ export const Footer = () => {
       <div className="footerinnercontainer">
         <div className="details">
           <h3>Tina Rosaria</h3>
-          <div>
-            t is a long established fact that a reader will be distracted by the readable content of a page when looking
-            at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-          </div>
+          <div>Let the garms you don, adorn the style within you.</div>
         </div>
         <div className="column collections">
           <p>Collections</p>

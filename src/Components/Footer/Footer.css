@@ -4,7 +4,7 @@
 
 
 .footercontainer{
-    height: 260px;
+    height: 220px;
     background-color: black;
     overflow: hidden;
 }
@@ -71,14 +71,50 @@ img{
 
 
 @media screen and (max-width: 600px) {
+    .footerinnercontainer{
+        padding: 1px;
+        
+        margin-left: 10px;
+        margin-right: 10px;
+    }
     .details > h3{
         font-size: 1.3em;
     }
     .details >div{
-        font-size: 1em;
+        font-size: 0.9em;
     }
     .column >p{
         font-size: 1.2rem;
+    }
+    .column >h4{
+        font-size: 0.9rem;
+    }
+    img{
+        width: 25px;
+        height: 25px;
+    }
+    .footer-links > img{
+
+        margin: 0px;
+    }
+  }
+
+
+  @media screen and (max-width: 500px) {
+    .footerinnercontainer{
+        padding: 1px;
+        
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .details > h3{
+        font-size: 1.2em;
+    }
+    .details >div{
+        font-size: 0.9em;
+    }
+    .column >p{
+        font-size: 1.0rem;
     }
     .column >h4{
         font-size: 0.9rem;

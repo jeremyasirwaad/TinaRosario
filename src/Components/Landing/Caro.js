@@ -9,12 +9,13 @@ export const Caro = () => {
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active" style={{}}>
           <div className="limginfo">
-            <span className="limginfo1">Lorem ipsum, dolor. Quo odio t</span>
-            <span className="limginfo2">Lorem ipsum, dolor. Quo odio t adsfljhas</span>
+            {/* <span className="limginfo1">Lorem ipsum, dolor. Quo odio t</span> */}
+            <span className="limginfo2">Customization as per your style, desire and comfort.</span>
 
             <button className="limginfo3">Buy Now</button>
           </div>
@@ -22,8 +23,8 @@ export const Caro = () => {
         </div>
         <div class="carousel-item">
           <div className="limginfo">
-            <span className="limginfo1">Lorem ipsum, dolor. Quo odio t</span>
-            <span className="limginfo2">Lorem ipsum, dolor. Quo odio t adsfljhas</span>
+            {/* <span className="limginfo1">Lorem ipsum, dolor. Quo odio t</span> */}
+            <span className="limginfo2">Usage of premium quality fabrics</span>
 
             <button className="limginfo3">Buy Now</button>
           </div>
@@ -31,12 +32,22 @@ export const Caro = () => {
         </div>
         <div class="carousel-item ">
           <div className="limginfoL">
-            <span className="limginfo1">Lorem ipsum, dolor. Quo odio t</span>
-            <span className="limginfo2">Lorem ipsum, dolor. Quo odio t adsfljhas</span>
-
+            {/* <span className="limginfo1">Lorem ipsum, dolor. Quo odio t</span> */}
+            <span className="limginfo2">
+              One Stop platform for all your needs from basic handlooms to wedding grandeurs
+            </span>
             <button className="limginfo3">Buy Now</button>
           </div>
           <img class="d-block w-100" src={img1} alt="Third slide" style={{ height: "700px" }} />
+        </div>
+        <div class="carousel-item">
+          <div className="limginfo">
+            {/* <span className="limginfo1">Lorem ipsum, dolor. Quo odio t</span> */}
+            <span className="limginfo2">No sitting back until we find the smile of contentment in you.</span>
+
+            <button className="limginfo3">Buy Now</button>
+          </div>
+          <img class="d-block w-100" src={img4} alt="Second slide" style={{ height: "700px" }} />
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

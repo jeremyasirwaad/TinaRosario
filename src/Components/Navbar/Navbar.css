@@ -68,7 +68,7 @@
 }
 
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
     .navoptions span{
         padding: 2px;
     }
@@ -84,6 +84,17 @@
     }
 
 }
+
+@media screen and (max-width: 900px) {
+
+    .navlogocontainer span{
+        font-size: 25px;
+        letter-spacing: 5px;
+    }
+    
+
+}
+
 
 @media screen and (max-width:800px) {
     .navoptions{
