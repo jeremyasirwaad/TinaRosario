@@ -7,6 +7,7 @@ import { HiHand } from "react-icons/hi";
 import { BsEmojiSmile } from "react-icons/bs";
 import img1 from "./Rectangle 46.png";
 import { Footer } from "../Footer/Footer";
+import svg1 from "./Group 36.svg";
 
 export const About = () => {
 	return (
@@ -59,7 +60,7 @@ export const About = () => {
 			</div>
 			<div className="sec3abtus">
 				<div className="lsec3">
-					<div style={{ height: "400px", width: "500px" }}> </div>
+					<img src={svg1} alt="" style={{ height: "310px", width: "400px" }} />
 				</div>
 				<div className="rsec3">
 					<p style={{ fontSize: "18px" }}>

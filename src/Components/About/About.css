@@ -101,13 +101,19 @@
 .sec3abtus{
     background-color: #DDFDFF;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     width: 80%;
+    margin-bottom: 80px;
 }
 
 .lsec3{
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* align-items: flex-end; */
+    /* justify-content: flex-end; */
 }
 
 .rsec3
@@ -167,7 +173,8 @@
 
 .divimg{
     margin-top: 50px;
-    margin-bottom: 50px;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+margin-bottom: 50px;
 }
 
 .CCC{
