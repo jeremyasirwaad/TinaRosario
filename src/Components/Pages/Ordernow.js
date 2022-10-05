@@ -73,7 +73,7 @@ export const Ordernow = () => {
 	};
 
 	const placeorder = async () => {
-		const sendreq = await fetch("http://184.72.184.140:8080/formdata", {
+		const sendreq = await fetch("http://localhost:8080/formdata", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify({
