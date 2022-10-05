@@ -4,8 +4,8 @@
 
 
 .footercontainer{
-    height: 220px;
-    background-color: black;
+    height: 300px;
+    background-color: #270641;
     overflow: hidden;
     width: 100%;
 }
@@ -13,16 +13,17 @@
 
 .footerinnercontainer{
     height: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
-    padding: 20px;
+    padding: 10px;
     color: white;
     justify-content: space-evenly;
 }
 
-img{
-    width: 40px;
-    height: 40px;
+.foot-logo{
+
+    width:214px;
+    height: 200px;
 }
 
 .details > h3{
@@ -39,6 +40,8 @@ img{
 
 .footerinnercontainer >h4{
     margin-top: 10px;
+    coolor:#FFB8BC;
+    opacity: 0.5;
     /* font-family: 'Josefin Sans', sans-serif; */
 }
 .column{
@@ -50,10 +53,17 @@ img{
 .column >p{
    
     font-size: 1.4rem;
+    color:#FFB8BC;
 }
 .column >h4{
     font-size: 0.9rem;
-    color: rgb(200, 193, 193);
+    color:#FFB8BC;
+    opacity: 0.5;
+    font-family: 'Poppins';
+    font-size: 14px;
+    line-height: 21px;
+    margin-top: 15px;
+    cursor:pointer;
 }
 
 .details{
@@ -64,10 +74,24 @@ img{
 .footer-links{
     display: flex;
     align-items: flex-start;
+    justify-content: flex-start;
 }
 .footer-links > img{
 
-    margin: -3px 10px 10px 10px;
+    margin: -3px 10px 10px ;
+    width: 50px;
+    height:50px;
+}
+
+.foot-link-wa{
+    margin: -3px 10px 10px ;
+    width: 45px;
+    height:45px;
+}
+
+
+.footer-text{
+    color:#FFB8BC;
 }
 
 
