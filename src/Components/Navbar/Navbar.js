@@ -56,7 +56,7 @@ export const Navbar = () => {
 					</span>
 					<span
 						onClick={async () => {
-							await navigate("/");
+							await navigate("/contact");
 							// document.getElementById("contactusdiv").scrollIntoView();
 							document.getElementById("contactusdiv").scrollIntoView({
 								behavior: "smooth"

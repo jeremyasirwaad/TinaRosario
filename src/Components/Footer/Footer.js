@@ -21,7 +21,7 @@ export const Footer = () => {
         <div className="column ImpLinks">
           <p>Important links</p>
           <h4 onClick={() => navigate("/about")}>About us</h4>
-          <h4>Contact us</h4>
+          <h4 onClick={() => navigate("/contact")}>Contact us</h4>
         </div>
         <div className="column faq">
           <p>FAQ's</p>
