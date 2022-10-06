@@ -22,62 +22,64 @@ export const Contactus = () => {
 					<span className="CuU">To Design your style</span>
 				</div>
 			</div>
-			<div className="mainsection">
-				<div className="mainsectionleft">
-					<span className="msl1">Get in Touch</span>
-					{/* <span className="msl2">Tina Rosario</span> */}
-					<img style={{ marginTop: "60px" }} src={logoforcontact} alt="" />
-					<span className="msl3">THE DESIGN HOUSE</span>
-					<div className="loca">
-						<div className="locainner">
-							<i class="fa-solid fa-location-pin"></i>
-							<span>112a Nehru street Alwar thiru nagar Chennai 600087</span>
-						</div>
-						<div className="locainner">
-							<i class="fa-solid fa-phone"></i>
-							<div className="locainner2">
-								<div>
-									<img src={indflag} alt="" />
-									<span>+91 7200060540</span>
-								</div>
-								<div>
-									<img src={usflag} alt="" />
-									<span>+1 412-251-1363</span>
+			<div className="bgcontact">
+				<div className="mainsection">
+					<div className="mainsectionleft">
+						<span className="msl1">Get in Touch</span>
+						{/* <span className="msl2">Tina Rosario</span> */}
+						<img style={{ marginTop: "60px" }} src={logoforcontact} alt="" />
+						<span className="msl3">THE DESIGN HOUSE</span>
+						<div className="loca">
+							<div className="locainner">
+								<i class="fa-solid fa-location-pin"></i>
+								<span>112a Nehru street Alwar thiru nagar Chennai 600087</span>
+							</div>
+							<div className="locainner">
+								<i class="fa-solid fa-phone"></i>
+								<div className="locainner2">
+									<div>
+										<img src={indflag} alt="" />
+										<span>+91 7200060540</span>
+									</div>
+									<div>
+										<img src={usflag} alt="" />
+										<span>+1 412-251-1363</span>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div className="locainner">
-							<i class="fa-regular fa-envelope"></i>
-							<span> design@tinarosario.com</span>
+							<div className="locainner">
+								<i class="fa-regular fa-envelope"></i>
+								<span> design@tinarosario.com</span>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div className="mainsectionright">
-					<div className="mainsecheader">
-						<span>Write to Us</span>
+					<div className="mainsectionright">
+						<div className="mainsecheader">
+							<span>Write to Us</span>
+						</div>
+						<TextField label="Name" color="primary" />
+						<TextField label="Email" color="primary"></TextField>
+						<TextField
+							color="primary"
+							label="Contact Number"
+
+							// placeholder="If any"
+
+							// defaultValue="Default Value"
+						/>
+
+						<TextField
+							color="primary"
+							id="outlined-multiline-static"
+							label="Custom Note"
+							multiline
+							rows={5}
+							// placeholder="If any"
+
+							// defaultValue="Default Value"
+						/>
+						<button className="contactsend">Send Message</button>
 					</div>
-					<TextField label="Name" color="primary" />
-					<TextField label="Email" color="primary"></TextField>
-					<TextField
-						color="primary"
-						label="Contact Number"
-
-						// placeholder="If any"
-
-						// defaultValue="Default Value"
-					/>
-
-					<TextField
-						color="primary"
-						id="outlined-multiline-static"
-						label="Custom Note"
-						multiline
-						rows={5}
-						// placeholder="If any"
-
-						// defaultValue="Default Value"
-					/>
-					<button className="contactsend">Send Message</button>
 				</div>
 			</div>
 			<Footer></Footer>

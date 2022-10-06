@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #DDFDFF;
+    /* background-color: #DDFDFF; */
 }
 
 
@@ -48,6 +48,18 @@
     letter-spacing: 4px;
 }
 
+.bgcontact{
+    background-image: url('./Contact\ us-\ FinalBG.png');
+    width: 100%;
+    height:800px;
+    background-size:     cover;                   
+    background-repeat:   no-repeat;
+    background-position: center center; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .mainsection{
    
     width: 100%;
@@ -57,6 +69,7 @@
     justify-content: space-around;
     margin-top: 40px;
     margin-bottom: 40px;
+   
     
 }
 
@@ -79,6 +92,8 @@
     /* background-color: #4C2A76; */
 
 }
+
+
 
 .mainsecheader{
     background-color: #4C2A76;
