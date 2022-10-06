@@ -10,13 +10,14 @@ export const Landing = () => {
 		<div
 			style={{
 				display: "flex",
-				flexDirection: "column",
+				flexDirection: "column"
 			}}
 		>
 			<Caro />
 			<OurBestSellers />
-			<Testimonials></Testimonials>
-			<Contactus></Contactus>
+			<div style={{ height: "250px" }}></div>
+			{/* <Testimonials></Testimonials> */}
+			{/* <Contactus></Contactus> */}
 			<Footer></Footer>
 		</div>
 	);

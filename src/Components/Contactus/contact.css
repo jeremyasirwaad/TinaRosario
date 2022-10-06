@@ -1,3 +1,12 @@
+.contactuspage{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DDFDFF;
+}
+
+
 .contactbanner{
     height: 260px;
     width: 100%;
@@ -8,13 +17,147 @@
 }
 
 .contactbannerinner{
-    width: 70%;
+    width: 60%;
     height: 200px;
-    background-color: white;
+    /* background-color: white; */
     border-radius: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-image: url('./Rectangle\ 58.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #FFB8BC;
+    font-weight: 400;
+    
+    
 }   
+.cu1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    
+}
 
+.cuT{
+    font-size: 40px;
+}
+
+.CuU{
+    font-weight: 200;
+    letter-spacing: 4px;
+}
+
+.mainsection{
+   
+    width: 100%;
+    /* width: 80%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+}
+
+.mainsectionleft{
+    height: 620px;
+    width: 40%;
+    background-color: #4C2A76;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainsectionright{
+    height: 620px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* background-color: #4C2A76; */
+
+}
+
+.mainsecheader{
+    background-color: #4C2A76;
+    color: #FFB8BC;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.contactsend{
+    border: none;
+    background: #4C2A76;
+    box-shadow: 0px 6px 14px -2px rgba(76, 42, 118, 0.65);
+    border-radius: 7px;
+    width: 230.14px;
+    height: 55.85px;
+    color: #FFB8BC;
+    font-size: 20px;
+}
+
+.msl1{
+    color: #FFB8BC;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.msl2
+{
+    color: #FFB8BC;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.msl3{
+    color: #FFB8BC;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.loca{
+    width: 100%;
+    /* background-color: #DDFDFF; */
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.locainner{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    
+}
+
+.locainner span{
+    color: #FFB8BC;
+    font-size: 17px;
+    margin-left: 20px;
+}
+
+.locainner i{
+    font-size: 18px;
+    color: #DDFDFF;
+}
+
+.locainner2{
+    display: flex;
+    flex-direction: column;
+}
+
+.locainner2 img{
+    height: auto;
+    width: 30px;
+    margin-left: 20px;
+}
