@@ -1,0 +1,20 @@
+.contactbanner{
+    height: 260px;
+    width: 100%;
+    background-color: #270641;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactbannerinner{
+    width: 70%;
+    height: 200px;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}   
+
