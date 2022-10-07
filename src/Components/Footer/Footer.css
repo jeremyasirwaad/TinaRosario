@@ -76,7 +76,7 @@
     align-items: flex-start;
     justify-content: flex-start;
 }
-.footer-links > img{
+.footer-links > a>img{
 
     margin: -3px 10px 10px ;
     width: 50px;
@@ -85,8 +85,8 @@
 
 .foot-link-wa{
     margin: -3px 10px 10px ;
-    width: 45px;
-    height:45px;
+    width: 30px;
+    height:30px;
 }
 
 
