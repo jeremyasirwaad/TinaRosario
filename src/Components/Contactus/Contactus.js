@@ -18,17 +18,22 @@ export const Contactus = () => {
 	});
 	const [mailSent, setmailSent] = useState(false);
 
-	console.log(contact);
 	const sendMessage = async () => {
-		const result = await axios.post("http://localhost:80/mail", {
-			from: contact.email,
-			to: "raghavjindal0212@gmail.com",
-			subject: `Mail from ${contact.name} - ${contact.email} `,
-			text: `Sender's Mail - ${contact.email} \nSender Contact - ${contact.contact} \n\n Note: \n ${contact.note}`
-		});
-		if (result.data.status) {
-			setmailSent(true);
-		}
+		const result = await axios
+			.post("http://3.84.74.187:8080/mail", {
+				from: contact.email,
+				to: "design@tinarosario.com",
+				subject: `Mail from ${contact.name} - ${contact.email} `,
+				text: `Sender's Mail - ${contact.email} \nSender Contact - ${contact.contact} \n\n Note: \n ${contact.note}`
+			})
+			.then((data) => {
+				if (data.status) {
+					setmailSent(true);
+				}
+			});
+		// if (result.data.status) {
+		// 	setmailSent(true);
+		// }
 	};
 	useEffect(() => {
 		if (mailSent == true) {
