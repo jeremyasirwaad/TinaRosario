@@ -8,8 +8,16 @@ import logoforcontact from "./Frame.png";
 import indflag from "./Flag_of_India.png";
 import usflag from "./2560px-Flag_of_the_United_States.svg.png";
 import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
+import validator from "validator";
 
 export const Contactus = () => {
+	const notify = () => toast.success("Message sent successfully");
+	const notify1 = () =>
+		toast("Message sent already", {
+			icon: "👍"
+		});
+
 	const [contact, setContact] = useState({
 		name: "",
 		email: "",
@@ -18,7 +26,32 @@ export const Contactus = () => {
 	});
 	const [mailSent, setmailSent] = useState(false);
 
+	const [nameerror, setnameerror] = useState(false);
+	const [emailerror, setemailerror] = useState(false);
+	const [contacterror, setContacterror] = useState(false);
+
 	const sendMessage = async () => {
+		if (contact.name == "") {
+			setnameerror(true);
+		}
+		if (contact.email == "") {
+			setemailerror(true);
+		}
+		if (contact.contact == "") {
+			setContacterror(true);
+		}
+		if (!validator.isEmail(contact.email)) {
+			setemailerror(true);
+		}
+		if (
+			contact.name == "" ||
+			contact.email == "" ||
+			contact.contact == "" ||
+			!validator.isEmail(contact.email)
+		) {
+			return;
+		}
+
 		const result = await axios
 			.post("http://3.84.74.187:8080/mail", {
 				from: contact.email,
@@ -29,19 +62,20 @@ export const Contactus = () => {
 			.then((data) => {
 				if (data.status) {
 					setmailSent(true);
+					notify();
 				}
 			});
 		// if (result.data.status) {
 		// 	setmailSent(true);
 		// }
 	};
-	useEffect(() => {
-		if (mailSent == true) {
-			setTimeout(() => {
-				setmailSent(false);
-			}, 5000);
-		}
-	}, [mailSent]);
+	// useEffect(() => {
+	// 	if (mailSent == true) {
+	// 		setTimeout(() => {
+	// 			setmailSent(false);
+	// 		}, 5000);
+	// 	}
+	// }, [mailSent]);
 
 	return (
 		<div className="contactuspage">
@@ -94,22 +128,34 @@ export const Contactus = () => {
 							color="primary"
 							value={contact.name}
 							onChange={(e) => {
+								if (e.target.value != "") {
+									setContacterror(false);
+								}
 								setContact({ ...contact, name: e.target.value });
 							}}
+							error={nameerror}
 						/>
 						<TextField
 							label="Email"
 							color="primary"
 							value={contact.email}
+							error={emailerror}
 							onChange={(e) => {
+								if (e.target.value != "") {
+									setemailerror(false);
+								}
 								setContact({ ...contact, email: e.target.value });
 							}}
 						></TextField>
 						<TextField
+							error={contacterror}
 							color="primary"
 							label="Contact Number"
 							value={contact.contact}
 							onChange={(e) => {
+								if (e.target.value != "") {
+									setContacterror(false);
+								}
 								setContact({ ...contact, contact: e.target.value });
 							}}
 
@@ -133,16 +179,19 @@ export const Contactus = () => {
 							// defaultValue="Default Value"
 						/>
 						{mailSent ? (
-							<button className="contactsend">Mail Sent successfully</button>
+							<button className="contactsend" onClick={notify1}>
+								<i class="fa-solid fa-check"></i>{" "}
+							</button>
 						) : (
 							<button className="contactsend" onClick={sendMessage}>
-								{mailSent ? <i class="fa-solid fa-check"></i> : " Send Message"}
+								Send Message
 							</button>
 						)}
 					</div>
 				</div>
 			</div>
 			<Footer></Footer>
+			<Toaster />
 		</div>
 	);
 };
