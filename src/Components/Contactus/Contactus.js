@@ -114,6 +114,10 @@ export const Contactus = () => {
 								</div>
 							</div>
 							<div className="locainner">
+								<i class="fa-brands fa-whatsapp"></i>
+								<span>+1 801-808-2273</span>
+							</div>
+							<div className="locainner">
 								<i class="fa-regular fa-envelope"></i>
 								<span> design@tinarosario.com</span>
 							</div>
@@ -129,7 +133,7 @@ export const Contactus = () => {
 							value={contact.name}
 							onChange={(e) => {
 								if (e.target.value != "") {
-									setContacterror(false);
+									setnameerror(false);
 								}
 								setContact({ ...contact, name: e.target.value });
 							}}
