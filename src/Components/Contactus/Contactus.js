@@ -92,7 +92,7 @@ export const Contactus = () => {
 				<div className="mainsection">
 					<div className="mainsectionleft">
 						<span className="msl1">Get in Touch</span>
-						{/* <span className="msl2">Tina Rosario</span> */}
+
 						<img style={{ marginTop: "60px" }} src={logoforcontact} alt="" />
 						<span className="msl3">THE DESIGN HOUSE</span>
 						<div className="loca">

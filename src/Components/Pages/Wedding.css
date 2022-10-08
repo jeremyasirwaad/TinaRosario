@@ -1,140 +1,130 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
-
-.weddinglanding
-{
+.weddingbanner{
+    height: 300px;
     width: 100%;
-    height: 650px;
-    background-color: black;
-    padding-left: 40px;
-    padding-right: 40px;
-}
-
-.weddinginner{
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("./pexels-min-an-758898-min.jpg");
-    background-position: center;
-    background-size: cover;
+    background-image: url('../About/image\ 3.png');
     display: flex;
     align-items: center;
     justify-content: center;
+    /* background-image: url(path-to-file/img.jpg); */
+background-repeat:no-repeat;
+background-position: center center;
 }
 
-.maskerforwedding{
+.weddingbannerinner{
     height: 100%;
-    width: 90%;
-    /* background-color: black; */
-    /* opacity: 0.5; */
-    font-family: 'Dancing Script', cursive;
-    color: white;
+    width: 40%;
     display: flex;
     align-items: center;
+    padding: 40px;
     justify-content: center;
-    display: flex;
     flex-direction: column;
-    /* padding: 100px; */
+    background-color: #270641;
 }
 
-.maskerforwedding span{
-    font-size: 60px;
-    margin-bottom: 30px;
-}
-
-.maskerforwedding p{
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.buywedding{
-    border: none;
-    background-color: rgb(47, 0, 33);
-    padding: 17px 35px;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    border-radius: 10px;
-
-}
-.buywedding:hover{
-    background-color: rgb(86, 14, 64);
-}
-
-.featureswed{
-    margin-top: 70px;
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-    margin-bottom: 70px ;
-}
-
-/* .featurewedhead{
+.wb1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
     font-size: 40px;
-    margin-top: 30px;
-} */
+    color: #FFB8BC;
+}
 
+.wb2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    text-align: center;
+    color: #FFB8BC;
+    margin-top: 20px;
 
+}
 
-.featurediv{
-    display: flex;
-    justify-content: space-between;
+.wedsec1{
+    display: flex;  
+    width: 80%;
     align-items: center;
-    margin-bottom: 30px;
-   
-    
+    /* margin-top: 100px; */
+    /* justify-content: space-evenly; */
+
 }
 
-.featuredimgdiv img{
-    height: 500px;
-    width: 300px;
-}
-
-.featuedcontentdiv{
-    text-align: right;
-    padding: 30px;
-    margin-left: 70px;
-}
-
-
-.featurediv2{
-    display: flex;
+.wedsec2{
+    display: flex;  
+    width: 80%;
+    align-items: center;
     flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
-    
+    margin-top: 80px;
 }
 
-.featuredimgdiv2 img{
+.wedsec2 img{
     height: auto;
-    width: 300px;
+    width: 350px;
 }
 
-.featuedcontentdiv2{
-    text-align: left;
-    padding: 50px;
-    margin-right: 70px;
+.wedsec1img{
+    width: 30%;
 }
 
-.featuedcontentdiv, .featuedcontentdiv2{
+.wedsec1 img{
+    height: auto;
+    width: 350px;
+}
+
+.wedsec1cont{
+    width: 40%;
+    margin-left: 80px;
     display: flex;
     flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+font-size: 18px;
 }
 
-.featuredcontectheading{
-    font-family: 'Dancing Script', cursive;
-    font-size: 45px;
-    margin-bottom: 30px;
-
-}
-
-.ethnicinner{
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("https://images.indulgexpress.com/uploads/user/imagelibrary/2022/6/10/original/a9dc66cea8030a03fcc4d973aaa8c70a.jpeg");
-    background-position: center;
-    background-size: cover;
+.wedsec2cont{
+    width: 40%;
+    margin-right: 80px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
 
+}
+
+
+
+
+.weddingforms{
+    width: 80%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.weddingt2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    /* align-self: flex-start; */
+}
+
+.datewidth{
+    width: 500px;
+    margin-top: 30px;
+}
+
+.weddingbookbtn{
+    border: none;
+    background-color: #4C2A76;
+    color: #FFB8BC;
+    margin-top: 30px;
+    padding: 10px 40px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.weddingforms{
+    margin-bottom: 100px;
+}
+
+.weddingbg{
+    background-image: url("../Landing/bg.png");
 }
