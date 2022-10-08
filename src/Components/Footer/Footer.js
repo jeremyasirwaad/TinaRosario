@@ -22,6 +22,7 @@ export const Footer = () => {
           <p>Important links</p>
           <h4 onClick={() => navigate("/about")}>About us</h4>
           <h4 onClick={() => navigate("/contact")}>Contact us</h4>
+          <h4 onClick={() => navigate("/policies")}>Policies</h4>
         </div>
         <div className="column faq">
           <p>FAQ's</p>
@@ -33,11 +34,16 @@ export const Footer = () => {
         <div className="column links">
           <p>Catch us on</p>
           <div className="footer-links">
-            <img className="foot-link-logo" src="https://img.icons8.com/cotton/2x/facebook.png" />
-            <img className="foot-link-logo" src="https://img.icons8.com/cotton/2x/instagram-new.png" />
-
-            <img className="foot-link-logo" src="https://img.icons8.com/cotton/2x/twitter.png" />
-            <a target="_blank" href="https://api.whatsapp.com/send?phone=8015637209">
+            <a href="https://www.facebook.com/people/Tina-Rosario-The-Design-House/100086487516274/">
+              <img className="foot-link-logo" src="https://img.icons8.com/cotton/2x/facebook.png" />
+            </a>
+            <a href="https://www.instagram.com/tina_rosario_the_design_house/?r=nametag">
+              <img className="foot-link-logo" src="https://img.icons8.com/cotton/2x/instagram-new.png" />
+            </a>
+            {/* <a href="">
+              <img className="foot-link-logo" src="https://img.icons8.com/cotton/2x/twitter.png" />
+            </a> */}
+            <a target="_blank" href="https://api.whatsapp.com/send?phone=7200060540">
               <img className="foot-link-wa" src="https://img.icons8.com/color/344/whatsapp--v1.png" />
             </a>
           </div>
