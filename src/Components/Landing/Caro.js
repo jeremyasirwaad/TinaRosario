@@ -3,24 +3,32 @@ import img1 from "./l1-min.jpg";
 import img4 from "./l4-min.jpg";
 import img5 from "./l5-min.jpg";
 import caro from "./caro.svg";
+import "./newlanding.css";
 export const Caro = () => {
   return (
-    <div style={{ height: "450px", backgroundColor: "black" }} class="carousel slide" data-ride="carousel">
+    <div
+      className="caro-container caro"
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
-        <div class="carousel-inner">
-          <div style={{ backgroundSize: "contain" }} class="carousel-item active">
-            <div style={{ backgroundColor: "black", height: "450px" }}></div>
+        <div className="" style={{ borderRadius: "30px" }} class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="" src={caro} alt="First slide" />
           </div>
           <div class="carousel-item">
-            <div style={{ backgroundColor: "#4C2A76", height: "450px" }}></div>
+            <img class="" src={caro} alt="Second slide" />
           </div>
           <div class="carousel-item">
-            <div style={{ backgroundColor: "#270641", height: "450px" }}></div>
+            <img class="" src={caro} alt="Third slide" />
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

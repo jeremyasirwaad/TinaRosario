@@ -10,7 +10,7 @@ import img1 from "./3_ 1.png";
 import img2 from "./4 1.png";
 import img3 from "./6.png";
 import img4 from "./12eeeab4-9c1e-4b34-bc15-1618ca2060e7-removebg-preview 1.png";
-
+import "./TestiCaro.css";
 import img5 from "./357afd91-05da-4ece-8b27-2709123848ab-removebg-preview 1.png";
 import img6 from "./12eeeab4-9c1e-4b34-bc15-1618ca2060e7-removebg-preview 1.png";
 import img7 from "./77b8b7bf-4a7e-4508-a551-8f2209ad58cf-removebg-preview 1.png";
@@ -23,7 +23,9 @@ export const Landing = () => {
         flexDirection: "column",
       }}
     >
-      <Caro />
+      <div className="landsec1">
+        <Caro />
+      </div>
 
       <div className="landbgdiv">
         <span className="landtit">@ The Design House</span>
@@ -251,7 +253,34 @@ export const Landing = () => {
           </div>
         </div>
         <span className="Landingtesti">Testimonials</span>
-        <div className="testcont"></div>
+        <div className="testcont">
+          <div className="avatar"></div>
+
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active ">
+                <p>“ We suggest suitable combinations of colors for different dress</p>
+                <h3>Rowan Atkinson</h3>
+              </div>
+              <div class="carousel-item ">
+                <p>“ We suggest suitable combinations of colors for different dress</p>
+                <h3>Rowan Atkinson</h3>
+              </div>
+              <div class="carousel-item ">
+                <p>“ We suggest suitable combinations of colors for different dress</p>
+                <h3>Rowan Atkinson</h3>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
       </div>
       <Footer></Footer>
     </div>
