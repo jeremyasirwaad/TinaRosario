@@ -69,6 +69,7 @@
     height: 323px;
     width: 225px;
     padding: 20px;
+    cursor: pointer;
 }
 .servcarocont img{
     height: auto;

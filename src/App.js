@@ -19,84 +19,71 @@ import { OrderSuccess } from "./Components/Pages/OrderSuccess";
 import { About } from "./Components/About/About";
 import Faq from "./Components/Pages/Faq/Faq";
 import { Contactus } from "./Components/Contactus/Contactus";
+import { Footer } from "./Components/Footer/Footer";
+import ImageCons from "./Components/Pages/ImageCons/ImageCons";
 
 const faqs = [
-	{
-		q: "How to place an order?",
-		a: "' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blanditleo lobortis eget'"
-	},
-	{
-		q: "How to place an order?",
-		a: "' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blanditleo lobortis eget'"
-	},
-	{
-		q: "How to place an order?",
-		a: "' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blanditleo lobortis eget'"
-	},
-	{
-		q: "How to place an order?",
-		a: "' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blanditleo lobortis eget'"
-	},
-	{
-		q: "How to place an order?",
-		a: "' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blanditleo lobortis eget'"
-	},
-	{
-		q: "How to place an order?",
-		a: "' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blanditleo lobortis eget'"
-	}
+  {
+    q: "How to place an order?",
+    a: "' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blanditleo lobortis eget'",
+  },
+  {
+    q: "How to place an order?",
+    a: "' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blanditleo lobortis eget'",
+  },
+  {
+    q: "How to place an order?",
+    a: "' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blanditleo lobortis eget'",
+  },
+  {
+    q: "How to place an order?",
+    a: "' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blanditleo lobortis eget'",
+  },
+  {
+    q: "How to place an order?",
+    a: "' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blanditleo lobortis eget'",
+  },
+  {
+    q: "How to place an order?",
+    a: "' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blanditleo lobortis eget'",
+  },
 ];
 
 function App() {
-	return (
-		<div className="App">
-			<PreNav></PreNav>
-			<BrowserRouter>
-				<Scrolltotop></Scrolltotop>
-				<Navbar />
-				<Routes>
-					<Route path="/" element={<Landing />}></Route>
-					<Route path="/about" element={<About />}></Route>
-					<Route path="/wedding" element={<Wedding />}></Route>
-					<Route path="/fabrics" element={<Fabrics />}></Route>
-					<Route path="/Ethnic" element={<Ethnic />}></Route>
-					<Route path="/Partywear" element={<Partywear />}></Route>
-					<Route path="/indo" element={<Indo />}></Route>
+  return (
+    <div className="App">
+      <PreNav></PreNav>
+      <BrowserRouter>
+        <Scrolltotop></Scrolltotop>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Landing />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/wedding" element={<Wedding />}></Route>
+          <Route path="/fabrics" element={<Fabrics />}></Route>
+          <Route path="/Ethnic" element={<Ethnic />}></Route>
+          <Route path="/Partywear" element={<Partywear />}></Route>
+          <Route path="/indo" element={<Indo />}></Route>
 
-					<Route path="/Contact" element={<Contactus></Contactus>}>
-						{" "}
-					</Route>
-					<Route path="/ordernow/wedding" element={<Ordernow />}></Route>
-					<Route path="/ordernow/Ethnic" element={<OrdernowEthinic />}></Route>
-					<Route path="/ordernow/Party" element={<Ordernowparty />}></Route>
-					<Route path="/ordernow/indo" element={<Ordernowindo />}></Route>
-					<Route
-						path="/ordernow/success/:id"
-						element={<OrderSuccess />}
-					></Route>
-					<Route path="/sidebar" element={<Sidebar />}></Route>
-					<Route
-						path="/faq_reg"
-						element={<Faq faqs={faqs} heading={"Registration & Payment"} />}
-					></Route>
-					<Route
-						path="/faq_order"
-						element={<Faq faqs={faqs} heading={"Order &  Customization"} />}
-					></Route>
-					<Route
-						path="/faq_deli"
-						element={
-							<Faq faqs={faqs} heading={"Delivery, Return and refunds"} />
-						}
-					></Route>
-					<Route
-						path="/faq_ship"
-						element={<Faq faqs={faqs} heading={"Shipping and tracking"} />}
-					></Route>
-				</Routes>
-			</BrowserRouter>
-		</div>
-	);
+          <Route path="/Contact" element={<Contactus></Contactus>}>
+            {" "}
+          </Route>
+          <Route path="/ordernow/wedding" element={<Ordernow />}></Route>
+          <Route path="/ordernow/Ethnic" element={<OrdernowEthinic />}></Route>
+          <Route path="/ordernow/Party" element={<Ordernowparty />}></Route>
+          <Route path="/ordernow/indo" element={<Ordernowindo />}></Route>
+          <Route path="/ordernow/success/:id" element={<OrderSuccess />}></Route>
+          <Route path="/sidebar" element={<Sidebar />}></Route>
+          <Route path="/imagecons" element={<ImageCons />}></Route>
+          <Route path="/faq_reg" element={<Faq faqs={faqs} heading={"Registration & Payment"} />}></Route>
+          <Route path="/faq_order" element={<Faq faqs={faqs} heading={"Order &  Customization"} />}></Route>
+          <Route path="/faq_deli" element={<Faq faqs={faqs} heading={"Delivery, Return and refunds"} />}></Route>
+          <Route path="/faq_ship" element={<Faq faqs={faqs} heading={"Shipping and tracking"} />}></Route>
+        </Routes>
+        <Footer></Footer>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;

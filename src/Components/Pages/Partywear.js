@@ -100,7 +100,7 @@ export const Partywear = () => {
           </div>
         </div>
       </div>
-      <Footer></Footer>
+      
     </div>
   );
 };

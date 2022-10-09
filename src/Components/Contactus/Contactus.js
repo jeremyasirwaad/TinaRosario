@@ -194,7 +194,7 @@ export const Contactus = () => {
 					</div>
 				</div>
 			</div>
-			<Footer></Footer>
+			
 			<Toaster />
 		</div>
 	);

@@ -24,7 +24,7 @@ export const OrderSuccess = () => {
 					<p>Order Id : {id}</p>
 				</div>
 			</div>
-			<Footer></Footer>
+			
 		</div>
 	);
 };

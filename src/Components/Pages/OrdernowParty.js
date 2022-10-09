@@ -165,7 +165,7 @@ export const Ordernowparty = () => {
           </div>
         )}
       </div>
-      <Footer></Footer>
+      
     </div>
   );
 };

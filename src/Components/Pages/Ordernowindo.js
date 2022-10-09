@@ -165,7 +165,7 @@ export const Ordernowindo = () => {
           </div>
         )}
       </div>
-      <Footer></Footer>
+     
     </div>
   );
 };

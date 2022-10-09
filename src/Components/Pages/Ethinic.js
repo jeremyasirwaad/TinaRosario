@@ -100,7 +100,7 @@ export const Ethnic = () => {
           </div>
         </div>
       </div>
-      <Footer></Footer>
+      
     </div>
   );
 };

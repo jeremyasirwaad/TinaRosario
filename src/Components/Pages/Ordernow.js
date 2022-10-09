@@ -319,7 +319,7 @@ export const Ordernow = () => {
 					</div>
 				)}
 			</div>
-			<Footer></Footer>
+			
 		</div>
 	);
 };
