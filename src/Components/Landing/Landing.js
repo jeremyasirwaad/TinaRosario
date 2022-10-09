@@ -14,8 +14,9 @@ import "./TestiCaro.css";
 import img5 from "./357afd91-05da-4ece-8b27-2709123848ab-removebg-preview 1.png";
 import img6 from "./12eeeab4-9c1e-4b34-bc15-1618ca2060e7-removebg-preview 1.png";
 import img7 from "./77b8b7bf-4a7e-4508-a551-8f2209ad58cf-removebg-preview 1.png";
-
+import { useNavigate } from "react-router-dom";
 export const Landing = () => {
+  const navigate = useNavigate();
   return (
     <div
       style={{
@@ -207,8 +208,8 @@ export const Landing = () => {
           </div>
         </div>
         <span className="landser">Services</span>
-        <div className="servcaro">
-          <div className="servcarocont">
+        <div className="servcaro" >
+          <div className="servcarocont" onClick={() => navigate("/wedding")}>
             <img src={img1} alt="" />
             <span>Wedding</span>
             <span>Collections</span>
@@ -218,7 +219,7 @@ export const Landing = () => {
             <span>Customized</span>
             <span>Designs</span>
           </div>
-          <div className="servcarocont">
+          <div className="servcarocont" onClick={() => navigate("/imagecons")}>
             <img src={img3} alt="" />
             <span>Image</span>
             <span>Consulting</span>
