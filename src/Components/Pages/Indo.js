@@ -100,7 +100,7 @@ export const Indo = () => {
           </div>
         </div>
       </div>
-      <Footer></Footer>
+     
     </div>
   );
 };

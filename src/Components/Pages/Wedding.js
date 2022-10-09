@@ -153,7 +153,7 @@ export const Wedding = () => {
 					<button className="weddingbookbtn">Book</button>
 				</div>
 			</div>
-			<Footer></Footer>
+			
 		</div>
 	);
 };

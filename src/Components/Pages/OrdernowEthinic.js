@@ -414,7 +414,7 @@ export const OrdernowEthinic = () => {
           </div>
         )}
       </div>
-      <Footer></Footer>
+    
     </div>
   );
 };
