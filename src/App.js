@@ -21,6 +21,7 @@ import Faq from "./Components/Pages/Faq/Faq";
 import { Contactus } from "./Components/Contactus/Contactus";
 import { Footer } from "./Components/Footer/Footer";
 import ImageCons from "./Components/Pages/ImageCons/ImageCons";
+import OrderFinish from "./Components/orderdone/OrderFinish";
 
 const faqs = [
   {
@@ -79,6 +80,7 @@ function App() {
           <Route path="/faq_order" element={<Faq faqs={faqs} heading={"Order &  Customization"} />}></Route>
           <Route path="/faq_deli" element={<Faq faqs={faqs} heading={"Delivery, Return and refunds"} />}></Route>
           <Route path="/faq_ship" element={<Faq faqs={faqs} heading={"Shipping and tracking"} />}></Route>
+          <Route path="/orderfinish/:type/:name/:date" element={<OrderFinish />}></Route>
         </Routes>
         <Footer></Footer>
       </BrowserRouter>
