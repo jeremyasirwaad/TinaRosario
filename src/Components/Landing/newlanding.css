@@ -87,14 +87,15 @@
 
 .caro{
     width:500px !important;
+
 }
 .carousel-inner{
-width: 1150px;
+    width: 90%
 }
 
 @media only screen and (max-width:1200px){
     .carousel-inner{
-        width: 900px;
+        width: 90%;
         }
         
 }

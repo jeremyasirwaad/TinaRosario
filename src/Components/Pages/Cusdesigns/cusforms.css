@@ -1,0 +1,35 @@
+.optionsdiv
+{
+    margin-top: 20px;
+}
+
+.optionstitle{
+    /* margin-top: 20px; */
+}
+
+.optionsbtndiv{
+    margin-top: 10px;
+}
+
+
+.optionsbtn{
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.258);
+    color: rgba(0, 0, 0, 0.608);
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    
+}
+
+.optionsbtn:focus, .optionsbtn:focus{
+    outline: none;
+}
+
+.optionsbtnselected{
+    background-color: #4C2A76;
+    color: #FFB8BC;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

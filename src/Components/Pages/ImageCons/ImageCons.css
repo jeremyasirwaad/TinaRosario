@@ -69,8 +69,35 @@
     display: flex;
     padding:20px;
     justify-content: center;
+}
 
-   
+.img-row1{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    padding:20px;
+    justify-content: center;
+}
+
+.img-row1>img{
+
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 40px;
+    
+
+
+}
+
+.img-row1>p{
+    display: flex;
+    width: 50%;
+    font-size: 1.2rem;
+
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
 }
 
 
