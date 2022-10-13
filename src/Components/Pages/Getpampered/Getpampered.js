@@ -434,36 +434,36 @@ export const Getpampered = () => {
 						variant="outlined"
 						style={{ width: "500px", marginTop: "30px" }}
 					/>
-					<LocalizationProvider
-						dateAdapter={AdapterDayjs}
-						className="datewidth"
-					>
-						<Stack spacing={3} className="datewidth">
-							<MobileDatePicker
-								label="When is the big day ?"
-								inputFormat="MM/DD/YYYY"
-								value={value}
-								onChange={handleChange}
-								renderInput={(params) => <TextField {...params} />}
-								className="datewidth"
-								disablePast
-							/>
-						</Stack>
-					</LocalizationProvider>
 					<TextField
 						id="outlined-basic"
-						label="Any special note	"
+						label="Contact"
 						variant="outlined"
-						className="datewidth"
-						style={{ marginTop: "30px" }}
+						style={{ width: "500px", marginTop: "30px" }}
 					/>
+					<TextField
+						id="outlined-basic"
+						label="Address"
+						variant="outlined"
+						multiline
+						rows={4}
+						style={{ width: "500px", marginTop: "30px" }}
+					/>
+					<TextField
+						id="outlined-basic"
+						label="Special Note"
+						variant="outlined"
+						multiline
+						rows={4}
+						style={{ width: "500px", marginTop: "30px" }}
+					/>
+
 					<LocalizationProvider
 						dateAdapter={AdapterDayjs}
 						className="datewidth"
 					>
 						<Stack spacing={3} className="datewidth">
 							<MobileDatePicker
-								label="Appointment Date"
+								label="Choose a Date ?"
 								inputFormat="MM/DD/YYYY"
 								value={value}
 								onChange={handleChange}
@@ -473,6 +473,7 @@ export const Getpampered = () => {
 							/>
 						</Stack>
 					</LocalizationProvider>
+
 					<button className="weddingbookbtn">Book</button>
 				</div>
 			</div>
