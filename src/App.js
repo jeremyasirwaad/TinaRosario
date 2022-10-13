@@ -23,6 +23,7 @@ import { Footer } from "./Components/Footer/Footer";
 import ImageCons from "./Components/Pages/ImageCons/ImageCons";
 import OrderFinish from "./Components/orderdone/OrderFinish";
 import { Cusdesigns } from "./Components/Pages/Cusdesigns/Cusdesigns";
+import { Getpampered } from "./Components/Pages/Getpampered/Getpampered";
 
 const faqs = [
 	{
@@ -65,6 +66,7 @@ function App() {
 					<Route path="/fabrics" element={<Fabrics />}></Route>
 					<Route path="/customiseddesigns" element={<Cusdesigns />}></Route>
 					<Route path="/imagecons" element={<ImageCons />}></Route>
+					<Route path="/getpampered" element={<Getpampered />}></Route>
 
 					<Route path="/Contact" element={<Contactus></Contactus>}>
 						{" "}
