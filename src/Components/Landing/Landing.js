@@ -26,7 +26,7 @@ export const Landing = () => {
     >
       <div className="landsec1">
         <Caro />
-        <p >Your Untold Fashion Destination</p>
+        <p>Your Untold Fashion Destination</p>
       </div>
 
       <div className="landbgdiv">
