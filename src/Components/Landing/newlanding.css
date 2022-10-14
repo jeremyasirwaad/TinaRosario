@@ -1,15 +1,20 @@
 .landsec1{
-    height: 550px;
+    height:450px;
     width: 100%;
-    background-color: black;
+    background-color: #270641;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
+    position: relative;
+   
 
 }
 .landsec1>P{
     color: #FFB8BC;
+    position: relative;
+
+    
     
 }
 
@@ -90,18 +95,10 @@
     /* margin-top: 10px; */
 }
 
-
-.caro{
-    width:120% !important;
-
-}
-.carousel-inner{
-    width: 120% ;
-}
-
-@media only screen and (max-width:1200px){
-    .carousel-inner{
-        width: 90%;
-        }
-        
+@media only screen and (min-width: 1600px){
+    .landsec1{
+        height:510px;
+       
+    
+    }
 }

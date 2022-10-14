@@ -4,15 +4,10 @@ import img4 from "./l4-min.jpg";
 import img5 from "./l5-min.jpg";
 import caro from "./caro.svg";
 import "./newlanding.css";
-import Carousel from "react-bootstrap/Carousel";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export const Caro = () => {
-  const [index, setIndex] = React.useState(0);
-
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
-
   // return (
   //   <div
   //     className="caro-container caro"
@@ -53,19 +48,24 @@ export const Caro = () => {
 
   return (
     <Carousel
-      style={{  width: "100%" }}
-      activeIndex={index}
-      onSelect={handleSelect}
+      style={{ height: "200px" }}
+      // dynamicHeight={true}
+      infiniteLoop
+      useKeyboardArrows
+      autoPlay
+      showThumbs={false}
+      showStatus={false}
+      showIndicators={false}
     >
-      <Carousel.Item>
-        <img style={{ borderRadius: "60px", padding: "50px " }} className=" w-100" src={caro} />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img style={{ borderRadius: "60px", padding: "50px" }} className=" w-100" src={caro} />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img style={{ borderRadius: "60px", padding: "50px" }} className=" w-100" src={caro} />
-      </Carousel.Item>
+      <div style={{ padding: "15px", borderRadius: "30px" }}>
+        <img style={{ borderRadius: "30px" }} src={caro} />
+      </div>
+      <div style={{ padding: "15px" }}>
+        <img style={{ borderRadius: "30px" }} src={caro} />
+      </div>
+      <div style={{ padding: "15px" }}>
+        <img style={{ borderRadius: "30px" }} src={caro} />
+      </div>
     </Carousel>
   );
 };
