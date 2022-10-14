@@ -36,7 +36,7 @@ export const Navbar = () => {
           >
             Gallery
           </span>
-          <span
+          {/* <span
             className="navlink2"
             onClick={async () => {
               await navigate("/");
@@ -47,7 +47,7 @@ export const Navbar = () => {
             }}
           >
             Testimonials
-          </span>
+          </span> */}
           <span
             className="navlink3"
             onClick={() => {
