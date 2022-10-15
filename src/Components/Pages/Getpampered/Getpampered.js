@@ -385,7 +385,7 @@ export const Getpampered = () => {
             <Stack spacing={3} className="datewidth">
               <MobileDatePicker
                 label="Appointment Date"
-                inputFormat="MM/DD/YYYY"
+                inputFormat="DD/MM/YYYY"
                 value={appointDate}
                 onChange={selectappoint}
                 renderInput={(params) => <TextField {...params} />}

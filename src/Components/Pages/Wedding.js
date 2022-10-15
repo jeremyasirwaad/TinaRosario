@@ -49,9 +49,9 @@ export const Wedding = () => {
 	const [formData, setformData] = useState({
 		name: "",
 		email: "",
-		dday: "",
+		dday: dday,
 		note: "",
-		appointDate: ""
+		appointDate: appointDate
 	});
 
 	const handleFormSubmit = async () => {
