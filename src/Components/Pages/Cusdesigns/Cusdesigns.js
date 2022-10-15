@@ -44,7 +44,7 @@ export const Cusdesigns = () => {
   const [value, setValue] = React.useState(dayjs());
 
   const [imginputloader, setImginputloader] = useState(false);
-  const [file, setfile] = useState({});
+  const [file, setfile] = useState();
   const [imageerror, setImageerror] = useState(false);
 
   const handleChange = (newValue) => {

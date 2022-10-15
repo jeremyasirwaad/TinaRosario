@@ -37,7 +37,14 @@ export const Getpampered = () => {
     setformData({ ...formData, appointDate: dayjs(newLocale).format("DD/MM/YYYY") });
   };
 
-  const [formData, setformData] = useState({ name: "", email: "", dday: "", note: "", appointDate: "" });
+  const [formData, setformData] = useState({
+    name: "",
+    email: "",
+    contact: "",
+    address: "",
+    note: "",
+    appointDate: "",
+  });
 
   const handleFormSubmit = async () => {
     const data = await axios.post(`${url}/formData`, { category: "get pampered", ...formData });
@@ -334,32 +341,41 @@ export const Getpampered = () => {
             label="Name"
             variant="outlined"
             style={{ width: "500px", marginTop: "30px" }}
+            value={formData.name}
+            onChange={(e) => setformData({ ...formData, name: e.target.value })}
           />
           <TextField
             id="outlined-basic"
             label="Email"
             variant="outlined"
             style={{ width: "500px", marginTop: "30px" }}
+            value={formData.email}
+            onChange={(e) => setformData({ ...formData, email: e.target.value })}
           />
-          <LocalizationProvider dateAdapter={AdapterDayjs} className="datewidth">
-            <Stack spacing={3} className="datewidth">
-              <MobileDatePicker
-                label="When is the big day ?"
-                inputFormat="MM/DD/YYYY"
-                value={dday}
-                onChange={selectdday}
-                renderInput={(params) => <TextField {...params} />}
-                className="datewidth"
-                disablePast
-              />
-            </Stack>
-          </LocalizationProvider>
+          <TextField
+            id="outlined-basic"
+            label="Contact"
+            variant="outlined"
+            style={{ width: "500px", marginTop: "30px" }}
+            value={formData.contact}
+            onChange={(e) => setformData({ ...formData, contact: e.target.value })}
+          />
+          <TextField
+            id="outlined-basic"
+            label="Address"
+            variant="outlined"
+            style={{ width: "500px", marginTop: "30px" }}
+            value={formData.address}
+            onChange={(e) => setformData({ ...formData, address: e.target.value })}
+          />
           <TextField
             id="outlined-basic"
             label="Any special note	"
             variant="outlined"
             className="datewidth"
             style={{ marginTop: "30px" }}
+            value={formData.note}
+            onChange={(e) => setformData({ ...formData, note: e.target.value })}
           />
           <LocalizationProvider dateAdapter={AdapterDayjs} className="datewidth">
             <Stack spacing={3} className="datewidth">
