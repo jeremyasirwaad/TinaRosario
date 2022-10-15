@@ -362,7 +362,9 @@ export const Getpampered = () => {
           />
           <TextField
             id="outlined-basic"
-            label="Address"
+            label="Address"a
+            multiline
+            rows={4}
             variant="outlined"
             style={{ width: "500px", marginTop: "30px" }}
             value={formData.address}
@@ -372,6 +374,8 @@ export const Getpampered = () => {
             id="outlined-basic"
             label="Any special note	"
             variant="outlined"
+            multiline
+            rows={4}
             className="datewidth"
             style={{ marginTop: "30px" }}
             value={formData.note}
