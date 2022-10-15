@@ -99,6 +99,10 @@ export const Cusdesigns = () => {
     }
   };
 
+  window.addEventListener("load", () => {
+    setfile();
+  });
+
   console.log(formData);
 
   return (
@@ -239,6 +243,7 @@ export const Cusdesigns = () => {
                 className={owndesign ? "optionsbtn optionsbtnselected" : "optionsbtn"}
                 onClick={() => {
                   setOwndesign(true);
+                  setfile();
                   setformData({ ...formData, ownDesign: "true" });
                 }}
               >
