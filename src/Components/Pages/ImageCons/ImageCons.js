@@ -16,11 +16,15 @@ import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 import axios from "axios";
+import validator from "validator";
+
 import toast, { Toaster } from "react-hot-toast";
 const ImageCons = () => {
 	const url = "http://localhost:3001";
 
 	const [appointDate, setappointDate] = React.useState(dayjs());
+
+	const [isownfab, setIsownfab] = useState(true);
 
 	const selectappoint = (newLocale) => {
 		setappointDate(newLocale);
@@ -34,10 +38,38 @@ const ImageCons = () => {
 		name: "",
 		email: "",
 		note: "",
-		appointDate: appointDate
+		appointDate: appointDate,
+		contact: ""
 	});
 
+	const [nameerr, setNameerr] = useState(false);
+	const [emailerr, setEmailerr] = useState(false);
+	const [contacterr, setContacterr] = useState(false);
+
 	const handleFormSubmit = async () => {
+		if (formData.name == "") {
+			setNameerr(true);
+		}
+
+		if (formData.email == "") {
+			setEmailerr(true);
+		}
+		if (formData.contact == "") {
+			setContacterr(true);
+		}
+
+		if (!validator.isEmail(formData.email)) {
+			setEmailerr(true);
+		}
+
+		if (
+			formData.name == "" ||
+			formData.email == "" ||
+			formData.contact == "" ||
+			!validator.isEmail(formData.email)
+		) {
+			return 0;
+		}
 		const data = await axios.post(`${url}/formData`, {
 			category: "image consulting",
 			...formData
@@ -91,21 +123,74 @@ const ImageCons = () => {
 					<TextField
 						id="outlined-basic"
 						label="Name"
+						error={nameerr}
 						value={formData.name}
-						onChange={(e) => setformData({ ...formData, name: e.target.value })}
+						onChange={(e) => {
+							if (e.target.value != "") {
+								setNameerr(false);
+							}
+							setformData({ ...formData, name: e.target.value });
+						}}
 						variant="outlined"
 						style={{ width: "500px", marginTop: "30px" }}
 					/>
 					<TextField
+						error={emailerr}
 						id="outlined-basic"
 						label="Email"
 						value={formData.email}
-						onChange={(e) =>
-							setformData({ ...formData, email: e.target.value })
-						}
+						onChange={(e) => {
+							if (e.target.value != "") {
+								setEmailerr(false);
+							}
+
+							setformData({ ...formData, email: e.target.value });
+						}}
 						variant="outlined"
 						style={{ width: "500px", marginTop: "30px" }}
 					/>
+					<TextField
+						error={contacterr}
+						id="outlined-basic"
+						label="Contact"
+						variant="outlined"
+						style={{ width: "500px", marginTop: "30px" }}
+						value={formData.contact}
+						onChange={(e) => {
+							if (e.target.value != "") {
+								setContacterr(false);
+							}
+							setformData({ ...formData, contact: e.target.value });
+						}}
+					/>
+					<div className="optionsdiv">
+						<span className="optionstitle">Consultation preferance ?</span>
+						<div className="optionsbtndiv">
+							<button
+								className={
+									isownfab ? "optionsbtn optionsbtnselected" : "optionsbtn"
+								}
+								onClick={() => {
+									setIsownfab(true);
+									// setformData({ ...formData, fabric: "own" });
+								}}
+							>
+								In Person
+							</button>
+							<button
+								className={
+									isownfab ? "optionsbtn" : "optionsbtn optionsbtnselected"
+								}
+								onClick={() => {
+									setIsownfab(false);
+									// setformData({ ...formData, fabric: "provide some options" });
+								}}
+								style={{ marginLeft: "15px" }}
+							>
+								Virtually
+							</button>
+						</div>
+					</div>
 					<TextField
 						id="outlined-basic"
 						label="Any special note	"

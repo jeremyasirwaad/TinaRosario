@@ -6,6 +6,7 @@ import { Footer } from "../Footer/Footer";
 import "./Wedding.css";
 import { TextField } from "@mui/material";
 import dayjs from "dayjs";
+import validator from "validator";
 import Stack from "@mui/material/Stack";
 
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
@@ -51,10 +52,39 @@ export const Wedding = () => {
 		email: "",
 		dday: dday,
 		note: "",
-		appointDate: appointDate
+		appointDate: appointDate,
+		contact: ""
 	});
 
+	const [nameerr, setNameerr] = useState(false);
+	const [emailerr, setEmailerr] = useState(false);
+	const [contacterr, setContacterr] = useState(false);
+
 	const handleFormSubmit = async () => {
+		if (formData.name == "") {
+			setNameerr(true);
+		}
+
+		if (formData.email == "") {
+			setEmailerr(true);
+		}
+		if (formData.contact == "") {
+			setContacterr(true);
+		}
+
+		if (!validator.isEmail(formData.email)) {
+			setEmailerr(true);
+		}
+
+		if (
+			formData.name == "" ||
+			formData.email == "" ||
+			formData.contact == "" ||
+			!validator.isEmail(formData.email)
+		) {
+			return 0;
+		}
+
 		const data = await axios.post(`${url}/formData`, {
 			category: "wedding collection",
 			...formData
@@ -137,19 +167,44 @@ export const Wedding = () => {
 						id="outlined-basic"
 						label="Name"
 						value={formData.name}
-						onChange={(e) => setformData({ ...formData, name: e.target.value })}
+						error={nameerr}
+						onChange={(e) => {
+							if (e.target.value != "") {
+								setNameerr(false);
+							}
+							setformData({ ...formData, name: e.target.value });
+						}}
 						variant="outlined"
 						style={{ width: "500px", marginTop: "30px" }}
 					/>
 					<TextField
 						id="outlined-basic"
 						label="Email"
+						error={emailerr}
 						value={formData.email}
-						onChange={(e) =>
-							setformData({ ...formData, email: e.target.value })
-						}
+						onChange={(e) => {
+							if (e.target.value != "") {
+								setEmailerr(false);
+							}
+
+							setformData({ ...formData, email: e.target.value });
+						}}
 						variant="outlined"
 						style={{ width: "500px", marginTop: "30px" }}
+					/>
+					<TextField
+						error={contacterr}
+						id="outlined-basic"
+						label="Contact"
+						variant="outlined"
+						style={{ width: "500px", marginTop: "30px" }}
+						value={formData.contact}
+						onChange={(e) => {
+							if (e.target.value != "") {
+								setContacterr(false);
+							}
+							setformData({ ...formData, contact: e.target.value });
+						}}
 					/>
 					<LocalizationProvider
 						dateAdapter={AdapterDayjs}
