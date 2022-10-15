@@ -22,7 +22,6 @@ export const Landing = () => {
       style={{
         display: "flex",
         flexDirection: "column",
-        
       }}
     >
       <div className="landsec1">
@@ -255,70 +254,39 @@ export const Landing = () => {
             <span>Accessories</span>
           </div>
         </div>
+
+        <span className="Landingtesti">Testimonials</span>
+        <div className="testcont">
+          <div className="avatar"></div>
+
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active ">
+                <p>“ We suggest suitable combinations of colors for different dress</p>
+                <h3>Rowan Atkinson</h3>
+              </div>
+              <div class="carousel-item ">
+                <p>“ We suggest suitable combinations of colors for different dress</p>
+                <h3>Rowan Atkinson</h3>
+              </div>
+              <div class="carousel-item ">
+                <p>“ We suggest suitable combinations of colors for different dress</p>
+                <h3>Rowan Atkinson</h3>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
 //Testi container
-
-{
-  /* <span className="Landingtesti">Testimonials</span>
-				<div className="testcont">
-					<div className="avatar"></div>
-
-					<div
-						id="carouselExampleControls"
-						class="carousel slide"
-						data-ride="carousel"
-					>
-						<div class="carousel-inner">
-							<div class="carousel-item active ">
-								<p>
-									“ We suggest suitable combinations of colors for different
-									dress
-								</p>
-								<h3>Rowan Atkinson</h3>
-							</div>
-							<div class="carousel-item ">
-								<p>
-									“ We suggest suitable combinations of colors for different
-									dress
-								</p>
-								<h3>Rowan Atkinson</h3>
-							</div>
-							<div class="carousel-item ">
-								<p>
-									“ We suggest suitable combinations of colors for different
-									dress
-								</p>
-								<h3>Rowan Atkinson</h3>
-							</div>
-						</div>
-						<a
-							class="carousel-control-prev"
-							href="#carouselExampleControls"
-							role="button"
-							data-slide="prev"
-						>
-							<span
-								class="carousel-control-prev-icon"
-								aria-hidden="true"
-							></span>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a
-							class="carousel-control-next"
-							href="#carouselExampleControls"
-							role="button"
-							data-slide="next"
-						>
-							<span
-								class="carousel-control-next-icon"
-								aria-hidden="true"
-							></span>
-							<span class="sr-only">Next</span>
-						</a>
-					</div>
-				</div> */
-}

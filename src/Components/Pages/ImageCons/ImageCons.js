@@ -115,7 +115,11 @@ const ImageCons = () => {
               />
             </Stack>
           </LocalizationProvider>
-          <button style={{ cursor: "pointer" }} className="weddingbookbtn" onClick={handleFormSubmit}>
+          <button
+            style={{ cursor: "pointer", marginBottom: "30px" }}
+            className="weddingbookbtn"
+            onClick={handleFormSubmit}
+          >
             Book
           </button>
         </div>

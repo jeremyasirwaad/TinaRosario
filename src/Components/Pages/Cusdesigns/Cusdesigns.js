@@ -248,7 +248,7 @@ export const Cusdesigns = () => {
                 className={owndesign ? "optionsbtn" : "optionsbtn optionsbtnselected"}
                 onClick={() => {
                   setOwndesign(false);
-                  setfile({});
+                  setfile();
                   setImginputloader(false);
                   setformData({ ...formData, ownDesign: "false" });
                 }}
