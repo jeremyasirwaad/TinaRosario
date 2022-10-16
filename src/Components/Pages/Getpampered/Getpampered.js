@@ -24,7 +24,7 @@ import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 export const Getpampered = () => {
-	const url = "http://localhost:3001";
+	const url = "http://localhost:8080";
 	const [dday, setdday] = React.useState(dayjs());
 	const [appointDate, setappointDate] = React.useState(dayjs());
 
