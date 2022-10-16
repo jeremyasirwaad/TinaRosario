@@ -24,6 +24,7 @@ import ImageCons from "./Components/Pages/ImageCons/ImageCons";
 import OrderFinish from "./Components/orderdone/OrderFinish";
 import { Cusdesigns } from "./Components/Pages/Cusdesigns/Cusdesigns";
 import { Getpampered } from "./Components/Pages/Getpampered/Getpampered";
+import { Policies } from "./Components/Policies/Policies";
 
 const faqs = [
   {
@@ -67,6 +68,7 @@ function App() {
           <Route path="/customiseddesigns" element={<Cusdesigns />}></Route>
           <Route path="/imagecons" element={<ImageCons />}></Route>
           <Route path="/getpampered" element={<Getpampered />}></Route>
+          <Route path="/policies" element={<Policies />}></Route>
 
           <Route path="/Contact" element={<Contactus></Contactus>}>
             {" "}
@@ -82,7 +84,7 @@ function App() {
           <Route path="/faq_order" element={<Faq faqs={faqs} heading={"Order &  Customization"} />}></Route>
           <Route path="/faq_deli" element={<Faq faqs={faqs} heading={"Delivery, Return and refunds"} />}></Route>
           <Route path="/faq_ship" element={<Faq faqs={faqs} heading={"Shipping and tracking"} />}></Route>
-          <Route path="/orderfinish/:type/:name/:date" element={<OrderFinish />}></Route>
+          <Route path="/orderfinish/:type/:name/:d/:m/:y" element={<OrderFinish />}></Route>
         </Routes>
         <Footer></Footer>
       </BrowserRouter>

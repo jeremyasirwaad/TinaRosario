@@ -19,10 +19,14 @@ import axios from "axios";
 import validator from "validator";
 
 import toast, { Toaster } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 const ImageCons = () => {
-  const url = "http://localhost:3001";
+  const navigate = useNavigate();
+  const url = "http://localhost:8080";
+  // const url = "http://localhost:3001";
 
-  const [appointDate, setappointDate] = React.useState(dayjs());
+  const [dday, setdday] = React.useState(dayjs().format("DD/MM/YYYY"));
+  const [appointDate, setappointDate] = React.useState(dayjs().format("DD/MM/YYYY"));
 
   const [isownfab, setIsownfab] = useState(true);
 
@@ -73,7 +77,7 @@ const ImageCons = () => {
       ...formData,
     });
     if (data) {
-      toast.success("Thank you! Your response if saved with us!");
+      navigate(`/orderfinish/image/${data.data.name}/${data.data.appointDate}`);
       console.log(data);
     }
   };
