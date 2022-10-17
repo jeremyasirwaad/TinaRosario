@@ -22,7 +22,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 const ImageCons = () => {
   const navigate = useNavigate();
-  const url = "http://localhost:8080";
+  const url = "http://54.226.201.17:8080";
   // const url = "http://localhost:3001";
 
   const [dday, setdday] = React.useState(dayjs().format("DD/MM/YYYY"));

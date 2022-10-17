@@ -53,7 +53,7 @@ export const Contactus = () => {
 		}
 
 		const result = await axios
-			.post("http://localhost:8080/mail", {
+			.post("http://54.226.201.17:8080/mail", {
 				from: contact.email,
 				to: "design@tinarosario.com",
 				subject: `Mail from ${contact.name} - ${contact.email} `,
