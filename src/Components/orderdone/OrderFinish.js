@@ -3,10 +3,10 @@ import { useParams } from "react-router-dom";
 import tick from "./tick.svg";
 import "./OrderFinish.css";
 const OrderFinish = () => {
-  const { type, name, date } = useParams();
+  const { type, name,  d, m, y } = useParams();
   return (
     <div className="order-bg">
-      {type == "wedding" ? (
+      {type == "wedding" && (
         <div className="order-card">
           <div className="icon">
             <img src={tick} />
@@ -16,11 +16,12 @@ const OrderFinish = () => {
             your confidence in us <br /> - <br />
             Your appointment has been confirmed. <br /> Looking forward to discuss further to make your day <br />{" "}
             “look” special <br /> <br />
-            Our Designer will contact you on {date}, <br />
+            Our Designer will contact you on {d}/{m}/{y}, <br />
             between 11am to 7pm.
           </div>
         </div>
-      ) : (
+      )}
+      {type == "customized" && (
         <div className="order-card">
           <div className="icon">
             <img src={tick} />
@@ -32,6 +33,34 @@ const OrderFinish = () => {
             special <br /> <br />
             Our Designer will contact you between between 11am to 7pm. <br /> to discuss fabric, design, and measurement
             details.
+          </div>
+        </div>
+      )}
+      {type == "image" && (
+        <div className="order-card">
+          <div className="icon">
+            <img src={tick} />
+          </div>
+          <div className="details">
+            Hello {name} , <br /> Welcome to the family of “The Design House” by <br /> Tina Rosario. <br /> Appreciate
+            your confidence in us <br /> - <br />
+            Your Consultation has been confirmed. Our Designer <br /> Will send you an email with details <br />{" "}
+            <br />
+            Looking forward to understand you and create a garm of your choice
+          </div>
+        </div>
+      )}
+      {type == "getpam" && (
+        <div className="order-card">
+          <div className="icon">
+            <img src={tick} />
+          </div>
+          <div className="details">
+            Hello {name} , <br /> Welcome to the family of “The Design House” by <br /> Tina Rosario. <br /> Appreciate
+            your confidence in us <br />
+            <br />
+            Looking forward to satisfy your needs from the comfort of your home.
+            <br /> Our Designer will contact you to confirm a time.
           </div>
         </div>
       )}
