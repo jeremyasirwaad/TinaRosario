@@ -32,8 +32,8 @@ import toast, { Toaster } from "react-hot-toast";
 import FormData from "form-data";
 
 export const Cusdesigns = () => {
-  // const url = "http://54.226.201.17:8080";
-  const url = "http://localhost:3001";
+  const url = "http://54.226.201.17:8080";
+  // const url = "http://localhost:3001";
   const navigate = useNavigate();
   const [agecat1, setagecat1] = useState(true);
   const [agecat2, setagecat2] = useState(false);
