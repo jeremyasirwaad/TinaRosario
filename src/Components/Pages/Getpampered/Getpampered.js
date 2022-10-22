@@ -51,7 +51,7 @@ export const Getpampered = () => {
     contact: "",
     address: "",
     note: "",
-    appointDate: "",
+    appointDate: appointDate,
   });
 
   const [nameerr, setNameerr] = useState(false);
