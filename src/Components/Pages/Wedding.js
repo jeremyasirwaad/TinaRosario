@@ -21,8 +21,8 @@ import AOS from "aos";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 export const Wedding = () => {
-  // const url = "http://54.226.201.17:8080";
-  const url = "http://localhost:3001";
+  const url = "http://54.226.201.17:8080";
+  // const url = "http://localhost:3001";
   const navigate = useNavigate();
 
   useEffect(() => {
