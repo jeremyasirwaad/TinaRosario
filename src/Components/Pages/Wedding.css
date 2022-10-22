@@ -6,16 +6,18 @@
     align-items: center;
     justify-content: center;
     /* background-image: url(path-to-file/img.jpg); */
-background-repeat:no-repeat;
-background-position: center center;
+    background-repeat:no-repeat;
+    background-position: center ;
+    background-size: cover;
 }
 
 .weddingbannerinner{
+    width: 100%;
     height: 100%;
     width: 40%;
     display: flex;
     align-items: center;
-    padding: 40px;
+    /* padding: 40px; */
     justify-content: center;
     flex-direction: column;
     background-color: #270641;
@@ -129,4 +131,7 @@ font-size: 18px;
 
 .weddingbg{
     background-image: url("../Landing/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
 }

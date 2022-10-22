@@ -21,8 +21,8 @@ import AOS from "aos";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 export const Wedding = () => {
-    const url = "http://54.226.201.17:8080";
-//   const url = "http://localhost:3001";
+  // const url = "http://54.226.201.17:8080";
+  const url = "http://localhost:3001";
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -32,8 +32,10 @@ export const Wedding = () => {
     });
   }, []);
 
-  const [dday, setdday] = React.useState(dayjs().format("DD/MM/YYYY"));
-  const [appointDate, setappointDate] = React.useState(dayjs().format("DD/MM/YYYY"));
+  const days = dayjs();
+
+  const [dday, setdday] = React.useState(days.format("MM/DD/YYYY"));
+  const [appointDate, setappointDate] = React.useState(days.format("MM/DD/YYYY"));
 
   const selectdday = (newLocale) => {
     setdday(newLocale);
@@ -98,7 +100,9 @@ export const Wedding = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        // backgroundColor: "black"
+        width: "100%",
+
+        backgroundColor: "black",
       }}
     >
       <Toaster />
