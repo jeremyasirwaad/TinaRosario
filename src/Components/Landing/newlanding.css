@@ -1,5 +1,5 @@
 .landsec1{
-    /* height:710px; */
+    height:710px;
     width: 100%;
     background-color: #270641;
     display: flex;
@@ -102,7 +102,8 @@
 
 @media only screen and (min-width: 1600px){
     .landsec1{
-        height:510px;
+    height:710px;
+        
        
     
     }
