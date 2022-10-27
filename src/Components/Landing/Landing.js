@@ -15,6 +15,7 @@ import img5 from "./357afd91-05da-4ece-8b27-2709123848ab-removebg-preview 1.png"
 import img6 from "./12eeeab4-9c1e-4b34-bc15-1618ca2060e7-removebg-preview 1.png";
 import img7 from "./77b8b7bf-4a7e-4508-a551-8f2209ad58cf-removebg-preview 1.png";
 import { useNavigate } from "react-router-dom";
+import { fontSize } from "@mui/system";
 export const Landing = () => {
 	const navigate = useNavigate();
 	return (
@@ -26,10 +27,23 @@ export const Landing = () => {
 		>
 			<div className="landsec1">
 				<Caro />
-				<p>"Your Untold Fashion Destination"</p>
 			</div>
 
 			<div className="landbgdiv">
+				<div
+					style={{
+						width: "100%",
+						height: "30px",
+						backgroundColor: "rgb(47, 0, 33)",
+						display: "flex",
+						alignItems: "center",
+						justifyContent: "center",
+						color: "white",
+						fontSize: "20px"
+					}}
+				>
+					<span>"Your Untold Fashion Destination"</span>
+				</div>
 				<span className="landtit">In The Design House</span>
 				<div className="landiconsdiv">
 					<div
