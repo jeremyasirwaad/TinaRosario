@@ -7,11 +7,11 @@ export const PreNav = () => {
 				<Typewriter
 					options={{
 						strings: [
-							"10% OFF FIRST ORDER CODE: WELCOME10",
-							"FREE SHIPPING | 60-DAYS EASY RETURN",
+							"10% OFF FIRST ORDER"
+							// "FREE SHIPPING | 60-DAYS EASY RETURN"
 						],
 						autoStart: true,
-						loop: true,
+						loop: true
 					}}
 				/>
 			</span>
