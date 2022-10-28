@@ -35,10 +35,20 @@
 .imagesection img{
     margin-top: 50px;
 }
-
+.aboutContainer{
+    background-image: url("./bg1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 .abtussec2{
-    background-color: #DDFDFF;
+    /* background-color: #DDFDFF; */
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,7 +109,7 @@
 
 
 .sec3abtus{
-    background-color: #DDFDFF;
+    /* background-color: #DDFDFF; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,7 +134,7 @@
 
 .sec4abtus
 {
-    background-color: #DDFDFF;
+    /* background-color: #DDFDFF; */
     width: 70%;
     display: flex;
     flex-direction: column;
