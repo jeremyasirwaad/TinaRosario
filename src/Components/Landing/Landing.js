@@ -314,7 +314,7 @@ export const Landing = () => {
 				<span
 					className="Landingtesti"
 					id="Landingtesti"
-					style={{ fontWeight: "600", fontSize: "40px" }}
+					style={{  fontSize: "40px" }}
 				>
 					Testimonials
 				</span>
