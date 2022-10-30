@@ -110,13 +110,13 @@ const ImageCons = () => {
         <div className="img-row">
           <img src={back} />
           <p>
-            While we hold In-depth conversations to understand you better.
-            <br /> It is important we Fashion is mostly an individual choice. Uncover your aspirations in THE DESIGN
-            HOUSE.
+            Come to us, our experienced designer and stylist
+            <br /> will guide you to make a fashion statement and
+            <br /> enhance your personal, professional and social image.
           </p>
         </div>
 
-        <div className="steps">
+        <div className="steps1">
           <img src={steps} />
         </div>
         <div className="steps">

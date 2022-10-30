@@ -130,10 +130,10 @@ export const Wedding = () => {
 
           <div className="wedsec1cont">
             <span>
-              We understand wedding chores could overwhelm you, Here we are to take off your burden of how you're going
+              We understand wedding chores could overwhelm you,<br/> Here we are to take off your burden of how you're going
               to look.
             </span>
-            <span style={{ marginTop: "10px" }}>Here we are to take off your burden of how you're going to look.</span>
+            
           </div>
         </div>
         <div className="wedsec2">
@@ -141,10 +141,7 @@ export const Wedding = () => {
             <img src={img1} alt="" />
           </div>
 
-          <div className="wedsec2cont">
-            <span>Get in touch and allow us to unfold</span>
-            <span>your dream attire</span>
-          </div>
+          <div className="wedsec2cont">Get in touch and allow us to unfold your dream attire</div>
         </div>
         <div className="wedsec1" style={{ marginTop: "80px" }}>
           <div className="wedsec1img">
@@ -152,8 +149,8 @@ export const Wedding = () => {
           </div>
 
           <div className="wedsec1cont">
-            <span>A few ounces of personal attention along with some love and care.</span>
-            <span style={{ marginTop: "10px" }}>We assure you a perfect attire that'll be spoken about, forever.</span>
+            A few ounces of personal attention along with some love and care. We assure you a perfect attire that'll be
+            spoken about, forever.
           </div>
         </div>
         <div className="weddingforms">

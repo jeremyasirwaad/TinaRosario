@@ -25,7 +25,7 @@ import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 export const Getpampered = () => {
   const navigate = useNavigate();
-    const url = "http://54.226.201.17:8080";
+  const url = "http://54.226.201.17:8080";
   // const url = "http://localhost:3001";
   const days = dayjs();
 
@@ -51,7 +51,7 @@ export const Getpampered = () => {
     contact: "",
     address: "",
     note: "",
-    appointDate: appointDate,
+    
   });
 
   const [nameerr, setNameerr] = useState(false);
@@ -99,7 +99,7 @@ export const Getpampered = () => {
         </div>
       </div>
       <div className="backgroundforgetpam">
-        <span className="getpamtitle2">Exclusively for Chennai Vaasies</span>
+        <span className="getpamtitle2">Exclusively for Chennai Vaasies!!!</span>
         <div className="img-row">
           <img src={back} />
           <p
@@ -112,7 +112,7 @@ export const Getpampered = () => {
           >
             <p>
               Hello <span style={{ fontWeight: "600" }}> Chennai makkale...</span> We've come up with something
-              exclusive for you!!!
+              exclusive for you!
             </p>
 
             <p style={{ fontWeight: "600", fontStyle: "italic" }}>
@@ -437,7 +437,7 @@ export const Getpampered = () => {
             value={formData.note}
             onChange={(e) => setformData({ ...formData, note: e.target.value })}
           />
-          <LocalizationProvider dateAdapter={AdapterDayjs} className="datewidth">
+          {/* <LocalizationProvider dateAdapter={AdapterDayjs} className="datewidth">
             <Stack spacing={3} className="datewidth">
               <MobileDatePicker
                 label="Appointment Date"
@@ -449,7 +449,7 @@ export const Getpampered = () => {
                 disablePast
               />
             </Stack>
-          </LocalizationProvider>
+          </LocalizationProvider> */}
           <button style={{ cursor: "pointer" }} onClick={handleFormSubmit} className="weddingbookbtn">
             Book
           </button>

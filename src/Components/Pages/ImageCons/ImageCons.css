@@ -114,8 +114,8 @@
 
 .img-row>p{
     display: flex;
-    width: 50%;
-    font-size: 1.2rem;
+    width: 56%;
+    font-size: 1.5rem;
 
     justify-content: center;
     align-items: center;
@@ -129,8 +129,9 @@
     align-items: center;
     margin-top: 30px;
 }
-.steps >img{
-    width: 800px;
+.steps1 >img{
+    margin-top: 70px;
+    width: 1400px;
     
 }
 

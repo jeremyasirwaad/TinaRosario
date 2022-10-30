@@ -21,9 +21,9 @@ import FormHelperText from "@mui/material/FormHelperText";
 import steps from "./3.png";
 import smilebar from "./4.png";
 import AOS from "aos";
-import img1 from "./Group 77.png";
-import img2 from "./Group 78.png";
-import img3 from "./Group 79.png";
+import img1 from "./img1.svg";
+import img2 from "./img2.svg";
+import img3 from "./img3.svg";
 import back from "./Rectangle 70.png";
 import "./cusforms.css";
 import { LoadingButton } from "@mui/lab";
@@ -35,7 +35,7 @@ export const Cusdesigns = () => {
   const url = "http://54.226.201.17:8080";
   // const url = "http://localhost:3001";
   const navigate = useNavigate();
-  const [agecat1, setagecat1] = useState(true);
+  const [agecat1, setagecat1] = useState(false);
   const [agecat2, setagecat2] = useState(false);
   const [agecat3, setagecat3] = useState(false);
 
@@ -171,7 +171,7 @@ export const Cusdesigns = () => {
       <div className="weddingbanner">
         <div className="weddingbannerinner">
           <span className="wb1">Customized Design</span>
-          <span className="wb2">“ Choose us once and be marveled by our commitment and work “</span>
+          <span className="wb2">“Choose us once and be marveled by our commitment and work“</span>
         </div>
       </div>
       <div className="weddingbg">
