@@ -6,7 +6,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import navlogo from "./navlogo.svg";
 
 export const Navbar = () => {
-	const navigate = useNavigate();
+  const navigate = useNavigate();
 
 	return (
 		<div className="navcontainer">
@@ -44,7 +44,14 @@ export const Navbar = () => {
 					>
 						Gallery
 					</span>
-					
+					<span
+						className="navlink5"
+						onClick={() => {
+							navigate("/fabrics");
+						}}
+					>
+						Fabrics
+					</span>
 					<span
 						onClick={async () => {
 							await navigate("/contact");
