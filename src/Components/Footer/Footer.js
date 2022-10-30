@@ -42,7 +42,7 @@ export const Footer = () => {
             {/* <a href="">
               <img className="foot-link-logo" src="https://img.icons8.com/cotton/2x/twitter.png" />
             </a> */}
-            <a target="_blank" href="https://api.whatsapp.com/send?phone=7200060540">
+            <a target="_blank" href="https://api.whatsapp.com/send?phone=9916818637">
               <img className="foot-link-wa" src="https://img.icons8.com/color/344/whatsapp--v1.png" />
             </a>
           </div>

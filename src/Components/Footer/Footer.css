@@ -4,7 +4,7 @@
 
 
 .footercontainer{
-    height: 300px;
+    height: 200px;
     background-color: #270641;
     overflow: hidden;
     width: 100%;
@@ -18,18 +18,21 @@
     display: flex;
     padding: 10px;
     color: white;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .foot-logo{
-
-    width:214px;
-    height: 200px;
+    width:200px;
+    height: 150px;
+}
+.details{
+    margin-top: -30px;
 }
 
 .details > h3{
     font-size: 2em;
     letter-spacing:6px;
+    
     font-family: 'Great Vibes', cursive;
     cursor: pointer;
 }
@@ -50,11 +53,14 @@
     flex-direction: column;
     /* justify-content: center; */
     align-items: flex-start;
+    /* margin-right: -50px; */
+
 }
 .column >p{
    
     font-size: 1.4rem;
     color:#FFB8BC;
+    margin-bottom:1px
 }
 .column >h4{
     font-size: 0.9rem;
@@ -63,7 +69,7 @@
     font-family: 'Poppins';
     font-size: 14px;
     line-height: 21px;
-    margin-top: 15px;
+    /* margin-top: -5px; */
     cursor:pointer;
 }
 
@@ -76,6 +82,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    margin-left: -25px;
 }
 .footer-links > a>img{
 
