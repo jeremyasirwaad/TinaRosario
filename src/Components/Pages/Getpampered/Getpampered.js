@@ -52,6 +52,7 @@ export const Getpampered = () => {
     contact: "",
     address: "",
     note: "",
+    ownDesign: "false",
   });
 
   const [nameerr, setNameerr] = useState(false);

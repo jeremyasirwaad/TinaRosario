@@ -4,10 +4,11 @@
 
 
 .footercontainer{
-    height: 200px;
+    height: 220px;
     background-color: #270641;
     overflow: hidden;
     width: 100%;
+
     
 }
 
@@ -15,6 +16,7 @@
 .footerinnercontainer{
     height: 100%;
     margin-top: 10px;
+    margin-bottom: 20px;
     display: flex;
     padding: 10px;
     color: white;

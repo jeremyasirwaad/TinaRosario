@@ -58,6 +58,7 @@ export const Wedding = () => {
     note: "",
     appointDate: appointDate,
     contact: "",
+    ownDesign: "false",
   });
 
   const [nameerr, setNameerr] = useState(false);
