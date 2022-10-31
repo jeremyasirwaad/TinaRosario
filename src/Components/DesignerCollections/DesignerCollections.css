@@ -1,0 +1,168 @@
+.designercollections{
+   width: 100%;
+   display: flex;
+}
+
+.subfilter{
+    margin-top: 20px;
+}
+
+.filter{
+    width: 330px;
+    height: 100vh;
+    overflow-x: scroll;
+    background: rgba(221, 253, 255, 0.8);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+}
+
+
+.subinner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.subinner2{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.fa-chevron-down{
+    margin-right: 20px;
+    transition: all 0.5s ease-in;
+}
+
+.rotate{
+    transform: rotateX(180deg);
+}
+
+
+.fa-chevron-up{
+    margin-right: 20px;
+    transition: all 0.1s ease-in;
+
+}
+
+.subinnertitle{
+    font-weight: 600;
+}
+
+.fildiv{
+    width: 80%;
+    height: 1px;
+    margin-top: 10px;
+    background-color: black;
+}
+
+.fliterchoicediv{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.fliterchoice{
+    display: flex;
+    margin-right: 50px;
+ 
+}
+
+.displaynone{
+    display: none;
+
+}
+
+.prodpage{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    overflow-x: scroll;
+    background-image: url('../About/bg.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.prodpaget1{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.prodpaget2{
+    font-size: 22px;
+    /* font-weight: 600; */
+}
+
+.prodcardgrid{
+    margin-top: 10px;
+    width: 100%;
+    /* display: flex; */
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    justify-items: center;
+}
+
+.prodcard{
+    margin-top: 20px;
+    height: 400px;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(221, 253, 255, 0.8);
+    border-radius: 14.8103px;
+    box-shadow: 0px 3.94942px 14.8103px rgba(0, 0, 0, 0.1);
+    /* outline: none;
+    border: none; */
+    cursor: pointer;
+}
+
+.prodcard img{
+    height: auto;
+    width: 270px;
+}
+
+.prodcarddetails{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.prodcardtitle{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
