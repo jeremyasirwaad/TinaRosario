@@ -1,118 +1,99 @@
-
-
-.fabric{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-
-}
-.fabric > .carousel{
-    background-color: lavender;
+.bgFabrics{
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-image: url('../../About/bg.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
-.fabric>h4{
-    color: white;
-  margin:0;
-  font-family: 'Square Peg', cursive;
-    font-size: 45px;
-    background-color: white;
-    color:black;
+.fabricsheader{
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  margin-top: 30px;
 }
 
-
-.fabric-image{
-   width: 300px;
-   height: 200px;
-  
+.fabricscaro{
+  width: 100%;
+  height: 400px;
+  background-color: #270641;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.image-div{
-    width: 100px;
-    height: 100px;
-    
-
+.fabricsheader2{
+  margin-top: 30px;
+  font-size: 40px;
+  font-weight: 600;
 }
 
-.grid-image{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 15px;
+.textcontainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  text-align: center;
+  margin-top: 40px;
 }
 
-.grid-image>img{
-    height: 250px;
-    width: 300px;
-    border-radius: 20px;
-    padding: 10px;
+.fabbutton{
+  outline: none;
+  border: none;
+  font-size: 32px;
+  margin-top: 30px;
+  color: #FFB8BC;
+  width: 240px;
+  height: 71px;
+  background: #4C2A76;
+  box-shadow: 0px 8px 25px rgba(76, 42, 118, 0.55);
+  border-radius: 41px;
 }
 
-.desc-content{
-    margin: 80px;
-
+.imgfabrows{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-top: 90px;
 }
-/* 
 
- .slider {
-    position: relative;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-  }
-  
-  .slider-image {
-    width: 400px;
-    height: 300px;
-    border-radius: 10px;
-  }
-  
-  .sright-arrow {
-    position: absolute;
-    top: 50%;
-    right: 32px;
-    font-size: 3rem;
-    color: #000;
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
-  }
-  
-  .sleft-arrow {
-    position: absolute;
-    top: 50%;
-    left: 32px;
-    font-size: 3rem;
-    color: #000;
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
-  }
-  
-  .sslide {
-    opacity: 0;
-    transition-duration: 1s ease;
-  }
-  
-  .sslide.active {
-    opacity: 1;
-    transition-duration: 1s;
-    transform: scale(1.08);
-  }
+.imgfabrow1 img{
+  height: auto;
+  width: 325px;
+}
 
-  .fabric-container>h4{
-  margin:0;
-    font-family: 'Brush Script MT', cursive;
-    font-size: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
- 
+.imgfabrow1{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.imgfabrowinner{
+  margin-left: 40px;
 }
 
 
- */
+.imgfabrow2 img{
+  height: auto;
+  width: 325px;
+}
+
+.imgfabrow2{
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin-top: 20px;
+  text-align: right;
+
+}
+
+.imgfabrowinner{
+  margin-right: 40px;
+}
+
+.imgfabrowinner span{
+  font-weight: 600;
+  font-size: 35px;
+}
