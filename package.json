@@ -21,7 +21,7 @@
     "form-data": "^4.0.0",
     "libphonenumber-js": "^1.10.13",
     "material-ui-phone-number": "^3.0.0",
-    "mui-tel-input": "^2.0.2",
+    "mui-tel-input": "^2.0.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-coverflow": "^0.2.20",

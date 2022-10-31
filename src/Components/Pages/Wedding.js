@@ -20,6 +20,7 @@ import img1 from "./Group 36 (1).svg";
 import AOS from "aos";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import { MuiTelInput } from "mui-tel-input";
 export const Wedding = () => {
   const url = "http://54.226.201.17:8080";
   // const url = "http://localhost:3001";
@@ -94,6 +95,13 @@ export const Wedding = () => {
     }
   };
 
+  const [value, setValue] = React.useState("+91");
+
+  const handleChange = (newValue) => {
+    setValue(newValue);
+    setformData({ ...formData, contact: newValue });
+  };
+
   return (
     <div
       style={{
@@ -130,10 +138,9 @@ export const Wedding = () => {
 
           <div className="wedsec1cont">
             <span>
-              We understand wedding chores could overwhelm you,<br/> Here we are to take off your burden of how you're going
-              to look.
+              We understand wedding chores could overwhelm you,
+              <br /> Here we are to take off your burden of how you're going to look.
             </span>
-            
           </div>
         </div>
         <div className="wedsec2">
@@ -184,7 +191,7 @@ export const Wedding = () => {
             variant="outlined"
             style={{ width: "500px", marginTop: "30px" }}
           />
-          <TextField
+          {/* <TextField
             error={contacterr}
             id="outlined-basic"
             label="Contact"
@@ -197,6 +204,13 @@ export const Wedding = () => {
               }
               setformData({ ...formData, contact: e.target.value });
             }}
+          /> */}
+          <MuiTelInput
+            label="Contact"
+            style={{ width: "500px", marginTop: "30px" }}
+            value={value}
+            variant="outlined"
+            onChange={handleChange}
           />
           <LocalizationProvider dateAdapter={AdapterDayjs} className="datewidth">
             <Stack spacing={3} className="datewidth">

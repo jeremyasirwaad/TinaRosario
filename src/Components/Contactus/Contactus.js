@@ -10,6 +10,8 @@ import usflag from "./2560px-Flag_of_the_United_States.svg.png";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import validator from "validator";
+import { MuiTelInput } from "mui-tel-input";
+import { BorderTop } from "@mui/icons-material";
 
 export const Contactus = () => {
   const notify = () => toast.success("Message sent successfully");
@@ -71,6 +73,12 @@ export const Contactus = () => {
   // 		}, 5000);
   // 	}
   // }, [mailSent]);
+  const [value, setValue] = React.useState("+91");
+
+  const handleChange = (newValue) => {
+    setValue(newValue);
+    setContact({ ...contact, contact: newValue });
+  };
 
   return (
     <div className="contactuspage">
@@ -152,7 +160,7 @@ export const Contactus = () => {
                 setContact({ ...contact, email: e.target.value });
               }}
             ></TextField>
-            <TextField
+            {/* <TextField
               error={contacterror}
               color="primary"
               label="Contact Number"
@@ -167,7 +175,8 @@ export const Contactus = () => {
               // placeholder="If any"
 
               // defaultValue="Default Value"
-            />
+            /> */}
+            <MuiTelInput label="Contact" value={value} onChange={handleChange} />
 
             <TextField
               color="primary"

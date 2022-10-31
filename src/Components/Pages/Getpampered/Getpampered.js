@@ -23,6 +23,7 @@ import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import { MuiTelInput } from "mui-tel-input";
 export const Getpampered = () => {
   const navigate = useNavigate();
   const url = "http://54.226.201.17:8080";
@@ -51,7 +52,6 @@ export const Getpampered = () => {
     contact: "",
     address: "",
     note: "",
-    
   });
 
   const [nameerr, setNameerr] = useState(false);
@@ -88,6 +88,13 @@ export const Getpampered = () => {
 
       console.log(data);
     }
+  };
+
+  const [contact, setcontact] = React.useState("+91");
+
+  const handleContact = (newValue) => {
+    setcontact(newValue);
+    setformData({ ...formData, contact: newValue });
   };
   return (
     <div className="getpamperedpage">
@@ -401,7 +408,7 @@ export const Getpampered = () => {
               setformData({ ...formData, email: e.target.value });
             }}
           />
-          <TextField
+          {/* <TextField
             error={contacterr}
             id="outlined-basic"
             label="Contact"
@@ -414,6 +421,13 @@ export const Getpampered = () => {
               }
               setformData({ ...formData, contact: e.target.value });
             }}
+          /> */}
+          <MuiTelInput
+            label="Contact"
+            style={{ width: "500px", marginTop: "30px" }}
+            value={contact}
+            variant="outlined"
+            onChange={handleContact}
           />
           <TextField
             id="outlined-basic"

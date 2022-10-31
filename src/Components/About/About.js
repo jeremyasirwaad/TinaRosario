@@ -9,6 +9,11 @@ import img1 from "./Rectangle 46.png";
 import { Footer } from "../Footer/Footer";
 import svg1 from "./Group 36.svg";
 import { useNavigate } from "react-router-dom";
+import zoom from "./zoom.svg";
+import glove from "./glove.svg";
+import scale from "./scale.svg";
+import face from "./face.svg";
+import photo from "./photo.png";
 
 export const About = () => {
   const navigate = useNavigate();
@@ -38,25 +43,29 @@ export const About = () => {
           <div className="sec2box">
             <div className="box1">
               <div className="rect">
-                <BsArrowsFullscreen color="white" size={40}></BsArrowsFullscreen>
+                {/* <BsArrowsFullscreen color="white" size={40}></BsArrowsFullscreen> */}
+                <img src={zoom} />
               </div>
               <p>Have you tried various sizes and still felt uncomfortable?</p>
             </div>
             <div className="box1">
               <div className="rect">
-                <RiRulerLine color="white" size={40} />
+                {/* <RiRulerLine color="white" size={40} /> */}
+                <img src={scale} />
               </div>
               <p>Do the standard measurements bother you?</p>
             </div>
             <div className="box1">
               <div className="rect">
-                <HiHand color="white" size={40}></HiHand>
+                {/* <HiHand color="white" size={40}></HiHand> */}
+                <img src={glove} />
               </div>
               <p>How about something that fits like a glove?</p>
             </div>
             <div className="box1">
               <div className="rect">
-                <BsEmojiSmile color="white" size={40}></BsEmojiSmile>
+                {/* <BsEmojiSmile color="white" size={40}></BsEmojiSmile> */}
+                <img src={face} />
               </div>
               <p>Would you want to express your persona through your clothing?</p>
             </div>
@@ -420,14 +429,15 @@ export const About = () => {
             {" "}
             <span className="abtus5titlesub">The Pioneer</span> behind the label
           </span>
-          <div
+          <img
+            src={photo}
             className="divimg"
             style={{
               width: "250px",
-              height: "250px",
+              height: "300px",
               backgroundColor: "#4C2A76",
             }}
-          ></div>
+          ></img>
           <p className="CCC">Creative | Curious | Committed </p>
           <p>
             Tina Rosario, an accomplished celebrity stylist and fashion designer, who is well known for her exquisite

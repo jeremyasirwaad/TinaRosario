@@ -101,6 +101,10 @@
 .footer-text{
     color:#FFB8BC;
 }
+.foot-logo
+{
+    margin-top: 15px;
+}
 
 
 @media screen and (max-width: 600px) {
