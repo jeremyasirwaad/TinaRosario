@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
-import logoWeb from "./logoweb.svg";
+// import logoWeb from "./logoweb.svg";
+import logo2 from "./logo2.png";
 import { useNavigate } from "react-router-dom";
 
 export const Footer = () => {
@@ -9,7 +10,7 @@ export const Footer = () => {
     <div className="footercontainer">
       <div className="footerinnercontainer">
         <div className="details">
-          <img className="foot-logo" src={logoWeb} />
+          <img className="foot-logo" src={logo2} />
           <div className="footer-text">Let the garms you don, adorn the style within you.</div>
         </div>
         <div className="column collections">

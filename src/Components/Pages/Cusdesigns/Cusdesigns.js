@@ -30,6 +30,7 @@ import { LoadingButton } from "@mui/lab";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import FormData from "form-data";
+import { MuiTelInput } from "mui-tel-input";
 
 export const Cusdesigns = () => {
   const url = "http://54.226.201.17:8080";
@@ -39,9 +40,11 @@ export const Cusdesigns = () => {
   const [agecat2, setagecat2] = useState(false);
   const [agecat3, setagecat3] = useState(false);
 
-  const [isownfab, setIsownfab] = useState(true);
+  const [isownfab1, setIsownfab1] = useState(false);
+  const [isownfab2, setIsownfab2] = useState(false);
 
-  const [owndesign, setOwndesign] = useState(true);
+  const [owndesign1, setOwndesign1] = useState(false);
+  const [owndesign2, setOwndesign2] = useState(false);
 
   const [value, setValue] = React.useState(dayjs());
 
@@ -157,6 +160,12 @@ export const Cusdesigns = () => {
   });
 
   console.log(formData);
+  const [contact, setcontact] = React.useState("+91");
+
+  const handleContact = (newValue) => {
+    setcontact(newValue);
+    setformData({ ...formData, contact: newValue });
+  };
 
   return (
     <div
@@ -281,18 +290,20 @@ export const Cusdesigns = () => {
             <span className="optionstitle">Do you have your own fabric?</span>
             <div className="optionsbtndiv">
               <button
-                className={isownfab ? "optionsbtn optionsbtnselected" : "optionsbtn"}
+                className={isownfab1 ? "optionsbtn optionsbtnselected" : "optionsbtn"}
                 onClick={() => {
-                  setIsownfab(true);
+                  setIsownfab1(true);
+                  setIsownfab2(false);
                   setformData({ ...formData, fabric: "own" });
                 }}
               >
                 Yes
               </button>
               <button
-                className={isownfab ? "optionsbtn" : "optionsbtn optionsbtnselected"}
+                className={!isownfab2 ? "optionsbtn" : "optionsbtn optionsbtnselected"}
                 onClick={() => {
-                  setIsownfab(false);
+                  setIsownfab2(true);
+                  setIsownfab1(false);
                   setformData({ ...formData, fabric: "provide some options" });
                 }}
                 style={{ marginLeft: "15px" }}
@@ -305,9 +316,10 @@ export const Cusdesigns = () => {
             <span className="optionstitle">Do you have your own design?</span>
             <div className="optionsbtndiv">
               <button
-                className={owndesign ? "optionsbtn optionsbtnselected" : "optionsbtn"}
+                className={owndesign1 ? "optionsbtn optionsbtnselected" : "optionsbtn"}
                 onClick={() => {
-                  setOwndesign(true);
+                  setOwndesign1(true);
+                  setOwndesign2(false);
                   setfile();
                   setformData({ ...formData, ownDesign: "true" });
                 }}
@@ -315,9 +327,10 @@ export const Cusdesigns = () => {
                 Yes
               </button>
               <button
-                className={owndesign ? "optionsbtn" : "optionsbtn optionsbtnselected"}
+                className={!owndesign2 ? "optionsbtn" : "optionsbtn optionsbtnselected"}
                 onClick={() => {
-                  setOwndesign(false);
+                  setOwndesign2(true);
+                  setOwndesign1(false);
 
                   setImginputloader(false);
                   setformData({ ...formData, ownDesign: "false" });
@@ -330,15 +343,16 @@ export const Cusdesigns = () => {
             <LoadingButton
               // loading={imginputloader}
               style={{ marginTop: "15px" }}
-              className={owndesign ? "optionsbtn optionsbtnselected" : "optionsbtn"}
+              className={owndesign1 ? "optionsbtn optionsbtnselected" : "optionsbtn"}
               onClick={() => {
-                setOwndesign(true);
+                setOwndesign1(true);
+                setOwndesign2(false);
               }}
               variant="outlined"
               component="label"
               color={imageerror ? "error" : "primary"}
             >
-              {owndesign ? (
+              {owndesign1 ? (
                 file ? (
                   <i style={{ color: "black" }} class="fa-solid fa-check"></i>
                 ) : (
@@ -401,7 +415,7 @@ export const Cusdesigns = () => {
               setformData({ ...formData, email: e.target.value });
             }}
           />
-          <TextField
+          {/* <TextField
             error={contacterr}
             className="image-textfield datewidth"
             id="outlined-basic"
@@ -415,6 +429,13 @@ export const Cusdesigns = () => {
               }
               setformData({ ...formData, contact: e.target.value });
             }}
+          /> */}
+          <MuiTelInput
+            label="Contact"
+            style={{ width: "500px", marginTop: "30px" }}
+            value={contact}
+            variant="outlined"
+            onChange={handleContact}
           />
           <TextField
             className="image-textfield datewidth"

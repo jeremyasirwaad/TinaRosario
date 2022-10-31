@@ -20,6 +20,7 @@ import validator from "validator";
 
 import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { MuiTelInput } from "mui-tel-input";
 const ImageCons = () => {
   const navigate = useNavigate();
   const url = "http://54.226.201.17:8080";
@@ -30,7 +31,8 @@ const ImageCons = () => {
   const [dday, setdday] = React.useState(days.format("MM/DD/YYYY"));
   const [appointDate, setappointDate] = React.useState(days.format("MM/DD/YYYY"));
 
-  const [isownfab, setIsownfab] = useState(true);
+  const [isownfab1, setIsownfab1] = useState(false);
+  const [isownfab2, setIsownfab2] = useState(false);
 
   const selectappoint = (newLocale) => {
     setappointDate(newLocale);
@@ -82,6 +84,13 @@ const ImageCons = () => {
       navigate(`/orderfinish/image/${data.data.name}/${data.data.appointDate}`);
       console.log(data);
     }
+  };
+
+  const [contact, setcontact] = React.useState("+91");
+
+  const handleContact = (newValue) => {
+    setcontact(newValue);
+    setformData({ ...formData, contact: newValue });
   };
   return (
     <div className="imagecons">
@@ -153,7 +162,7 @@ const ImageCons = () => {
             variant="outlined"
             style={{ width: "500px", marginTop: "30px" }}
           />
-          <TextField
+          {/* <TextField
             error={contacterr}
             id="outlined-basic"
             label="Contact"
@@ -166,23 +175,32 @@ const ImageCons = () => {
               }
               setformData({ ...formData, contact: e.target.value });
             }}
+          /> */}
+          <MuiTelInput
+            label="Contact"
+            style={{ width: "500px", marginTop: "30px" }}
+            value={contact}
+            variant="outlined"
+            onChange={handleContact}
           />
           <div className="optionsdiv">
             <span className="optionstitle">Consultation preferance ?</span>
             <div className="optionsbtndiv">
               <button
-                className={isownfab ? "optionsbtn optionsbtnselected" : "optionsbtn"}
+                className={isownfab1 ? "optionsbtn optionsbtnselected" : "optionsbtn"}
                 onClick={() => {
-                  setIsownfab(true);
+                  setIsownfab1(true);
+                  setIsownfab2(false);
                   setformData({ ...formData, consPre: "inperson" });
                 }}
               >
                 In Person
               </button>
               <button
-                className={isownfab ? "optionsbtn" : "optionsbtn optionsbtnselected"}
+                className={!isownfab2 ? "optionsbtn" : "optionsbtn optionsbtnselected"}
                 onClick={() => {
-                  setIsownfab(false);
+                  setIsownfab2(true);
+                  setIsownfab1(false);
                   setformData({ ...formData, consPre: "virtually" });
                 }}
                 style={{ marginLeft: "15px" }}
