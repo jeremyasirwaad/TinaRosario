@@ -430,6 +430,7 @@ export const DesignerCollections = () => {
 								img={data.attributes.Img_1}
 								title={data.attributes.Product_name}
 								description={data.attributes.description}
+								id={data.attributes.Product_id}
 							/>
 						);
 					})}
