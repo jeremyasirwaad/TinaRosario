@@ -3,6 +3,8 @@ import "./DesignerCollections.css";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import rectimg from "./Rectimg.svg";
 import { Prodcard } from "./Prodcard";
+import MoonLoader from "react-spinners/ClipLoader";
+import { height } from "@mui/system";
 
 export const DesignerCollections = () => {
 	const [subcatoptions, setSubcatoptions] = useState(false);
@@ -423,18 +425,32 @@ export const DesignerCollections = () => {
 			<div className="prodpage">
 				<span className="prodpaget1">Designer Collections</span>
 				<span className="prodpaget2">Specially made for you</span>
-				<div className="prodcardgrid">
-					{pagedata.map((data) => {
-						return (
-							<Prodcard
-								img={data.attributes.Img_1}
-								title={data.attributes.Product_name}
-								description={data.attributes.description}
-								id={data.attributes.Product_id}
-							/>
-						);
-					})}
-				</div>
+				{loading ? (
+					<div
+						style={{
+							display: "flex",
+							width: "100%",
+							alignItems: "center",
+							justifyContent: "center",
+							height: "30vh"
+						}}
+					>
+						<MoonLoader color="#4C2A76" size={50} />
+					</div>
+				) : (
+					<div className="prodcardgrid">
+						{pagedata.map((data) => {
+							return (
+								<Prodcard
+									img={data.attributes.Img_1}
+									title={data.attributes.Product_name}
+									description={data.attributes.description}
+									id={data.attributes.Product_id}
+								/>
+							);
+						})}
+					</div>
+				)}
 			</div>
 		</div>
 	);

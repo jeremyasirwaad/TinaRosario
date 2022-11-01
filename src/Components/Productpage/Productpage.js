@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import washicon from "./washcareicon.svg";
 import "./Productpage.css";
 import productimg from "./productimg.svg";
+import MoonLoader from "react-spinners/ClipLoader";
 
 export default function Productpage() {
 	const { prodid } = useParams();
@@ -104,7 +105,7 @@ export default function Productpage() {
 					</div>
 				</div>
 			) : (
-				"Loading"
+				<MoonLoader color="#4C2A76" size={50} />
 			)}
 		</div>
 	);
