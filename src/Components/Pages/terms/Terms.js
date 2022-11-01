@@ -2,9 +2,9 @@ import { AccordionDetails, AccordionSummary, Typography } from "@mui/material";
 import React from "react";
 import Accordion from "@mui/material/Accordion";
 import ControlPointIcon from "@mui/icons-material/ControlPoint";
-import "./policies.css";
+import "./terms.css";
 import ana from "./ana.svg";
-export const Policies = () => {
+export const Terms = () => {
   const inneraccordionStyle = {
     // backgroundColor: "rgba(39, 6, 65, 0.7)",
     backgroundColor: "transparent",
@@ -28,7 +28,16 @@ export const Policies = () => {
 
   return (
     <div className="policontainer">
-      <h2 style={{ marginTop: "80px", marginBottom: "40px" }}>OUR POLICIES</h2>
+      <div className="pheader">
+        <h2>TERMS OF SERVICE AGREEMENT</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blanditleo
+          lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit
+          amet blanditleo lobortis egetLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
+          lacus ex, sit
+        </p>
+      </div>
+
       <Accordion sx={{ display: "none" }} className="outeraccordion">
         <AccordionSummary
           expandIcon={<ControlPointIcon />}
@@ -54,7 +63,7 @@ export const Policies = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
-	  <Accordion sx={inneraccordionStyle} className="accordion">
+      <Accordion sx={inneraccordionStyle} className="accordion">
         <AccordionSummary
           sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
           expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}

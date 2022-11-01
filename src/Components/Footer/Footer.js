@@ -10,7 +10,7 @@ export const Footer = () => {
   return (
     <div className="footercontainer">
       <div className="footerinnercontainer">
-        <div className="details">
+        <div className="fdetails">
           <img className="foot-logo" src={logo2} />
           <div className="footer-text">Let the garms you don, adorn the style within you.</div>
         </div>
@@ -46,13 +46,13 @@ export const Footer = () => {
           <h4 onClick={() => navigate("/about")}>About us</h4>
           <h4 onClick={() => navigate("/contact")}>Contact us</h4>
           <h4 onClick={() => navigate("/policies")}>Our Policies</h4>
-          <h4 onClick={() => navigate("/policies")}>Terms of Use</h4>
+          <h4 onClick={() => navigate("/terms")}>Terms of Use</h4>
           <h4 onClick={() => navigate("/policies")}>Feedback</h4>
         </div>
         <div className="column faq">
           <p>FAQ's</p>
           <h4 onClick={() => navigate("/faq_reg", { state: 1 })}>Working Model </h4>
-          <h4 onClick={() => navigate("/faq_reg", { state: 2 })}>Registration & Payment </h4>
+          <h4 onClick={() => navigate("/faq_reg", { state: 2 })}>Pricing & Payment </h4>
           <h4 onClick={() => navigate("/faq_order", { state: 3 })}>Order & Customization</h4>
           <h4 onClick={() => navigate("/faq_deli", { state: 4 })}>Delivery, Return & Refund</h4>
           <h4 onClick={() => navigate("/faq_ship", { state: 5 })}>Shipping & Tracking</h4>

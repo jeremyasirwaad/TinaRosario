@@ -3,8 +3,9 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+// import ControlPointIcon from "@mui/icons-material/ExpandMore";
 import "./Faq.css";
+import ControlPointIcon from "@mui/icons-material/ControlPoint";
 import { useLocation } from "react-router-dom";
 
 const FAQ = () => {
@@ -29,6 +30,8 @@ const FAQ = () => {
       display: "none",
       border: "none",
     },
+    marginLeft: "20px",
+    marginRight: "20px",
   };
   const outeraccordionStyle2 = {
     backgroundColor: outerAcc2 ? "#4C2A76" : "transparent",
@@ -43,6 +46,8 @@ const FAQ = () => {
       display: "none",
       border: "none",
     },
+    marginLeft: "20px",
+    marginRight: "20px",
   };
   const outeraccordionStyle3 = {
     backgroundColor: outerAcc3 ? "#4C2A76" : "transparent",
@@ -57,6 +62,8 @@ const FAQ = () => {
       display: "none",
       border: "none",
     },
+    marginLeft: "20px",
+    marginRight: "20px",
   };
   const outeraccordionStyle4 = {
     backgroundColor: outerAcc4 ? "#4C2A76" : "transparent",
@@ -71,6 +78,8 @@ const FAQ = () => {
       display: "none",
       border: "none",
     },
+    marginLeft: "20px",
+    marginRight: "20px",
   };
   const outeraccordionStyle5 = {
     backgroundColor: outerAcc5 ? "#4C2A76" : "transparent",
@@ -85,18 +94,25 @@ const FAQ = () => {
       display: "none",
       border: "none",
     },
+    marginLeft: "20px",
+    marginRight: "20px",
   };
   const inneraccordionStyle = {
     backgroundColor: "rgba(39, 6, 65, 0.7)",
     borderRadius: "20px",
     color: "#FFB8BC",
     marginTop: "10px",
+    "&:before": {
+      display: "none",
+      border: "none",
+    },
   };
 
   const accordionDetail = {
     backgroundColor: "white",
     color: "black",
     borderRadius: "20px",
+    margin: "0px 20px 20px 20px",
   };
   const [expand1, setExpand1] = React.useState(false);
   const [expand2, setExpand2] = React.useState(false);
@@ -154,7 +170,7 @@ const FAQ = () => {
       <div className="faq-inner">
         <Accordion sx={{ display: "none" }} className="outeraccordion">
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
+            expandIcon={<ControlPointIcon />}
             aria-controls="panel1a-content"
             id="panel1a-header"
           ></AccordionSummary>
@@ -163,7 +179,7 @@ const FAQ = () => {
         <Accordion expanded={expand1} sx={outeraccordionStyle1} className="outeraccordion">
           <AccordionSummary
             onClick={toggleAcordion1}
-            expandIcon={<ExpandMoreIcon sx={{ color: outerAcc1 ? "#FFB8BC" : "#4C2A76" }} />}
+            expandIcon={<ControlPointIcon sx={{ color: outerAcc1 ? "#FFB8BC" : "#4C2A76" }} />}
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
@@ -172,7 +188,7 @@ const FAQ = () => {
           <AccordionDetails>
             <Accordion sx={{ display: "none" }} className="outeraccordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: "#FFB8BC" }} />}
+                expandIcon={<ControlPointIcon sx={{ color: "#FFB8BC" }} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               ></AccordionSummary>
@@ -180,7 +196,7 @@ const FAQ = () => {
             </Accordion>
             <Accordion sx={inneraccordionStyle} className="accordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: "#FFB8BC" }} />}
+                expandIcon={<ControlPointIcon sx={{ color: "#FFB8BC" }} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
@@ -195,7 +211,7 @@ const FAQ = () => {
             </Accordion>
             <Accordion sx={inneraccordionStyle} className="accordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: "#FFB8BC" }} />}
+                expandIcon={<ControlPointIcon sx={{ color: "#FFB8BC" }} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
@@ -210,7 +226,7 @@ const FAQ = () => {
             </Accordion>
             <Accordion sx={inneraccordionStyle} className="accordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: "#FFB8BC" }} />}
+                expandIcon={<ControlPointIcon sx={{ color: "#FFB8BC" }} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
@@ -225,7 +241,7 @@ const FAQ = () => {
             </Accordion>
             <Accordion sx={{ display: "none" }} className="outeraccordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
+                expandIcon={<ControlPointIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               ></AccordionSummary>
@@ -238,7 +254,7 @@ const FAQ = () => {
         <Accordion expanded={expand2} sx={outeraccordionStyle2} className="outeraccordion">
           <AccordionSummary
             onClick={toggleAcordion2}
-            expandIcon={<ExpandMoreIcon sx={{ color: outerAcc2 ? "#FFB8BC" : "#4C2A76" }} />}
+            expandIcon={<ControlPointIcon sx={{ color: outerAcc2 ? "#FFB8BC" : "#4C2A76" }} />}
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
@@ -247,7 +263,7 @@ const FAQ = () => {
           <AccordionDetails>
             <Accordion sx={{ display: "none" }} className="outeraccordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: "#FFB8BC" }} />}
+                expandIcon={<ControlPointIcon sx={{ color: "#FFB8BC" }} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               ></AccordionSummary>
@@ -255,7 +271,7 @@ const FAQ = () => {
             </Accordion>
             <Accordion sx={inneraccordionStyle} className="accordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: "#FFB8BC" }} />}
+                expandIcon={<ControlPointIcon sx={{ color: "#FFB8BC" }} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
@@ -270,7 +286,7 @@ const FAQ = () => {
             </Accordion>
             <Accordion sx={inneraccordionStyle} className="accordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: "#FFB8BC" }} />}
+                expandIcon={<ControlPointIcon sx={{ color: "#FFB8BC" }} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
@@ -285,7 +301,7 @@ const FAQ = () => {
             </Accordion>
             <Accordion sx={inneraccordionStyle} className="accordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: "#FFB8BC" }} />}
+                expandIcon={<ControlPointIcon sx={{ color: "#FFB8BC" }} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
@@ -300,7 +316,7 @@ const FAQ = () => {
             </Accordion>
             <Accordion sx={{ display: "none" }} className="outeraccordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
+                expandIcon={<ControlPointIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               ></AccordionSummary>
@@ -312,7 +328,7 @@ const FAQ = () => {
         <Accordion expanded={expand3} sx={outeraccordionStyle3} className="outeraccordion">
           <AccordionSummary
             onClick={toggleAcordion3}
-            expandIcon={<ExpandMoreIcon sx={{ color: outerAcc3 ? "#FFB8BC" : "#4C2A76" }} />}
+            expandIcon={<ControlPointIcon sx={{ color: outerAcc3 ? "#FFB8BC" : "#4C2A76" }} />}
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
@@ -321,7 +337,7 @@ const FAQ = () => {
           <AccordionDetails>
             <Accordion sx={{ display: "none" }} className="outeraccordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: "#FFB8BC" }} />}
+                expandIcon={<ControlPointIcon sx={{ color: "#FFB8BC" }} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               ></AccordionSummary>
@@ -329,7 +345,7 @@ const FAQ = () => {
             </Accordion>
             <Accordion sx={inneraccordionStyle} className="accordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: "#FFB8BC" }} />}
+                expandIcon={<ControlPointIcon sx={{ color: "#FFB8BC" }} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
@@ -344,7 +360,7 @@ const FAQ = () => {
             </Accordion>
             <Accordion sx={inneraccordionStyle} className="accordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: "#FFB8BC" }} />}
+                expandIcon={<ControlPointIcon sx={{ color: "#FFB8BC" }} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
@@ -359,7 +375,7 @@ const FAQ = () => {
             </Accordion>
             <Accordion sx={inneraccordionStyle} className="accordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: "#FFB8BC" }} />}
+                expandIcon={<ControlPointIcon sx={{ color: "#FFB8BC" }} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
@@ -374,7 +390,7 @@ const FAQ = () => {
             </Accordion>
             <Accordion sx={{ display: "none" }} className="outeraccordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
+                expandIcon={<ControlPointIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               ></AccordionSummary>
@@ -385,7 +401,7 @@ const FAQ = () => {
         <Accordion expanded={expand4} sx={outeraccordionStyle4} className="outeraccordion">
           <AccordionSummary
             onClick={toggleAcordion4}
-            expandIcon={<ExpandMoreIcon sx={{ color: outerAcc4 ? "#FFB8BC" : "#4C2A76" }} />}
+            expandIcon={<ControlPointIcon sx={{ color: outerAcc4 ? "#FFB8BC" : "#4C2A76" }} />}
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
@@ -394,7 +410,7 @@ const FAQ = () => {
           <AccordionDetails>
             <Accordion sx={{ display: "none" }} className="outeraccordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: "#FFB8BC" }} />}
+                expandIcon={<ControlPointIcon sx={{ color: "#FFB8BC" }} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               ></AccordionSummary>
@@ -402,7 +418,7 @@ const FAQ = () => {
             </Accordion>
             <Accordion sx={inneraccordionStyle} className="accordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: "#FFB8BC" }} />}
+                expandIcon={<ControlPointIcon sx={{ color: "#FFB8BC" }} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
@@ -417,7 +433,7 @@ const FAQ = () => {
             </Accordion>
             <Accordion sx={inneraccordionStyle} className="accordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: "#FFB8BC" }} />}
+                expandIcon={<ControlPointIcon sx={{ color: "#FFB8BC" }} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
@@ -432,7 +448,7 @@ const FAQ = () => {
             </Accordion>
             <Accordion sx={inneraccordionStyle} className="accordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: "#FFB8BC" }} />}
+                expandIcon={<ControlPointIcon sx={{ color: "#FFB8BC" }} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
@@ -447,7 +463,7 @@ const FAQ = () => {
             </Accordion>
             <Accordion sx={{ display: "none" }} className="outeraccordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
+                expandIcon={<ControlPointIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               ></AccordionSummary>
@@ -458,7 +474,7 @@ const FAQ = () => {
         <Accordion expanded={expand5} sx={outeraccordionStyle5} className="outeraccordion">
           <AccordionSummary
             onClick={toggleAcordion5}
-            expandIcon={<ExpandMoreIcon sx={{ color: outerAcc5 ? "#FFB8BC" : "#4C2A76" }} />}
+            expandIcon={<ControlPointIcon sx={{ color: outerAcc5 ? "#FFB8BC" : "#4C2A76" }} />}
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
@@ -467,7 +483,7 @@ const FAQ = () => {
           <AccordionDetails>
             <Accordion sx={{ display: "none" }} className="outeraccordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: "#FFB8BC" }} />}
+                expandIcon={<ControlPointIcon sx={{ color: "#FFB8BC" }} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               ></AccordionSummary>
@@ -475,7 +491,7 @@ const FAQ = () => {
             </Accordion>
             <Accordion sx={inneraccordionStyle} className="accordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: "#FFB8BC" }} />}
+                expandIcon={<ControlPointIcon sx={{ color: "#FFB8BC" }} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
@@ -490,7 +506,7 @@ const FAQ = () => {
             </Accordion>
             <Accordion sx={inneraccordionStyle} className="accordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: "#FFB8BC" }} />}
+                expandIcon={<ControlPointIcon sx={{ color: "#FFB8BC" }} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
@@ -505,7 +521,7 @@ const FAQ = () => {
             </Accordion>
             <Accordion sx={inneraccordionStyle} className="accordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: "#FFB8BC" }} />}
+                expandIcon={<ControlPointIcon sx={{ color: "#FFB8BC" }} />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
@@ -520,7 +536,7 @@ const FAQ = () => {
             </Accordion>
             <Accordion sx={{ display: "none" }} className="outeraccordion">
               <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
+                expandIcon={<ControlPointIcon />}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               ></AccordionSummary>
@@ -532,7 +548,7 @@ const FAQ = () => {
 
         {/* //END OF ACCORDION */}
         <Accordion sx={{ display: "none" }} className="outeraccordion">
-          <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+          <AccordionSummary expandIcon={<ControlPointIcon />} aria-controls="panel1a-content" id="panel1a-header">
             <Typography>Registration & Payment</Typography>
           </AccordionSummary>
           <AccordionDetails></AccordionDetails>

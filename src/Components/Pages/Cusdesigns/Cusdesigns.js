@@ -18,7 +18,7 @@ import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
 import FormHelperText from "@mui/material/FormHelperText";
 
-import steps from "./3.png";
+import steps from "./steps.svg";
 import smilebar from "./4.png";
 import AOS from "aos";
 import img1 from "./img1.svg";

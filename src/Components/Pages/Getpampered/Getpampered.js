@@ -85,7 +85,7 @@ export const Getpampered = () => {
       ...formData,
     });
     if (data) {
-      navigate(`/orderfinish/getpam/${data.data.name}/${data.data.appointDate}`);
+      navigate(`/orderfinish/getpam/${formData.name}/22/11/aa`);
 
       console.log(data);
     }
