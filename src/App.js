@@ -25,6 +25,7 @@ import OrderFinish from "./Components/orderdone/OrderFinish";
 import { Cusdesigns } from "./Components/Pages/Cusdesigns/Cusdesigns";
 import { Getpampered } from "./Components/Pages/Getpampered/Getpampered";
 import { Policies } from "./Components/Policies/Policies";
+import Productpage from "./Components/Productpage/Productpage";
 import { DesignerCollections } from "./Components/DesignerCollections/DesignerCollections";
 
 const faqs = [
@@ -110,6 +111,7 @@ function App() {
 						path="/orderfinish/:type/:name/:d/:m/:y"
 						element={<OrderFinish />}
 					></Route>
+					<Route path="/product/:prodid" element={<Productpage />}></Route>
 				</Routes>
 				<Footer></Footer>
 			</BrowserRouter>

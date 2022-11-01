@@ -1,13 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./DesignerCollections.css";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import rectimg from "./Rectimg.svg";
+import { Prodcard } from "./Prodcard";
+import MoonLoader from "react-spinners/ClipLoader";
+import { height } from "@mui/system";
 
 export const DesignerCollections = () => {
 	const [subcatoptions, setSubcatoptions] = useState(false);
 	const [subpriceoptions, setSubpriceoptions] = useState(true);
 	const [subfabric, setSubfabric] = useState(true);
 	const [subcolor, setSubcolor] = useState(true);
+	const [pagedata, setPagedata] = useState([]);
+	const [loading, setLoading] = useState(true);
+
+	const getdata = async () => {
+		const data = await fetch("http://products.tinarosario.com/api/Products")
+			.then((res) => res.json())
+			.then((result) => {
+				const temp = result.data;
+				const data = temp.filter(
+					(e) => e.attributes.Main_Category == "Designer Wear"
+				);
+				setPagedata(data);
+				setLoading(false);
+			});
+	};
+	console.log(pagedata);
+
+	useEffect(() => {
+		getdata();
+	}, []);
 
 	return (
 		<div className="designercollections">
@@ -402,71 +425,32 @@ export const DesignerCollections = () => {
 			<div className="prodpage">
 				<span className="prodpaget1">Designer Collections</span>
 				<span className="prodpaget2">Specially made for you</span>
-				<div className="prodcardgrid">
-					<div className="prodcard">
-						<img src={rectimg} alt="" />
-						<div className="prodcarddetails">
-							<span className="prodcardtitle">Dress Name</span>
-							<span className="prodcarddiscription">
-								Lorem ipsum dorium lateral
-							</span>
-						</div>
+				{loading ? (
+					<div
+						style={{
+							display: "flex",
+							width: "100%",
+							alignItems: "center",
+							justifyContent: "center",
+							height: "30vh"
+						}}
+					>
+						<MoonLoader color="#4C2A76" size={50} />
 					</div>
-					<div className="prodcard">
-						<img src={rectimg} alt="" />
-						<div className="prodcarddetails">
-							<span className="prodcardtitle">Dress Name</span>
-							<span className="prodcarddiscription">
-								Lorem ipsum dorium lateral
-							</span>
-						</div>
+				) : (
+					<div className="prodcardgrid">
+						{pagedata.map((data) => {
+							return (
+								<Prodcard
+									img={data.attributes.Img_1}
+									title={data.attributes.Product_name}
+									description={data.attributes.description}
+									id={data.attributes.Product_id}
+								/>
+							);
+						})}
 					</div>
-					<div className="prodcard">
-						<img src={rectimg} alt="" />
-						<div className="prodcarddetails">
-							<span className="prodcardtitle">Dress Name</span>
-							<span className="prodcarddiscription">
-								Lorem ipsum dorium lateral
-							</span>
-						</div>
-					</div>
-					<div className="prodcard">
-						<img src={rectimg} alt="" />
-						<div className="prodcarddetails">
-							<span className="prodcardtitle">Dress Name</span>
-							<span className="prodcarddiscription">
-								Lorem ipsum dorium lateral
-							</span>
-						</div>
-					</div>
-					<div className="prodcard">
-						<img src={rectimg} alt="" />
-						<div className="prodcarddetails">
-							<span className="prodcardtitle">Dress Name</span>
-							<span className="prodcarddiscription">
-								Lorem ipsum dorium lateral
-							</span>
-						</div>
-					</div>
-					<div className="prodcard">
-						<img src={rectimg} alt="" />
-						<div className="prodcarddetails">
-							<span className="prodcardtitle">Dress Name</span>
-							<span className="prodcarddiscription">
-								Lorem ipsum dorium lateral
-							</span>
-						</div>
-					</div>
-					<div className="prodcard">
-						<img src={rectimg} alt="" />
-						<div className="prodcarddetails">
-							<span className="prodcardtitle">Dress Name</span>
-							<span className="prodcarddiscription">
-								Lorem ipsum dorium lateral
-							</span>
-						</div>
-					</div>
-				</div>
+				)}
 			</div>
 		</div>
 	);
