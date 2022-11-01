@@ -8,6 +8,9 @@ export default function Productpage() {
 	const { prodid } = useParams();
 	const [pagedata, setPagedata] = useState([]);
 	const [loading, setLoading] = useState(true);
+	const [showimg1, setShowimg1] = useState(true);
+	const [showimg2, setShowimg2] = useState(false);
+	const [showimg3, setShowimg3] = useState(false);
 
 	const getdata = async () => {
 		const data = await fetch("http://products.tinarosario.com/api/Products")
@@ -32,17 +35,51 @@ export default function Productpage() {
 				<div className="productspages">
 					<div className="prodpagegalsection">
 						<div className="imgselection">
-							<img src={pagedata.attributes.Img_1} alt="" />
-							<img src={pagedata.attributes.Img_2} alt="" />
-							<img src={pagedata.attributes.Img_3} alt="" />
+							<img
+								src={pagedata.attributes.Img_1}
+								alt=""
+								onClick={() => {
+									setShowimg2(false);
+									setShowimg3(false);
+									setShowimg1(true);
+								}}
+							/>
+							<img
+								src={pagedata.attributes.Img_2}
+								alt=""
+								onClick={() => {
+									setShowimg2(true);
+									setShowimg3(false);
+									setShowimg1(false);
+								}}
+							/>
+							<img
+								src={pagedata.attributes.Img_3}
+								alt=""
+								onClick={() => {
+									setShowimg2(false);
+									setShowimg3(true);
+									setShowimg1(false);
+								}}
+							/>
 						</div>
-						<img className="mainimg" src={pagedata.attributes.Img_1} alt="" />
+						{showimg1 && (
+							<img className="mainimg" src={pagedata.attributes.Img_1} alt="" />
+						)}
+
+						{showimg2 && (
+							<img className="mainimg" src={pagedata.attributes.Img_2} alt="" />
+						)}
+
+						{showimg3 && (
+							<img className="mainimg" src={pagedata.attributes.Img_3} alt="" />
+						)}
 					</div>
 					<div className="prodpagedatasection">
 						<span className="productname">
 							{pagedata.attributes.Product_name}
 						</span>
-						<span className="productprice">{pagedata.attributes.price}</span>
+						<span className="productprice">{pagedata.attributes.price}rs</span>
 						<span className="productdescriptiontitle">Product Description</span>
 						<span className="productdescription">
 							{pagedata.attributes.description}
