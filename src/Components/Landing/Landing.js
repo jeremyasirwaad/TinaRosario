@@ -259,7 +259,7 @@ export const Landing = () => {
         <div className="servcaro">
           <div className="servcarocont">
             <img src={img1} alt="" />
-            <span>WeddingDesigner</span>
+            <span>Designer</span>
             <span>Collections</span>
           </div>
           <div className="servcarocont">

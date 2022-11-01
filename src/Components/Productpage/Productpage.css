@@ -1,0 +1,18 @@
+.productspages{
+    display: flex;
+    margin-top: 30px;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.prodpagegalsection{
+    width: 50%;
+}
+
+.prodpagedatasection
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+}
