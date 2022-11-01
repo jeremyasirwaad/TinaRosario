@@ -49,6 +49,7 @@ const ImageCons = () => {
     appointDate: appointDate,
     contact: "",
     consPre: "inperson",
+    ownDesign: "false",
   });
 
   const [ConsultingInPerson, setConsultingInPerson] = useState(true);

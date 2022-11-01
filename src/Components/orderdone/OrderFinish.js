@@ -12,7 +12,7 @@ const OrderFinish = () => {
             <img src={tick} />
           </div>
           <div className="details">
-            Hello {name} , <br /> Welcome to the “The Design House” family <br />
+            Hello {name} , <br /> Welcome to “The Design House” family <br />
             by Tina Rosario. <br /> Appreciate your confidence in us <br /> - <br />
             Your appointment has been confirmed. <br /> Looking forward to discuss further to make your day <br />{" "}
             “look” special <br /> <br />
@@ -27,7 +27,7 @@ const OrderFinish = () => {
             <img src={tick} />
           </div>
           <div className="details">
-            Hello {name} , <br /> Welcome to the “The Design House” family <br /> by Tina Rosario. <br /> Appreciate
+            Hello {name} , <br /> Welcome to  “The Design House” family <br /> by Tina Rosario. <br /> Appreciate
             your confidence in us <br /> <br />
             Looking forward to customise your comfort attire. <br /> <br />
             Our Designer will contact you to discuss fabric, design, and measurement details.
@@ -43,7 +43,7 @@ const OrderFinish = () => {
             Hello {name} , <br /> Welcome to “The Design House” family
             <br />
             by Tina Rosario. <br /> Appreciate your confidence in us <br /> <br />
-            Your Consultation has been confirmed. Our Designer <br /> Will send you an email with details <br /> <br />
+            Your Consultation has been confirmed. Our Designer <br /> will send you an email with details <br /> <br />
             Looking forward to understand you and create a garm of your choice.
           </div>
         </div>

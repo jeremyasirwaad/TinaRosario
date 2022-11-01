@@ -1,0 +1,35 @@
+.policontainer{
+    display: flex;
+    background-image: url("./bg.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width:100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#270641;
+    
+}
+.pheader{
+    margin-top:60px;
+    /* height: 200px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    flex-direction: column;
+    /* border:1px solid black; */
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.71);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.pheader>p{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}

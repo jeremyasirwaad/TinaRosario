@@ -4,32 +4,36 @@
 
 
 .footercontainer{
-    height: 200px;
+    height: 220px;
     background-color: #270641;
     overflow: hidden;
     width: 100%;
+
     
 }
 
 
 .footerinnercontainer{
     height: 100%;
+    width:100%;
     margin-top: 10px;
+    margin-bottom: 20px;
     display: flex;
     padding: 10px;
     color: white;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: flex-start;
 }
 
 .foot-logo{
     width:200px;
     height: 150px;
 }
-.details{
+.fdetails{
     margin-top: -30px;
 }
 
-.details > h3{
+.fdetails > h3{
     font-size: 2em;
     letter-spacing:6px;
     
