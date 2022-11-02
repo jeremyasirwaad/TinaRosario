@@ -303,20 +303,35 @@ export const Landing = () => {
 						<span>Designer</span>
 						<span>Collections</span>
 					</div>
-					<div className="servcarocont">
+					<div
+						className="servcarocont"
+						onClick={() => {
+							navigate("/Handloom");
+						}}
+					>
 						<img src={img5} alt="" />
 						<span>Handloom</span>
 						<span>Sarees</span>
 					</div>
-					<div className="servcarocont">
+					<div
+						className="servcarocont"
+						onClick={() => {
+							navigate("/Casualwear");
+						}}
+					>
 						<img src={img3} alt="" />
 						<span>Casual</span>
 						<span>Wear</span>
 					</div>
-					<div className="servcarocont">
+					<div
+						className="servcarocont"
+						onClick={() => {
+							navigate("/Kidswear");
+						}}
+					>
 						<img src={img2} alt="" />
-						<span>Exclusive</span>
-						<span>Accessories</span>
+						<span>Kid's</span>
+						<span>Wear</span>
 					</div>
 				</div>
 

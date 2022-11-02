@@ -26,6 +26,9 @@ import { Cusdesigns } from "./Components/Pages/Cusdesigns/Cusdesigns";
 import { Getpampered } from "./Components/Pages/Getpampered/Getpampered";
 import { Policies } from "./Components/Policies/Policies";
 import Productpage from "./Components/Productpage/Productpage";
+import { Handloom } from "./Components/Handloom/Handloom";
+import { Causalwear } from "./Components/Casual Wear/Casualwear";
+import { Kidswear } from "./Components/KidsWear/Kidswear";
 import { DesignerCollections } from "./Components/DesignerCollections/DesignerCollections";
 
 const faqs = [
@@ -75,7 +78,9 @@ function App() {
 						path="/DesignerCollections"
 						element={<DesignerCollections />}
 					></Route>
-
+					<Route path="/Handloom" element={<Handloom />}></Route>
+					<Route path="/Casual" element={<Causalwear />}></Route>
+					<Route path="/Kidswear" element={<Kidswear />}></Route>
 					<Route path="/Contact" element={<Contactus></Contactus>}>
 						{" "}
 					</Route>
