@@ -4,14 +4,48 @@ import washicon from "./washcareicon.svg";
 import "./Productpage.css";
 import productimg from "./productimg.svg";
 import MoonLoader from "react-spinners/ClipLoader";
+import delivery from "./delivery.svg";
+import fabricsicon from "./fabricsimg.svg";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default function Productpage() {
 	const { prodid } = useParams();
+	const navigate = useNavigate();
 	const [pagedata, setPagedata] = useState([]);
 	const [loading, setLoading] = useState(true);
+	const [loading2, setLoading2] = useState(true);
 	const [showimg1, setShowimg1] = useState(true);
 	const [showimg2, setShowimg2] = useState(false);
 	const [showimg3, setShowimg3] = useState(false);
+
+	const [state, setState] = useState({
+		ip: "",
+		countryName: "",
+		countryCode: "",
+		city: "",
+		timezone: ""
+	});
+
+	const getGeoInfo = () => {
+		axios
+			.get("https://ipapi.co/json/")
+			.then((response) => {
+				let data = response.data;
+				setState({
+					...state,
+					ip: data.ip,
+					countryName: data.country_name,
+					countryCode: data.country_calling_code,
+					city: data.city,
+					timezone: data.timezone
+				});
+				setLoading2(false);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	};
 
 	const getdata = async () => {
 		const data = await fetch("http://products.tinarosario.com/api/Products")
@@ -27,12 +61,13 @@ export default function Productpage() {
 	console.log(pagedata);
 
 	useEffect(() => {
+		getGeoInfo();
 		getdata();
 	}, []);
 
 	return (
 		<div className="productspages">
-			{loading == false ? (
+			{loading == false && loading2 == false ? (
 				<div className="productspages">
 					<div className="prodpagegalsection">
 						<div className="imgselection">
@@ -64,43 +99,130 @@ export default function Productpage() {
 								}}
 							/>
 						</div>
-						{showimg1 && (
-							<img className="mainimg" src={pagedata.attributes.Img_1} alt="" />
-						)}
+						<div style={{ display: "flex", flexDirection: "column" }}>
+							{showimg1 && (
+								<img
+									className="mainimg"
+									src={pagedata.attributes.Img_1}
+									alt=""
+								/>
+							)}
 
-						{showimg2 && (
-							<img className="mainimg" src={pagedata.attributes.Img_2} alt="" />
-						)}
+							{showimg2 && (
+								<img
+									className="mainimg"
+									src={pagedata.attributes.Img_2}
+									alt=""
+								/>
+							)}
 
-						{showimg3 && (
-							<img className="mainimg" src={pagedata.attributes.Img_3} alt="" />
-						)}
+							{showimg3 && (
+								<img
+									className="mainimg"
+									src={pagedata.attributes.Img_3}
+									alt=""
+								/>
+							)}
+							<span style={{ marginTop: "10px" }}>*Image color may vary</span>
+						</div>
 					</div>
 					<div className="prodpagedatasection">
 						<span className="productname">
 							{pagedata.attributes.Product_name}
 						</span>
-						<span className="productprice">{pagedata.attributes.price}rs</span>
+						{state.countryName == "India" ? (
+							<span className="productprice">
+								INR {pagedata.attributes.price}
+							</span>
+						) : (
+							<span>USD {pagedata.attributes.priceinUSD}</span>
+						)}
+
 						<span className="productdescriptiontitle">Product Description</span>
 						<span className="productdescription">
 							{pagedata.attributes.description}
 						</span>
-						<div>
-							<div className="washcarediv">
-								<img className="washcareimg" src={washicon} alt="" />
+						<div
+							style={{
+								display: "flex",
+								width: "350px",
+								justifyContent: "space-between"
+							}}
+						>
+							<div className="washcarediv" style={{ width: "150px" }}>
+								<img
+									className="washcareimg"
+									src={fabricsicon}
+									alt=""
+									style={{ marginRight: "10px" }}
+								/>
+								<span className="washcare">{pagedata.attributes.Fabric}</span>
+							</div>
+						</div>
+						<div
+							style={{
+								display: "flex",
+								width: "350px",
+								justifyContent: "space-between"
+							}}
+						>
+							<div className="washcarediv" style={{ width: "105px" }}>
+								<img
+									className="washcareimg"
+									src={washicon}
+									alt=""
+									style={{ marginRight: "10px", width: "18px", height: "auto" }}
+								/>
 								<span className="washcare">
 									{pagedata.attributes.Wash_Care}
 								</span>
 							</div>
 						</div>
+						<div
+							style={{
+								display: "flex",
+								width: "350px",
+								justifyContent: "space-between"
+							}}
+						>
+							<div
+								className="washcarediv"
+								style={{ width: "150px", marginTop: "25px" }}
+							>
+								<img
+									className="washcareimg"
+									src={delivery}
+									alt=""
+									style={{ width: "25px", height: "auto" }}
+								/>
+								<span className="washcare">1 Week Delivery</span>
+							</div>
+							{/* <div className="washcarediv" style={{ width: "150px" }}>
+								<img
+									className="washcareimg"
+									src={fabricsicon}
+									alt=""
+									style={{ marginRight: "10px" }}
+								/>
+								<span className="washcare">{pagedata.attributes.Fabric}</span>
+							</div> */}
+						</div>
+
 						<span className="sku">SKU: {pagedata.attributes.Product_id}</span>
 						<span className="producttabs">
 							{pagedata.attributes.Main_Category} |{" "}
 							{pagedata.attributes.Sub_Category} | {pagedata.attributes.Color}
 						</span>
-						<button className="Interestedbutton">Interested ?</button>
+						<button
+							className="Interestedbutton"
+							onClick={() => {
+								navigate("/Productmsg/" + pagedata.attributes.Product_name);
+							}}
+						>
+							Customized ?
+						</button>
 						<span className="internationaldelivery">
-							* - International Delivery timeline may vary
+							* Customized orders & International Delivery timeline may vary
 						</span>
 					</div>
 				</div>

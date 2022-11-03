@@ -38,6 +38,7 @@
     width: 50%;
     display: flex;
     flex-direction: column;
+    /* margin-bottom: 60px; */
 
 }
 
@@ -46,6 +47,7 @@
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
     font-size: 35px;
+    /* margin-bottom: 30px; */
 }
 
 
@@ -57,24 +59,25 @@
 
 .productdescriptiontitle{
     font-weight: 600;
-    margin-top: 40px;
+    margin-top: 25px;
     font-size: 20px;
 }
 
 .productdescription{
-    margin-top: 25px;
+    /* margin-top: 25px; */
     width: 80% ;
 }
 
 .washcarediv{
     margin-top: 25px;
-    width: 110px;
+    width: 100px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .sku{
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .producttabs{

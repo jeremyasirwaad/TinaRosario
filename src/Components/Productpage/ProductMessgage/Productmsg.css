@@ -1,0 +1,128 @@
+.productmsgpage{
+    height: 100vh - 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../About/bg.svg');
+   
+}
+
+.productmsgcont{
+    height: 500px;
+    width: 500px;
+    background-color: #4C2A76;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.prodmsgt1{
+    margin-top: 30px;
+    color: #FFB8BC;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.prodmsgt2{
+    /* margin-top: 0px; */
+    color: #FFB8BC;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.prodmsgt3{
+    margin-top: 30px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #FFB8BC;
+
+}
+
+.input1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.input1 span{
+    color: #FFB8BC;
+    margin-top: 20px;
+}
+
+.input1 input{
+    background-color: #8157b6;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 290px;
+    height: 40px;
+    color: #FFB8BC;
+}
+
+
+.input2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input2inner1{
+    width: 40px;
+    margin-right: 15px;
+    background-color: #8157b6;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    height: 40px;
+    color: #FFB8BC;
+}
+
+.input2inner2{
+    width: 235px;
+    background-color: #8157b6;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    height: 40px;
+    color: #FFB8BC;
+
+}
+
+.input2{
+    margin-top: 15px;
+}
+
+.input2 span{
+    color: #FFB8BC;
+  
+}
+
+.prodmsgsumbitbtn{
+background: #FFB8BC;
+box-shadow: 0px 6px 14px -2px rgba(76, 42, 118, 0.65);
+border-radius: 7px;
+font-family: 'Poppins';
+font-style: normal;
+/* font-weight: 500; */
+font-size: 20px;
+line-height: 30px;
+text-align: center;
+color: #270641;
+width: 150px;
+height: 40px;
+border: none;
+outline: none;
+margin-top: 30px;
+}
+
+.prodmsgtext3{
+    margin-top: 10px;
+    color: #FFB8BC;
+}

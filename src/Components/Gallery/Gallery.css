@@ -1,0 +1,36 @@
+.gallerypage{
+    /* height: calc(100vh - 150px); */
+    width: 100%;
+    background-image: url("../About/bg.svg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+
+}
+
+.gallerytitle{
+    font-weight: 600;
+    font-size: 40px;
+    margin-top: 45px;
+}
+
+.gal1{
+    margin-top: 40px;
+}
+
+.gal1 img{
+    height: auto;
+    width: 370px;
+    cursor:pointer;
+}
+
+.gal2 img{
+    height: auto;
+    cursor: pointer;
+    width: 370px;
+}
+
+.gal2{
+    margin-bottom: 80px;
+}

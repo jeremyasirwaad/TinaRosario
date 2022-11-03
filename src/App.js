@@ -29,6 +29,13 @@ import Productpage from "./Components/Productpage/Productpage";
 import { Handloom } from "./Components/Handloom/Handloom";
 import { Causalwear } from "./Components/Casual Wear/Casualwear";
 import { Kidswear } from "./Components/KidsWear/Kidswear";
+import { Productmsg } from "./Components/Productpage/ProductMessgage/Productmsg";
+import { Gallery } from "./Components/Gallery/Gallery";
+import Jingles from "./Components/Gallery/Jingles/Jingles";
+import HappyClients from "./Components/Gallery/HappyClients/HappyClients";
+import { StartStud } from "./Components/Gallery/StarStud/StartStud";
+import { Talkies } from "./Components/Gallery/Talkies/Talkies";
+
 import { DesignerCollections } from "./Components/DesignerCollections/DesignerCollections";
 
 const faqs = [
@@ -67,6 +74,7 @@ function App() {
 				<Navbar />
 				<Routes>
 					<Route path="/" element={<Landing />}></Route>
+					<Route path="/gallery" element={<Gallery />}></Route>
 					<Route path="/about" element={<About />}></Route>
 					<Route path="/wedding" element={<Wedding />}></Route>
 					<Route path="/fabrics" element={<Fabrics />}></Route>
@@ -74,6 +82,7 @@ function App() {
 					<Route path="/imagecons" element={<ImageCons />}></Route>
 					<Route path="/getpampered" element={<Getpampered />}></Route>
 					<Route path="/policies" element={<Policies />}></Route>
+					<Route path="/Productmsg/:type" element={<Productmsg />}></Route>
 					<Route
 						path="/DesignerCollections"
 						element={<DesignerCollections />}
@@ -117,6 +126,10 @@ function App() {
 						element={<OrderFinish />}
 					></Route>
 					<Route path="/product/:prodid" element={<Productpage />}></Route>
+					<Route
+						path="*"
+						element={<div>{/* <h2>404 Page not found</h2> */}</div>}
+					/>
 				</Routes>
 				<Footer></Footer>
 			</BrowserRouter>

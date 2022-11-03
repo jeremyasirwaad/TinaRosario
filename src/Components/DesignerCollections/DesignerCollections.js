@@ -444,7 +444,7 @@ export const DesignerCollections = () => {
 								<Prodcard
 									img={data.attributes.Img_1}
 									title={data.attributes.Product_name}
-									description={data.attributes.description}
+									description={data.attributes.Subtitle}
 									id={data.attributes.Product_id}
 								/>
 							);
