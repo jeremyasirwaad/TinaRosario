@@ -2,6 +2,9 @@ import React from "react";
 import img1 from "./l1-min.jpg";
 import img4 from "./l4-min.jpg";
 import img5 from "./l5-min.jpg";
+import landingtext from "./landingtext.svg";
+import text2 from "./text2.svg";
+import text3 from "./text3.svg";
 import caro from "./caro.svg";
 import "./newlanding.css";
 import { Carousel } from "react-responsive-carousel";
@@ -58,13 +61,17 @@ export const Caro = () => {
 			showIndicators={false}
 		>
 			<div style={{ padding: "15px", borderRadius: "30px" }}>
-				<img style={{ borderRadius: "30px" }} src={img5} height={"650px"} />
+				<img
+					style={{ borderRadius: "30px" }}
+					src={landingtext}
+					height={"650px"}
+				/>
 			</div>
 			<div style={{ padding: "15px" }}>
-				<img style={{ borderRadius: "30px" }} src={img4} height={"650px"} />
+				<img style={{ borderRadius: "30px" }} src={text2} height={"650px"} />
 			</div>
 			<div style={{ padding: "15px" }}>
-				<img style={{ borderRadius: "30px" }} src={img1} height={"650px"} />
+				<img style={{ borderRadius: "30px" }} src={text3} height={"650px"} />
 			</div>
 		</Carousel>
 	);
