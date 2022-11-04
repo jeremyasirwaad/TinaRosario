@@ -31,6 +31,7 @@ import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import FormData from "form-data";
 import { MuiTelInput } from "mui-tel-input";
+import video from "./video.svg";
 
 export const Cusdesigns = () => {
   const url = "http://54.226.201.17:8080";
@@ -208,6 +209,9 @@ export const Cusdesigns = () => {
 
         <div className="steps">
           <img src={steps} />
+          <a href="https://www.google.com" target="_blank">
+            <img style={{ marginTop: "10px",marginLeft:"-20px" }} src={video} />
+          </a>
         </div>
         <div className="steps">
           <img src={smilebar} />

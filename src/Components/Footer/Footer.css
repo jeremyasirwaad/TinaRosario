@@ -4,7 +4,7 @@
 
 
 .footercontainer{
-    height: 220px;
+    minHeight: 240px;
     background-color: #270641;
     overflow: hidden;
     width: 100%;
@@ -17,7 +17,7 @@
     height: 100%;
     width:100%;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     display: flex;
     padding: 10px;
     color: white;
@@ -167,6 +167,30 @@
     .footer-links > img{
 
         margin: 0px;
+    }
+  }
+
+
+  @media screen and (max-width: 700px) {
+    .footercontainer{
+        height: 100%;
+        background-color: #270641;
+        overflow: hidden;
+        width: 100%;
+    }
+    
+    
+    .footerinnercontainer{
+   
+        width:100%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        display: flex;
+        padding: 10px;
+        color: white;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        flex-direction: column;
     }
   }
   

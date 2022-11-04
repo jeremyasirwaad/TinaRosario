@@ -14,6 +14,8 @@
     background-color: #4C2A76;
     margin-top: 60px;
     margin-bottom: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
     box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(5px);
     border-radius: 30px;
@@ -70,7 +72,7 @@
 .input2{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .input2inner1{
@@ -85,16 +87,30 @@
 }
 
 .input2inner2{
-    width: 235px;
+    /* width: 305px;
     background-color: #8157b6;
     border: none;
     outline: none;
     border-radius: 5px;
     height: 40px;
+    color: #FFB8BC; */
+    background-color: #8157b6;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 290px;
+    height: 55px;
+    color: #FFB8BC;
+}
+
+.MuiTelInput-TextField>input{
     color: #FFB8BC;
 
 }
+.MuiInputBase-input{
+    color: #FFB8BC;
 
+}
 .input2{
     margin-top: 15px;
 }
@@ -102,6 +118,10 @@
 .input2 span{
     color: #FFB8BC;
   
+}
+
+input{
+    color: #FFB8BC !important;
 }
 
 .prodmsgsumbitbtn{
