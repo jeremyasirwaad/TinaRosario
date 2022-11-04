@@ -5,6 +5,15 @@ import img5 from "./l5-min.jpg";
 import landingtext from "./landingtext.svg";
 import text2 from "./text2.svg";
 import text3 from "./text3.svg";
+import text4 from "./text4.svg";
+import text5 from "./text5.svg";
+
+import text6 from "./text6.svg";
+
+import text7 from "./text7.svg";
+import text8 from "./text8.svg";
+import text9 from "./text9.svg";
+
 import caro from "./caro.svg";
 import "./newlanding.css";
 import { Carousel } from "react-responsive-carousel";
@@ -72,6 +81,24 @@ export const Caro = () => {
 			</div>
 			<div style={{ padding: "15px" }}>
 				<img style={{ borderRadius: "30px" }} src={text3} height={"650px"} />
+			</div>
+			<div style={{ padding: "15px" }}>
+				<img style={{ borderRadius: "30px" }} src={text4} height={"650px"} />
+			</div>
+			<div style={{ padding: "15px" }}>
+				<img style={{ borderRadius: "30px" }} src={text5} height={"650px"} />
+			</div>
+			<div style={{ padding: "15px" }}>
+				<img style={{ borderRadius: "30px" }} src={text6} height={"650px"} />
+			</div>
+			<div style={{ padding: "15px" }}>
+				<img style={{ borderRadius: "30px" }} src={text7} height={"650px"} />
+			</div>
+			<div style={{ padding: "15px" }}>
+				<img style={{ borderRadius: "30px" }} src={text8} height={"650px"} />
+			</div>
+			<div style={{ padding: "15px" }}>
+				<img style={{ borderRadius: "30px" }} src={text9} height={"650px"} />
 			</div>
 		</Carousel>
 	);
