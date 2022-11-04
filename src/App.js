@@ -35,6 +35,7 @@ import Jingles from "./Components/Gallery/Jingles/Jingles";
 import HappyClients from "./Components/Gallery/HappyClients/HappyClients";
 import { StartStud } from "./Components/Gallery/StarStud/StartStud";
 import { Talkies } from "./Components/Gallery/Talkies/Talkies";
+import { Feedback } from "./Components/Feedback/Feedback";
 
 import { DesignerCollections } from "./Components/DesignerCollections/DesignerCollections";
 
@@ -73,6 +74,7 @@ function App() {
 				<Scrolltotop></Scrolltotop>
 				<Navbar />
 				<Routes>
+					<Route path="/feedback" element={<Feedback />}></Route>
 					<Route path="/" element={<Landing />}></Route>
 					<Route path="/gallery" element={<Gallery />}></Route>
 					<Route path="/about" element={<About />}></Route>
