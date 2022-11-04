@@ -13,6 +13,9 @@ import validator from "validator";
 import { MuiTelInput } from "mui-tel-input";
 import { BorderTop } from "@mui/icons-material";
 
+// const backendUrl = "http://54.226.201.17:8080";
+const backendUrl = "http://localhost:3001";
+
 export const Contactus = () => {
   const notify = () => toast.success("Message sent successfully");
   const notify1 = () =>
@@ -50,11 +53,12 @@ export const Contactus = () => {
     }
 
     const result = await axios
-      .post("http://54.226.201.17:8080/mail", {
+      .post(`${backendUrl}/mail`, {
         from: contact.email,
         to: "design@tinarosario.com",
         subject: `Mail from ${contact.name} - ${contact.email} `,
         text: `Sender's Mail - ${contact.email} \nSender Contact - ${contact.contact} \n\n Note: \n ${contact.note}`,
+        userName: contact.name,
       })
       .then((data) => {
         if (data.status) {
@@ -96,7 +100,7 @@ export const Contactus = () => {
           <div className="mainsectionleft">
             <span className="msl1">Get in Touch</span>
 
-            <img style={{ marginTop: "60px" }} src={logoforcontact} alt="" />
+            <img className="clogo" style={{ marginTop: "50px" }} src={logoforcontact} alt="" />
             <span className="msl3">THE DESIGN HOUSE</span>
             <div className="loca">
               <div className="locainner">
@@ -120,7 +124,7 @@ export const Contactus = () => {
                 <a
                   target="_blank"
                   style={{ textDecoration: "none" }}
-                  href="https://api.whatsapp.com/send?phone=9916818637"
+                  href="https://api.whatsapp.com/send?phone=919916818637"
                 >
                   <i class="fa-brands fa-whatsapp"></i>
                   <span>+91 9916818637</span>

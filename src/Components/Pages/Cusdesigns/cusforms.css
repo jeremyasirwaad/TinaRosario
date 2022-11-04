@@ -33,3 +33,8 @@
     color: #FFB8BC;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+.steps{
+    display: flex;
+    flex-direction: column;
+}

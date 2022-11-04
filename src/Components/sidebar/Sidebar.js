@@ -82,7 +82,7 @@ export default function Sidebar() {
     <Box
       sx={{
         display: "flex",
-        "@media (min-width: 800px)": {
+        "@media (min-width: 700px)": {
           display: "none",
         },
       }}
@@ -100,13 +100,15 @@ export default function Sidebar() {
       </Toolbar>
 
       <Drawer
-        sx={{
-        //   width: drawerWidth,
-        //   flexShrink: 0,
-        //   "& .MuiDrawer-paper": {
-        //     width: drawerWidth,
-        //   },
-        }}
+        sx={
+          {
+              width: drawerWidth,
+              flexShrink: 0,
+              "& .MuiDrawer-paper": {
+                width: drawerWidth,
+              },
+          }
+        }
         variant="persistent"
         anchor="right"
         open={open}

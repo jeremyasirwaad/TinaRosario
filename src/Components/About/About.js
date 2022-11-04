@@ -433,8 +433,8 @@ export const About = () => {
             src={photo}
             className="divimg"
             style={{
-              width: "250px",
-              height: "300px",
+              width: "230px",
+              height: "350px",
               backgroundColor: "#4C2A76",
             }}
           ></img>
