@@ -36,8 +36,10 @@ import HappyClients from "./Components/Gallery/HappyClients/HappyClients";
 import { StartStud } from "./Components/Gallery/StarStud/StartStud";
 import { Talkies } from "./Components/Gallery/Talkies/Talkies";
 import { Feedback } from "./Components/Feedback/Feedback";
+import Evisiting from "./Components/evisitingcard/Evisiting";
 
 import { DesignerCollections } from "./Components/DesignerCollections/DesignerCollections";
+import React from "react";
 
 const faqs = [
 	{
@@ -69,71 +71,331 @@ const faqs = [
 function App() {
 	return (
 		<div className="App">
-			<PreNav></PreNav>
 			<BrowserRouter>
 				<Scrolltotop></Scrolltotop>
-				<Navbar />
+
 				<Routes>
-					<Route path="/feedback" element={<Feedback />}></Route>
-					<Route path="/" element={<Landing />}></Route>
-					<Route path="/gallery" element={<Gallery />}></Route>
-					<Route path="/about" element={<About />}></Route>
-					<Route path="/wedding" element={<Wedding />}></Route>
-					<Route path="/fabrics" element={<Fabrics />}></Route>
-					<Route path="/customiseddesigns" element={<Cusdesigns />}></Route>
-					<Route path="/imagecons" element={<ImageCons />}></Route>
-					<Route path="/getpampered" element={<Getpampered />}></Route>
-					<Route path="/policies" element={<Policies />}></Route>
-					<Route path="/Productmsg/:type" element={<Productmsg />}></Route>
+					<Route
+						path="/feedback"
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<Feedback />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/"
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<Landing />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/gallery"
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<Gallery />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/about"
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<About />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/wedding"
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<Wedding />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/fabrics"
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<Fabrics></Fabrics>
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/customiseddesigns"
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<Cusdesigns />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/imagecons"
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<ImageCons />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/getpampered"
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<Getpampered />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/policies"
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<Policies />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/Productmsg/:type"
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<Productmsg />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
 					<Route
 						path="/DesignerCollections"
-						element={<DesignerCollections />}
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<DesignerCollections />
+								<Footer></Footer>
+							</>
+						}
 					></Route>
-					<Route path="/Handloom" element={<Handloom />}></Route>
-					<Route path="/Casual" element={<Causalwear />}></Route>
-					<Route path="/Kidswear" element={<Kidswear />}></Route>
-					<Route path="/Contact" element={<Contactus></Contactus>}>
+					<Route
+						path="/Handloom"
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<Handloom />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/Casualwear"
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<Causalwear />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/Kidswear"
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<Kidswear />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/Contact"
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<Contactus></Contactus>
+								<Footer></Footer>
+							</>
+						}
+					>
 						{" "}
 					</Route>
-					<Route path="/ordernow/wedding" element={<Ordernow />}></Route>
-					<Route path="/ordernow/Ethnic" element={<OrdernowEthinic />}></Route>
-					<Route path="/ordernow/Party" element={<Ordernowparty />}></Route>
-					<Route path="/ordernow/indo" element={<Ordernowindo />}></Route>
+					<Route
+						path="/ordernow/wedding"
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<Ordernow />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/ordernow/Ethnic"
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<OrdernowEthinic />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/ordernow/Party"
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<Ordernowparty />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/ordernow/indo"
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<Ordernowindo />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
 					<Route
 						path="/ordernow/success/:id"
-						element={<OrderSuccess />}
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<OrderSuccess />
+								<Footer></Footer>
+							</>
+						}
 					></Route>
-					<Route path="/sidebar" element={<Sidebar />}></Route>
+					<Route
+						path="/sidebar"
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<Sidebar />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
 
 					<Route
 						path="/faq_reg"
-						element={<Faq faqs={faqs} heading={"Registration & Payment"} />}
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<Faq faqs={faqs} heading={"Registration & Payment"} />
+								<Footer></Footer>
+							</>
+						}
 					></Route>
 					<Route
 						path="/faq_order"
-						element={<Faq faqs={faqs} heading={"Order &  Customization"} />}
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<Faq faqs={faqs} heading={"Order &  Customization"} />
+								<Footer></Footer>
+							</>
+						}
 					></Route>
 					<Route
 						path="/faq_deli"
 						element={
-							<Faq faqs={faqs} heading={"Delivery, Return and refunds"} />
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<Faq faqs={faqs} heading={"Delivery, Return and refunds"} />
+								<Footer></Footer>
+							</>
 						}
 					></Route>
 					<Route
 						path="/faq_ship"
-						element={<Faq faqs={faqs} heading={"Shipping and tracking"} />}
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<Faq faqs={faqs} heading={"Shipping and tracking"} />
+								<Footer></Footer>
+							</>
+						}
 					></Route>
 					<Route
 						path="/orderfinish/:type/:name/:d/:m/:y"
-						element={<OrderFinish />}
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<OrderFinish />
+								<Footer></Footer>
+							</>
+						}
 					></Route>
-					<Route path="/product/:prodid" element={<Productpage />}></Route>
+					<Route
+						path="/product/:prodid"
+						element={
+							<>
+								<PreNav></PreNav>
+								<Navbar></Navbar>
+								<Productpage />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/visiting/ecard"
+						element={<Evisiting></Evisiting>}
+					></Route>
 					<Route
 						path="*"
 						element={<div>{/* <h2>404 Page not found</h2> */}</div>}
 					/>
 				</Routes>
-				<Footer></Footer>
+				{/* <Footer></Footer> */}
 			</BrowserRouter>
 		</div>
 	);
