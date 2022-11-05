@@ -13,7 +13,7 @@ import { LoadingButton } from "@mui/lab";
 import axios from "axios";
 
 export const Feedback = () => {
-  const backendUrl = "http://localhost:3001";
+  const backendUrl = "http://54.226.201.17:8080/";
   const [rating, setRating] = useState(0);
   const [file, setfile] = useState();
   const [imageerror, setImageerror] = useState(false);
