@@ -12,7 +12,7 @@ export const Productmsg = () => {
     toast("Message sent already", {
       icon: "👍",
     });
-  const backendUrl = "http://54.226.201.17:8080/";
+  const backendUrl = "http://54.226.201.17:8080";
   const [value, setValue] = React.useState("+91");
 
   const { type } = useParams();
