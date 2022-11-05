@@ -70,7 +70,7 @@
 
 .washcarediv{
     margin-top: 25px;
-    width: 100px;
+    /* width: 100px; */
     display: flex;
     justify-content: space-between;
     align-items: center;

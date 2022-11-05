@@ -19,22 +19,23 @@
 .fabricscaro{
   width: 100%;
   height: 400px;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   background-color: #270641;
   margin-top: 20px;
   margin-bottom: 20px;
+  padding: 30px;
 }
 
 .caroimg{
   height: 400px;
   width: 100%;
-  margin-top: 20px,
+  /* margin-top: 500px, */
 }
 
 .fabricsheader2{
-  margin-top: 30px;
+  margin-top: 70px;
   font-size: 40px;
   font-weight: 600;
 }

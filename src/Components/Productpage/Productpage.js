@@ -149,7 +149,7 @@ export default function Productpage() {
 								justifyContent: "space-between"
 							}}
 						>
-							<div className="washcarediv" style={{ width: "150px" }}>
+							<div className="washcarediv">
 								<img
 									className="washcareimg"
 									src={fabricsicon}
