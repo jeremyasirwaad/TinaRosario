@@ -6,11 +6,11 @@ import { Carousel } from "3d-react-carousal";
 
 export const Fabrics = () => {
   let slides = [
-    <img className="caroimg" src="https://picsum.photos/800/300/?random" alt="1" />,
-    <img className="caroimg" src="https://picsum.photos/800/301/?random" alt="2" />,
-    <img className="caroimg" src="https://picsum.photos/800/302/?random" alt="3" />,
-    <img className="caroimg" src="https://picsum.photos/800/303/?random" alt="4" />,
-    <img className="caroimg" src="https://picsum.photos/800/304/?random" alt="5" />,
+    <img className="caroimg" src="https://picsum.photos/800/200/?random" alt="1" />,
+    <img className="caroimg" src="https://picsum.photos/800/201/?random" alt="2" />,
+    <img className="caroimg" src="https://picsum.photos/800/202/?random" alt="3" />,
+    <img className="caroimg" src="https://picsum.photos/800/203/?random" alt="4" />,
+    <img className="caroimg" src="https://picsum.photos/800/204/?random" alt="5" />,
   ];
 
   const callback = function (index) {};
@@ -19,20 +19,7 @@ export const Fabrics = () => {
       <div className="bgFabrics">
         <span className="fabricsheader">Know your Fabrics</span>
         <div className="fabricscaro">
-          <Carousel
-            style={{
-              height: "100%",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              width: "100%",
-              marginTop: "20px",
-            }}
-            slides={slides}
-            autoplay={true}
-            interval={5000}
-            onSlideChange={callback}
-          />
+          <Carousel slides={slides} autoplay={true} interval={5000} onSlideChange={callback} />
         </div>
         <span className="fabricsheader2">Why use sustainable eco friendly Fabric</span>
         <div className="textcontainer">
