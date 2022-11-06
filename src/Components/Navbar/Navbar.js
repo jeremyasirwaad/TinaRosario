@@ -4,9 +4,33 @@ import "./Navbar.css";
 import Sidebar from "../sidebar/Sidebar";
 import HomeIcon from "@mui/icons-material/Home";
 import navlogo from "./navlogo.svg";
+import Select from "react-select";
 
 export const Navbar = () => {
 	const navigate = useNavigate();
+
+	const searchoptions = [
+		{ value: "chocolate", label: "Kurta" },
+		{ value: "strawberry", label: "Saree" },
+		{ value: "vanilla", label: "Lehenga" },
+		{ value: "vanilla", label: "Dress" },
+		{ value: "vanilla", label: "Handloom dress" },
+		{ value: "vanilla", label: "Pant" },
+		{ value: "vanilla", label: "Shirt" },
+		{ value: "vanilla", label: "Trouser" },
+		{ value: "vanilla", label: "Blouse,Designer blouses" },
+		{ value: "vanilla", label: "Aari work" },
+		{ value: "vanilla", label: "Dresses" },
+		{ value: "vanilla", label: "Accessories" },
+		{ value: "vanilla", label: "Blazer" },
+		{ value: "vanilla", label: "Customised clothes" },
+		{ value: "vanilla", label: "Ready made garments" },
+		{ value: "vanilla", label: "Chanderi" },
+		{ value: "vanilla", label: "Cotton" },
+		{ value: "vanilla", label: "Umberalla cut" },
+		{ value: "vanilla", label: "Bridegroom" },
+		{ value: "vanilla", label: "Wedding" }
+	];
 
 	return (
 		<div className="navcontainer">
@@ -98,10 +122,29 @@ export const Navbar = () => {
 					{/* <span className="navlink5">Testimonials</span> */}
 				</div>
 				<div className="navicons">
-					<i class="fa-solid fa-magnifying-glass"></i>
+					<i
+						class="fa-solid fa-magnifying-glass"
+						style={{ marginRight: "10px" }}
+					></i>
+					<Select options={searchoptions}></Select>
+					{/* <input
+						type="text"
+						style={{
+							width: "500px",
+							height: "40px",
+							borderRadius: "10px",
+							border: "1px solid black"
+						}}
+					/> */}
+					{/* <select>
+						<option value="A">Apple</option>
+						<option value="B">Banana</option>
+						<option value="C">Cranberry</option>
+					</select> */}
 					{/* <i class="fa-solid fa-cart-shopping"></i> */}
 					{/* <i class="fa-solid fa-user"></i> */}
 				</div>
+
 				<div
 					style={{
 						"@media (min-width: 800px)": {
