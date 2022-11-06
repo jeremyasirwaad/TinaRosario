@@ -12,6 +12,7 @@ import toast, { Toaster } from "react-hot-toast";
 import validator from "validator";
 import { MuiTelInput } from "mui-tel-input";
 import { BorderTop } from "@mui/icons-material";
+import caro from "./caro.svg";
 
 const backendUrl = "http://54.226.201.17:8080";
 // const backendUrl = "http://localhost:3001";
@@ -87,13 +88,14 @@ export const Contactus = () => {
   return (
     <div className="contactuspage">
       <div className="contactbanner">
-        <div className="contactbannerinner">
+        <img src={caro} />
+        {/* <div className="contactbannerinner">
           <span className="cuT">
             {" "}
             <span className="cu1">Contact</span> Us
           </span>
           <span className="CuU">To Design your style</span>
-        </div>
+        </div> */}
       </div>
       <div className="bgcontact">
         <div className="mainsection">
@@ -141,7 +143,7 @@ export const Contactus = () => {
               <span>Write to Us</span>
             </div>
             <TextField
-              label="Name"
+              label="Name *"
               color="primary"
               value={contact.name}
               onChange={(e) => {
@@ -153,7 +155,7 @@ export const Contactus = () => {
               error={nameerror}
             />
             <TextField
-              label="Email"
+              label="Email *"
               color="primary"
               value={contact.email}
               error={emailerror}
@@ -170,7 +172,7 @@ export const Contactus = () => {
               label="Contact Number"
               value={contact.contact}
               onChange={(e) => {
-                if (e.target.value != "") {
+              if (e.target.value != "") {
                   setContacterror(false);
                 }
                 setContact({ ...contact, contact: e.target.value });
@@ -180,12 +182,12 @@ export const Contactus = () => {
 
               // defaultValue="Default Value"
             /> */}
-            <MuiTelInput label="Contact" value={value} onChange={handleChange} />
+            <MuiTelInput label="Contact *" value={value} onChange={handleChange} />
 
             <TextField
               color="primary"
               id="outlined-multiline-static"
-              label="Custom Note"
+              label="Message"
               multiline
               rows={5}
               value={contact.note}
@@ -196,6 +198,7 @@ export const Contactus = () => {
 
               // defaultValue="Default Value"
             />
+            <p>* Mandatory Fields</p>
             {mailSent ? (
               <button className="contactsend" onClick={notify1}>
                 <i class="fa-solid fa-check"></i>{" "}
