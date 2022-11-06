@@ -4,12 +4,11 @@
 
 
 .footercontainer{
-    minHeight: 240px;
-    background-color: #270641;
-    overflow: hidden;
-    width: 100%;
-
+    minHeight: 250px;
     
+    background-color: #270641;
+    width: 100%;
+    display: flex;
 }
 
 
@@ -83,10 +82,12 @@
 }
 
 
+
 .footer-links{
+    height: 100%;
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: space-between;
     margin-left: -25px;
 }
 .footer-links > a>img{

@@ -75,7 +75,7 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      
+      {/* <p className="copy">© 2022 Tina Rosario, All rights reserved</p> */}
     </div>
   );
 };

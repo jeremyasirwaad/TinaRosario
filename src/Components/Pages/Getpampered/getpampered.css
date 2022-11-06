@@ -38,10 +38,7 @@
     justify-content: flex-start;
 }
 
-.getpamdetailsdiv img{
-    height: auto;
-    width: 90px;
-}
+
 
 .getpamdetailsdiv span{
     margin-left: 30px;
@@ -56,11 +53,11 @@
     margin-top: 22px;
     justify-content: flex-end;
 }
-
+/* 
 .getpamdetailsdiv2 svg{
     height: auto;
     width: 90px;
-}
+} */
 
 .getpamdetailsdiv2 span{
     margin-right: 30px;
