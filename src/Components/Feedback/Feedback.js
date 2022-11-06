@@ -128,6 +128,7 @@ export const Feedback = () => {
         timeline: 0,
         response: 0,
       });
+      setRating(0);
       setfile();
       //   navigate(`/orderfinish/customized/${data.data.name}/d/m/y`);
     }
@@ -142,7 +143,7 @@ export const Feedback = () => {
         <span className="feedbackt1">Drop your Feedbacks</span>
         <span className="feedbackt2">We value your opinion, it makes us better!</span>
         <div className="feedback_div">
-          <span className="feedsub1">Name</span>
+          <span className="feedsub1">Name *</span>
           <input
             style={{ border: nameerr ? "2px solid red" : "none" }}
             value={formData.name}
@@ -155,7 +156,7 @@ export const Feedback = () => {
             type="text"
             className="feedbackinput1"
           />
-          <span className="feedsub2">Email</span>
+          <span className="feedsub2">Email *</span>
           <input
             style={{ border: emailerr ? "2px solid red" : "none" }}
             value={formData.email}
@@ -168,7 +169,7 @@ export const Feedback = () => {
             type="text"
             className="feedbackinput1"
           />
-          <span className="feedsub2">Feedback</span>
+          <span className="feedsub2">Feedback *</span>
           <input
             style={{ border: feedbackerr ? "2px solid red" : "none" }}
             value={formData.feedback}
@@ -209,7 +210,7 @@ export const Feedback = () => {
             />
           </LoadingButton>
 
-          <span className="feedsub2">Rating</span>
+          <span className="feedsub2">Rating *</span>
           <div className="feedbratediv">
             <div className="feedbrateddivinner2">
               <span></span>
@@ -394,6 +395,10 @@ export const Feedback = () => {
               starEmptyColor="white"
             />
           </div>
+          <span>
+            {" "}
+            <b>* Mandatory Fields</b>
+          </span>
           <button onClick={handleFormSubmit} className="feedbacksubbtn">
             Submit
           </button>

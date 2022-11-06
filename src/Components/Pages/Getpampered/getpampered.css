@@ -18,14 +18,14 @@
 .getpamtitle2{
     margin-top: 30px;
 
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-font-size: 37px;
-line-height: 75px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 37px;
+    line-height: 75px;
 
 
-color: #270641;
+    color: #270641;
 
 
 }
@@ -38,7 +38,7 @@ color: #270641;
     justify-content: flex-start;
 }
 
-.getpamdetailsdiv svg{
+.getpamdetailsdiv img{
     height: auto;
     width: 90px;
 }

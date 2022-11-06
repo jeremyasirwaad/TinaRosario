@@ -136,7 +136,7 @@ const ImageCons = () => {
           <span className="weddingt2">To discuss further, provide your </span>
           <TextField
             id="outlined-basic"
-            label="Name"
+            label="Name *"
             error={nameerr}
             value={formData.name}
             onChange={(e) => {
@@ -151,7 +151,7 @@ const ImageCons = () => {
           <TextField
             error={emailerr}
             id="outlined-basic"
-            label="Email"
+            label="Email *"
             value={formData.email}
             onChange={(e) => {
               if (e.target.value != "") {
@@ -178,14 +178,14 @@ const ImageCons = () => {
             }}
           /> */}
           <MuiTelInput
-            label="Contact"
+            label="Contact *"
             style={{ width: "500px", marginTop: "30px" }}
             value={contact}
             variant="outlined"
             onChange={handleContact}
           />
           <div className="optionsdiv">
-            <span className="optionstitle">Consultation preferance ?</span>
+            <span className="optionstitle">Consultation preferance ? *</span>
             <div className="optionsbtndiv">
               <button
                 className={isownfab1 ? "optionsbtn optionsbtnselected" : "optionsbtn"}
@@ -212,7 +212,7 @@ const ImageCons = () => {
           </div>
           <TextField
             id="outlined-basic"
-            label="Any special note	"
+            label="Your note...	"
             variant="outlined"
             className="datewidth"
             value={formData.note}
@@ -222,7 +222,7 @@ const ImageCons = () => {
           <LocalizationProvider dateAdapter={AdapterDayjs} className="datewidth">
             <Stack spacing={3} className="datewidth">
               <MobileDatePicker
-                label="Appointment Date"
+                label="Appointment Date *"
                 inputFormat="DD/MM/YYYY"
                 value={appointDate}
                 onChange={selectappoint}
@@ -232,6 +232,7 @@ const ImageCons = () => {
               />
             </Stack>
           </LocalizationProvider>
+          <p>* Mandatory Fields</p>
           <button
             style={{ cursor: "pointer", marginBottom: "30px" }}
             className="weddingbookbtn"
