@@ -251,3 +251,34 @@ border: none;
     scale: 1.1;
 
 }
+
+.abtin1{
+    background-image: url('./slider1.svg');
+    height: 220px;
+    width: 400px;
+    cursor: pointer;
+}
+
+.abtin2:hover{
+    background-image: url('./slider1b.svg');
+    height: 240px;
+    width: 420px;
+    cursor: pointer;
+
+}
+
+.abtin2{
+    background-image: url('./slider2.svg');
+    height: 220px;
+    width: 400px;
+    cursor: pointer;
+
+}
+
+.abtin3{
+    background-image: url('./slider3.svg');
+    height: 220px;
+    width: 400px;
+    cursor: pointer;
+
+}
