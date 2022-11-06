@@ -37,7 +37,6 @@ export const Policies = () => {
     width: "90%",
   };
 
-
   const accordionDetail = {
     backgroundColor: "transparent",
     // color: "#FFB8BC",
@@ -295,6 +294,8 @@ export const Policies = () => {
         ></AccordionSummary>
         <AccordionDetails></AccordionDetails>
       </Accordion>
+
+      <h2 style={{ marginTop: "80px", marginBottom: "40px" }}>Acknowledgement</h2>
     </div>
   );
 };

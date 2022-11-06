@@ -1,9 +1,9 @@
 .policontainer{
     display: flex;
     background-image: url("./bg.svg");
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     height: 100%;
     width:100%;
     flex-direction: column;

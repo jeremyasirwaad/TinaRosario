@@ -165,7 +165,7 @@ export const Wedding = () => {
           <span className="weddingt2">To discuss further, provide your </span>
           <TextField
             id="outlined-basic"
-            label="Name"
+            label="Name *"
             value={formData.name}
             error={nameerr}
             onChange={(e) => {
@@ -179,7 +179,7 @@ export const Wedding = () => {
           />
           <TextField
             id="outlined-basic"
-            label="Email"
+            label="Email *"
             error={emailerr}
             value={formData.email}
             onChange={(e) => {
@@ -207,7 +207,7 @@ export const Wedding = () => {
             }}
           /> */}
           <MuiTelInput
-            label="Contact"
+            label="Contact *"
             style={{ width: "500px", marginTop: "30px" }}
             value={value}
             variant="outlined"
@@ -216,7 +216,7 @@ export const Wedding = () => {
           <LocalizationProvider dateAdapter={AdapterDayjs} className="datewidth">
             <Stack spacing={3} className="datewidth">
               <MobileDatePicker
-                label="When is the big day ?"
+                label="When is the big day *?"
                 inputFormat="DD/MM/YYYY"
                 value={dday}
                 onChange={selectdday}
@@ -228,7 +228,7 @@ export const Wedding = () => {
           </LocalizationProvider>
           <TextField
             id="outlined-basic"
-            label="Any special note	"
+            label="Your note...	"
             variant="outlined"
             className="datewidth"
             value={formData.note}
@@ -238,7 +238,7 @@ export const Wedding = () => {
           <LocalizationProvider dateAdapter={AdapterDayjs} className="datewidth">
             <Stack spacing={3} className="datewidth">
               <MobileDatePicker
-                label="Appointment Date"
+                label="Appointment Date *"
                 inputFormat="DD/MM/YYYY"
                 value={appointDate}
                 onChange={selectappoint}
@@ -248,6 +248,7 @@ export const Wedding = () => {
               />
             </Stack>
           </LocalizationProvider>
+          <p>* Mandatory Fields</p>
           <button style={{ cursor: "pointer" }} className="weddingbookbtn" onClick={handleFormSubmit}>
             Book
           </button>

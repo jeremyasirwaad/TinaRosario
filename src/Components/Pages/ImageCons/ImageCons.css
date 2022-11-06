@@ -104,8 +104,8 @@
 .img-row>img{
 
     width: 400px;
-    height: 300px;
-    object-fit: cover;
+    height: 450px;
+    object-fit: contain;
     /* border-radius: 40px; */
     
 
