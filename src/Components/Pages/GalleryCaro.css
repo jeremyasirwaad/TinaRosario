@@ -17,10 +17,18 @@
   }
   
   .galleryCaro{
+    background-color: #270641;
+    padding: 30px;
     width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+
+  .galleryCaro img{
+    height: 612px;
+    width: auto;
+    border-radius: 20px;
   }

@@ -31,13 +31,13 @@ export const About = () => {
 			}}
 		>
 			<div className="imagesection">
-				<span className="t1">
+				{/* <span className="t1">
 					About <span className="t1-1">Us</span>{" "}
 				</span>
 				<span className="t2">
 					" Creating customized designs using sustainable fabric "
 				</span>
-				<img src={arrow} alt="" style={{ height: "auto", width: "25px" }} />
+				<img src={arrow} alt="" style={{ height: "auto", width: "25px" }} /> */}
 			</div>
 			<div className="aboutContainer">
 				<div className="abtussec2">
