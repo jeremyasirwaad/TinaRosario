@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "aos/dist/aos.css";
-import { Navbar } from "../Navbar/Navbar";
-import { Footer } from "../Footer/Footer";
+
 import "./Wedding.css";
 import { TextField } from "@mui/material";
 import dayjs from "dayjs";
@@ -11,16 +10,18 @@ import Stack from "@mui/material/Stack";
 
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { TimePicker } from "@mui/x-date-pickers/TimePicker";
-import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
-import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
-import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
 
-import img1 from "./Group 36 (1).svg";
+import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
+import wed1 from "./wedd1.svg";
+import wed2 from "./wed2.svg";
+import wed3 from "./wed3.svg";
 import AOS from "aos";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { MuiTelInput } from "mui-tel-input";
+
+
+
 export const Wedding = () => {
   const url = "http://54.226.201.17:8080";
   // const url = "http://localhost:3001";
@@ -116,13 +117,13 @@ export const Wedding = () => {
     >
       <Toaster />
       <div className="weddingbanner">
-        <div className="weddingbannerinner">
+        {/* <div className="weddingbannerinner">
           <span className="wb1">Wedding Collections</span>
           <span className="wb2">
             As you hold hands and shine together and promise to live as one forever, you need to look your best as
             you've always dreamt.
           </span>
-        </div>
+        </div> */}
       </div>
       <div
         style={{
@@ -134,7 +135,7 @@ export const Wedding = () => {
       >
         <div className="wedsec1" style={{ marginTop: "100px" }}>
           <div className="wedsec1img">
-            <img src={img1} alt="" />
+            <img src={wed1} alt="" />
           </div>
 
           <div className="wedsec1cont">
@@ -146,14 +147,17 @@ export const Wedding = () => {
         </div>
         <div className="wedsec2">
           <div className="wedsec1img">
-            <img src={img1} alt="" />
+            <img style={{ height: "400px" }} src={wed2} alt="" />
           </div>
 
-          <div className="wedsec2cont">Get in touch and allow us to unfold your dream attire</div>
+          <div className="wedsec2cont">
+            Get in touch and allow us to unfold
+            <br /> your dream attire
+          </div>
         </div>
         <div className="wedsec1" style={{ marginTop: "80px" }}>
           <div className="wedsec1img">
-            <img src={img1} alt="" />
+            <img src={wed3} alt="" />
           </div>
 
           <div className="wedsec1cont">

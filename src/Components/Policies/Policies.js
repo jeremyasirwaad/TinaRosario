@@ -109,12 +109,11 @@ export const Policies = () => {
               <li>Cash (Only @ store)</li>
               <li>Store credit (In case of return)</li>
             </ul>
-            Once you have confirmed your order with us, you will receive an Invoice. 50% of the total amount mentioned
-            in the invoice is due at that time. The remaining 50% will be due before the order is ready for
-            pickup/dispatch.
+            50% of the total amount is due at the time of ordering. The remaining has to be paid at the time of pickup
+            or before dispatch.
             <br />
-            <br /> When payments are made using other party mediums, we would not be responsible for transaction mishaps
-            from your end directly or indirectly. For any queries contact your bank or contact us.
+            <br /> For electronic payments, we will not be responsible for transaction mishaps that occur. However, we
+            will be glad to assist with your queries and resolve payment issues.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -127,16 +126,16 @@ export const Policies = () => {
           id="panel1a-header"
         >
           <img style={{ height: "25px", marginRight: "10px" }} src={returns} />
-          <Typography sx={{ alignSelf: "center", fontWeight: "bold", fontSize: "22px" }}>NO RETURN</Typography>
+          <Typography sx={{ alignSelf: "center", fontWeight: "bold", fontSize: "22px" }}>RETURNS</Typography>
         </AccordionSummary>
         <AccordionDetails sx={accordionDetail}>
           <Typography sx={{ fontSize: "18px" }}>
-            We do not encourage any cancellations or refund requests as our products are of premium quality and
-            workmanship. However in special cases, you shall request for an exchange via email
+            We do not encourage cancellations or refund requests as our products are of premium quality and workmanship.
+            However in special cases, you shall request for an exchange via email
             <a href="mailto:design@tinarosario.com"> design@tinarosario.com </a>. The exchange request should be made
-            within two (2) days of you receiving your product. After verification (an unboxing video as evidence)
-            exchanges will be processed within a 15 day period. Please note, shipping charges should be borne by the
-            customer for exchanges. In rare cases, we might not honor your exchange requests.
+            within two (2) days of receiving your product. After verification (an unboxing video as evidence) exchanges
+            will be processed within a 15 day period. Please note, shipping charges should be borne by the customer for
+            exchanges. In rare cases, we might<b>not honor exchange requests.</b>
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -149,20 +148,32 @@ export const Policies = () => {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <img style={{ height: "25px", marginRight: "10px" }} src={esti} />
-          <Typography sx={{ alignSelf: "center", fontWeight: "bold", fontSize: "22px" }}>ESTIMATED DELIVERY</Typography>
+          <img style={{ height: "25px", marginRight: "10px" }} src={shipping} />
+          <Typography sx={{ alignSelf: "center", fontWeight: "bold", fontSize: "22px" }}>
+            DELIVERY & SHIPPING{" "}
+          </Typography>
         </AccordionSummary>
         <AccordionDetails sx={accordionDetail}>
           <Typography sx={{ fontSize: "18px" }}>
-            We, at The Design House, value our customer’s time and would surely try to deliver the product within the
-            requested date. Our general timelines are 3 to 5 business days for ready to ship products or 15 to 20
-            business days for customized outfits. Please note customized order can take even longer depending on the
-            design. In case there is a delay in delivery, we will notify you immediately via email or phone.
+            We, at The Design House, value our customer’s time and attempt to deliver the product within the requested
+            date
             <br />
             <br />
-            We use best courier services to ensure timely delivery of your product for both domestic and international
-            orders. No extra <b> handling charges </b> will be charged at the time of delivery. Please do not make any
-            such extra payments to anyone when your product is delivered.
+            For ready to ship products, we will be able to deliver within the following business days: Domestic: 5 - 7
+            International: 10 - 12 <br />
+            <br />
+            For customized orders, it might take a bit longer as mentioned below. Domestic: 10 - 15 International: 15 -
+            25
+            <br />
+            <br />
+            We cater to pan India and various overseas destinations. Shipping charges are to be borne by the customer
+            and may include taxes and duties levied by the respective jurisdiction. Shipments and courier services are
+            done using reputed companies for a hassle-free delivery process. If shipment is delayed, we will notify you
+            immediately via email or phone.
+            <br />
+            <br />
+            No extra handling charges will be applicable at the time of delivery. Please do not make payments to anyone
+            when your product is delivered.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -174,34 +185,15 @@ export const Policies = () => {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <img style={{ height: "25px", marginRight: "10px" }} src={shipping} />
-          <Typography sx={{ alignSelf: "center", fontWeight: "bold", fontSize: "22px" }}>SHIPPING</Typography>
-        </AccordionSummary>
-        <AccordionDetails sx={accordionDetail}>
-          <Typography sx={{ fontSize: "18px" }}>
-            We cater to Pan India and various overseas destinations with extra care. Shipping charges are to be borne by
-            the customer and may include the taxes and duties levied by the respective country. Shipments are done using
-            reputed companies for a hassle-free delivery process. Once a shipping label or tracking number is generated,
-            our logistics team delivers anywhere in India between 2 to 5 business days or 7-10 business days for
-            international order. For the order to be dispatched, full payment needs to be made.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion sx={inneraccordionStyle1} className="accordion">
-        <AccordionSummary
-          onClick={() => setExpand5(!expand5)}
-          sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
-          expandIcon={<ControlPointIcon sx={{ color: "#4C2A76" }} />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
           <img style={{ height: "25px", marginRight: "10px" }} src={alter} />
           <Typography sx={{ alignSelf: "center", fontWeight: "bold", fontSize: "22px" }}>ALTERATION</Typography>
         </AccordionSummary>
         <AccordionDetails sx={accordionDetail}>
           <Typography sx={{ fontSize: "18px" }}>
-            If our tailored clothes don’t fit as expected, we’ll alter them at no extra charge based on the feedback you
-            provide. Your final measurements will be recorded for future use.
+            We, at The Design House strive to complete your customized orders with utmost care. Our designer will ensure
+            that the final product satisfies the original requirements. Alteration if any should be communicated within
+            a day of receiving the outfit. A nominal fee may be charged depending on the nature of the alteration. If
+            you are unable to bring the outfit, we offer pick-up and delivery for an extra charge.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -219,20 +211,16 @@ export const Policies = () => {
         <AccordionDetails sx={accordionDetail}>
           <Typography sx={{ fontSize: "18px" }}>
             Our products are mostly designed with the notion of being easy to maintain: <br />
-            <b>Recommended</b>
+            <b>For hand washed fabric: </b>
             <ul>
-              <li>Dry cleaning</li>
-              <li>Hand Wash</li>
-              <ul>
-                <li>Use mild detergent.</li>
-                <li>Use cold water</li>
-                <li>Wash like colors together (Red and blue tend to run)</li>
-                <li>Dry inside out in the shade.</li>
-                <li>Airing the clothes after every wash.</li>
-                <li>Gentle squeeze</li>
-              </ul>
+              <li>Use mild detergent.</li>
+              <li>Use cold water</li>
+              <li>Wash like colors together (Red and blue tend to run)</li>
+              <li>Dry inside out in the shade.</li>
+              <li>Airing the clothes after every wash.</li>
+              <li>Gentle squeeze</li>
             </ul>
-            <b>Avoid</b>
+            <b>Kindly avoid</b>
             <ul>
               <li>Machine wash</li>
               <li>Mixing of white with colored clothes</li>
@@ -256,10 +244,8 @@ export const Policies = () => {
         </AccordionSummary>
         <AccordionDetails sx={accordionDetail}>
           <Typography sx={{ fontSize: "18px" }}>
-            The photographs are shot by professionals for an accurate display of the details and specifications of the
-            garment.
-            <br /> Thus, the products are bound to have a certain variation in the color and appearance in reality when
-            compared to the photographs or videos uploaded.
+            The photographs and videos are shot by professionals to display specifications and nuances of the garment.
+            In reality, the color and appearance could vary slightly from what is present on our website.
             <br /> Moderate shrinkage can be expected depending on the type of fabric.
           </Typography>
         </AccordionDetails>
@@ -278,10 +264,10 @@ export const Policies = () => {
         </AccordionSummary>
         <AccordionDetails sx={accordionDetail}>
           <Typography sx={{ fontSize: "18px" }}>
-            We take utmost care to make your loved ones feel special. Gift wrap services are available with a small
-            additional cost and can be made completely eco-friendly upon request. Please let us know if the purchase is
-            a gift and special note to be included. Also, the product is sent along with the tags, as they signify a new
-            product and would be helpful for any future verification.
+            We take utmost care to make your loved ones feel special. Gift wrap services are available at a nominal
+            charge and can be done eco-friendly upon request. Please let us know if the purchase is a gift along with
+            your special note. The product is sent along with the tags, as they signify a new product and would be
+            helpful for future verification.
           </Typography>
         </AccordionDetails>
       </Accordion>

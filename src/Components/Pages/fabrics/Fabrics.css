@@ -2,6 +2,8 @@
   width: 100%;
   align-items: center;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   background-image: url('../../About/bg.svg');
   background-repeat: no-repeat;
@@ -11,6 +13,9 @@
 
 .fabricsheader{
   font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 40px;
   font-weight: 600;
   margin-top: 30px;
@@ -36,8 +41,12 @@
 
 .fabricsheader2{
   margin-top: 70px;
+  width: 100%;
   font-size: 40px;
   font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .textcontainer{
@@ -76,6 +85,7 @@
 
 .imgfabrow1{
   display: flex;
+ 
   align-items: center;
   margin-top: 20px;
 }
@@ -110,4 +120,35 @@
 .imgfabrowinner span{
   font-weight: 600;
   font-size: 35px;
+}
+
+@media only screen and (max-width:650px){
+  .imgfabrow1{
+    flex-direction: column;
+  }
+  .imgfabrow2{
+    flex-direction: column;
+  }
+  .caroimg{
+    height: 300px;
+    width: 100%;
+    /* margin-top: 500px, */
+  }
+  .fabricscaro{
+    height: 350px;
+
+  }
+  .bgFabrics{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+    flex-direction: column;
+    background-image: url('../../About/bg.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  
 }

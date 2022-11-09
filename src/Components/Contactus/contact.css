@@ -10,7 +10,11 @@
     overflow: hidden;
     width: 100%;
     background-color: #270641;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20720.png?alt=media&token=246930de-5f92-4014-b256-93983bcd27d1");
     display: flex;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     align-items: center;
     justify-content: center;
 }
@@ -24,7 +28,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url('./Rectangle\ 58.png');
     background-position: center;
     background-repeat: no-repeat;
     color: #FFB8BC;

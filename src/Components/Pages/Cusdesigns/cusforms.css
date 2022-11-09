@@ -3,6 +3,20 @@
     margin-top: 20px;
 }
 
+.customBanner{
+    height: 600px;
+    overflow: hidden;
+    width: 100%;
+    background-color: #270641;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/header.png?alt=media&token=6f9cb77f-ed1f-4c1b-ac49-1401cf530e29");
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+}
+
 .optionstitle{
     /* margin-top: 20px; */
 }

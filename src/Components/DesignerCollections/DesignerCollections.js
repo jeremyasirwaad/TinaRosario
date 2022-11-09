@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./DesignerCollections.css";
-import { BsChevronDown, BsChevronUp } from "react-icons/bs";
-import rectimg from "./Rectimg.svg";
+
+
 import { Prodcard } from "./Prodcard";
 import MoonLoader from "react-spinners/ClipLoader";
-import { height } from "@mui/system";
+
 
 export const DesignerCollections = () => {
 	const [subcatoptions, setSubcatoptions] = useState(false);

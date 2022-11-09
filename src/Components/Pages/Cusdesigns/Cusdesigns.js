@@ -8,7 +8,6 @@ import "../ImageCons/ImageCons.css";
 import { TextField } from "@mui/material";
 import dayjs from "dayjs";
 import validator from "validator";
-import Stack from "@mui/material/Stack";
 
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -24,7 +23,7 @@ import AOS from "aos";
 import img1 from "./img1.svg";
 import img2 from "./img2.svg";
 import img3 from "./img3.svg";
-import back from "./Rectangle 70.png";
+
 import "./cusforms.css";
 import { LoadingButton } from "@mui/lab";
 import axios from "axios";
@@ -178,12 +177,13 @@ export const Cusdesigns = () => {
         // backgroundColor: "black"
       }}
     >
-      <div className="weddingbanner">
-        <div className="weddingbannerinner">
-          <span className="wb1">Customized Design</span>
-          <span className="wb2">“Choose us once and be marveled by our commitment and work“</span>
-        </div>
-      </div>
+      <div
+        style={{
+          backgroundImage:
+            "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/header.png?alt=media&token=6f9cb77f-ed1f-4c1b-ac49-1401cf530e29",
+        }}
+        className="customBanner"
+      ></div>
       <div className="weddingbg">
         <div className="icons">
           <div className="icon-holder">
@@ -200,8 +200,13 @@ export const Cusdesigns = () => {
           </div>
         </div>
         <div className="img-row1">
-          <img src={back} />
-          <p style={{ marginRight: "60px" }}>
+          <img
+            style={{ height: "400px" }}
+            src={
+              "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20706.png?alt=media&token=f531cd3b-455f-491d-975a-035ffa6fec61"
+            }
+          />
+          <p style={{ marginRight: "60px", alignContent: "flex-end" }}>
             We believe each individual’s notion of style is different. Often choosing the right platform can satiate all
             your needs. Choose THE DESIGN HOUSE to discover it.
           </p>
