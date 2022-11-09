@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./GalleryCaro.css";
-import { Carousel } from "react-responsive-carousel";
+// import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import MoonLoader from "react-spinners/ClipLoader";
+import img23 from "./aiony-haust-3TLl_97HNJo-unsplash.jpg";
+import Carousel from "react-bootstrap/Carousel";
 
 const GalleryCaro = () => {
 	const [loading, setLoading] = useState(true);
@@ -43,9 +45,78 @@ const GalleryCaro = () => {
 			) : (
 				<div className="galleryCont">
 					<h2 className="gallerytitle">By the House</h2>
-					<div className="galleryCaro" style={{ marginBottom: "80px" }}>
+					<div
+						id="carouselExampleIndicators"
+						class="carousel slide"
+						data-ride="carousel"
+						style={{ marginBottom: "80px" }}
+					>
+						<ol class="carousel-indicators">
+							<li
+								data-target="#carouselExampleIndicators"
+								data-slide-to="0"
+								class="active"
+							></li>
+							<li
+								data-target="#carouselExampleIndicators"
+								data-slide-to="1"
+							></li>
+							<li
+								data-target="#carouselExampleIndicators"
+								data-slide-to="2"
+							></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<div className="innercarodiv">
+									{" "}
+									<img src={pagedata[0]} alt="First slide" />
+								</div>
+							</div>
+							{pagedata.slice(1, pagedata.length).map((img) => {
+								return (
+									<div class="carousel-item">
+										<div className="innercarodiv">
+											<img src={img} alt="Second slide" />
+										</div>
+									</div>
+								);
+							})}
+							{/* <div class="carousel-item">
+								<img class="d-block w-100" src="..." alt="Second slide" />
+							</div>
+							<div class="carousel-item">
+								<img class="d-block w-100" src="..." alt="Third slide" />
+							</div> */}
+						</div>
+						<a
+							class="carousel-control-prev"
+							href="#carouselExampleIndicators"
+							role="button"
+							data-slide="prev"
+						>
+							<span
+								class="carousel-control-prev-icon"
+								aria-hidden="true"
+							></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a
+							class="carousel-control-next"
+							href="#carouselExampleIndicators"
+							role="button"
+							data-slide="next"
+						>
+							<span
+								class="carousel-control-next-icon"
+								aria-hidden="true"
+							></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+
+					{/* <div className="galleryCaro" style={{ marginBottom: "80px" }}>
 						<Carousel
-							dynamicHeight={true}
 							infiniteLoop
 							useKeyboardArrows
 							autoPlay
@@ -56,10 +127,12 @@ const GalleryCaro = () => {
 							// transitionTime={0.1}
 						>
 							{pagedata.map((img) => {
-								return <img src={img} alt="" />;
+								return (
+									<img src={img23} alt="" width={"500"} height={"500px"} />
+								);
 							})}
 						</Carousel>
-					</div>
+					</div> */}
 				</div>
 			)}
 		</div>

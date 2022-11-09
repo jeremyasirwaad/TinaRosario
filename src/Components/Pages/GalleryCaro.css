@@ -9,11 +9,12 @@
     background-position: center ;
     background-size: cover;
     flex-direction: column;
+   
 }
 .gcaroimg{
     height: 400px;
     width: 100%;
-    margin-top: 20px,
+    /* margin-top: 20px, */
   }
   
   .galleryCaro{
@@ -25,10 +26,37 @@
     align-items: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    height: 612px;
   }
 
-  .galleryCaro img{
-    height: 612px;
+
+
+  /* .backimg{
+    display: flex;
+    height: 550px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+  }
+
+  .backimg img{
+    height: 550px;
+    width: 300px;
+  } */
+
+  .innercarodiv{
+    width: 100%;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4C2A76;
+    padding: 20px;
+  }
+
+  .innercarodiv img{
+    height: 100%;
     width: auto;
-    border-radius: 20px;
+    border-radius: 10px;
   }
