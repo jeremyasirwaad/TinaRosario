@@ -1,14 +1,15 @@
 .weddingbanner{
-    height: 300px;
+    height: 600px;
     width: 100%;
-    background-image: url('../About/image\ 3.png');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20705.png?alt=media&token=2ba34763-aa97-4793-b1c9-7f49cf22df66');
     display: flex;
+    background-color: #270641;
     align-items: center;
     justify-content: center;
     /* background-image: url(path-to-file/img.jpg); */
     background-repeat:no-repeat;
     background-position: center ;
-    background-size: cover;
+    background-size: contain;
 }
 
 .weddingbannerinner{

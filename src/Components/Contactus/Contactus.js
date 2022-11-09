@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { Footer } from "../Footer/Footer";
+import React, { useState } from "react";
+
 import "./contact.css";
 import { TextField } from "@mui/material";
 // import { MuiTelInput } from "mui-tel-input";
-import MuiPhoneNumber from "material-ui-phone-number";
+
 import logoforcontact from "./Frame.png";
 import indflag from "./Flag_of_India.png";
 import usflag from "./2560px-Flag_of_the_United_States.svg.png";
@@ -11,8 +11,8 @@ import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import validator from "validator";
 import { MuiTelInput } from "mui-tel-input";
-import { BorderTop } from "@mui/icons-material";
-import caro from "./caro.svg";
+
+
 
 const backendUrl = "http://54.226.201.17:8080";
 // const backendUrl = "http://localhost:3001";
@@ -88,7 +88,7 @@ export const Contactus = () => {
   return (
     <div className="contactuspage">
       <div className="contactbanner">
-        <img src={caro} />
+        {/* <img src={caro} /> */}
         {/* <div className="contactbannerinner">
           <span className="cuT">
             {" "}

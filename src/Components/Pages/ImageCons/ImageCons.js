@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import back from "./back.svg";
+
 import "./ImageCons.css";
 import img1 from "./img1.svg";
 import img2 from "./img2.svg";
@@ -12,13 +12,11 @@ import { MobileDatePicker } from "@mui/x-date-pickers";
 import { Stack } from "@mui/system";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { TimePicker } from "@mui/x-date-pickers/TimePicker";
-import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
-import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
+
 import axios from "axios";
 import validator from "validator";
 
-import toast, { Toaster } from "react-hot-toast";
+import  { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { MuiTelInput } from "mui-tel-input";
 const ImageCons = () => {
@@ -96,12 +94,7 @@ const ImageCons = () => {
   return (
     <div className="imagecons">
       <Toaster />
-      <div className="topbar">
-        <div className="background">
-          <span className="wb1">Image Consulting</span>
-          <span className="wb2">"Pride in the new look"</span>
-        </div>
-      </div>
+      <div className="topbar"></div>
       <div className="weddingbg">
         <div className="icons">
           <div className="icon-holder">
@@ -118,7 +111,11 @@ const ImageCons = () => {
           </div>
         </div>
         <div className="img-row">
-          <img src={back} />
+          <img
+            src={
+              "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20197.png?alt=media&token=4ad2419a-b42d-48a4-b58c-45fa68bdb3cd"
+            }
+          />
           <p>
             Come to us, our experienced designer and stylist
             <br /> will guide you to make a fashion statement and

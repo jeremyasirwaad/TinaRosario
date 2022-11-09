@@ -22,13 +22,7 @@ export const Fabrics = () => {
       <div className="bgFabrics">
         <span className="fabricsheader">Know your Fabric</span>
         <div className="fabricscaro">
-          <Carousel
-            style={{ width: "100%" }}
-            slides={slides}
-            autoplay={true}
-            interval={5000}
-            onSlideChange={callback}
-          />
+          <Carousel style={{ width: "98%" }} slides={slides} autoplay={true} interval={5000} onSlideChange={callback} />
         </div>
         <span className="fabricsheader2">Why use sustainable eco friendly Fabric</span>
         <div className="textcontainer">
