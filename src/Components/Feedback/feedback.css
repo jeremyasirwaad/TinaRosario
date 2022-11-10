@@ -3,6 +3,9 @@
     display: flex;
     justify-content: center;
     background-image: url('../About/bg.svg');
+    background-position: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .feedbackinner{

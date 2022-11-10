@@ -12,8 +12,6 @@ import toast, { Toaster } from "react-hot-toast";
 import validator from "validator";
 import { MuiTelInput } from "mui-tel-input";
 
-
-
 const backendUrl = "http://54.226.201.17:8080";
 // const backendUrl = "http://localhost:3001";
 
@@ -107,7 +105,7 @@ export const Contactus = () => {
             <div className="loca">
               <div className="locainner">
                 <i class="fa-solid fa-location-pin"></i>
-                <span>112a Nehru street, Alwar thiru nagar, Chennai 600087</span>
+                <span>112A Nehru Street, Alwar Thiru Nagar, Chennai 600087</span>
               </div>
               <div className="locainner">
                 <i class="fa-solid fa-phone"></i>
