@@ -61,12 +61,13 @@
 }
 
 .feedbackinput1{
-    height: 40px;
+    /* height: 40px; */
     border-radius: 5px;
     font-size: 18;
     border: 1px solid rgba(209, 209, 209, 0.3);
-    background-color: rgba(255, 255, 255, 0.3);
-    padding-left: 10px;
+    /* background-color: rgba(255, 255, 255, 0.3); */
+
+    /* padding-left: 10px; */
 
 
 
@@ -74,15 +75,15 @@
 }
 
 .feedbackinput2{
-    height: 40px;
+    /* height: 40px; */
     border-radius: 5px;
     font-size: 18;
     border: 1px solid rgb(205, 205, 205);
-    padding-left: 10px;
+    /* padding-left: 10px; */
     height: 150px;
     color: #270641;
     border: 1px solid rgba(209, 209, 209, 0.3);
-    background-color: rgba(255, 255, 255, 0.3);
+    /* background-color: rgba(255, 255, 255, 0.3); */
 }
 
 .feedupbtn{
