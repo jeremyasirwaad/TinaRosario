@@ -14,6 +14,7 @@ import axios from "axios";
 import { TextField } from "@mui/material";
 
 export const Feedback = () => {
+	const [submitted, setSubmitted] = useState(false);
 	const backendUrl = "http://54.226.201.17:8080";
 	const [rating, setRating] = useState(0);
 	const [file, setfile] = useState();
@@ -140,6 +141,7 @@ export const Feedback = () => {
 			});
 			setRating(0);
 			setfile();
+			setSubmitted(true);
 			//   navigate(`/orderfinish/customized/${data.data.name}/d/m/y`);
 		}
 	};
@@ -168,12 +170,14 @@ export const Feedback = () => {
 							setformData({ ...formData, name: e.target.value });
 						}}
 						type="text"
+						disabled={submitted}
 						className="feedbackinput1"
 					/>
 
 					<TextField
 						style={{ marginTop: "20px" }}
 						label="Email *"
+						disabled={submitted}
 						error={emailerr}
 						// style={{ border: emailerr ? "1px solid red" : "none" }}
 						value={formData.email}
@@ -192,6 +196,7 @@ export const Feedback = () => {
 						style={{ marginTop: "20px" }}
 						multiline={true}
 						rows={5}
+						disabled={submitted}
 						label="Feedback"
 						error={feedbackerr}
 						value={formData.feedback}
@@ -255,12 +260,14 @@ export const Feedback = () => {
 									value={1}
 									onChange={() => setformData({ ...formData, design: 1 })}
 									type="radio"
+									disabled={submitted}
 									name="design"
 								/>
 								<input
 									value={2}
 									onChange={() => setformData({ ...formData, design: 2 })}
 									type="radio"
+									disabled={submitted}
 									name="design"
 								/>
 								<input
@@ -268,18 +275,21 @@ export const Feedback = () => {
 									onChange={() => setformData({ ...formData, design: 3 })}
 									type="radio"
 									name="design"
+									disabled={submitted}
 								/>
 								<input
 									value={4}
 									onChange={() => setformData({ ...formData, design: 4 })}
 									type="radio"
 									name="design"
+									disabled={submitted}
 								/>
 								<input
 									value={5}
 									onChange={() => setformData({ ...formData, design: 5 })}
 									type="radio"
 									name="design"
+									disabled={submitted}
 								/>
 							</div>
 						</div>
@@ -291,30 +301,35 @@ export const Feedback = () => {
 									onChange={() => setformData({ ...formData, creativity: 1 })}
 									type="radio"
 									name="creativity"
+									disabled={submitted}
 								/>
 								<input
 									value={2}
 									onChange={() => setformData({ ...formData, creativity: 2 })}
 									type="radio"
 									name="creativity"
+									disabled={submitted}
 								/>
 								<input
 									value={3}
 									onChange={() => setformData({ ...formData, creativity: 3 })}
 									type="radio"
 									name="creativity"
+									disabled={submitted}
 								/>
 								<input
 									value={4}
 									onChange={() => setformData({ ...formData, creativity: 4 })}
 									type="radio"
 									name="creativity"
+									disabled={submitted}
 								/>
 								<input
 									value={5}
 									onChange={() => setformData({ ...formData, creativity: 5 })}
 									type="radio"
 									name="creativity"
+									disabled={submitted}
 								/>
 							</div>
 						</div>
@@ -326,30 +341,35 @@ export const Feedback = () => {
 									onChange={() => setformData({ ...formData, fit: 1 })}
 									type="radio"
 									name="fit"
+									disabled={submitted}
 								/>
 								<input
 									value={2}
 									onChange={() => setformData({ ...formData, fit: 2 })}
 									type="radio"
 									name="fit"
+									disabled={submitted}
 								/>
 								<input
 									value={3}
 									onChange={() => setformData({ ...formData, fit: 3 })}
 									type="radio"
 									name="fit"
+									disabled={submitted}
 								/>
 								<input
 									value={4}
 									onChange={() => setformData({ ...formData, fit: 4 })}
 									type="radio"
 									name="fit"
+									disabled={submitted}
 								/>
 								<input
 									value={5}
 									onChange={() => setformData({ ...formData, fit: 5 })}
 									type="radio"
 									name="fit"
+									disabled={submitted}
 								/>
 							</div>
 						</div>
@@ -361,30 +381,35 @@ export const Feedback = () => {
 									onChange={() => setformData({ ...formData, quality: 1 })}
 									type="radio"
 									name="quality"
+									disabled={submitted}
 								/>
 								<input
 									value={2}
 									onChange={() => setformData({ ...formData, quality: 2 })}
 									type="radio"
 									name="quality"
+									disabled={submitted}
 								/>
 								<input
 									value={3}
 									onChange={() => setformData({ ...formData, quality: 3 })}
 									type="radio"
 									name="quality"
+									disabled={submitted}
 								/>
 								<input
 									value={4}
 									onChange={() => setformData({ ...formData, quality: 4 })}
 									type="radio"
 									name="quality"
+									disabled={submitted}
 								/>
 								<input
 									value={5}
 									onChange={() => setformData({ ...formData, quality: 5 })}
 									type="radio"
 									name="quality"
+									disabled={submitted}
 								/>
 							</div>
 						</div>
@@ -396,11 +421,13 @@ export const Feedback = () => {
 									onChange={() => setformData({ ...formData, timeline: 1 })}
 									type="radio"
 									name="timeline"
+									disabled={submitted}
 								/>
 								<input
 									value={2}
 									onChange={() => setformData({ ...formData, timeline: 2 })}
 									type="radio"
+									disabled={submitted}
 									name="timeline"
 								/>
 								<input
@@ -408,18 +435,21 @@ export const Feedback = () => {
 									onChange={() => setformData({ ...formData, timeline: 3 })}
 									type="radio"
 									name="timeline"
+									disabled={submitted}
 								/>
 								<input
 									value={4}
 									onChange={() => setformData({ ...formData, timeline: 4 })}
 									type="radio"
 									name="timeline"
+									disabled={submitted}
 								/>
 								<input
 									value={5}
 									onChange={() => setformData({ ...formData, timeline: 5 })}
 									type="radio"
 									name="timeline"
+									disabled={submitted}
 								/>
 							</div>
 						</div>
@@ -431,30 +461,35 @@ export const Feedback = () => {
 									onChange={() => setformData({ ...formData, response: 1 })}
 									type="radio"
 									name="response"
+									disabled={submitted}
 								/>
 								<input
 									value={2}
 									onChange={() => setformData({ ...formData, response: 2 })}
 									type="radio"
 									name="response"
+									disabled={submitted}
 								/>
 								<input
 									value={3}
 									onChange={() => setformData({ ...formData, response: 3 })}
 									type="radio"
 									name="response"
+									disabled={submitted}
 								/>
 								<input
 									value={4}
 									onChange={() => setformData({ ...formData, response: 4 })}
 									type="radio"
 									name="response"
+									disabled={submitted}
 								/>
 								<input
 									value={5}
 									onChange={() => setformData({ ...formData, response: 5 })}
 									type="radio"
 									name="response"
+									disabled={submitted}
 								/>
 							</div>
 						</div>
