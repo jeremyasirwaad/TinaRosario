@@ -1,5 +1,5 @@
 .landsec1{
-    height:630px;
+    height:650px;
     width: 100%;
     background-color: #270641;
     display: flex;
@@ -56,6 +56,7 @@
 .landser{
     font-family: 'Poppins', sans-serif;
     font-size: 40px;
+    font-weight: 600;
    
 }
 
@@ -63,7 +64,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: 40px;
     margin-top: 70px;
-
+    font-weight: 600;
     
 
 }
