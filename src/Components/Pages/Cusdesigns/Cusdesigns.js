@@ -184,7 +184,7 @@ export const Cusdesigns = () => {
         }}
         className="customBanner"
       ></div>
-      <div className="weddingbg">
+      <div className="Iweddingbg">
         <div className="icons">
           <div className="icon-holder">
             <img src={img1} />

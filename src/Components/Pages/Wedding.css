@@ -56,7 +56,7 @@
     width: 80%;
     align-items: center;
     flex-direction: row-reverse;
-    margin-top: 80px;
+   
 }
 
 .wedsec2 img{
@@ -84,8 +84,10 @@ font-size: 18px;
 
 .wedsec2cont{
     width: 40%;
-    margin-right: 80px;
     display: flex;
+    justify-content: flex-end;
+    align-items: flex-end  ;
+    text-align: right;
     flex-direction: column;
     align-items: flex-end;
     font-size: 18px;
@@ -131,8 +133,9 @@ font-size: 18px;
 }
 
 .weddingbg{
-    background-image: url("../Landing/bg.png");
+    background-image: url("../wedbg.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: right;
     width:100%;
 }
