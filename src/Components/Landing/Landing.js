@@ -21,6 +21,7 @@ export const Landing = () => {
         phoneNumber="919916818637"
         accountName="Tina rosario"
         avatar={avatar}
+        chatMessage={"Welcome to The Design House by Tina Rosario. \n How can we help you?"}
       />
       <div className="landsec1">
         <Caro />
@@ -255,7 +256,7 @@ export const Landing = () => {
           />
           <img
             src={
-              "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20664.jpg?alt=media&token=61967ec9-adb0-4301-a4f3-213c9c40c23f"
+              "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20664.png?alt=media&token=d42723b3-69c2-4d1e-8c62-e4632f8d2e16"
             }
             alt=""
             onClick={() => navigate("/getpampered")}
@@ -276,14 +277,6 @@ export const Landing = () => {
           />
           <img
             src={
-              "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%2059.png?alt=media&token=bf7432ef-5700-4d2c-8f12-6fe4154c1608"
-            }
-            alt=""
-            onClick={() => navigate("/Casualwear")}
-            style={{ cursor: "pointer" }}
-          />
-          <img
-            src={
               "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%2060.png?alt=media&token=d24f6173-ffa5-4b41-9482-590181c012a8"
             }
             alt=""
@@ -292,14 +285,12 @@ export const Landing = () => {
           />
           <img
             src={
-              "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20667.png?alt=media&token=2ff7c719-222a-4973-b8f4-39e624173d77"
+              "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%2059.png?alt=media&token=bf7432ef-5700-4d2c-8f12-6fe4154c1608"
             }
             alt=""
-            onClick={() => navigate("/Handloom")}
+            onClick={() => navigate("/Casualwear")}
             style={{ cursor: "pointer" }}
           />
-        </div>
-        <div className="servcaro">
           <img
             id="maternity"
             src={
@@ -309,6 +300,8 @@ export const Landing = () => {
             onClick={() => navigate("/DesignerCollections")}
             style={{ cursor: "pointer" }}
           />
+        </div>
+        <div className="servcaro">
           <img
             id="handloomSari"
             src={
@@ -319,12 +312,11 @@ export const Landing = () => {
             style={{ cursor: "pointer" }}
           />
           <img
-            id="coustomisedGift"
             src={
-              "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20666.png?alt=media&token=aee52d17-3622-4ecc-b5c9-565f1faf5c4e"
+              "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20667.png?alt=media&token=2ff7c719-222a-4973-b8f4-39e624173d77"
             }
             alt=""
-            onClick={() => navigate("/Kidswear")}
+            onClick={() => navigate("/Handloom")}
             style={{ cursor: "pointer" }}
           />
           <img
@@ -334,6 +326,16 @@ export const Landing = () => {
             }
             alt=""
             onClick={() => navigate("/Handloom")}
+            style={{ cursor: "pointer" }}
+          />
+
+          <img
+            id="coustomisedGift"
+            src={
+              "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20666.png?alt=media&token=aee52d17-3622-4ecc-b5c9-565f1faf5c4e"
+            }
+            alt=""
+            onClick={() => navigate("/Kidswear")}
             style={{ cursor: "pointer" }}
           />
         </div>
