@@ -429,7 +429,11 @@ export const Getpampered = () => {
             </Stack>
           </LocalizationProvider> */}
           <p>* Mandatory Fields</p>
-          <button style={{ cursor: "pointer" }} onClick={handleFormSubmit} className="weddingbookbtn">
+          <button
+            style={{ cursor: "pointer", marginBottom: "-40px" }}
+            onClick={handleFormSubmit}
+            className="weddingbookbtn"
+          >
             Book
           </button>
         </div>

@@ -20,8 +20,6 @@ import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { MuiTelInput } from "mui-tel-input";
 
-
-
 export const Wedding = () => {
   const url = "http://54.226.201.17:8080";
   // const url = "http://localhost:3001";
@@ -147,7 +145,7 @@ export const Wedding = () => {
         </div>
         <div className="wedsec2">
           <div className="wedsec1img">
-            <img style={{ height: "400px" }} src={wed2} alt="" />
+            <img style={{ height: "350px" }} src={wed2} alt="" />
           </div>
 
           <div className="wedsec2cont">
@@ -155,7 +153,7 @@ export const Wedding = () => {
             <br /> your dream attire
           </div>
         </div>
-        <div className="wedsec1" style={{ marginTop: "80px" }}>
+        <div className="wedsec1">
           <div className="wedsec1img">
             <img src={wed3} alt="" />
           </div>
@@ -253,7 +251,11 @@ export const Wedding = () => {
             </Stack>
           </LocalizationProvider>
           <p>* Mandatory Fields</p>
-          <button style={{ cursor: "pointer" }} className="weddingbookbtn" onClick={handleFormSubmit}>
+          <button
+            style={{ cursor: "pointer", marginBottom: "-20px" }}
+            className="weddingbookbtn"
+            onClick={handleFormSubmit}
+          >
             Book
           </button>
         </div>

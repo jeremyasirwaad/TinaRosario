@@ -32,10 +32,11 @@
 }
 
 
-.weddingbg{
-    background-image: url("../../Landing/bg.png");
+.Iweddingbg{
+    background-image: url("../../wedbg.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: right;
     display: flex;
     flex-direction: column;
     align-items: center;

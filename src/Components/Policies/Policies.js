@@ -28,6 +28,12 @@ export const Policies = () => {
     // backgroundColor: expand1 ? "#4C2A76" : "transparent",
     // color: expand1 ? "#FFB8BC" : "#4C2A76",
     backgroundColor: "transparent",
+    background: "rgba( 255, 255, 255, 0.1 )",
+    boxShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+    backdropFilter: "blur( 7.5px )",
+
+    borderRadius: "40px",
+    border: "1px solid rgba( 255, 255, 255, 0.18 )",
     color: "#4C2A76",
     marginBottom: "20px",
     "&:before": {

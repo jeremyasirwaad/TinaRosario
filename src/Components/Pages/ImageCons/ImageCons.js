@@ -16,7 +16,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import axios from "axios";
 import validator from "validator";
 
-import  { Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { MuiTelInput } from "mui-tel-input";
 const ImageCons = () => {
@@ -95,7 +95,7 @@ const ImageCons = () => {
     <div className="imagecons">
       <Toaster />
       <div className="topbar"></div>
-      <div className="weddingbg">
+      <div className="Iweddingbg">
         <div className="icons">
           <div className="icon-holder">
             <img src={img1} />
@@ -231,7 +231,7 @@ const ImageCons = () => {
           </LocalizationProvider>
           <p>* Mandatory Fields</p>
           <button
-            style={{ cursor: "pointer", marginBottom: "30px" }}
+            style={{ cursor: "pointer", marginBottom: "60px" }}
             className="weddingbookbtn"
             onClick={handleFormSubmit}
           >
