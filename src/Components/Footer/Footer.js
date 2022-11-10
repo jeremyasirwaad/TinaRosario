@@ -12,7 +12,9 @@ export const Footer = () => {
       <div className="footerinnercontainer">
         <div className="fdetails">
           <img className="foot-logo" src={logo2} />
-          <div className="footer-text">Let the garms you don, adorn the style within you.</div>
+          <div style={{ marginTop: "20px" }} className="footer-text">
+            Let the garms you don, adorn the style within you.
+          </div>
         </div>
         <div className="column collections">
           <p>Collections</p>
@@ -60,19 +62,18 @@ export const Footer = () => {
         <div className="column links">
           <p>Catch us on</p>
           <div className="footer-links">
-            <a href="https://www.facebook.com/people/Tina-Rosario-The-Design-House/100086487516274/">
+            <a target="_blank" href="https://www.facebook.com/people/Tina-Rosario-The-Design-House/100086487516274/">
               <img className="foot-link-logo" src="https://img.icons8.com/cotton/2x/facebook.png" />
             </a>
-            <a href="https://www.instagram.com/tina_rosario_the_design_house/?r=nametag">
+            <a target="_blank" href="https://www.instagram.com/tina_rosario_the_design_house/?r=nametag">
               <img className="foot-link-logo" src="https://img.icons8.com/cotton/2x/instagram-new.png" />
             </a>
-            {/* <a href="">
-              <img className="foot-link-logo" src="https://img.icons8.com/cotton/2x/twitter.png" />
-            </a> */}
-            <a target="_blank" href="https://api.whatsapp.com/send?phone=919916818637">
+
+            {/* <a target="_blank" href="https://api.whatsapp.com/send?phone=919916818637">
               <img className="foot-link-wa" src="https://img.icons8.com/color/344/whatsapp--v1.png" />
-            </a>
+            </a> */}
           </div>
+          <p className="copy">@2022 Tina Rosario, All rights reserved</p>
         </div>
       </div>
       {/* <p className="copy">© 2022 Tina Rosario, All rights reserved</p> */}

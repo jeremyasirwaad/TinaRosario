@@ -4,7 +4,7 @@
 
 
 .footercontainer{
-    minHeight: 250px;
+    minHeight: 220px;
     
     background-color: #270641;
     width: 100%;
@@ -57,6 +57,7 @@
     flex-direction: column;
     /* justify-content: center; */
     align-items: flex-start;
+    height: 100%;
     /* margin-right: -50px; */
 
 }
@@ -81,7 +82,11 @@
     flex:0.6;
 }
 
-
+.copy{
+    bottom: 0;
+    font-size: 15px !important;
+    margin-top: 50px;
+}
 
 .footer-links{
     height: 100%;

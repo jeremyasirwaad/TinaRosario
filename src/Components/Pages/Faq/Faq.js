@@ -98,7 +98,8 @@ const FAQ = () => {
     marginRight: "20px",
   };
   const inneraccordionStyle = {
-    backgroundColor: "rgba(39, 6, 65, 0.7)",
+    // backgroundColor: "rgba(39, 6, 65, 0.7)",
+    backgroundColor:"transparent  ",
     borderRadius: "20px",
     color: "#FFB8BC",
     marginTop: "10px",
