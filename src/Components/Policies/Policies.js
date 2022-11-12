@@ -25,8 +25,8 @@ export const Policies = () => {
   const [expand9, setExpand9] = React.useState(false);
   const inneraccordionStyle1 = {
     borderRadius: "20px",
-    // backgroundColor: expand1 ? "#4C2A76" : "transparent",
-    // color: expand1 ? "#FFB8BC" : "#4C2A76",
+    // backgroundColor: expand1 ? "#270641" : "transparent",
+    // color: expand1 ? "#FFB8BC" : "#270641",
     backgroundColor: "transparent",
     background: "rgba( 255, 255, 255, 0.1 )",
     boxShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
@@ -34,26 +34,27 @@ export const Policies = () => {
 
     borderRadius: "40px",
     border: "1px solid rgba( 255, 255, 255, 0.18 )",
-    color: "#4C2A76",
+    color: "#270641",
     marginBottom: "20px",
     "&:before": {
       display: "none",
       border: "none",
     },
     width: "90%",
+  
   };
 
   const accordionDetail = {
     backgroundColor: "transparent",
     // color: "#FFB8BC",
-    color: "black",
+    color: "#270641",
     borderRadius: "20px",
     margin: "0px 20px 20px 20px",
   };
 
   return (
     <div className="policontainer">
-      <h2 style={{ marginTop: "80px", marginBottom: "40px" }}>OUR POLICIES</h2>
+      <h2 style={{ marginTop: "80px", marginBottom: "40px", color: "#270641" }}>OUR POLICIES</h2>
       <Accordion sx={{ display: "none" }} className="outeraccordion">
         <AccordionSummary
           expandIcon={<ControlPointIcon />}
@@ -67,7 +68,7 @@ export const Policies = () => {
         <AccordionSummary
           onClick={() => setExpand1(!expand1)}
           sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
-          expandIcon={<ControlPointIcon sx={{ color: "#4C2A76" }} />}
+          expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -75,7 +76,7 @@ export const Policies = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: expand1 ? "#FFB8BC" : "#4C2A76",
+              color: expand1 ? "#FFB8BC" : "#270641",
             }}
             src={ana}
           />
@@ -99,7 +100,7 @@ export const Policies = () => {
         <AccordionSummary
           onClick={() => setExpand2(!expand2)}
           sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
-          expandIcon={<ControlPointIcon sx={{ color: "#4C2A76" }} />}
+          expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -127,7 +128,7 @@ export const Policies = () => {
         <AccordionSummary
           onClick={() => setExpand6(!expand6)}
           sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
-          expandIcon={<ControlPointIcon sx={{ color: "#4C2A76" }} />}
+          expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -150,7 +151,7 @@ export const Policies = () => {
         <AccordionSummary
           onClick={() => setExpand7(!expand7)}
           sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
-          expandIcon={<ControlPointIcon sx={{ color: "#4C2A76" }} />}
+          expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -191,7 +192,7 @@ export const Policies = () => {
         <AccordionSummary
           onClick={() => setExpand8(!expand8)}
           sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
-          expandIcon={<ControlPointIcon sx={{ color: "#4C2A76" }} />}
+          expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -211,7 +212,7 @@ export const Policies = () => {
         <AccordionSummary
           onClick={() => setExpand3(!expand3)}
           sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
-          expandIcon={<ControlPointIcon sx={{ color: "#4C2A76" }} />}
+          expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -245,7 +246,7 @@ export const Policies = () => {
         <AccordionSummary
           onClick={() => setExpand4(!expand4)}
           sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
-          expandIcon={<ControlPointIcon sx={{ color: "#4C2A76" }} />}
+          expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -267,7 +268,7 @@ export const Policies = () => {
         <AccordionSummary
           onClick={() => setExpand9(!expand9)}
           sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
-          expandIcon={<ControlPointIcon sx={{ color: "#4C2A76" }} />}
+          expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >

@@ -33,9 +33,8 @@ import contact from "./contact.svg";
 export const Terms = () => {
   const inneraccordionStyle1 = {
     borderRadius: "20px",
-    // backgroundColor: expand1 ? "#4C2A76" : "transparent",
-    // color: expand1 ? "#FFB8BC" : "#4C2A76",
-    backgroundColor: "transparent",
+    // backgroundColor: expand1 ? "#270641" : "transparent",
+    // color: expand1 ? "#FFB8BC" : "#270641",
     backgroundColor: "transparent",
     background: "rgba( 255, 255, 255, 0.1 )",
     boxShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
@@ -43,13 +42,21 @@ export const Terms = () => {
 
     borderRadius: "40px",
     border: "1px solid rgba( 255, 255, 255, 0.18 )",
-    color: "#4C2A76",
+    color: "#270641",
     marginBottom: "20px",
-    display: "flex",
-    justifyContent: "center",
-    flexDirection: "column",
-
+    "&:before": {
+      display: "none",
+      border: "none",
+    },
     width: "90%",
+  };
+
+  const accordionDetail = {
+    backgroundColor: "transparent",
+
+    color: "#270641",
+    borderRadius: "20px",
+    margin: "0px 20px 20px 20px",
     "&:before": {
       display: "none",
       border: "none",
@@ -60,23 +67,11 @@ export const Terms = () => {
     },
   };
 
-  const accordionDetail = {
-    backgroundColor: "transparent",
-    "&:before": {
-      display: "none",
-      border: "none",
-    },
-    // color: "#FFB8BC",
-    color: "black",
-    borderRadius: "20px",
-    margin: "0px 20px 20px 20px",
-  };
-
   return (
     <div className="policontainer">
       <div className="pheader">
-        <h2>TERMS OF SERVICE AGREEMENT</h2>
-        <p>
+        <h2 style={{ color: "#270641" }}>TERMS OF SERVICE AGREEMENT</h2>
+        <p style={{ color: "#270641" }}>
           These Terms of Use constitute a legally binding agreement made between you, whether personally or on behalf of
           an entity ("you") and TINA ROSARIO THE DESIGN HOUSE ("Company," "we," "us," or "our"), concerning your access
           to and use of the http://www.tinarosario.com website as well as any other media form, media channel, mobile
@@ -125,7 +120,7 @@ export const Terms = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: "#4C2A76",
+              color: "#270641",
             }}
             src={privacy}
           />
@@ -159,7 +154,7 @@ export const Terms = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: "#4C2A76",
+              color: "#270641",
             }}
             src={int}
           />
@@ -199,7 +194,7 @@ export const Terms = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: "#4C2A76",
+              color: "#270641",
             }}
             src={users}
           />
@@ -236,7 +231,7 @@ export const Terms = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: "#4C2A76",
+              color: "#270641",
             }}
             src={register}
           />
@@ -265,7 +260,7 @@ export const Terms = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: "#4C2A76",
+              color: "#270641",
             }}
             src={prohibit}
           />
@@ -372,7 +367,7 @@ export const Terms = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: "#4C2A76",
+              color: "#270641",
             }}
             src={contri}
           />
@@ -456,7 +451,7 @@ export const Terms = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: "#4C2A76",
+              color: "#270641",
             }}
             src={license}
           />
@@ -507,7 +502,7 @@ export const Terms = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: "#4C2A76",
+              color: "#270641",
             }}
             src={guide}
           />
@@ -549,7 +544,7 @@ export const Terms = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: "#4C2A76",
+              color: "#270641",
             }}
             src={sub}
           />
@@ -580,7 +575,7 @@ export const Terms = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: "#4C2A76",
+              color: "#270641",
             }}
             src={site}
           />
@@ -612,7 +607,7 @@ export const Terms = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: "#4C2A76",
+              color: "#270641",
             }}
             src={copy}
           />
@@ -644,7 +639,7 @@ export const Terms = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: "#4C2A76",
+              color: "#270641",
             }}
             src={terms}
           />
@@ -680,7 +675,7 @@ export const Terms = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: "#4C2A76",
+              color: "#270641",
             }}
             src={modi}
           />
@@ -718,7 +713,7 @@ export const Terms = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: "#4C2A76",
+              color: "#270641",
             }}
             src={gover}
           />
@@ -744,7 +739,7 @@ export const Terms = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: "#4C2A76",
+              color: "#270641",
             }}
             src={dis}
           />
@@ -799,7 +794,7 @@ export const Terms = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: "#4C2A76",
+              color: "#270641",
             }}
             src={correct}
           />
@@ -826,7 +821,7 @@ export const Terms = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: "#4C2A76",
+              color: "#270641",
             }}
             src={disclaim}
           />
@@ -868,7 +863,7 @@ export const Terms = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: "#4C2A76",
+              color: "#270641",
             }}
             src={limit}
           />
@@ -897,7 +892,7 @@ export const Terms = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: "#4C2A76",
+              color: "#270641",
             }}
             src={inde}
           />
@@ -933,7 +928,7 @@ export const Terms = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: "#4C2A76",
+              color: "#270641",
             }}
             src={userdata}
           />
@@ -962,7 +957,7 @@ export const Terms = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: "#4C2A76",
+              color: "#270641",
             }}
             src={elect}
           />
@@ -996,7 +991,7 @@ export const Terms = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: "#4C2A76",
+              color: "#270641",
             }}
             src={mis}
           />
@@ -1034,7 +1029,7 @@ export const Terms = () => {
             style={{
               height: "25px",
               marginRight: "10px",
-              color: "#4C2A76",
+              color: "#270641",
             }}
             src={contact}
           />

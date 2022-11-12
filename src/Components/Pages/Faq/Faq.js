@@ -20,11 +20,11 @@ const FAQ = () => {
   const outeraccordionStyle1 = {
     backgroundColor: outerAcc1 ? "#4C2A76" : "transparent",
     // color: "#FFB8BC",
-    color: outerAcc1 ? "#FFB8BC" : "#4C2A76",
+    color: outerAcc1 ? "#FFB8BC" : "#270641",
     borderRadius: "30px",
     padding: "10px",
     marginBottom: "10px",
-    border: "1px solid #4C2A76",
+    border: "1px solid #270641",
     // position: "absolute",
     "&:before": {
       display: "none",
@@ -32,16 +32,15 @@ const FAQ = () => {
     },
     marginLeft: "20px",
     marginRight: "20px",
-    
   };
   const outeraccordionStyle2 = {
     backgroundColor: outerAcc2 ? "#4C2A76" : "transparent",
     // color: "#FFB8BC",
-    color: outerAcc2 ? "#FFB8BC" : "#4C2A76",
+    color: outerAcc2 ? "#FFB8BC" : "#270641",
     borderRadius: "30px",
     padding: "10px",
     marginBottom: "10px",
-    border: "1px solid #4C2A76",
+    border: "1px solid #270641",
     // position: "absolute",
     "&:before": {
       display: "none",
@@ -53,11 +52,11 @@ const FAQ = () => {
   const outeraccordionStyle3 = {
     backgroundColor: outerAcc3 ? "#4C2A76" : "transparent",
     // color: "#FFB8BC",
-    color: outerAcc3 ? "#FFB8BC" : "#4C2A76",
+    color: outerAcc3 ? "#FFB8BC" : "#270641",
     borderRadius: "30px",
     padding: "10px",
     marginBottom: "10px",
-    border: "1px solid #4C2A76",
+    border: "1px solid #270641",
     // position: "absolute",
     "&:before": {
       display: "none",
@@ -69,11 +68,11 @@ const FAQ = () => {
   const outeraccordionStyle4 = {
     backgroundColor: outerAcc4 ? "#4C2A76" : "transparent",
     // color: "#FFB8BC",
-    color: outerAcc4 ? "#FFB8BC" : "#4C2A76",
+    color: outerAcc4 ? "#FFB8BC" : "#270641",
     borderRadius: "30px",
     padding: "10px",
     marginBottom: "10px",
-    border: "1px solid #4C2A76",
+    border: "1px solid #270641",
     // position: "absolute",
     "&:before": {
       display: "none",
@@ -85,11 +84,11 @@ const FAQ = () => {
   const outeraccordionStyle5 = {
     backgroundColor: outerAcc5 ? "#4C2A76" : "transparent",
     // color: "#FFB8BC",
-    color: outerAcc5 ? "#FFB8BC" : "#4C2A76",
+    color: outerAcc5 ? "#FFB8BC" : "#270641",
     borderRadius: "30px",
     padding: "10px",
     marginBottom: "50px",
-    border: "1px solid #4C2A76",
+    border: "1px solid #270641",
     // position: "absolute",
     "&:before": {
       display: "none",
@@ -115,7 +114,7 @@ const FAQ = () => {
 
   const accordionDetail = {
     backgroundColor: "white",
-    color: "black",
+    color: "#270641",
     borderRadius: "20px",
     margin: "0px 20px 20px 20px",
   };
@@ -171,7 +170,7 @@ const FAQ = () => {
 
   return (
     <div className="faq-container">
-      <h2 style={{ marginTop: "80px", marginBottom: "40px" }}>Frequently Asked Questions</h2>
+      <h2 style={{ marginTop: "80px", marginBottom: "40px", color: "#270641" }}>Frequently Asked Questions</h2>
       <div className="faq-inner">
         <Accordion sx={{ display: "none" }} className="outeraccordion">
           <AccordionSummary
@@ -184,7 +183,7 @@ const FAQ = () => {
         <Accordion expanded={expand1} sx={outeraccordionStyle1} className="outeraccordion">
           <AccordionSummary
             onClick={toggleAcordion1}
-            expandIcon={<ControlPointIcon sx={{ color: outerAcc1 ? "#FFB8BC" : "#4C2A76" }} />}
+            expandIcon={<ControlPointIcon sx={{ color: outerAcc1 ? "#FFB8BC" : "#270641" }} />}
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
@@ -753,6 +752,7 @@ const FAQ = () => {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
+            color: "#270641",
           }}
         >
           <h3>Still have a question?</h3>

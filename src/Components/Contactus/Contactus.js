@@ -201,7 +201,7 @@ export const Contactus = () => {
 
               // defaultValue="Default Value"
             />
-            <p>* Mandatory Fields</p>
+            <p style={{ color: "#270641" }}>* Mandatory Fields</p>
             {mailSent ? (
               <button className="contactsend" onClick={notify1}>
                 <i class="fa-solid fa-check"></i>{" "}

@@ -90,7 +90,9 @@ export const Getpampered = () => {
       <Toaster />
       <div className="getpamperedBar"></div>
       <div className="backgroundforgetpam">
-        <span className="getpamtitle2">Exclusively for Chennai Vaasies!!!</span>
+        <span className="getpamtitle2" style={{ color: "#270641" }}>
+          Exclusively for Chennai Vaasies!!!
+        </span>
         <div className="img-row">
           <img
             src={
@@ -106,17 +108,16 @@ export const Getpampered = () => {
             }}
           >
             <p>
-              Hello <span style={{ fontWeight: "600" }}> Chennai makkale...</span> We've come up with something
-              exclusive for you!
+              Hello <span style={{ fontWeight: "600", color: "#270641" }}> Chennai makkale...</span> We've come up with
+              something exclusive for you!
             </p>
-
-            <p style={{ fontWeight: "600", fontStyle: "italic" }}>
+            <p style={{ fontWeight: "600", fontStyle: "italic", color: "#270641" }}>
               Have you stopped getting clothes tailored because it's such a time sink?{" "}
             </p>
-            <p>Well, we've got your back.. </p>
-            <p>Get your designer wear from the comfort of your home... </p>
-            <p>No more grueling visits to the shop.. </p>
-            <p>We're just a call away..</p>
+            <p style={{ color: "#270641" }}>Well, we've got your back.. </p>
+            <p style={{ color: "#270641" }}>Get your designer wear from the comfort of your home... </p>
+            <p style={{ color: "#270641" }}>No more grueling visits to the shop.. </p>
+            <p style={{ color: "#270641" }}>We're just a call away..</p>
           </p>
         </div>
         <div className="getpamdetailsdiv">
@@ -332,7 +333,7 @@ export const Getpampered = () => {
                 <feComposite in2="hardAlpha" operator="out" />
                 <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
                 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_396_24968" />
-              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_396_24968" result="shape" />
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_396_24968" result="shape" />
               </filter>
             </defs>
           </svg>
