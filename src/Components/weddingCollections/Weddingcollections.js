@@ -6,7 +6,7 @@ import { Prodcard } from "./Prodcard";
 import MoonLoader from "react-spinners/ClipLoader";
 import { height } from "@mui/system";
 
-export const Causalwear = () => {
+export const Weddingcollections = () => {
 	const [subcatoptions, setSubcatoptions] = useState(false);
 	const [subpriceoptions, setSubpriceoptions] = useState(true);
 	const [subfabric, setSubfabric] = useState(true);
@@ -20,7 +20,7 @@ export const Causalwear = () => {
 			.then((result) => {
 				const temp = result.data;
 				const data = temp.filter(
-					(e) => e.attributes.Main_Category == "Casual Wear"
+					(e) => e.attributes.Main_Category == "Wedding Collections"
 				);
 				setPagedata(data);
 				setLoading(false);
@@ -423,7 +423,7 @@ export const Causalwear = () => {
 				</div>
 			</div>
 			<div className="prodpage">
-				<span className="prodpaget1">Casual Wear</span>
+				<span className="prodpaget1">Wedding Collections</span>
 				<span className="prodpaget2">Specially designed to make you feel comfortable </span>
 				{loading ? (
 					<div
