@@ -22,7 +22,7 @@ export const About = () => {
       }}
     >
       <div className="imagesection"></div>
-    <div className="aboutContainer">
+      <div className="aboutContainer">
         <div className="abtussec2">
           <span className="sec2t1">
             {" "}
@@ -64,7 +64,7 @@ export const About = () => {
             <img src={img1} alt="" style={{ height: "310px", width: "400px" }} />
           </div>
           <div className="rsec3">
-            <p style={{ fontSize: "18px" }}>
+            <p style={{ fontSize: "18px", color: "#270641" }}>
               <span style={{ fontWeight: "600", fontSize: "25px" }}>Tina Rosario</span> and her team have been thinking
               about it for a while. Machinated clothing and broad patterns did not interest them. In fact, they believe
               that proper attire and personality based designs makes an individual look elegant, enhances confidence and
@@ -75,13 +75,13 @@ export const About = () => {
         <div className="sec4abtus">
           <span>What’s Inside?</span>
           <img src={img2} alt="" style={{ height: "310px", width: "400px", marginBottom: "40px" }} />
-          <p style={{ fontSize: "18px" }}>
+          <p style={{ fontSize: "18px", color: "#270641" }}>
             The Design House, your one-stop customized online clothing platform is an ideal choice for you to decide and
             design the attire of your dreams. We literally mean it. Identifying the cultural fusion you want to blend
             into, choosing the type of fabric you want to don upon, providing specific designs, we guarantee
             satisfactory outcomes.
           </p>
-          <p style={{ fontSize: "18px" }}>
+          <p style={{ fontSize: "18px", color: "#270641" }}>
             We also have a list of exquisite patterns modeled in the finest of fabrics and available for display in our
             store. Hop in and check it out yourself
           </p>
@@ -123,8 +123,10 @@ export const About = () => {
               backgroundColor: "#4C2A76",
             }}
           ></img>
-          <p className="CCC">Creative | Curious | Committed </p>
-          <p style={{ fontSize: "18px" }}>
+          <p className="CCC" style={{ color: "#270641" }}>
+            Creative | Curious | Committed{" "}
+          </p>
+          <p style={{ fontSize: "18px", color: "#270641" }}>
             Tina Rosario, an accomplished celebrity stylist and fashion designer, who is well known for her exquisite
             works in the film industry. She has played a key role in styling made-to-measure costumes for numerous
             movies, TV Commercials and web series. Currently, through The Design House she has taken a revolutionary

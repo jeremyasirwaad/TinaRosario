@@ -60,7 +60,7 @@ export const Landing = () => {
                 fill="#FFB8BC"
               />
             </svg>
-            <p style={{ fontSize: "18px" }}>Customization per your style, desire and comfort</p>
+            <p style={{ fontSize: "18px", color: "#270641" }}>Customization per your style, desire and comfort</p>
           </div>
           <div
             style={{
@@ -138,7 +138,7 @@ export const Landing = () => {
               />
             </svg>
 
-            <p style={{ fontSize: "18px" }}>Premium quality fabric</p>
+            <p style={{ fontSize: "18px", color: "#270641" }}>Premium quality fabric</p>
           </div>
           <div
             style={{
@@ -156,7 +156,7 @@ export const Landing = () => {
                 fill="#FFB8BC"
               />
             </svg>
-            <p style={{ fontSize: "18px" }}>One Stop platform</p>
+            <p style={{ fontSize: "18px", color: "#270641" }}>One Stop platform</p>
           </div>
           <div
             style={{
@@ -193,7 +193,7 @@ export const Landing = () => {
                 fill="#FFB8BC"
               />
             </svg>
-            <p style={{ fontSize: "18px" }}>Work Transparency</p>
+            <p style={{ fontSize: "18px", color: "#270641" }}>Work Transparency</p>
           </div>
           <div
             style={{
@@ -223,7 +223,7 @@ export const Landing = () => {
                 fill="#FFB8BC"
               />
             </svg>
-            <p style={{ fontSize: "18px" }}>No sitting back until we see you smile</p>
+            <p style={{ fontSize: "18px", color: "#270641" }}>No sitting back until we see you smile</p>
           </div>
         </div>
         <span id="services" className="landser">
