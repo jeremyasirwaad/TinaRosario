@@ -33,7 +33,7 @@ import { MuiTelInput } from "mui-tel-input";
 import video from "./video.svg";
 
 export const Cusdesigns = () => {
-  const url = "http://54.226.201.17:8080";
+  const url = "http://3.88.157.171:8080";
   // const url = "http://localhost:3001";
   const navigate = useNavigate();
   const [agecat1, setagecat1] = useState(false);

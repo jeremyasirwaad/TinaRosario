@@ -12,7 +12,7 @@ import toast, { Toaster } from "react-hot-toast";
 import validator from "validator";
 import { MuiTelInput } from "mui-tel-input";
 
-const backendUrl = "http://54.226.201.17:8080";
+const backendUrl = "http://3.88.157.171:8080";
 // const backendUrl = "http://localhost:3001";
 
 export const Contactus = () => {

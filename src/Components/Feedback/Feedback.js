@@ -15,7 +15,7 @@ import { TextField } from "@mui/material";
 
 export const Feedback = () => {
   const [submitted, setSubmitted] = useState(false);
-  const backendUrl = "http://54.226.201.17:8080";
+  const backendUrl = "http://3.88.157.171:8080";
   const [rating, setRating] = useState(0);
   const [file, setfile] = useState();
   const [imageerror, setImageerror] = useState(false);

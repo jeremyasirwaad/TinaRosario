@@ -14,7 +14,7 @@ import final from "./final.svg";
 
 export const Getpampered = () => {
   const navigate = useNavigate();
-  const url = "http://54.226.201.17:8080";
+  const url = "http://3.88.157.171:8080";
   // const url = "http://localhost:3001";
   const days = dayjs();
 
