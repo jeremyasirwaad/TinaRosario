@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import tick from "./tick.svg";
 import "./OrderFinish.css";
+import bottomLogo from "./bottomLogo.svg";
 const OrderFinish = () => {
   const { type, name, d, m, y } = useParams();
   return (
@@ -27,8 +28,8 @@ const OrderFinish = () => {
             <img src={tick} />
           </div>
           <div className="details">
-            Hello {name} , <br /> Welcome to  “The Design House” family <br /> by Tina Rosario. <br /> Appreciate
-            your confidence in us <br /> <br />
+            Hello {name} , <br /> Welcome to “The Design House” family <br /> by Tina Rosario. <br /> Appreciate your
+            confidence in us <br /> <br />
             Looking forward to customise your comfort attire. <br /> <br />
             Our Designer will contact you to discuss fabric, design, and measurement details.
           </div>
@@ -65,6 +66,9 @@ const OrderFinish = () => {
           </div>
         </div>
       )}
+      <div className="bottomLogo">
+        <img src={bottomLogo} />
+      </div>
     </div>
   );
 };

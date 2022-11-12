@@ -4,10 +4,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-image:url("./bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     color:#FFB8BC;
+}
+.bottomLogo{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 100px;
+
+    position: relative;
 }
 .order-card{
     background-color: #4C2A76;

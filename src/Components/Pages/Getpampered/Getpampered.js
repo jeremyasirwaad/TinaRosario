@@ -332,17 +332,21 @@ export const Getpampered = () => {
                 <feComposite in2="hardAlpha" operator="out" />
                 <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
                 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_396_24968" />
-                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_396_24968" result="shape" />
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_396_24968" result="shape" />
               </filter>
             </defs>
           </svg>
         </div>
-        <span className="getpamlines" style={{ marginTop: "30px" }}>
+        <span className="getpamlines" style={{ marginTop: "30px", color: "#270641" }}>
           We look forward to meet you at your place of.{" "}
         </span>
-        <span className="getpamlines">comfort and discuss further</span>
+        <span className="getpamlines" style={{ color: "#270641" }}>
+          comfort and discuss further
+        </span>
         <div className="weddingforms">
-          <span className="weddingt2">To discuss further, provide your </span>
+          <span className="weddingt2" style={{ color: "#270641" }}>
+            To discuss further, provide your{" "}
+          </span>
           <TextField
             id="outlined-basic"
             label="Name *"

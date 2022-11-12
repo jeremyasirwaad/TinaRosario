@@ -32,6 +32,7 @@ const FAQ = () => {
     },
     marginLeft: "20px",
     marginRight: "20px",
+    
   };
   const outeraccordionStyle2 = {
     backgroundColor: outerAcc2 ? "#4C2A76" : "transparent",

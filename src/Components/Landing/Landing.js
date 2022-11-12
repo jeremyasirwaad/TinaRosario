@@ -1,5 +1,5 @@
 import React from "react";
-
+import testi from "./testi.svg";
 import "./newlanding.css";
 import { Caro } from "./Caro";
 import "./TestiCaro.css";
@@ -18,7 +18,7 @@ export const Landing = () => {
       <FloatingWhatsApp
         allowClickAway="true"
         statusMessage="Online"
-        phoneNumber="919916818637"
+        phoneNumber="917200060540"
         accountName="Tina rosario"
         avatar={avatar}
         chatMessage={"Welcome to The Design House by Tina Rosario. \n How can we help you?"}
@@ -32,7 +32,7 @@ export const Landing = () => {
           style={{
             width: "100%",
             height: "30px",
-            backgroundColor: "rgb(47, 0, 33)",
+            backgroundColor: "#270641",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -60,7 +60,7 @@ export const Landing = () => {
                 fill="#FFB8BC"
               />
             </svg>
-            <p>Customization per your style, desire and comfort</p>
+            <p style={{ fontSize: "18px" }}>Customization per your style, desire and comfort</p>
           </div>
           <div
             style={{
@@ -138,7 +138,7 @@ export const Landing = () => {
               />
             </svg>
 
-            <p>Premium quality fabric</p>
+            <p style={{ fontSize: "18px" }}>Premium quality fabric</p>
           </div>
           <div
             style={{
@@ -156,7 +156,7 @@ export const Landing = () => {
                 fill="#FFB8BC"
               />
             </svg>
-            <p>One Stop platform</p>
+            <p style={{ fontSize: "18px" }}>One Stop platform</p>
           </div>
           <div
             style={{
@@ -193,7 +193,7 @@ export const Landing = () => {
                 fill="#FFB8BC"
               />
             </svg>
-            <p>Work Transparency</p>
+            <p style={{ fontSize: "18px" }}>Work Transparency</p>
           </div>
           <div
             style={{
@@ -223,7 +223,7 @@ export const Landing = () => {
                 fill="#FFB8BC"
               />
             </svg>
-            <p>No sitting back until we see you smile</p>
+            <p style={{ fontSize: "18px" }}>No sitting back until we see you smile</p>
           </div>
         </div>
         <span id="services" className="landser">
@@ -340,28 +340,67 @@ export const Landing = () => {
           />
         </div>
 
-        <span className="Landingtesti" id="Landingtesti" style={{ fontSize: "40px", fontWeight: "600" }}>
+        <span
+          className="Landingtesti"
+          id="Landingtesti"
+          style={{ fontSize: "40px", fontWeight: "600", color: "#270641" }}
+        >
           Testimonials
         </span>
         <div className="testcont" id="testcont">
-          <div className="avatar"></div>
           <div style={{ height: "100%" }} id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active ">
-                {/* <img className="avatar" src={testimImage} /> */}
-                <p>“ We suggest suitable combinations of colors for different dress“</p>
-                <h3>Rowan Atkinson</h3>
+                <div>
+                  <img
+                    style={{ width: "170px", height: "250px", borderRadius: "20px" }}
+                    className="avatar"
+                    src={testi}
+                  />
+                  <div>
+                    <p>
+                      Thank you Tina Aunty, this dress feels comfortable to wear and I have received a lot of
+                      compliments.
+                    </p>
+                    <h3>Akansha Jose</h3>
+                  </div>
+                </div>
               </div>
-              <div class="carousel-item ">
-                {/* <img className="avatar" src={testimImage} /> */}
-
-                <p>“ We suggest suitable combinations of colors for different dress</p>
-                <h3>Rowan Atkinson</h3>
+              <div class="carousel-item  ">
+                <div>
+                  <img
+                    style={{ width: "170px", height: "250px", borderRadius: "20px" }}
+                    className="avatar"
+                    src={
+                      "https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                    }
+                  />
+                  <div>
+                    <p>
+                      Thank you Tina Aunty, this dress feels comfortable to wear and I have received a lot of
+                      compliments.
+                    </p>
+                    <h3>Akansha Jose</h3>
+                  </div>
+                </div>
               </div>
-              <div class="carousel-item ">
-                {/* <img className="avatar" src={testimImage} /> */}
-                <p>“ We suggest suitable combinations of colors for different dress</p>
-                <h3>Rowan Atkinson</h3>
+              <div class="carousel-item  ">
+                <div>
+                  <img
+                    style={{ width: "170px", height: "250px", borderRadius: "20px" }}
+                    className="avatar"
+                    src={
+                      "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                    }
+                  />
+                  <div>
+                    <p>
+                      Thank you Tina Aunty, this dress feels comfortable to wear and I have received a lot of
+                      compliments.
+                    </p>
+                    <h3>Akansha Jose</h3>
+                  </div>
+                </div>
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

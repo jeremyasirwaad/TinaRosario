@@ -141,7 +141,7 @@ export const Policies = () => {
             <a href="mailto:design@tinarosario.com"> design@tinarosario.com </a>. The exchange request should be made
             within two (2) days of receiving your product. After verification (an unboxing video as evidence) exchanges
             will be processed within a 15 day period. Please note, shipping charges should be borne by the customer for
-            exchanges. In rare cases, we might<b>not honor exchange requests.</b>
+            exchanges. In rare cases, we might<b> not honor exchange requests.</b>
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -165,11 +165,15 @@ export const Policies = () => {
             date
             <br />
             <br />
-            For ready to ship products, we will be able to deliver within the following business days: Domestic: 5 - 7
-            International: 10 - 12 <br />
+            For ready to ship products, we will be able to deliver within the following business days:
             <br />
-            For customized orders, it might take a bit longer as mentioned below. Domestic: 10 - 15 International: 15 -
-            25
+            Domestic: 5 - 7days <br />
+            International: 10 - 12 days <br />
+            <br />
+            For customized orders, it might take a bit longer as mentioned below.
+            <br />
+            Domestic: 10 - 15 days
+            <br /> International: 15 - 25 days
             <br />
             <br />
             We cater to pan India and various overseas destinations. Shipping charges are to be borne by the customer
@@ -216,7 +220,9 @@ export const Policies = () => {
         </AccordionSummary>
         <AccordionDetails sx={accordionDetail}>
           <Typography sx={{ fontSize: "18px" }}>
-            Our products are mostly designed with the notion of being easy to maintain: <br />
+            Our products are mostly designed with the notion of being easy to maintain. Clothing tags would indicate if
+            the fabric can be dry cleaned or hand washed.
+            <br />
             <b>For hand washed fabric: </b>
             <ul>
               <li>Use mild detergent.</li>
@@ -286,8 +292,6 @@ export const Policies = () => {
         ></AccordionSummary>
         <AccordionDetails></AccordionDetails>
       </Accordion>
-
-      <h2 style={{ marginTop: "80px", marginBottom: "40px" }}>Acknowledgement</h2>
     </div>
   );
 };
