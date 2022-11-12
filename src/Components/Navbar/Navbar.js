@@ -10,10 +10,10 @@ export const Navbar = () => {
 	const navigate = useNavigate();
 
 	const searchoptions = [
-		{ value: "chocolate", label: "Kurta" },
-		{ value: "strawberry", label: "Saree" },
-		{ value: "vanilla", label: "Lehenga" },
-		{ value: "vanilla", label: "Dress" },
+		{ value: "Kurta", label: "Kurta" },
+		{ value: "Saree", label: "Saree" },
+		{ value: "Lehenga", label: "Lehenga" },
+		{ value: "Dress", label: "Dress" },
 		{ value: "vanilla", label: "Handloom dress" },
 		{ value: "vanilla", label: "Pant" },
 		{ value: "vanilla", label: "Shirt" },
@@ -126,7 +126,14 @@ export const Navbar = () => {
 						class="fa-solid fa-magnifying-glass"
 						style={{ marginRight: "10px" }}
 					></i>
-					<Select options={searchoptions}></Select>
+					<Select
+						options={searchoptions}
+						onChange={(e) => {
+							if (e.value == "Saree") {
+								navigate("/Weddingproduct");
+							}
+						}}
+					></Select>
 					{/* <input
 						type="text"
 						style={{
