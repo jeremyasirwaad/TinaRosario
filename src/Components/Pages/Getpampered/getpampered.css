@@ -47,7 +47,7 @@
     display: flex;
     width: 600px;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 10px;
     justify-content: flex-start;
 }
 
@@ -57,13 +57,14 @@
     margin-left: 30px;
     font-size: 20px;
     font-weight: 600;
+    color:#270641;
 }
 
 .getpamdetailsdiv2{
     display: flex;
     width: 600px;
     align-items: center;
-    margin-top: 22px;
+    margin-top: 10px;
     justify-content: flex-end;
 }
 /* 
@@ -74,8 +75,9 @@
 
 .getpamdetailsdiv2 span{
     margin-right: 30px;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
+    color:#270641;
 }
 
 .tagimg{

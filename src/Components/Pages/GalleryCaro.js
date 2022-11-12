@@ -4,7 +4,6 @@ import "./GalleryCaro.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import MoonLoader from "react-spinners/ClipLoader";
 
-
 const GalleryCaro = () => {
   const [loading, setLoading] = useState(true);
   const [pagedata, setPagedata] = useState([]);
@@ -46,7 +45,7 @@ const GalleryCaro = () => {
             id="carouselExampleIndicators"
             class="carousel slide"
             data-ride="carousel"
-            style={{ marginBottom: "80px" }}
+            style={{ marginBottom: "80px", marginTop: "80px" }}
           >
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -57,14 +56,14 @@ const GalleryCaro = () => {
               <div class="carousel-item active">
                 <div className="innercarodiv">
                   {" "}
-                  <img src={pagedata[0]} alt="First slide" />
+                  <img className="caroImg" src={pagedata[0]} alt="First slide" />
                 </div>
               </div>
               {pagedata.slice(1, pagedata.length).map((img) => {
                 return (
                   <div class="carousel-item">
                     <div className="innercarodiv">
-                      <img src={img} alt="Second slide" />
+                      <img className="caroImg" src={img} alt="Second slide" />
                     </div>
                   </div>
                 );

@@ -11,7 +11,7 @@
     flex-direction: column;
    
 }
-.gcaroimg{
+.caroImg{
     height: 400px;
     width: 100%;
     /* margin-top: 20px, */
@@ -47,16 +47,16 @@
 
   .innercarodiv{
     width: 100%;
-    height: 650px;
+    height: 700px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #4C2A76;
+    background-color: #270641;
     padding: 20px;
   }
 
   .innercarodiv img{
-    height: 100%;
+    height: 700px;
     width: auto;
     border-radius: 10px;
   }

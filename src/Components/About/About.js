@@ -6,6 +6,8 @@ import glove from "./glove.svg";
 import scale from "./scale.svg";
 import face from "./face.svg";
 import photo from "./photo.png";
+import img1 from "./img1.svg";
+import img2 from "./img2.svg";
 
 export const About = () => {
   const navigate = useNavigate();
@@ -20,7 +22,7 @@ export const About = () => {
       }}
     >
       <div className="imagesection"></div>
-      <div className="aboutContainer">
+    <div className="aboutContainer">
         <div className="abtussec2">
           <span className="sec2t1">
             {" "}
@@ -59,13 +61,7 @@ export const About = () => {
         </div>
         <div className="sec3abtus">
           <div className="lsec3">
-            <img
-              src={
-                "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%2036a.png?alt=media&token=0ecf8c31-39d8-4e8e-b4df-20affce84804"
-              }
-              alt=""
-              style={{ height: "310px", width: "400px" }}
-            />
+            <img src={img1} alt="" style={{ height: "310px", width: "400px" }} />
           </div>
           <div className="rsec3">
             <p style={{ fontSize: "18px" }}>
@@ -78,13 +74,14 @@ export const About = () => {
         </div>
         <div className="sec4abtus">
           <span>What’s Inside?</span>
-          <p>
+          <img src={img2} alt="" style={{ height: "310px", width: "400px", marginBottom: "40px" }} />
+          <p style={{ fontSize: "18px" }}>
             The Design House, your one-stop customized online clothing platform is an ideal choice for you to decide and
             design the attire of your dreams. We literally mean it. Identifying the cultural fusion you want to blend
             into, choosing the type of fabric you want to don upon, providing specific designs, we guarantee
             satisfactory outcomes.
           </p>
-          <p>
+          <p style={{ fontSize: "18px" }}>
             We also have a list of exquisite patterns modeled in the finest of fabrics and available for display in our
             store. Hop in and check it out yourself
           </p>
@@ -127,7 +124,7 @@ export const About = () => {
             }}
           ></img>
           <p className="CCC">Creative | Curious | Committed </p>
-          <p>
+          <p style={{ fontSize: "18px" }}>
             Tina Rosario, an accomplished celebrity stylist and fashion designer, who is well known for her exquisite
             works in the film industry. She has played a key role in styling made-to-measure costumes for numerous
             movies, TV Commercials and web series. Currently, through The Design House she has taken a revolutionary

@@ -241,16 +241,17 @@ export const Fabrics = () => {
                 Dupattas have been a recent trend for its luscious glamor and remarkable sophistication.
               </p>
             </div>
-        </div>
+          </div>
           <div className="imgfabrow2">
             <img src={kala} alt="" />
             <div className="imgfabrowinner">
-              <span>Tanjore Painting :</span>
+              <span>Tanjore Painting </span>
               <p>
-                History on our sleeve A 16th century art that has vivid paintings crafted on wooden planks. In the past
-                few years, creative minds have started embedding the same pictures on fabrics stealing the spotlight.
-                Their intricacy makes the attire look artsy. The precise incorporation of stones in an iconic
-                composition along with the glittering gold has gained worldwide attention.
+                History on our sleeve
+                <br /> A 16th century art that has vivid paintings crafted on wooden planks. In the past few years,
+                creative minds have started embedding the same pictures on fabrics stealing the spotlight. Their
+                intricacy makes the attire look artsy. The precise incorporation of stones in an iconic composition
+                along with the glittering gold has gained worldwide attention.
                 <br />
                 Embellishing these designs on silk sarees weaves (quite literally) the cultural ethos of history into
                 the modern times.

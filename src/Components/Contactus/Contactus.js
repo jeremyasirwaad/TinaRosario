@@ -105,7 +105,12 @@ export const Contactus = () => {
             <div className="loca">
               <div className="locainner">
                 <i class="fa-solid fa-location-pin"></i>
-                <span>112A Nehru Street, Alwar Thiru Nagar, Chennai 600087</span>
+                <span>
+                  112A Nehru Street
+                  <br /> Alwar Thiru Nagar
+                  <br /> Chennai 600087
+                </span>
+                <br />
               </div>
               <div className="locainner">
                 <i class="fa-solid fa-phone"></i>
