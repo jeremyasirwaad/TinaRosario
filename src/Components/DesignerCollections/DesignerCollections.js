@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./DesignerCollections.css";
 
-
 import { Prodcard } from "./Prodcard";
 import MoonLoader from "react-spinners/ClipLoader";
-
 
 export const DesignerCollections = () => {
 	const [subcatoptions, setSubcatoptions] = useState(false);
@@ -13,6 +11,8 @@ export const DesignerCollections = () => {
 	const [subcolor, setSubcolor] = useState(true);
 	const [pagedata, setPagedata] = useState([]);
 	const [loading, setLoading] = useState(true);
+
+	const [subcatfilter, setSubcatfilter] = useState("");
 
 	const getdata = async () => {
 		const data = await fetch("http://products.tinarosario.com/api/Products")
@@ -64,121 +64,198 @@ export const DesignerCollections = () => {
 							}
 						>
 							<div className="fliterchoice" style={{ marginTop: "10px" }}>
-								<input type="radio" />
+								<input
+									type="checkbox"
+									name="subcat"
+									checked={subcatfilter == "Lehenga"}
+									onChange={() => {
+										if (subcatfilter == "Lehenga") {
+											setSubcatfilter("");
+										} else {
+											setSubcatfilter("Lehenga");
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Lehenga
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input
+									type="checkbox"
+									name="subcat"
+									checked={subcatfilter == "Gown"}
+									onChange={() => {
+										if (subcatfilter == "Gown") {
+											setSubcatfilter("");
+										} else {
+											setSubcatfilter("Gown");
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Gown
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input
+									type="checkbox"
+									name="subcat"
+									checked={subcatfilter == "Dress"}
+									onChange={() => {
+										if (subcatfilter == "Dress") {
+											setSubcatfilter("");
+										} else {
+											setSubcatfilter("Dress");
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Dress
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input
+									type="checkbox"
+									name="subcat"
+									checked={subcatfilter == "Blouse"}
+									onChange={() => {
+										if (subcatfilter == "Blouse") {
+											setSubcatfilter("");
+										} else {
+											setSubcatfilter("Blouse");
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Blouse
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input
+									type="checkbox"
+									name="subcat"
+									checked={subcatfilter == "Anarkali"}
+									onChange={() => {
+										if (subcatfilter == "Anarkali") {
+											setSubcatfilter("");
+										} else {
+											setSubcatfilter("Anarkali");
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Anarkali
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input
+									type="checkbox"
+									name="subcat"
+									checked={subcatfilter == "Salwar Kameez"}
+									onChange={() => {
+										if (subcatfilter == "Salwar Kameez") {
+											setSubcatfilter("");
+										} else {
+											setSubcatfilter("Salwar Kameez");
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Salwar Kameez
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input
+									type="checkbox"
+									name="subcat"
+									checked={subcatfilter == "Chudidhar"}
+									onChange={() => {
+										if (subcatfilter == "Chudidhar") {
+											setSubcatfilter("");
+										} else {
+											setSubcatfilter("Chudidhar");
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Chudidhar
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input type="checkbox" name="subcat" />
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Kurtha
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input type="checkbox" name="subcat" />
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Half-saree
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input type="checkbox" name="subcat" />
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Pavadai Sattai
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input type="checkbox" name="subcat" />
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Frock
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input type="checkbox" name="subcat" />
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Skirt
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input type="checkbox" name="subcat" />
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Sherwani
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input type="checkbox" name="subcat" />
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Suit
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input type="checkbox" name="subcat" />
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Over-coat
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input type="checkbox" name="subcat" />
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Blazer
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input type="checkbox" name="subcat" />
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Pant
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input type="checkbox" name="subcat" />
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Trouser
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input type="checkbox" name="subcat" />
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Short
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input type="checkbox" name="subcat" />
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Shirt
 								</span>
