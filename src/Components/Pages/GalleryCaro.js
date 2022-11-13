@@ -3,6 +3,7 @@ import "./GalleryCaro.css";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import MoonLoader from "react-spinners/ClipLoader";
+import { padding } from "@mui/system";
 
 const GalleryCaro = () => {
 	const [loading, setLoading] = useState(true);
@@ -50,7 +51,8 @@ const GalleryCaro = () => {
 						style={{
 							marginBottom: "120px",
 							marginTop: "30px",
-							backgroundColor: "#270641"
+							backgroundColor: "#270641",
+							padding: "20px"
 						}}
 					>
 						<ol class="carousel-indicators">

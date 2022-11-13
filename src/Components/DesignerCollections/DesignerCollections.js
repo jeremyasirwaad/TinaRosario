@@ -40,14 +40,59 @@ export const DesignerCollections = () => {
 			const data = pagedata.filter((e) => {
 				return e.attributes.Gender == subcatfilter;
 			});
-
+			console.log(data);
 			setPagedata(data);
-		} else {
-			setPagedata(backupagedata);
+		}
+
+		if (pricefilter != 0) {
+			if (pricefilter == 1) {
+				const data = pagedata.filter((e) => {
+					return parseInt(e.attributes.price) < 5000;
+				});
+
+				setPagedata(data);
+			}
+			if (pricefilter == 2) {
+				const data = pagedata.filter((e) => {
+					return (
+						parseInt(e.attributes.price) > 5000 &&
+						parseInt(e.attributes.price) < 10000
+					);
+				});
+
+				setPagedata(data);
+			}
+			if (pricefilter == 3) {
+				const data = pagedata.filter((e) => {
+					return (
+						parseInt(e.attributes.price) > 10000 &&
+						parseInt(e.attributes.price) < 15000
+					);
+				});
+
+				setPagedata(data);
+			}
+			if (pricefilter == 4) {
+				const data = pagedata.filter((e) => {
+					return (
+						parseInt(e.attributes.price) > 15000 &&
+						parseInt(e.attributes.price) < 20000
+					);
+				});
+
+				setPagedata(data);
+			}
+			if (pricefilter == 5) {
+				const data = pagedata.filter((e) => {
+					return parseInt(e.attributes.price) > 20000;
+				});
+
+				setPagedata(data);
+			}
 		}
 
 		// console.log(pagedata);
-	}, [subcatfilter]);
+	}, [subcatfilter, pricefilter]);
 
 	return (
 		<div className="designercollections">
@@ -88,6 +133,7 @@ export const DesignerCollections = () => {
 									onChange={() => {
 										if (subcatfilter == "Male") {
 											setSubcatfilter("");
+											setPagedata(backupagedata);
 										} else {
 											setSubcatfilter("Male");
 										}
@@ -105,6 +151,7 @@ export const DesignerCollections = () => {
 									onChange={() => {
 										if (subcatfilter == "Female") {
 											setSubcatfilter("");
+											setPagedata(backupagedata);
 										} else {
 											setSubcatfilter("Female");
 										}
@@ -122,6 +169,7 @@ export const DesignerCollections = () => {
 									onChange={() => {
 										if (subcatfilter == "Kid's") {
 											setSubcatfilter("");
+											setPagedata(backupagedata);
 										} else {
 											setSubcatfilter("Kid's");
 										}
@@ -163,31 +211,91 @@ export const DesignerCollections = () => {
 							}
 						>
 							<div className="fliterchoice" style={{ marginTop: "10px" }}>
-								<input type="checkbox" />
+								<input
+									type="checkbox"
+									name="pricebox"
+									checked={pricefilter == 1}
+									onChange={() => {
+										if (pricefilter == 1) {
+											setpricefilter(0);
+											setPagedata(backupagedata);
+										} else {
+											setpricefilter(1);
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Less than 5000
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="checkbox" />
+								<input
+									type="checkbox"
+									name="pricebox"
+									checked={pricefilter == 2}
+									onChange={() => {
+										if (pricefilter == 2) {
+											setpricefilter(0);
+											setPagedata(backupagedata);
+										} else {
+											setpricefilter(2);
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									5001 - 10000
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="checkbox" />
+								<input
+									type="checkbox"
+									name="pricebox"
+									checked={pricefilter == 3}
+									onChange={() => {
+										if (pricefilter == 3) {
+											setpricefilter(0);
+											setPagedata(backupagedata);
+										} else {
+											setpricefilter(3);
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									10,001-15,000
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="checkbox" />
+								<input
+									type="checkbox"
+									name="pricebox"
+									checked={pricefilter == 4}
+									onChange={() => {
+										if (pricefilter == 4) {
+											setpricefilter(0);
+											setPagedata(backupagedata);
+										} else {
+											setpricefilter(4);
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									15,001 - 20,000
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="checkbox" />
+								<input
+									type="checkbox"
+									name="pricebox"
+									checked={pricefilter == 5}
+									onChange={() => {
+										if (pricefilter == 5) {
+											setpricefilter(0);
+											setPagedata(backupagedata);
+										} else {
+											setpricefilter(5);
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									More than 20,000
 								</span>
