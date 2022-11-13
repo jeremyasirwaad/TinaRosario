@@ -60,7 +60,7 @@ export const Landing = () => {
                 fill="#FFB8BC"
               />
             </svg>
-            <p style={{ fontSize: "18px", color: "#270641" }}>Customization per your style, desire and comfort</p>
+            <p style={{ fontSize: "22px", color: "#270641" }}>Customization per your style, desire and comfort</p>
           </div>
           <div
             style={{
@@ -138,7 +138,7 @@ export const Landing = () => {
               />
             </svg>
 
-            <p style={{ fontSize: "18px", color: "#270641" }}>Premium quality fabric</p>
+            <p style={{ fontSize: "22px", color: "#270641" }}>Premium quality fabric</p>
           </div>
           <div
             style={{
@@ -156,7 +156,7 @@ export const Landing = () => {
                 fill="#FFB8BC"
               />
             </svg>
-            <p style={{ fontSize: "18px", color: "#270641" }}>One Stop platform</p>
+            <p style={{ fontSize: "22px", color: "#270641" }}>One Stop platform</p>
           </div>
           <div
             style={{
@@ -193,7 +193,7 @@ export const Landing = () => {
                 fill="#FFB8BC"
               />
             </svg>
-            <p style={{ fontSize: "18px", color: "#270641" }}>Work Transparency</p>
+            <p style={{ fontSize: "22px", color: "#270641", textAlign: "center" }}>Work Transparency</p>
           </div>
           <div
             style={{
@@ -223,10 +223,10 @@ export const Landing = () => {
                 fill="#FFB8BC"
               />
             </svg>
-            <p style={{ fontSize: "18px", color: "#270641" }}>No sitting back until we see you smile</p>
+            <p style={{ fontSize: "22px", color: "#270641" }}>No sitting back until we see you smile</p>
           </div>
         </div>
-        <span style={{ marginTop: "70px" }} id="services" className="landser">
+        <span style={{ marginTop: "100px" }} id="services" className="landser">
           Services
         </span>
         <div className="servcaro">
@@ -263,7 +263,7 @@ export const Landing = () => {
             style={{ cursor: "pointer" }}
           />
         </div>
-        <span id="products" className="landser2">
+        <span style={{ marginTop: "100px" }} id="products" className="landser2">
           Products
         </span>
         <div className="servcaro">
@@ -300,7 +300,7 @@ export const Landing = () => {
             style={{ cursor: "pointer" }}
           />
         </div>
-        <div className="servcaro">
+        <div style={{ marginTop: "70px" }} className="servcaro">
           <img
             id="handloomSari"
             src={
