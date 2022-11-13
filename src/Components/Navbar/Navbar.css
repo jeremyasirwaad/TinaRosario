@@ -29,13 +29,14 @@
 }
 
 .navinnercontainer{
-    width: 90%;
+    width: 97%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
    
 }
+
 
 .navlogocontainer span{
     font-size: 40px;
@@ -53,7 +54,7 @@
 }
 
 .navoptions{
-    width: 750px;
+    width: 930px;
     display: flex;
     justify-content: space-evenly;
 }
