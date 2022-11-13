@@ -41,8 +41,28 @@ export const Policies = () => {
       border: "none",
     },
     width: "90%",
-  
   };
+
+  const inneraccordionStyle2={
+    borderRadius: "20px",
+    // backgroundColor: expand1 ? "#270641" : "transparent",
+    // color: expand1 ? "#FFB8BC" : "#270641",
+    backgroundColor: "transparent",
+    background: "rgba( 255, 255, 255, 0.1 )",
+    boxShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+    backdropFilter: "blur( 7.5px )",
+
+    borderRadius: "40px",
+    border: "1px solid rgba( 255, 255, 255, 0.18 )",
+    color: "#270641",
+    marginBottom: "20px",
+    "&:before": {
+      display: "none",
+      border: "none",
+    },
+    width: "90%",
+    marginBottom: "40px",
+  }
 
   const accordionDetail = {
     backgroundColor: "transparent",
@@ -54,7 +74,9 @@ export const Policies = () => {
 
   return (
     <div className="policontainer">
-      <h2 style={{ marginTop: "80px", marginBottom: "40px", color: "#270641" }}>OUR POLICIES</h2>
+      <h2 style={{ marginTop: "40px", marginBottom: "40px", color: "#270641", fontSize: "45px", fontWeight: "800" }}>
+        OUR POLICIES
+      </h2>
       <Accordion sx={{ display: "none" }} className="outeraccordion">
         <AccordionSummary
           expandIcon={<ControlPointIcon />}
@@ -264,7 +286,7 @@ export const Policies = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion sx={inneraccordionStyle1} className="accordion">
+      <Accordion sx={inneraccordionStyle2} className="accordion">
         <AccordionSummary
           onClick={() => setExpand9(!expand9)}
           sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}

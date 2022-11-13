@@ -63,6 +63,7 @@ export const Contactus = () => {
         if (data.status) {
           setmailSent(true);
           notify();
+          setContact({ name: "", email: "", contact: "", note: "" });
         }
       });
     // if (result.data.status) {
@@ -97,11 +98,17 @@ export const Contactus = () => {
     <div className="contactuspage">
       <div
         style={{ minHeight: "250px", maxHeight: "600px", width: "100%", height: width - height + 420 }}
-        className="weddingbanner"
+        className="contactbanner"
       >
         <img
-          style={{ width: "100%", height: "100%" }}
-          src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20720.png?alt=media&token=246930de-5f92-4014-b256-93983bcd27d1"
+          style={{
+            width: "105%",
+            marginLeft: "-10px",
+            marginBottom: "-10px",
+            height: "105%",
+            objectPosition: "center",
+          }}
+          src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20659.png?alt=media&token=431ad8b3-d548-4fec-b6a6-84b3be02e483"
         />
       </div>
       <div className="bgcontact">
@@ -138,10 +145,10 @@ export const Contactus = () => {
                 <a
                   target="_blank"
                   style={{ textDecoration: "none" }}
-                  href="https://api.whatsapp.com/send?phone=919916818637"
+                  href="https://api.whatsapp.com/send?phone=917200060540"
                 >
                   <i class="fa-brands fa-whatsapp"></i>
-                  <span>+91 9916818637</span>
+                  <span>+91 7200060540</span>
                 </a>
               </div>
               <div className="locainner">
