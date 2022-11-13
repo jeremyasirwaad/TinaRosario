@@ -70,7 +70,11 @@ export const Footer = () => {
             </a>
 
             <a target="_blank" href="https://api.whatsapp.com/send?phone=917200060540">
-              <img className="foot-link-wa" src="https://img.icons8.com/color/344/whatsapp--v1.png" />
+              <img
+                style={{ height: "45px", width: "45px", marginTop: "1px" }}
+                className="foot-link-wa"
+                src="https://img.icons8.com/color/344/whatsapp--v1.png"
+              />
             </a>
           </div>
           <p className="copy">@2022 Tina Rosario, All rights reserved</p>
