@@ -85,10 +85,30 @@ export const Getpampered = () => {
     setcontact(newValue);
     setformData({ ...formData, contact: newValue });
   };
+
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const [height, setHeight] = React.useState(window.innerHeight);
+  const updateWidthAndHeight = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  };
+  React.useEffect(() => {
+    window.addEventListener("resize", updateWidthAndHeight);
+    return () => window.removeEventListener("resize", updateWidthAndHeight);
+  });
+
   return (
     <div className="getpamperedpage">
       <Toaster />
-      <div className="getpamperedBar"></div>
+      <div
+        style={{ minHeight: "250px", maxHeight: "600px", width: "100%", height: width - height + 420 }}
+        className="weddingbanner"
+      >
+        <img
+          style={{ width: "98%", height: "98%" }}
+          src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Header%20(2).png?alt=media&token=6970ac9a-5e40-4dae-a80f-f12a73ba0a59"
+        />
+      </div>
       <div className="backgroundforgetpam">
         <span className="getpamtitle2" style={{ color: "#270641" }}>
           Exclusively for Chennai Vaasies!!!

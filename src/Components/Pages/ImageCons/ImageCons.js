@@ -91,10 +91,30 @@ const ImageCons = () => {
     setcontact(newValue);
     setformData({ ...formData, contact: newValue });
   };
+
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const [height, setHeight] = React.useState(window.innerHeight);
+  const updateWidthAndHeight = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  };
+  React.useEffect(() => {
+    window.addEventListener("resize", updateWidthAndHeight);
+    return () => window.removeEventListener("resize", updateWidthAndHeight);
+  });
+
   return (
     <div className="imagecons">
       <Toaster />
-      <div className="topbar"></div>
+      <div
+        style={{ minHeight: "250px", maxHeight: "600px", width: "100%", height: width - height + 420 }}
+        className="weddingbanner"
+      >
+        <img
+          style={{ width: "98%", height: "98%" }}
+          src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20722.png?alt=media&token=ef73764e-cacb-460e-a69a-4f63dd91fd08"
+        />
+      </div>
       <div className="Iweddingbg">
         <div className="icons">
           <div className="icon-holder">

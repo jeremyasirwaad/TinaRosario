@@ -166,6 +166,16 @@ export const Cusdesigns = () => {
     setcontact(newValue);
     setformData({ ...formData, contact: newValue });
   };
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const [height, setHeight] = React.useState(window.innerHeight);
+  const updateWidthAndHeight = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  };
+  React.useEffect(() => {
+    window.addEventListener("resize", updateWidthAndHeight);
+    return () => window.removeEventListener("resize", updateWidthAndHeight);
+  });
 
   return (
     <div
@@ -178,12 +188,14 @@ export const Cusdesigns = () => {
       }}
     >
       <div
-        style={{
-          backgroundImage:
-            "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/header.png?alt=media&token=6f9cb77f-ed1f-4c1b-ac49-1401cf530e29",
-        }}
-        className="customBanner"
-      ></div>
+        style={{ minHeight: "250px", maxHeight: "600px", width: "100%", height: width - height + 420 }}
+        className="weddingbanner"
+      >
+        <img
+          style={{ width: "97%", height: "96%" }}
+          src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/header.png?alt=media&token=6f9cb77f-ed1f-4c1b-ac49-1401cf530e29"
+        />
+      </div>
       <div className="Iweddingbg">
         <div className="icons">
           <div className="icon-holder">
