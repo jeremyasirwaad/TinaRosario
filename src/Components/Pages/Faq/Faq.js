@@ -170,7 +170,9 @@ const FAQ = () => {
 
   return (
     <div className="faq-container">
-      <h2 style={{ marginTop: "80px", marginBottom: "40px", color: "#270641" }}>Frequently Asked Questions</h2>
+      <h2 style={{ marginTop: "40px", marginBottom: "40px", color: "#270641", fontSize: "45px", fontWeight: "800" }}>
+        Frequently Asked Questions
+      </h2>
       <div className="faq-inner">
         <Accordion sx={{ display: "none" }} className="outeraccordion">
           <AccordionSummary
@@ -753,6 +755,7 @@ const FAQ = () => {
             alignItems: "center",
             justifyContent: "center",
             color: "#270641",
+            marginBottom: "40px",
           }}
         >
           <h3>Still have a question?</h3>
