@@ -9,10 +9,10 @@
     background-position: center;
     align-items: center;
     justify-content: center;
-    height: 600px;
-    width: 100%;
+    /* height: 600px; */
+    /* width: 100%; */
     background-color: #1A032C;
-    background-image: url("https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20674.png?alt=media&token=c74e9073-6954-4e64-96a9-e3e5b48b8d167");
+    /* background-image: url("https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20674.png?alt=media&token=c74e9073-6954-4e64-96a9-e3e5b48b8d167"); */
 }
 
 .t1{

@@ -11,6 +11,17 @@ import img2 from "./img2.svg";
 
 export const About = () => {
   const navigate = useNavigate();
+
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const [height, setHeight] = React.useState(window.innerHeight);
+  const updateWidthAndHeight = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  };
+  React.useEffect(() => {
+    window.addEventListener("resize", updateWidthAndHeight);
+    return () => window.removeEventListener("resize", updateWidthAndHeight);
+  });
   return (
     <div
       style={{
@@ -21,7 +32,17 @@ export const About = () => {
         backgroundImage: "./bg1.png",
       }}
     >
-      <div className="imagesection"></div>
+      {/* <div className="imagesection"></div> */}
+      <div
+        style={{ minHeight: "250px", maxHeight: "600px", width: "100%", height: width - height + 420 }}
+        className="weddingbanner"
+      >
+       
+        <img
+          style={{ width: "100%", height: "100%" }}
+          src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20674.png?alt=media&token=c74e9073-6954-4e64-96a9-e3e5b48b8d167"
+        />
+      </div>
       <div className="aboutContainer">
         <div className="abtussec2">
           <span className="sec2t1">

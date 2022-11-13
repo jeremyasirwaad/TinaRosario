@@ -102,6 +102,17 @@ export const Wedding = () => {
     setformData({ ...formData, contact: newValue });
   };
 
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const [height, setHeight] = React.useState(window.innerHeight);
+  const updateWidthAndHeight = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  };
+  React.useEffect(() => {
+    window.addEventListener("resize", updateWidthAndHeight);
+    return () => window.removeEventListener("resize", updateWidthAndHeight);
+  });
+
   return (
     <div
       style={{
@@ -114,15 +125,17 @@ export const Wedding = () => {
       }}
     >
       <Toaster />
-      <div className="weddingbanner">
-        {/* <div className="weddingbannerinner">
-          <span className="wb1">Wedding Collections</span>
-          <span className="wb2">
-            As you hold hands and shine together and promise to live as one forever, you need to look your best as
-            you've always dreamt.
-          </span>
-        </div> */}
+
+      <div
+        style={{ minHeight: "250px", maxHeight: "600px", width: "100%", height: width - height + 420 }}
+        className="weddingbanner"
+      >
+        <img
+          style={{ width: "96%", height: "95%" }}
+          src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20768.png?alt=media&token=f57e42f0-c5d1-45f6-9c13-a4171e71ace8"
+        />
       </div>
+
       <div
         style={{
           display: "flex",

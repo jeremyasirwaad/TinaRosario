@@ -4,12 +4,12 @@
     align-items: center;
 }
 .getpamperedBar{
-    width: 100%;
-    height: 600px;
+    /* width: 100%;
+    height: 600px; */
     background-color: #270641;
     display: flex;
     align-items: center;
-    background-image: url("https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Header%20(2).png?alt=media&token=6970ac9a-5e40-4dae-a80f-f12a73ba0a59");
+    /* background-image: url("https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Header%20(2).png?alt=media&token=6970ac9a-5e40-4dae-a80f-f12a73ba0a59"); */
     justify-content: center;
     /* background-image: url(path-to-file/img.jpg); */
     background-repeat:no-repeat;

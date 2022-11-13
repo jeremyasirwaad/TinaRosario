@@ -2,8 +2,10 @@ import React from "react";
 import "./newlanding.css";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Caro = () => {
+  const navigate = useNavigate();
   return (
     <Carousel
       style={{ height: "650px" }}
@@ -15,7 +17,18 @@ export const Caro = () => {
       showStatus={false}
       showIndicators={false}
     >
-      <div style={{ padding: "15px", borderRadius: "30px" }}>
+      <div style={{ padding: "15px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <div
+          onClick={() => navigate("/contact")}
+          style={{
+            backgroundColor: "transparent",
+            width: "350px",
+            height: "150px",
+            marginTop: "100px",
+            position: "absolute",
+            cursor: "pointer",
+          }}
+        ></div>
         <img
           style={{ borderRadius: "30px" }}
           src={
@@ -25,6 +38,17 @@ export const Caro = () => {
         />
       </div>
       <div style={{ padding: "15px" }}>
+        <div
+          onClick={() => navigate("/contact")}
+          style={{
+            backgroundColor: "transparent",
+            width: "350px",
+            height: "150px",
+            marginTop: "100px",
+            position: "absolute",
+            cursor: "pointer",
+          }}
+        ></div>
         <img
           style={{ borderRadius: "30px" }}
           src={
@@ -34,6 +58,17 @@ export const Caro = () => {
         />
       </div>
       <div style={{ padding: "15px" }}>
+        <div
+          onClick={() => navigate("/contact")}
+          style={{
+            backgroundColor: "transparent",
+            width: "350px",
+            height: "150px",
+            marginTop: "100px",
+            position: "absolute",
+            cursor: "pointer",
+          }}
+        ></div>
         <img
           style={{ borderRadius: "30px" }}
           src={
@@ -43,6 +78,17 @@ export const Caro = () => {
         />
       </div>
       <div style={{ padding: "15px" }}>
+        <div
+          onClick={() => navigate("/contact")}
+          style={{
+            backgroundColor: "transparent",
+            width: "350px",
+            height: "150px",
+            marginTop: "100px",
+            position: "absolute",
+            cursor: "pointer",
+          }}
+        ></div>
         <img
           style={{ borderRadius: "30px" }}
           src={
@@ -52,6 +98,17 @@ export const Caro = () => {
         />
       </div>
       <div style={{ padding: "15px" }}>
+        <div
+          onClick={() => navigate("/contact")}
+          style={{
+            backgroundColor: "transparent",
+            width: "350px",
+            height: "150px",
+            marginTop: "100px",
+            position: "absolute",
+            cursor: "pointer",
+          }}
+        ></div>
         <img
           style={{ borderRadius: "30px" }}
           src={
@@ -61,6 +118,17 @@ export const Caro = () => {
         />
       </div>
       <div style={{ padding: "15px" }}>
+        <div
+          onClick={() => navigate("/contact")}
+          style={{
+            backgroundColor: "transparent",
+            width: "350px",
+            height: "150px",
+            marginTop: "100px",
+            position: "absolute",
+            cursor: "pointer",
+          }}
+        ></div>
         <img
           style={{ borderRadius: "30px" }}
           src={
@@ -70,6 +138,17 @@ export const Caro = () => {
         />
       </div>
       <div style={{ padding: "15px" }}>
+        <div
+          onClick={() => navigate("/contact")}
+          style={{
+            backgroundColor: "transparent",
+            width: "350px",
+            height: "150px",
+            marginTop: "100px",
+            position: "absolute",
+            cursor: "pointer",
+          }}
+        ></div>
         <img
           style={{ borderRadius: "30px" }}
           src={

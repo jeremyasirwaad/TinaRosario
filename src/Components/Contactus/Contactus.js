@@ -82,18 +82,27 @@ export const Contactus = () => {
     setValue(newValue);
     setContact({ ...contact, contact: newValue });
   };
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const [height, setHeight] = React.useState(window.innerHeight);
+  const updateWidthAndHeight = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  };
+  React.useEffect(() => {
+    window.addEventListener("resize", updateWidthAndHeight);
+    return () => window.removeEventListener("resize", updateWidthAndHeight);
+  });
 
   return (
     <div className="contactuspage">
-      <div className="contactbanner">
-        {/* <img src={caro} /> */}
-        {/* <div className="contactbannerinner">
-          <span className="cuT">
-            {" "}
-            <span className="cu1">Contact</span> Us
-          </span>
-          <span className="CuU">To Design your style</span>
-        </div> */}
+      <div
+        style={{ minHeight: "250px", maxHeight: "600px", width: "100%", height: width - height + 420 }}
+        className="weddingbanner"
+      >
+        <img
+          style={{ width: "100%", height: "100%" }}
+          src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20720.png?alt=media&token=246930de-5f92-4014-b256-93983bcd27d1"
+        />
       </div>
       <div className="bgcontact">
         <div className="mainsection">
