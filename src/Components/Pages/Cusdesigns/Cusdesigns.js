@@ -134,7 +134,10 @@ export const Cusdesigns = () => {
       if (data.data.ownDesign == "true") {
         const postImage = async () => {
           let formData = new FormData();
-          formData.set("file", file);
+          let blob = file.slice(0, file.size, "image/png");
+          let newFile = new File([blob], "name.png", { type: "image/png" });
+          console.log(newFile);
+          formData.set("file", newFile);
           try {
             const result = await axios.post(`${url}/formData/photo/${data.data._id}`, formData, {
               headers: {
