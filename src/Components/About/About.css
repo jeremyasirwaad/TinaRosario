@@ -258,6 +258,14 @@ border: none;
 
 }
 
+.abtin1:hover{
+    background-image: url('./slider1b.svg');
+    height: 240px;
+    width: 400px;
+    cursor: pointer;
+    transition: all 0.08s ease-in;
+}
+
 .abtin1{
     background-image: url('./slider1.svg');
     height: 220px;
@@ -266,10 +274,12 @@ border: none;
 }
 
 .abtin2:hover{
-    background-image: url('./slider1b.svg');
+    background-image: url('./slider2b.svg');
     height: 240px;
     width: 420px;
     cursor: pointer;
+    transition: all 0.08s ease-in;
+
 
 }
 
@@ -278,6 +288,16 @@ border: none;
     height: 220px;
     width: 400px;
     cursor: pointer;
+
+
+}
+
+.abtin3:hover{
+    background-image: url('./slider3b.svg');
+    height: 220px;
+    width: 420px;
+    cursor: pointer;
+    transition: all 0.08s ease-in;
 
 }
 
