@@ -48,7 +48,7 @@ const GalleryCaro = () => {
 						class="carousel slide"
 						data-ride="carousel"
 						style={{
-							marginBottom: "70px",
+							marginBottom: "120px",
 							marginTop: "30px",
 							backgroundColor: "#270641"
 						}}
