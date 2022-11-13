@@ -10,7 +10,9 @@ export const DesignerCollections = () => {
 	const [subfabric, setSubfabric] = useState(true);
 	const [subcolor, setSubcolor] = useState(true);
 	const [pagedata, setPagedata] = useState([]);
+	const [backupagedata, setBackupagedata] = useState([]);
 	const [loading, setLoading] = useState(true);
+	const [pricefilter, setpricefilter] = useState(0);
 
 	const [subcatfilter, setSubcatfilter] = useState("");
 
@@ -23,6 +25,7 @@ export const DesignerCollections = () => {
 					(e) => e.attributes.Main_Category == "Designer Wear"
 				);
 				setPagedata(data);
+				setBackupagedata(data);
 				setLoading(false);
 			});
 	};
@@ -31,6 +34,20 @@ export const DesignerCollections = () => {
 	useEffect(() => {
 		getdata();
 	}, []);
+
+	useEffect(() => {
+		if (subcatfilter != "") {
+			const data = pagedata.filter((e) => {
+				return e.attributes.Gender == subcatfilter;
+			});
+
+			setPagedata(data);
+		} else {
+			setPagedata(backupagedata);
+		}
+
+		// console.log(pagedata);
+	}, [subcatfilter]);
 
 	return (
 		<div className="designercollections">
@@ -43,7 +60,7 @@ export const DesignerCollections = () => {
 								setSubcatoptions(!subcatoptions);
 							}}
 						>
-							<span className="subinnertitle">Sub-Categories</span>
+							<span className="subinnertitle">Gender</span>
 
 							<i
 								class={
@@ -67,197 +84,51 @@ export const DesignerCollections = () => {
 								<input
 									type="checkbox"
 									name="subcat"
-									checked={subcatfilter == "Lehenga"}
+									checked={subcatfilter == "Male"}
 									onChange={() => {
-										if (subcatfilter == "Lehenga") {
+										if (subcatfilter == "Male") {
 											setSubcatfilter("");
 										} else {
-											setSubcatfilter("Lehenga");
+											setSubcatfilter("Male");
 										}
 									}}
 								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									Lehenga
+									Men
 								</span>
 							</div>
 							<div className="fliterchoice">
 								<input
 									type="checkbox"
 									name="subcat"
-									checked={subcatfilter == "Gown"}
+									checked={subcatfilter == "Female"}
 									onChange={() => {
-										if (subcatfilter == "Gown") {
+										if (subcatfilter == "Female") {
 											setSubcatfilter("");
 										} else {
-											setSubcatfilter("Gown");
+											setSubcatfilter("Female");
 										}
 									}}
 								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									Gown
+									Women
 								</span>
 							</div>
 							<div className="fliterchoice">
 								<input
 									type="checkbox"
 									name="subcat"
-									checked={subcatfilter == "Dress"}
+									checked={subcatfilter == "Kid's"}
 									onChange={() => {
-										if (subcatfilter == "Dress") {
+										if (subcatfilter == "Kid's") {
 											setSubcatfilter("");
 										} else {
-											setSubcatfilter("Dress");
+											setSubcatfilter("Kid's");
 										}
 									}}
 								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									Dress
-								</span>
-							</div>
-							<div className="fliterchoice">
-								<input
-									type="checkbox"
-									name="subcat"
-									checked={subcatfilter == "Blouse"}
-									onChange={() => {
-										if (subcatfilter == "Blouse") {
-											setSubcatfilter("");
-										} else {
-											setSubcatfilter("Blouse");
-										}
-									}}
-								/>
-								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									Blouse
-								</span>
-							</div>
-							<div className="fliterchoice">
-								<input
-									type="checkbox"
-									name="subcat"
-									checked={subcatfilter == "Anarkali"}
-									onChange={() => {
-										if (subcatfilter == "Anarkali") {
-											setSubcatfilter("");
-										} else {
-											setSubcatfilter("Anarkali");
-										}
-									}}
-								/>
-								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									Anarkali
-								</span>
-							</div>
-							<div className="fliterchoice">
-								<input
-									type="checkbox"
-									name="subcat"
-									checked={subcatfilter == "Salwar Kameez"}
-									onChange={() => {
-										if (subcatfilter == "Salwar Kameez") {
-											setSubcatfilter("");
-										} else {
-											setSubcatfilter("Salwar Kameez");
-										}
-									}}
-								/>
-								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									Salwar Kameez
-								</span>
-							</div>
-							<div className="fliterchoice">
-								<input
-									type="checkbox"
-									name="subcat"
-									checked={subcatfilter == "Chudidhar"}
-									onChange={() => {
-										if (subcatfilter == "Chudidhar") {
-											setSubcatfilter("");
-										} else {
-											setSubcatfilter("Chudidhar");
-										}
-									}}
-								/>
-								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									Chudidhar
-								</span>
-							</div>
-							<div className="fliterchoice">
-								<input type="checkbox" name="subcat" />
-								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									Kurtha
-								</span>
-							</div>
-							<div className="fliterchoice">
-								<input type="checkbox" name="subcat" />
-								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									Half-saree
-								</span>
-							</div>
-							<div className="fliterchoice">
-								<input type="checkbox" name="subcat" />
-								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									Pavadai Sattai
-								</span>
-							</div>
-							<div className="fliterchoice">
-								<input type="checkbox" name="subcat" />
-								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									Frock
-								</span>
-							</div>
-							<div className="fliterchoice">
-								<input type="checkbox" name="subcat" />
-								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									Skirt
-								</span>
-							</div>
-							<div className="fliterchoice">
-								<input type="checkbox" name="subcat" />
-								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									Sherwani
-								</span>
-							</div>
-							<div className="fliterchoice">
-								<input type="checkbox" name="subcat" />
-								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									Suit
-								</span>
-							</div>
-							<div className="fliterchoice">
-								<input type="checkbox" name="subcat" />
-								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									Over-coat
-								</span>
-							</div>
-							<div className="fliterchoice">
-								<input type="checkbox" name="subcat" />
-								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									Blazer
-								</span>
-							</div>
-							<div className="fliterchoice">
-								<input type="checkbox" name="subcat" />
-								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									Pant
-								</span>
-							</div>
-							<div className="fliterchoice">
-								<input type="checkbox" name="subcat" />
-								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									Trouser
-								</span>
-							</div>
-							<div className="fliterchoice">
-								<input type="checkbox" name="subcat" />
-								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									Short
-								</span>
-							</div>
-							<div className="fliterchoice">
-								<input type="checkbox" name="subcat" />
-								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									Shirt
+									Kid's
 								</span>
 							</div>
 						</div>
@@ -292,31 +163,31 @@ export const DesignerCollections = () => {
 							}
 						>
 							<div className="fliterchoice" style={{ marginTop: "10px" }}>
-								<input type="radio" />
+								<input type="checkbox" />
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Less than 5000
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input type="checkbox" />
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									5001 - 10000
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input type="checkbox" />
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									10,001-15,000
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input type="checkbox" />
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									15,001 - 20,000
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input type="checkbox" />
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									More than 20,000
 								</span>
