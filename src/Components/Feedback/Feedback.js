@@ -23,7 +23,6 @@ export const Feedback = () => {
   const changerating = (data) => {
     setRating(data);
   };
-  console.log(rating);
 
   const [formData, setformData] = useState({
     name: "",
@@ -41,10 +40,11 @@ export const Feedback = () => {
   console.log(file);
   const fileonchange = (e) => {
     const files = e.target.files;
-    const file = files[0];
-    setfile(file);
+    const fil = files[0];
+    console.log(fil);
+    setfile(fil);
+    // setfile({ ...files[0], name: files[0].name.replace(/\s/g, "") });
     setImginputloader(true);
-    console.log(file);
   };
 
   const [nameerr, setNameerr] = useState(false);
@@ -98,7 +98,10 @@ export const Feedback = () => {
       if (data.data.image == "yes") {
         const postImage = async () => {
           let formData = new FormData();
-          formData.set("file", file);
+          let blob = file.slice(0, file.size, "image/png");
+          let newFile = new File([blob], "name.png", { type: "image/png" });
+          console.log(newFile);
+          formData.set("file", newFile);
           try {
             const result = await axios.post(`${backendUrl}/feedback/photo/${data.data._id}`, formData, {
               headers: {

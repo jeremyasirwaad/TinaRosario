@@ -51,6 +51,27 @@ export const Terms = () => {
     width: "90%",
   };
 
+  const inneraccordionStyle2 = {
+    borderRadius: "20px",
+    // backgroundColor: expand1 ? "#270641" : "transparent",
+    // color: expand1 ? "#FFB8BC" : "#270641",
+    backgroundColor: "transparent",
+    background: "rgba( 255, 255, 255, 0.1 )",
+    boxShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+    backdropFilter: "blur( 7.5px )",
+
+    borderRadius: "40px",
+    border: "1px solid rgba( 255, 255, 255, 0.18 )",
+    color: "#270641",
+    marginBottom: "20px",
+    "&:before": {
+      display: "none",
+      border: "none",
+    },
+    width: "90%",
+    marginBottom: "40px",
+  };
+
   const accordionDetail = {
     backgroundColor: "transparent",
 
@@ -70,8 +91,8 @@ export const Terms = () => {
   return (
     <div className="policontainer">
       <div className="pheader">
-        <h2 style={{ color: "#270641" }}>TERMS OF SERVICE AGREEMENT</h2>
-        <p style={{ color: "#270641" }}>
+        <h2 style={{ color: "#270641", fontSize: "45px", fontWeight: "700" }}>TERMS OF SERVICE AGREEMENT</h2>
+        <p style={{ color: "#270641", fontSize: "18px" }}>
           These Terms of Use constitute a legally binding agreement made between you, whether personally or on behalf of
           an entity ("you") and TINA ROSARIO THE DESIGN HOUSE ("Company," "we," "us," or "our"), concerning your access
           to and use of the http://www.tinarosario.com website as well as any other media form, media channel, mobile
@@ -1018,7 +1039,7 @@ export const Terms = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion style={inneraccordionStyle2}>
         <AccordionSummary
           sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
           expandIcon={<ControlPointIcon />}
