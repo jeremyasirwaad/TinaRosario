@@ -23,7 +23,7 @@ export const Caro = () => {
           style={{
             backgroundColor: "transparent",
             width: "350px",
-            height: "150px",
+            height: "300px",
             marginTop: "100px",
             position: "absolute",
             cursor: "pointer",
@@ -37,13 +37,13 @@ export const Caro = () => {
           height={"650px"}
         />
       </div>
-      <div style={{ padding: "15px" }}>
+      <div style={{ padding: "15px", display: "flex", justifyContent: "center", alignItems: "center" }}>
         <div
           onClick={() => navigate("/contact")}
           style={{
             backgroundColor: "transparent",
             width: "350px",
-            height: "150px",
+            height: "300px",
             marginTop: "100px",
             position: "absolute",
             cursor: "pointer",
@@ -57,13 +57,13 @@ export const Caro = () => {
           height={"650px"}
         />
       </div>
-      <div style={{ padding: "15px" }}>
+      <div style={{ padding: "15px", display: "flex", justifyContent: "center", alignItems: "center" }}>
         <div
           onClick={() => navigate("/contact")}
           style={{
             backgroundColor: "transparent",
             width: "350px",
-            height: "150px",
+            height: "300px",
             marginTop: "100px",
             position: "absolute",
             cursor: "pointer",
@@ -77,13 +77,13 @@ export const Caro = () => {
           height={"650px"}
         />
       </div>
-      <div style={{ padding: "15px" }}>
+      <div style={{ padding: "15px", display: "flex", justifyContent: "center", alignItems: "center" }}>
         <div
           onClick={() => navigate("/contact")}
           style={{
             backgroundColor: "transparent",
             width: "350px",
-            height: "150px",
+            height: "300px",
             marginTop: "100px",
             position: "absolute",
             cursor: "pointer",
@@ -97,13 +97,13 @@ export const Caro = () => {
           height={"650px"}
         />
       </div>
-      <div style={{ padding: "15px" }}>
+      <div style={{ padding: "15px", display: "flex", justifyContent: "center", alignItems: "center" }}>
         <div
           onClick={() => navigate("/contact")}
           style={{
             backgroundColor: "transparent",
             width: "350px",
-            height: "150px",
+            height: "300px",
             marginTop: "100px",
             position: "absolute",
             cursor: "pointer",
@@ -117,13 +117,13 @@ export const Caro = () => {
           height={"650px"}
         />
       </div>
-      <div style={{ padding: "15px" }}>
+      <div style={{ padding: "15px", display: "flex", justifyContent: "center", alignItems: "center" }}>
         <div
           onClick={() => navigate("/contact")}
           style={{
             backgroundColor: "transparent",
             width: "350px",
-            height: "150px",
+            height: "300px",
             marginTop: "100px",
             position: "absolute",
             cursor: "pointer",
@@ -137,13 +137,13 @@ export const Caro = () => {
           height={"650px"}
         />
       </div>
-      <div style={{ padding: "15px" }}>
+      <div style={{ padding: "15px", display: "flex", justifyContent: "center", alignItems: "center" }}>
         <div
           onClick={() => navigate("/contact")}
           style={{
             backgroundColor: "transparent",
             width: "350px",
-            height: "150px",
+            height: "300px",
             marginTop: "100px",
             position: "absolute",
             cursor: "pointer",
