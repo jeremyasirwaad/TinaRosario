@@ -47,7 +47,7 @@ const GalleryCaro = () => {
 						id="carouselExampleIndicators"
 						class="carousel slide"
 						data-ride="carousel"
-						style={{ marginBottom: "80px", marginTop: "40px" }}
+						style={{ marginBottom: "70px", marginTop: "30px" }}
 					>
 						<ol class="carousel-indicators">
 							<li
