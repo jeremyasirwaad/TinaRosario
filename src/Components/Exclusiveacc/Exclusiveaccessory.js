@@ -19,7 +19,7 @@ export const Exclusiveaccessory = () => {
       .then((res) => res.json())
       .then((result) => {
         const temp = result.data;
-        const data = temp.filter((e) => e.attributes.Main_Category == "Exclusive Accessory");
+        const data = temp.filter((e) => e.attributes.Main_Category == "Exclusive Accessories");
         setPagedata(data);
         setLoading(false);
       });

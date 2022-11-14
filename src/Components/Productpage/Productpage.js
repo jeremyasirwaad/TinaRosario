@@ -123,7 +123,17 @@ export default function Productpage() {
 									alt=""
 								/>
 							)}
-							<span style={{ marginTop: "10px" }}>*Image color may vary</span>
+							<span
+								style={{
+									marginTop: "10px",
+									display: "flex"
+									// alignItems: "flex-start"
+								}}
+							>
+								{" "}
+								<span style={{ fontSize: "12px" }}># </span> Image color may
+								vary
+							</span>
 						</div>
 					</div>
 					<div className="prodpagedatasection">
@@ -195,7 +205,7 @@ export default function Productpage() {
 									alt=""
 									style={{ width: "25px", height: "auto" }}
 								/>
-								<span className="washcare">1 Week Delivery</span>
+								<span className="washcare">1 Week Delivery*</span>
 							</div>
 							{/* <div className="washcarediv" style={{ width: "150px" }}>
 								<img
@@ -219,7 +229,7 @@ export default function Productpage() {
 								navigate("/Productmsg/" + pagedata.attributes.Product_name);
 							}}
 						>
-							Customized ?
+							Customize
 						</button>
 						<span className="internationaldelivery">
 							* Customized orders & International Delivery timeline may vary

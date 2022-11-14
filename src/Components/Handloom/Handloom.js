@@ -19,7 +19,7 @@ export const Handloom = () => {
       .then((res) => res.json())
       .then((result) => {
         const temp = result.data;
-        const data = temp.filter((e) => e.attributes.Main_Category == "Handloom Collections");
+        const data = temp.filter((e) => e.attributes.Main_Category == "Handloom Sarees");
         setPagedata(data);
         setLoading(false);
       });

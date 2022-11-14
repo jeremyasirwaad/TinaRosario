@@ -19,7 +19,7 @@ export const Maternity = () => {
       .then((res) => res.json())
       .then((result) => {
         const temp = result.data;
-        const data = temp.filter((e) => e.attributes.Main_Category == "Maternity");
+        const data = temp.filter((e) => e.attributes.Main_Category == "Maternity Collection");
         setPagedata(data);
         setLoading(false);
       });

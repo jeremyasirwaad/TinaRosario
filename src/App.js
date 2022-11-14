@@ -2,6 +2,7 @@ import "./App.css";
 import { Landing } from "./Components/Landing/Landing";
 import { Navbar } from "./Components/Navbar/Navbar";
 import { PreNav } from "./Components/PreNav/PreNav";
+import { Marqueeline } from "./Components/Marquee/Marquee";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Wedding } from "./Components/Pages/Wedding";
 import { Fabrics } from "./Components/Pages/fabrics/Fabrics";
@@ -52,6 +53,8 @@ function App() {
 						path="/feedback"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<Feedback />
@@ -63,6 +66,7 @@ function App() {
 						path="/"
 						element={
 							<>
+								<Marqueeline />
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<Landing />
@@ -74,6 +78,8 @@ function App() {
 						path="/gallery"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<Gallery />
@@ -85,6 +91,8 @@ function App() {
 						path="/about"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<About />
@@ -96,6 +104,8 @@ function App() {
 						path="/wedding"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<Wedding />
@@ -107,6 +117,8 @@ function App() {
 						path="/fabrics"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<Fabrics></Fabrics>
@@ -118,6 +130,8 @@ function App() {
 						path="/customiseddesigns"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<Cusdesigns />
@@ -129,6 +143,8 @@ function App() {
 						path="/imagecons"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<ImageCons />
@@ -140,6 +156,8 @@ function App() {
 						path="/getpampered"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<Getpampered />
@@ -151,6 +169,8 @@ function App() {
 						path="/policies"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<Policies />
@@ -162,6 +182,8 @@ function App() {
 						path="/Productmsg/:type"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<Productmsg />
@@ -173,6 +195,8 @@ function App() {
 						path="/DesignerCollections"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<DesignerCollections />
@@ -184,6 +208,8 @@ function App() {
 						path="/Handloom"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<Handloom />
@@ -195,6 +221,8 @@ function App() {
 						path="/weddingproduct"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<Weddingcollections />
@@ -206,6 +234,8 @@ function App() {
 						path="/Kidswear"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<Kidswear />
@@ -217,6 +247,8 @@ function App() {
 						path="/womenswear"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<Womanswear />
@@ -228,6 +260,8 @@ function App() {
 						path="/Menswear"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<Menswear />
@@ -239,6 +273,8 @@ function App() {
 						path="/Maternity"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<Maternity />
@@ -250,6 +286,8 @@ function App() {
 						path="/exclusiveaccessories"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<Exclusiveaccessory />
@@ -261,6 +299,8 @@ function App() {
 						path="/Contact"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<Contactus></Contactus>
@@ -275,6 +315,8 @@ function App() {
 						path="/sidebar"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<Sidebar />
@@ -287,6 +329,8 @@ function App() {
 						path="/faq_reg"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<Faq />
@@ -298,6 +342,8 @@ function App() {
 						path="/faq_order"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<Faq />
@@ -309,6 +355,8 @@ function App() {
 						path="/faq_deli"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<Faq />
@@ -320,6 +368,8 @@ function App() {
 						path="/faq_ship"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<Faq />
@@ -331,6 +381,8 @@ function App() {
 						path="/orderfinish/:type/:name/:d/:m/:y"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<OrderFinish />
@@ -342,6 +394,8 @@ function App() {
 						path="/product/:prodid"
 						element={
 							<>
+								<Marqueeline />
+
 								<PreNav></PreNav>
 								<Navbar></Navbar>
 								<Productpage />
@@ -353,8 +407,7 @@ function App() {
 						path="/terms"
 						element={
 							<>
-								{" "}
-								<PreNav></PreNav>
+								<Marqueeline /> <PreNav></PreNav>
 								<Navbar></Navbar>
 								<Terms />
 								<Footer></Footer>
@@ -365,8 +418,7 @@ function App() {
 						path="/gallerycaro"
 						element={
 							<>
-								{" "}
-								<PreNav></PreNav>
+								<Marqueeline /> <PreNav></PreNav>
 								<Navbar></Navbar>
 								<GalleryCaro />
 								<Footer></Footer>

@@ -288,7 +288,7 @@ border: none;
 }
 
 .abtin2:hover{
-    background-image: url('./slider2b.svg');
+    background-image: url('./slider3b.svg');
     height: 240px;
     width: 420px;
     cursor: pointer;
@@ -307,8 +307,8 @@ border: none;
 }
 
 .abtin3:hover{
-    background-image: url('./slider3b.svg');
-    height: 220px;
+    background-image: url('./slider2b.svg');
+    height: 240px;
     width: 420px;
     cursor: pointer;
     transition: all 0.08s ease-in;

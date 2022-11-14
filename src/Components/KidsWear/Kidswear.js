@@ -19,7 +19,7 @@ export const Kidswear = () => {
       .then((res) => res.json())
       .then((result) => {
         const temp = result.data;
-        const data = temp.filter((e) => e.attributes.Main_Category == "Kid's Wear");
+        const data = temp.filter((e) => e.attributes.Main_Category == "Kids' Wear");
         setPagedata(data);
         setLoading(false);
       });

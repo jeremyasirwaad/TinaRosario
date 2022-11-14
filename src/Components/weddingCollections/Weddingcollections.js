@@ -19,7 +19,7 @@ export const Weddingcollections = () => {
       .then((res) => res.json())
       .then((result) => {
         const temp = result.data;
-        const data = temp.filter((e) => e.attributes.Main_Category == "Wedding Collections");
+        const data = temp.filter((e) => e.attributes.Main_Category == "Wedding Collection");
         setPagedata(data);
         setLoading(false);
       });

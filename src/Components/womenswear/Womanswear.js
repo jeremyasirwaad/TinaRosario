@@ -19,7 +19,7 @@ export const Womanswear = () => {
       .then((res) => res.json())
       .then((result) => {
         const temp = result.data;
-        const data = temp.filter((e) => e.attributes.Main_Category == "Womans wear");
+        const data = temp.filter((e) => e.attributes.Main_Category == "Women's Wear");
         setPagedata(data);
         setLoading(false);
       });
