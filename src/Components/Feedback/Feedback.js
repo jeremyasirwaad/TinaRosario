@@ -43,10 +43,10 @@ export const Feedback = () => {
   console.log(file);
   const fileonchange = (e) => {
     const files = e.target.files;
-    const file = files[0];
-    setfile(file);
+    const fil = files[0];
+    setfile(fil);
     setImginputloader(true);
-    console.log(file);
+    console.log(fil);
   };
 
   const [nameerr, setNameerr] = useState(false);

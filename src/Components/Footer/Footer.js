@@ -19,7 +19,7 @@ export const Footer = () => {
         <div className="column collections">
           <p>Collections</p>
           <h4 onClick={() => navigate("/gallerycaro")}>Gallery</h4>
-          <h4 onClick={() => navigate("/fabrics")}>Fabrics</h4>
+          <h4 onClick={() => navigate("/fabrics")}>Fabric</h4>
           <h4
             onClick={async () => {
               await navigate("/");

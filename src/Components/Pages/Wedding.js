@@ -120,8 +120,8 @@ export const Wedding = () => {
         flexDirection: "column",
         alignItems: "center",
         width: "100%",
-
         backgroundColor: "black",
+        
       }}
     >
       <Toaster />
@@ -151,7 +151,7 @@ export const Wedding = () => {
 
           <div className="wedsec1cont">
             <span>
-              We understand wedding chores could overwhelm you,
+              We understand wedding chores could overwhelm you.
               <br /> Here we are to take off your burden of how you're going to look.
             </span>
           </div>
@@ -163,7 +163,7 @@ export const Wedding = () => {
 
           <div className="wedsec2cont">
             Get in touch and allow us to unfold
-            <br /> your dream attire
+            <br /> your dream attire.
           </div>
         </div>
         <div className="wedsec1">
