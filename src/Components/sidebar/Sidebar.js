@@ -12,12 +12,7 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import { useNavigate } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -78,6 +73,8 @@ export default function Sidebar() {
     setOpen(false);
   };
 
+  const navigate = useNavigate();
+
   return (
     <Box
       sx={{
@@ -100,15 +97,13 @@ export default function Sidebar() {
       </Toolbar>
 
       <Drawer
-        sx={
-          {
-              width: drawerWidth,
-              flexShrink: 0,
-              "& .MuiDrawer-paper": {
-                width: drawerWidth,
-              },
-          }
-        }
+        sx={{
+          width: drawerWidth,
+          flexShrink: 0,
+          "& .MuiDrawer-paper": {
+            width: drawerWidth,
+          },
+        }}
         variant="persistent"
         anchor="right"
         open={open}
@@ -119,16 +114,73 @@ export default function Sidebar() {
           </IconButton>
         </DrawerHeader>
         <Divider />
-        <List>
-          {["Gallery", "Testimonials", "About us", "Fabrics", "Contact us"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
+
+        <span
+          className="navlink3"
+          onClick={() => {
+            navigate("/about");
+          }}
+        >
+          About Us
+        </span>
+        <span
+          className="navlink1"
+          onClick={() => {
+            navigate("/gallerycaro");
+          }}
+        >
+          Gallery
+        </span>
+        <span
+          className="navlink5"
+          onClick={async () => {
+            await navigate("/");
+            // document.getElementById("contactusdiv").scrollIntoView();
+            document.getElementById("services").scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+        >
+          Services
+        </span>
+        <span
+          className="navlink5"
+          onClick={async () => {
+            await navigate("/");
+            // document.getElementById("contactusdiv").scrollIntoView();
+            document.getElementById("products").scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+        >
+          Products
+        </span>
+        <span
+          className="navlink2"
+          onClick={async () => {
+            await navigate("/");
+            // document.getElementById("contactusdiv").scrollIntoView();
+            document.getElementById("Landingtesti").scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+        >
+          Testimonials
+        </span>
+        <span
+          onClick={async () => {
+            await navigate("/contact");
+            // document.getElementById("contactusdiv").scrollIntoView();
+            document.getElementById("contactusdiv").scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+          className="navlink4"
+        >
+          Contact Us
+        </span>
+        {/* <span className="navlink5">Testimonials</span> */}
+
         {/* <Divider />
         <List>
           {['All mail', 'Trash', 'Spam'].map((text, index) => (

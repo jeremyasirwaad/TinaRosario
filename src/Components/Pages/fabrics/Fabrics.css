@@ -7,7 +7,7 @@
   flex-direction: column;
   background-image: url('../../About/bg.svg');
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
   margin-bottom: -50px;
 }
@@ -58,8 +58,9 @@
   width: 70%;
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  font-size: 18px;
+  font-size: 1.5rem;
   margin-top: 40px;
+
 }
 
 .fabbutton{
@@ -99,7 +100,8 @@
 }
 
 .imgfabrowinner>p{
-  font-size: 20px;
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 
@@ -109,7 +111,7 @@
 }
 
 .imgfabrow2{
-  display: flex;
+  display:flex;
   align-items: center;
   flex-direction: row-reverse;
   margin-top: 30px;

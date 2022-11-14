@@ -359,10 +359,10 @@ export const Getpampered = () => {
           </svg>
         </div>
         <span className="getpamlines" style={{ marginTop: "30px", color: "#270641" }}>
-          We look forward to meet you at your place of.{" "}
+          We look forward to meet you at your place of{" "}
         </span>
         <span className="getpamlines" style={{ color: "#270641" }}>
-          comfort and discuss further
+          comfort and discuss further.
         </span>
         <div className="weddingforms">
           <span className="weddingt2" style={{ color: "#270641" }}>

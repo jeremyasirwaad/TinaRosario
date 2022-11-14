@@ -91,12 +91,15 @@
 }
 
 .prodpaget1{
-    font-size: 30px;
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
 
 .prodpaget2{
-    font-size: 22px;
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
     /* font-weight: 600; */
 }
 

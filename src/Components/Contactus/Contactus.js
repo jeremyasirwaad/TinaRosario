@@ -55,7 +55,7 @@ export const Contactus = () => {
       .post(`${backendUrl}/mail`, {
         from: contact.email,
         to: "design@tinarosario.com",
-        subject: `Mail from ${contact.name} - ${contact.email} `,
+        subject: `Contact from ${contact.name} - ${contact.email} `,
         text: `Sender's Mail - ${contact.email} \nSender Contact - ${contact.contact} \n\n Note: \n ${contact.note}`,
         userName: contact.name,
       })
@@ -100,7 +100,7 @@ export const Contactus = () => {
         className="weddingbanner"
       >
         <img
-          style={{ width: "100%", height: "100%" }}
+          style={{ width: "105%", height: "105%" }}
           src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20720.png?alt=media&token=246930de-5f92-4014-b256-93983bcd27d1"
         />
       </div>
@@ -138,10 +138,10 @@ export const Contactus = () => {
                 <a
                   target="_blank"
                   style={{ textDecoration: "none" }}
-                  href="https://api.whatsapp.com/send?phone=919916818637"
+                  href="https://api.whatsapp.com/send?phone=917200060540"
                 >
                   <i class="fa-brands fa-whatsapp"></i>
-                  <span>+91 9916818637</span>
+                  <span>+91 7200060540</span>
                 </a>
               </div>
               <div className="locainner">

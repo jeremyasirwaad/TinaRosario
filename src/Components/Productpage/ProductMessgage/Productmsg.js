@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import "./Productmsg.css";
+import IconButton from "@mui/material/IconButton";
+import Tooltip from "@mui/material/Tooltip";
 
 export const Productmsg = () => {
   const notify = () => toast.success("Message sent successfully");
@@ -103,7 +105,7 @@ export const Productmsg = () => {
         </button>
         <span className="prodmsgtext3">Or Contact Via</span>
         <div className="prodmsgsocial">
-          <a target="_blank" href="tel:917200060540">
+          <Tooltip title="917200060540">
             <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="20.8865" cy="20.8875" r="20.1131" fill="#4C2A76" />
               <path
@@ -123,7 +125,7 @@ export const Productmsg = () => {
                 fill="#FFB8BC"
               />
             </svg>
-          </a>
+          </Tooltip>
 
           <a target="_blank" href="https://api.whatsapp.com/send?phone=917200060540">
             <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">

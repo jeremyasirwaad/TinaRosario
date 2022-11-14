@@ -1,11 +1,15 @@
 .feedback_page{
-    width: 100%;
     display: flex;
     justify-content: center;
     background-image: url('../About/bg.svg');
-    background-position: no-repeat;
-    background-position: center;
+    background-repeat: no-repeat;
+    background-position: top;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
 }
 
 .feedbackinner{
