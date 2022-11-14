@@ -148,7 +148,7 @@ export const Navbar = () => {
 
         <div
           style={{
-            "@media (min-width: 800px)": {
+            "@media (min-width: 700px)": {
               display: "none",
             },
           }}

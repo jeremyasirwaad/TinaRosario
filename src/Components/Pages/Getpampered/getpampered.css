@@ -30,14 +30,12 @@
 
 .getpamtitle2{
     margin-top: 30px;
-
+    text-align: center;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 37px;
     line-height: 75px;
-
-
     color: #270641;
 
 
@@ -100,7 +98,52 @@
 }
 
 .getpamlines{
-    font-size: 30px;
+    font-size: 28px;
+    padding: 10px;
     font-weight: 600;
     font-style: italic;
+    text-align: center;
+}
+.getpamdetailsdiv>img{
+    width: 115px;
+    height: 120px;
+}
+.getpamdetailsdiv>svg{
+    width: 115px;
+    height: 120px;
+}
+.getpamdetailsdiv2>svg{
+    width: 115px;
+    height: 120px;
+}
+
+@media only screen and (max-width:700px){
+    .getpamdetailsdiv{
+        width: 90%;
+    }
+    .getpamdetailsdiv>svg{
+        width: 115px;
+        height: 120px;
+    }
+    .getpamdetailsdiv2>svg{
+        width: 115px;
+        height: 120px;
+    }
+
+    .getpamdetailsdiv2{
+        width: 90%;
+    }
+
+    .tagimgcontainer{
+        margin-top: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .tagimgcontainer svg{
+        width: 96%;
+        height: auto;
+    
+    }
 }

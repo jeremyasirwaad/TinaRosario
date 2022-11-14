@@ -121,7 +121,6 @@ export const Wedding = () => {
         alignItems: "center",
         width: "100%",
         backgroundColor: "black",
-        
       }}
     >
       <Toaster />
@@ -141,19 +140,18 @@ export const Wedding = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          width: "100%",
         }}
         className="weddingbg"
       >
-        <div className="wedsec1" style={{ marginTop: "100px" }}>
+        <div className="wedsec1" style={{ marginTop: "70px" }}>
           <div className="wedsec1img">
             <img src={wed1} alt="" />
           </div>
 
           <div className="wedsec1cont">
-            <span>
-              We understand wedding chores could overwhelm you.
-              <br /> Here we are to take off your burden of how you're going to look.
-            </span>
+            We understand wedding chores could overwhelm you.
+            <br /> Here we are to take off your burden of how you're going to look.
           </div>
         </div>
         <div className="wedsec2">
@@ -179,6 +177,7 @@ export const Wedding = () => {
         <div className="weddingforms">
           <span className="weddingt2">To discuss further, provide your </span>
           <TextField
+            fluid
             id="outlined-basic"
             label="Name *"
             value={formData.name}
@@ -190,7 +189,13 @@ export const Wedding = () => {
               setformData({ ...formData, name: e.target.value });
             }}
             variant="outlined"
-            style={{ width: "500px", marginTop: "30px" }}
+            sx={{
+              "@media (max-width: 700px)": {
+                width: "90%",
+              },
+              width: "500px",
+              marginTop: "30px",
+            }}
           />
           <TextField
             id="outlined-basic"
@@ -205,25 +210,24 @@ export const Wedding = () => {
               setformData({ ...formData, email: e.target.value });
             }}
             variant="outlined"
-            style={{ width: "500px", marginTop: "30px" }}
-          />
-          {/* <TextField
-            error={contacterr}
-            id="outlined-basic"
-            label="Contact"
-            variant="outlined"
-            style={{ width: "500px", marginTop: "30px" }}
-            value={formData.contact}
-            onChange={(e) => {
-              if (e.target.value != "") {
-                setContacterr(false);
-              }
-              setformData({ ...formData, contact: e.target.value });
+            sx={{
+              "@media (max-width: 700px)": {
+                width: "90%",
+              },
+              width: "500px",
+              marginTop: "30px",
             }}
-          /> */}
+          />
+
           <MuiTelInput
             label="Contact *"
-            style={{ width: "500px", marginTop: "30px" }}
+            sx={{
+              "@media (max-width: 700px)": {
+                width: "90%",
+              },
+              width: "500px",
+              marginTop: "30px",
+            }}
             value={value}
             variant="outlined"
             onChange={handleChange}
@@ -248,7 +252,13 @@ export const Wedding = () => {
             className="datewidth"
             value={formData.note}
             onChange={(e) => setformData({ ...formData, note: e.target.value })}
-            style={{ marginTop: "30px" }}
+            sx={{
+              "@media (max-width: 700px)": {
+                width: "90%",
+              },
+              width: "500px",
+              marginTop: "30px",
+            }}
           />
           <LocalizationProvider dateAdapter={AdapterDayjs} className="datewidth">
             <Stack spacing={3} className="datewidth">

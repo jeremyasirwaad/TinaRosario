@@ -199,7 +199,15 @@ export const Cusdesigns = () => {
           src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/header.png?alt=media&token=6f9cb77f-ed1f-4c1b-ac49-1401cf530e29"
         />
       </div>
-      <div className="Iweddingbg">
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          width: "100%",
+        }}
+        className="weddingbg"
+      >
         <div className="icons">
           <div className="icon-holder">
             <img src={img1} />
@@ -244,7 +252,13 @@ export const Cusdesigns = () => {
             id="outlined-basic"
             label="Who are we styling for ? *"
             variant="outlined"
-            style={{ width: "500px", marginTop: "30px" }}
+            sx={{
+              "@media (max-width: 700px)": {
+                width: "90%",
+              },
+              width: "500px",
+              marginTop: "30px",
+            }}
             placeholder={"Enter your Gender"}
             value={formData.gender}
             onChange={(e) => {
@@ -300,7 +314,13 @@ export const Cusdesigns = () => {
             id="outlined-basic"
             label="What kind of attire you want customized ? *"
             variant="outlined"
-            style={{ width: "500px", marginTop: "30px" }}
+            sx={{
+              "@media (max-width: 700px)": {
+                width: "90%",
+              },
+              width: "500px",
+              marginTop: "30px",
+            }}
             placeholder={"Eg: Suit, Lehenga, Gown"}
             value={formData.typeOfAttire}
             onChange={(e) => {
@@ -414,7 +434,13 @@ export const Cusdesigns = () => {
             id="outlined-basic"
             label="Name *"
             variant="outlined"
-            style={{ width: "500px", marginTop: "30px" }}
+            sx={{
+              "@media (max-width: 700px)": {
+                width: "90%",
+              },
+              width: "500px",
+              marginTop: "30px",
+            }}
             value={formData.name}
             onChange={(e) => {
               if (e.target.value != "") {
@@ -429,7 +455,13 @@ export const Cusdesigns = () => {
             id="outlined-basic"
             label="Email *"
             variant="outlined"
-            style={{ width: "500px", marginTop: "30px" }}
+            sx={{
+              "@media (max-width: 700px)": {
+                width: "90%",
+              },
+              width: "500px",
+              marginTop: "30px",
+            }}
             value={formData.email}
             onChange={(e) => {
               if (e.target.value != "") {
@@ -456,7 +488,13 @@ export const Cusdesigns = () => {
           /> */}
           <MuiTelInput
             label="Contact *"
-            style={{ width: "500px", marginTop: "30px" }}
+            sx={{
+              "@media (max-width: 700px)": {
+                width: "90%",
+              },
+              width: "500px",
+              marginTop: "30px",
+            }}
             value={contact}
             variant="outlined"
             onChange={handleContact}
