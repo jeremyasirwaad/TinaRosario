@@ -141,7 +141,7 @@ export const Getpampered = () => {
           </p>
         </div>
         <div className="getpamdetailsdiv">
-          <svg width="115" height="118" viewBox="0 0 115 121" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg  viewBox="0 0 115 121" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="57.2378" cy="60.4763" rx="57.2378" ry="59.531" fill="#4C2A76" />
             <path
               d="M67.4337 48.5628H65.8455V50.1875H64.3667V48.5628H62.7785V47.1662H64.3667V45.5323H65.8455V47.1662H67.4337V48.5628ZM69.9341 49.1835C69.9828 49.4512 70.0923 49.6581 70.2627 49.8042C70.4392 49.9441 70.6734 50.0141 70.9655 50.0141C71.3428 50.0141 71.6167 49.8589 71.787 49.5486C71.9574 49.2322 72.0426 48.7027 72.0426 47.9603C71.9027 48.1551 71.7049 48.3072 71.4493 48.4167C71.1998 48.5263 70.929 48.581 70.6369 48.581C70.2475 48.581 69.8945 48.5019 69.5781 48.3437C69.2678 48.1794 69.0213 47.9391 68.8387 47.6226C68.6562 47.3001 68.5649 46.9106 68.5649 46.4543C68.5649 45.7788 68.7657 45.2433 69.1673 44.8478C69.569 44.4461 70.1166 44.2453 70.8104 44.2453C71.6745 44.2453 72.283 44.5222 72.6359 45.076C72.995 45.6297 73.1745 46.4634 73.1745 47.577C73.1745 48.3681 73.1045 49.0161 72.9645 49.5212C72.8307 50.0263 72.5964 50.4097 72.2617 50.6713C71.9331 50.933 71.4828 51.0638 70.9108 51.0638C70.4605 51.0638 70.0771 50.9786 69.7607 50.8082C69.4442 50.6318 69.2008 50.4036 69.0304 50.1236C68.8661 49.8376 68.7718 49.5243 68.7475 49.1835H69.9341ZM70.9016 47.5405C71.2181 47.5405 71.4676 47.4431 71.6501 47.2484C71.8327 47.0537 71.924 46.792 71.924 46.4634C71.924 46.1044 71.8266 45.8275 71.6319 45.6327C71.4432 45.4319 71.1846 45.3315 70.856 45.3315C70.5274 45.3315 70.2657 45.435 70.071 45.6419C69.8824 45.8427 69.788 46.1104 69.788 46.4451C69.788 46.7676 69.8793 47.0324 70.0619 47.2392C70.2505 47.4401 70.5304 47.5405 70.9016 47.5405ZM74.014 45.578V44.4005H76.2138V51.0547H74.8994V45.578H74.014Z"
@@ -175,7 +175,7 @@ export const Getpampered = () => {
         </div>
         <div className="getpamdetailsdiv2">
           <span>Schedule a pickup</span>
-          <svg width="115" height="120" viewBox="0 0 115 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 115 120" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="57.6245" cy="59.5398" rx="57.2378" ry="59.531" fill="#4C2A76" />
             <path d="M41.2979 31.4102H44.8721V42.5624H41.2979V31.4102Z" fill="#FFB8BC" />
             <path d="M69.8926 31.4102H73.4668V42.5624H69.8926V31.4102Z" fill="#FFB8BC" />
@@ -191,7 +191,7 @@ export const Getpampered = () => {
           </svg>
         </div>
         <div className="getpamdetailsdiv">
-          <svg width="115" height="120" viewBox="0 0 115 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 115 120" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="57.2378" cy="59.6033" rx="57.2378" ry="59.531" fill="#4C2A76" />
             <path
               d="M69.227 60.9814C68.9941 61.961 68.8746 62.5576 68.3776 63.2161C68.0463 63.6552 67.5036 63.9072 66.9507 63.8438C66.4702 63.7887 66.005 63.5866 65.5373 63.4099C60.1281 61.3667 55.7628 57.7692 51.3525 54.2377C50.3013 53.396 48.083 51.4473 46.8232 50.4236C49.8904 48.2956 51.16 46.9795 51.16 46.9795C56.1024 51.1906 61.8646 56.1203 67.8783 58.586C68.8366 58.9791 69.7332 58.8518 69.227 60.9814Z"
@@ -266,7 +266,7 @@ export const Getpampered = () => {
         </div>
         <div className="getpamdetailsdiv2">
           <span>Brainstorm designs</span>
-          <svg width="115" height="120" viewBox="0 0 115 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 115 120" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="57.6225" cy="59.6668" rx="57.2378" ry="59.531" fill="#4C2A76" />
             <path
               d="M56.8388 72.5745C55.332 72.4012 53.8776 72.047 52.4963 71.533C52.5428 70.4852 52.5669 69.3926 52.5669 68.2534L52.5671 67.8961C52.5673 67.5368 52.5675 67.1557 52.566 66.7565C53.8942 67.4128 55.3302 67.8715 56.8388 68.0959V57.1451C56.8388 53.4642 59.7078 50.4802 63.247 50.4802H73.776C72.7392 42.9437 66.5076 37.1503 58.9748 37.1503C56.473 37.1503 54.1148 37.7894 52.0427 38.9191C51.6867 37.4271 51.1428 36.0653 50.3911 34.8059C52.9748 33.4627 55.8899 32.707 58.9748 32.707C68.8703 32.707 77.0194 40.4829 78.0819 50.4802H84.6076C88.1466 50.4802 91.0158 53.4642 91.0158 57.1451V79.3616C91.0158 83.0424 88.1466 86.0265 84.6076 86.0265H63.247C59.7078 86.0265 56.8388 83.0424 56.8388 79.3616V72.5745ZM78.0819 54.9235C77.0972 64.1913 70.0217 71.5503 61.1109 72.5745V79.3616C61.1109 80.5884 62.0673 81.5832 63.247 81.5832H84.6076C85.7871 81.5832 86.7437 80.5884 86.7437 79.3616V57.1451C86.7437 55.9182 85.7871 54.9235 84.6076 54.9235H78.0819ZM73.776 54.9235H63.247C62.0673 54.9235 61.1109 55.9182 61.1109 57.1451V68.0959C67.6594 67.1216 72.8392 61.7344 73.776 54.9235Z"
@@ -279,7 +279,7 @@ export const Getpampered = () => {
           </svg>
         </div>
         <div className="getpamdetailsdiv">
-          <img src={final} />
+          <img style={{ width: "115", height: "120" }} src={final} />
 
           <span>Finalize order</span>
         </div>
@@ -373,7 +373,13 @@ export const Getpampered = () => {
             label="Name *"
             error={nameerr}
             variant="outlined"
-            style={{ width: "500px", marginTop: "30px" }}
+            sx={{
+              "@media (max-width: 700px)": {
+                width: "90%",
+              },
+              width: "500px",
+              marginTop: "30px",
+            }}
             value={formData.name}
             onChange={(e) => {
               if (e.target.value != "") {
@@ -387,7 +393,13 @@ export const Getpampered = () => {
             id="outlined-basic"
             label="Email *"
             variant="outlined"
-            style={{ width: "500px", marginTop: "30px" }}
+            sx={{
+              "@media (max-width: 700px)": {
+                width: "90%",
+              },
+              width: "500px",
+              marginTop: "30px",
+            }}
             value={formData.email}
             onChange={(e) => {
               if (e.target.value != "") {
@@ -402,7 +414,13 @@ export const Getpampered = () => {
             id="outlined-basic"
             label="Contact"
             variant="outlined"
-            style={{ width: "500px", marginTop: "30px" }}
+            sx={{
+              "@media (max-width: 700px)": {
+                width: "90%",
+              },
+              width: "500px",
+              marginTop: "30px",
+            }}
             value={formData.contact}
             onChange={(e) => {
               if (e.target.value != "") {
@@ -413,7 +431,13 @@ export const Getpampered = () => {
           /> */}
           <MuiTelInput
             label="Contact *"
-            style={{ width: "500px", marginTop: "30px" }}
+            sx={{
+              "@media (max-width: 700px)": {
+                width: "90%",
+              },
+              width: "500px",
+              marginTop: "30px",
+            }}
             value={contact}
             variant="outlined"
             onChange={handleContact}
@@ -425,7 +449,13 @@ export const Getpampered = () => {
             multiline
             rows={4}
             variant="outlined"
-            style={{ width: "500px", marginTop: "30px" }}
+            sx={{
+              "@media (max-width: 700px)": {
+                width: "90%",
+              },
+              width: "500px",
+              marginTop: "30px",
+            }}
             value={formData.address}
             onChange={(e) => setformData({ ...formData, address: e.target.value })}
           />

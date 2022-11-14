@@ -163,7 +163,13 @@ const ImageCons = () => {
               setformData({ ...formData, name: e.target.value });
             }}
             variant="outlined"
-            style={{ width: "500px", marginTop: "30px" }}
+            sx={{
+              "@media (max-width: 700px)": {
+                width: "90%",
+              },
+              width: "500px",
+              marginTop: "30px",
+            }}
           />
           <TextField
             error={emailerr}
@@ -178,14 +184,26 @@ const ImageCons = () => {
               setformData({ ...formData, email: e.target.value });
             }}
             variant="outlined"
-            style={{ width: "500px", marginTop: "30px" }}
+            sx={{
+              "@media (max-width: 700px)": {
+                width: "90%",
+              },
+              width: "500px",
+              marginTop: "30px",
+            }}
           />
           {/* <TextField
             error={contacterr}
             id="outlined-basic"
             label="Contact"
             variant="outlined"
-            style={{ width: "500px", marginTop: "30px" }}
+            sx={{
+              "@media (max-width: 700px)": {
+                width: "90%",
+              },
+              width: "500px",
+              marginTop: "30px",
+            }}
             value={formData.contact}
             onChange={(e) => {
               if (e.target.value != "") {
@@ -196,7 +214,13 @@ const ImageCons = () => {
           /> */}
           <MuiTelInput
             label="Contact *"
-            style={{ width: "500px", marginTop: "30px" }}
+            sx={{
+              "@media (max-width: 700px)": {
+                width: "90%",
+              },
+              width: "500px",
+              marginTop: "30px",
+            }}
             value={contact}
             variant="outlined"
             onChange={handleContact}

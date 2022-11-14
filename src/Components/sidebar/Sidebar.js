@@ -13,6 +13,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { useNavigate } from "react-router-dom";
+import { Button, ListItem, ListItemIcon, ListItemText, ListItemButton } from "@mui/material";
 
 const drawerWidth = 240;
 
@@ -54,147 +55,73 @@ const drawerWidth = 240;
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
-  alignItems: "center",
-  padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
-  ...theme.mixins.toolbar,
-  justifyContent: "flex-start",
+  // alignItems: "center",
+  // padding: theme.spacing(0, 1),
+  // // necessary for content to be below app bar
+  // ...theme.mixins.toolbar,
+  // justifyContent: "flex-start",
 }));
 
 export default function Sidebar() {
-  const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const [state, setState] = React.useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
+  });
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event.type === "keydown" && (event.key === "Tab" || event.key === "Shift")) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
   };
 
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
-
-  const navigate = useNavigate();
+  const list = (anchor) => (
+    <Box
+      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <List>
+        {["All mail", "Trash", "Spam"].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        "@media (min-width: 700px)": {
-          display: "none",
-        },
-      }}
-    >
-      <Toolbar>
-        <IconButton
-          color="inherit"
-          aria-label="open drawer"
-          edge="end"
-          onClick={handleDrawerOpen}
-          sx={{ ...(open && { display: "none" }) }}
-        >
-          <MenuIcon />
-        </IconButton>
-      </Toolbar>
-
-      <Drawer
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          "& .MuiDrawer-paper": {
-            width: drawerWidth,
-          },
-        }}
-        variant="persistent"
-        anchor="right"
-        open={open}
-      >
-        <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === "rtl" ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-          </IconButton>
-        </DrawerHeader>
-        <Divider />
-
-        <span
-          className="navlink3"
-          onClick={() => {
-            navigate("/about");
-          }}
-        >
-          About Us
-        </span>
-        <span
-          className="navlink1"
-          onClick={() => {
-            navigate("/gallerycaro");
-          }}
-        >
-          Gallery
-        </span>
-        <span
-          className="navlink5"
-          onClick={async () => {
-            await navigate("/");
-            // document.getElementById("contactusdiv").scrollIntoView();
-            document.getElementById("services").scrollIntoView({
-              behavior: "smooth",
-            });
-          }}
-        >
-          Services
-        </span>
-        <span
-          className="navlink5"
-          onClick={async () => {
-            await navigate("/");
-            // document.getElementById("contactusdiv").scrollIntoView();
-            document.getElementById("products").scrollIntoView({
-              behavior: "smooth",
-            });
-          }}
-        >
-          Products
-        </span>
-        <span
-          className="navlink2"
-          onClick={async () => {
-            await navigate("/");
-            // document.getElementById("contactusdiv").scrollIntoView();
-            document.getElementById("Landingtesti").scrollIntoView({
-              behavior: "smooth",
-            });
-          }}
-        >
-          Testimonials
-        </span>
-        <span
-          onClick={async () => {
-            await navigate("/contact");
-            // document.getElementById("contactusdiv").scrollIntoView();
-            document.getElementById("contactusdiv").scrollIntoView({
-              behavior: "smooth",
-            });
-          }}
-          className="navlink4"
-        >
-          Contact Us
-        </span>
-        {/* <span className="navlink5">Testimonials</span> */}
-
-        {/* <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List> */}
-      </Drawer>
-    </Box>
+    <div>
+      {["right"].map((anchor) => (
+        <React.Fragment key={anchor}>
+          <Button
+            style={{ color: "black", border: "none", "&:focus": { border: "none" } }}
+            onClick={toggleDrawer(anchor, true)}
+          >
+            <MenuIcon />
+          </Button>
+          <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
+            {list(anchor)}
+          </Drawer>
+        </React.Fragment>
+      ))}
+    </div>
   );
 }

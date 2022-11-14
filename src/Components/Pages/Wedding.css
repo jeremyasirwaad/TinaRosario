@@ -85,7 +85,6 @@
     display: flex;
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
- 
     font-size: 1.5rem;
     color:#270641;
   
@@ -127,7 +126,7 @@
 }
 
 .datewidth{
-    width: 500px;
+    width: 300px;
     margin-top: 30px;
     color:#270641;
 }
@@ -155,4 +154,67 @@
     background-position: right;
     width:100%;
   
+}
+
+@media screen and (max-width: 700px){
+
+    .wedsec1{
+        display: flex;  
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+       
+        
+    }
+    
+    .wedsec2{
+        display: flex;  
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+        
+    .wedsec2 img{
+        height: auto;
+        width: 350px;
+    }
+
+    .wedsec1img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .wedsec1 img{
+        height: auto;
+        width: 350px;
+    }
+
+    .wedsec1cont{
+        width:90%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        justify-content: center;
+        align-items:center  ;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-left: 0;
+
+    }
+
+    .wedsec2cont{
+        width:90%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        justify-content: center;
+        align-items:center  ;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
