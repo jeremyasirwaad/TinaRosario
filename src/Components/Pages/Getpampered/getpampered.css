@@ -108,11 +108,7 @@
     width: 115px;
     height: 120px;
 }
-.getpamdetailsdiv>svg{
-    width: 115px;
-    height: 120px;
-}
-.getpamdetailsdiv2>svg{
+.getpamdetailsdiv2>img{
     width: 115px;
     height: 120px;
 }
@@ -121,14 +117,7 @@
     .getpamdetailsdiv{
         width: 90%;
     }
-    .getpamdetailsdiv>svg{
-        width: 115px;
-        height: 120px;
-    }
-    .getpamdetailsdiv2>svg{
-        width: 115px;
-        height: 120px;
-    }
+
 
     .getpamdetailsdiv2{
         width: 90%;
