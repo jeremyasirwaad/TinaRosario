@@ -495,7 +495,7 @@ export const Kidswear = () => {
 											setColorfilter("");
 											setPagedata(backupagedata);
 										} else {
-											setColorfilter("Shades of Orangele");
+											setColorfilter("Shades of Orange");
 										}
 									}}
 								/>
@@ -543,7 +543,7 @@ export const Kidswear = () => {
 								<input
 									type="checkbox"
 									name="colorfilter"
-									checked={colorfilter == "Shades of Bluele"}
+									checked={colorfilter == "Shades of Blue"}
 									onChange={() => {
 										if (colorfilter == "Shades of Blue") {
 											setColorfilter("");
