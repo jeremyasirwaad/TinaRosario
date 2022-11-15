@@ -3,6 +3,7 @@ import "./DesignerCollections.css";
 
 import { Prodcard } from "./Prodcard";
 import MoonLoader from "react-spinners/ClipLoader";
+import axios from "axios";
 
 export const DesignerCollections = () => {
 	const [subcatoptions, setSubcatoptions] = useState(false);
@@ -12,9 +13,40 @@ export const DesignerCollections = () => {
 	const [pagedata, setPagedata] = useState([]);
 	const [backupagedata, setBackupagedata] = useState([]);
 	const [loading, setLoading] = useState(true);
+	const [loading2, setLoading2] = useState(true);
+
 	const [pricefilter, setpricefilter] = useState(0);
+	const [colorfilter, setColorfilter] = useState("");
 
 	const [subcatfilter, setSubcatfilter] = useState("");
+
+	const [state, setState] = useState({
+		ip: "",
+		countryName: "",
+		countryCode: "",
+		city: "",
+		timezone: ""
+	});
+
+	const getGeoInfo = () => {
+		axios
+			.get("https://ipapi.co/json/")
+			.then((response) => {
+				let data = response.data;
+				setState({
+					...state,
+					ip: data.ip,
+					countryName: data.country_name,
+					countryCode: data.country_calling_code,
+					city: data.city,
+					timezone: data.timezone
+				});
+				setLoading2(false);
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	};
 
 	const getdata = async () => {
 		const data = await fetch("http://products.tinarosario.com/api/Products")
@@ -33,66 +65,104 @@ export const DesignerCollections = () => {
 
 	useEffect(() => {
 		getdata();
+		getGeoInfo();
 	}, []);
 
 	useEffect(() => {
 		if (subcatfilter != "") {
-			const data = pagedata.filter((e) => {
+			const data = backupagedata.filter((e) => {
 				return e.attributes.Gender == subcatfilter;
 			});
 			console.log(data);
 			setPagedata(data);
 		}
 
-		if (pricefilter != 0) {
-			if (pricefilter == 1) {
-				const data = pagedata.filter((e) => {
-					return parseInt(e.attributes.price) < 5000;
-				});
+		if (state.countryName == "India") {
+			if (pricefilter != 0) {
+				if (pricefilter == 1) {
+					const data = backupagedata.filter((e) => {
+						return parseInt(e.attributes.price) < 5000;
+					});
 
-				setPagedata(data);
+					setPagedata(data);
+				}
+				if (pricefilter == 2) {
+					const data = backupagedata.filter((e) => {
+						return (
+							parseInt(e.attributes.price) > 5000 &&
+							parseInt(e.attributes.price) <= 10000
+						);
+					});
+
+					setPagedata(data);
+				}
+				if (pricefilter == 3) {
+					const data = backupagedata.filter((e) => {
+						return parseInt(e.attributes.price) > 10000;
+					});
+
+					setPagedata(data);
+				}
 			}
-			if (pricefilter == 2) {
-				const data = pagedata.filter((e) => {
-					return (
-						parseInt(e.attributes.price) > 5000 &&
-						parseInt(e.attributes.price) <= 10000
-					);
-				});
+		} else {
+			if (pricefilter != 0) {
+				if (pricefilter == 1) {
+					const data = backupagedata.filter((e) => {
+						return parseInt(e.attributes.priceinUSD) < 50;
+					});
 
-				setPagedata(data);
-			}
-			if (pricefilter == 3) {
-				const data = pagedata.filter((e) => {
-					return (
-						parseInt(e.attributes.price) > 10000 &&
-						parseInt(e.attributes.price) <= 15000
-					);
-				});
+					setPagedata(data);
+				}
+				if (pricefilter == 2) {
+					const data = backupagedata.filter((e) => {
+						return (
+							parseInt(e.attributes.priceinUSD) > 50 &&
+							parseInt(e.attributes.priceinUSD) <= 100
+						);
+					});
 
-				setPagedata(data);
-			}
-			if (pricefilter == 4) {
-				const data = pagedata.filter((e) => {
-					return (
-						parseInt(e.attributes.price) > 15000 &&
-						parseInt(e.attributes.price) <= 20000
-					);
-				});
+					setPagedata(data);
+				}
+				if (pricefilter == 3) {
+					const data = backupagedata.filter((e) => {
+						return (
+							parseInt(e.attributes.priceinUSD) > 100 &&
+							parseInt(e.attributes.priceinUSD) <= 150
+						);
+					});
 
-				setPagedata(data);
-			}
-			if (pricefilter == 5) {
-				const data = pagedata.filter((e) => {
-					return parseInt(e.attributes.price) > 20000;
-				});
+					setPagedata(data);
+				}
+				if (pricefilter == 4) {
+					const data = backupagedata.filter((e) => {
+						return (
+							parseInt(e.attributes.priceinUSD) > 150 &&
+							parseInt(e.attributes.priceinUSD) <= 200
+						);
+					});
 
-				setPagedata(data);
+					setPagedata(data);
+				}
+				if (pricefilter == 5) {
+					const data = backupagedata.filter((e) => {
+						return parseInt(e.attributes.priceinUSD) > 200;
+					});
+
+					setPagedata(data);
+				}
 			}
 		}
 
+		if (colorfilter != "") {
+			const data = backupagedata.filter((e) => {
+				return e.attributes.Color == colorfilter;
+			});
+			console.log(data);
+			setPagedata(data);
+		}
+
 		// console.log(pagedata);
-	}, [subcatfilter, pricefilter]);
+	}, [subcatfilter, pricefilter, colorfilter]);
 
 	return (
 		<div className="designercollections">
@@ -182,127 +252,217 @@ export const DesignerCollections = () => {
 						</div>
 					</div>
 				</div>
-				<div className="subfilter">
-					<div className="subinner">
-						<div
-							className="subinner2"
-							onClick={() => {
-								setSubpriceoptions(!subpriceoptions);
-							}}
-						>
-							<span className="subinnertitle">Price</span>
+				{
+					(state.countryName = "India" ? (
+						<div className="subfilter">
+							<div className="subinner">
+								<div
+									className="subinner2"
+									onClick={() => {
+										setSubpriceoptions(!subpriceoptions);
+									}}
+								>
+									<span className="subinnertitle">Price</span>
 
-							<i
-								class={
-									subpriceoptions
-										? "fa-solid fa-chevron-up rotate"
-										: "fa-solid fa-chevron-up "
-								}
-							></i>
-						</div>
-						<div
-							className={subpriceoptions ? "fildiv displaynone" : "fildiv"}
-						></div>
-						<div
-							className={
-								subpriceoptions
-									? "fliterchoicediv displaynone"
-									: "fliterchoicediv"
-							}
-						>
-							<div className="fliterchoice" style={{ marginTop: "10px" }}>
-								<input
-									type="checkbox"
-									name="pricebox"
-									checked={pricefilter == 1}
-									onChange={() => {
-										if (pricefilter == 1) {
-											setpricefilter(0);
-											setPagedata(backupagedata);
-										} else {
-											setpricefilter(1);
+									<i
+										class={
+											subpriceoptions
+												? "fa-solid fa-chevron-up rotate"
+												: "fa-solid fa-chevron-up "
 										}
-									}}
-								/>
-								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									Less than 5000
-								</span>
-							</div>
-							<div className="fliterchoice">
-								<input
-									type="checkbox"
-									name="pricebox"
-									checked={pricefilter == 2}
-									onChange={() => {
-										if (pricefilter == 2) {
-											setpricefilter(0);
-											setPagedata(backupagedata);
-										} else {
-											setpricefilter(2);
-										}
-									}}
-								/>
-								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									5001 - 10000
-								</span>
-							</div>
-							<div className="fliterchoice">
-								<input
-									type="checkbox"
-									name="pricebox"
-									checked={pricefilter == 3}
-									onChange={() => {
-										if (pricefilter == 3) {
-											setpricefilter(0);
-											setPagedata(backupagedata);
-										} else {
-											setpricefilter(3);
-										}
-									}}
-								/>
-								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									10,001-15,000
-								</span>
-							</div>
-							<div className="fliterchoice">
-								<input
-									type="checkbox"
-									name="pricebox"
-									checked={pricefilter == 4}
-									onChange={() => {
-										if (pricefilter == 4) {
-											setpricefilter(0);
-											setPagedata(backupagedata);
-										} else {
-											setpricefilter(4);
-										}
-									}}
-								/>
-								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									15,001 - 20,000
-								</span>
-							</div>
-							<div className="fliterchoice">
-								<input
-									type="checkbox"
-									name="pricebox"
-									checked={pricefilter == 5}
-									onChange={() => {
-										if (pricefilter == 5) {
-											setpricefilter(0);
-											setPagedata(backupagedata);
-										} else {
-											setpricefilter(5);
-										}
-									}}
-								/>
-								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-									More than 20,000
-								</span>
+									></i>
+								</div>
+								<div
+									className={subpriceoptions ? "fildiv displaynone" : "fildiv"}
+								></div>
+								<div
+									className={
+										subpriceoptions
+											? "fliterchoicediv displaynone"
+											: "fliterchoicediv"
+									}
+								>
+									<div className="fliterchoice" style={{ marginTop: "10px" }}>
+										<input
+											type="checkbox"
+											name="pricebox"
+											checked={pricefilter == 1}
+											onChange={() => {
+												if (pricefilter == 1) {
+													setpricefilter(0);
+													setPagedata(backupagedata);
+												} else {
+													setpricefilter(1);
+												}
+											}}
+										/>
+										<span style={{ marginLeft: "10px", marginTop: "2px" }}>
+											Less than 5000
+										</span>
+									</div>
+									<div className="fliterchoice">
+										<input
+											type="checkbox"
+											name="pricebox"
+											checked={pricefilter == 2}
+											onChange={() => {
+												if (pricefilter == 2) {
+													setpricefilter(0);
+													setPagedata(backupagedata);
+												} else {
+													setpricefilter(2);
+												}
+											}}
+										/>
+										<span style={{ marginLeft: "10px", marginTop: "2px" }}>
+											5001 - 10000
+										</span>
+									</div>
+									<div className="fliterchoice">
+										<input
+											type="checkbox"
+											name="pricebox"
+											checked={pricefilter == 3}
+											onChange={() => {
+												if (pricefilter == 3) {
+													setpricefilter(0);
+													setPagedata(backupagedata);
+												} else {
+													setpricefilter(3);
+												}
+											}}
+										/>
+										<span style={{ marginLeft: "10px", marginTop: "2px" }}>
+											more than 10000
+										</span>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
+					) : (
+						<div className="subfilter">
+							<div className="subinner">
+								<div
+									className="subinner2"
+									onClick={() => {
+										setSubpriceoptions(!subpriceoptions);
+									}}
+								>
+									<span className="subinnertitle">Price($)</span>
+
+									<i
+										class={
+											subpriceoptions
+												? "fa-solid fa-chevron-up rotate"
+												: "fa-solid fa-chevron-up "
+										}
+									></i>
+								</div>
+								<div
+									className={subpriceoptions ? "fildiv displaynone" : "fildiv"}
+								></div>
+								<div
+									className={
+										subpriceoptions
+											? "fliterchoicediv displaynone"
+											: "fliterchoicediv"
+									}
+								>
+									<div className="fliterchoice" style={{ marginTop: "10px" }}>
+										<input
+											type="checkbox"
+											name="pricebox"
+											checked={pricefilter == 1}
+											onChange={() => {
+												if (pricefilter == 1) {
+													setpricefilter(0);
+													setPagedata(backupagedata);
+												} else {
+													setpricefilter(1);
+												}
+											}}
+										/>
+										<span style={{ marginLeft: "10px", marginTop: "2px" }}>
+											Less than 50
+										</span>
+									</div>
+									<div className="fliterchoice">
+										<input
+											type="checkbox"
+											name="pricebox"
+											checked={pricefilter == 2}
+											onChange={() => {
+												if (pricefilter == 2) {
+													setpricefilter(0);
+													setPagedata(backupagedata);
+												} else {
+													setpricefilter(2);
+												}
+											}}
+										/>
+										<span style={{ marginLeft: "10px", marginTop: "2px" }}>
+											51 - 100
+										</span>
+									</div>
+									<div className="fliterchoice">
+										<input
+											type="checkbox"
+											name="pricebox"
+											checked={pricefilter == 3}
+											onChange={() => {
+												if (pricefilter == 3) {
+													setpricefilter(0);
+													setPagedata(backupagedata);
+												} else {
+													setpricefilter(3);
+												}
+											}}
+										/>
+										<span style={{ marginLeft: "10px", marginTop: "2px" }}>
+											101 - 150
+										</span>
+									</div>
+									<div className="fliterchoice">
+										<input
+											type="checkbox"
+											name="pricebox"
+											checked={pricefilter == 4}
+											onChange={() => {
+												if (pricefilter == 4) {
+													setpricefilter(0);
+													setPagedata(backupagedata);
+												} else {
+													setpricefilter(4);
+												}
+											}}
+										/>
+										<span style={{ marginLeft: "10px", marginTop: "2px" }}>
+											151-200
+										</span>
+									</div>
+									<div className="fliterchoice">
+										<input
+											type="checkbox"
+											name="pricebox"
+											checked={pricefilter == 5}
+											onChange={() => {
+												if (pricefilter == 5) {
+													setpricefilter(0);
+													setPagedata(backupagedata);
+												} else {
+													setpricefilter(5);
+												}
+											}}
+										/>
+										<span style={{ marginLeft: "10px", marginTop: "2px" }}>
+											More than 200
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					))
+				}
 
 				<div className="subfilter">
 					<div className="subinner">
@@ -329,73 +489,217 @@ export const DesignerCollections = () => {
 							}
 						>
 							<div className="fliterchoice" style={{ marginTop: "10px" }}>
-								<input type="radio" />
+								<input
+									type="checkbox"
+									name="colorfilter"
+									checked={colorfilter == "White"}
+									onChange={() => {
+										if (colorfilter == "White") {
+											setColorfilter("");
+											setPagedata(backupagedata);
+										} else {
+											setColorfilter("White");
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									White
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input
+									type="checkbox"
+									name="colorfilter"
+									checked={colorfilter == "Black"}
+									onChange={() => {
+										if (colorfilter == "Black") {
+											setColorfilter("");
+											setPagedata(backupagedata);
+										} else {
+											setColorfilter("Black");
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Black
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input
+									type="checkbox"
+									name="colorfilter"
+									checked={colorfilter == "Gold"}
+									onChange={() => {
+										if (colorfilter == "Gold") {
+											setColorfilter("");
+											setPagedata(backupagedata);
+										} else {
+											setColorfilter("Gold");
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Gold
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input
+									type="checkbox"
+									name="colorfilter"
+									checked={colorfilter == "Silver"}
+									onChange={() => {
+										if (colorfilter == "Silver") {
+											setColorfilter("");
+											setPagedata(backupagedata);
+										} else {
+											setColorfilter("Silver");
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Silver
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input
+									type="checkbox"
+									name="colorfilter"
+									checked={colorfilter == "Shades of Red"}
+									onChange={() => {
+										if (colorfilter == "Shades of Red") {
+											setColorfilter("");
+											setPagedata(backupagedata);
+										} else {
+											setColorfilter("Shades of Red");
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Shades of Red
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input
+									type="checkbox"
+									name="colorfilter"
+									checked={colorfilter == "Shades of Orange"}
+									onChange={() => {
+										if (colorfilter == "Shades of Orange") {
+											setColorfilter("");
+											setPagedata(backupagedata);
+										} else {
+											setColorfilter("Shades of Orangele");
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Shades of Orange
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input
+									type="checkbox"
+									name="colorfilter"
+									checked={colorfilter == "Shades of Green"}
+									onChange={() => {
+										if (colorfilter == "Shades of Green") {
+											setColorfilter("");
+											setPagedata(backupagedata);
+										} else {
+											setColorfilter("Shades of Green");
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Shades of Green
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input
+									type="checkbox"
+									name="colorfilter"
+									checked={colorfilter == "Shades of Yellow"}
+									onChange={() => {
+										if (colorfilter == "Shades of Yellow") {
+											setColorfilter("");
+											setPagedata(backupagedata);
+										} else {
+											setColorfilter("Shades of Yellow");
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Shades of Yellow
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input
+									type="checkbox"
+									name="colorfilter"
+									checked={colorfilter == "Shades of Bluele"}
+									onChange={() => {
+										if (colorfilter == "Shades of Blue") {
+											setColorfilter("");
+											setPagedata(backupagedata);
+										} else {
+											setColorfilter("Shades of Blue");
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Shades of Blue
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input
+									type="checkbox"
+									name="colorfilter"
+									checked={colorfilter == "Shades of Purple"}
+									onChange={() => {
+										if (colorfilter == "Shades of Purple") {
+											setColorfilter("");
+											setPagedata(backupagedata);
+										} else {
+											setColorfilter("Shades of Purple");
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Shades of Purple
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input
+									type="checkbox"
+									name="colorfilter"
+									checked={colorfilter == "Shades of Pink"}
+									onChange={() => {
+										if (colorfilter == "Shades of Pink") {
+											setColorfilter("");
+											setPagedata(backupagedata);
+										} else {
+											setColorfilter("Shades of Pink");
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Shades of Pink
 								</span>
 							</div>
 							<div className="fliterchoice">
-								<input type="radio" />
+								<input
+									type="checkbox"
+									name="colorfilter"
+									checked={colorfilter == "Shades of Grey"}
+									onChange={() => {
+										if (colorfilter == "Shades of Grey") {
+											setColorfilter("");
+											setPagedata(backupagedata);
+										} else {
+											setColorfilter("Shades of Grey");
+										}
+									}}
+								/>
 								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
 									Shades of Grey
 								</span>
@@ -416,7 +720,7 @@ export const DesignerCollections = () => {
 					<span className="prodpaget2"> "Specially made for you"</span>
 				</div>
 
-				{loading ? (
+				{loading == true || loading2 == true ? (
 					<div
 						style={{
 							display: "flex",
