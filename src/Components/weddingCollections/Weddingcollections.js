@@ -253,7 +253,7 @@ export const Weddingcollections = () => {
 					</div>
 				</div>
 				{
-					(state.countryName = "India" ? (
+					(state.countryName == "India" ? (
 						<div className="subfilter">
 							<div className="subinner">
 								<div

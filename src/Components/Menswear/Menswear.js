@@ -160,7 +160,7 @@ export const Menswear = () => {
 		<div className="designercollections">
 			<div className="filter">
 				{
-					(state.countryName = "India" ? (
+					(state.countryName == "India" ? (
 						<div className="subfilter">
 							<div className="subinner">
 								<div
