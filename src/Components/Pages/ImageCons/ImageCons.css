@@ -70,6 +70,7 @@
     color: #270641;
     font-family: 'Poppins', sans-serif;
     text-align: center;
+    width: 50%;
 }
 
 .img-row{
@@ -159,6 +160,7 @@
     }
     .icon-holder >span{
         font-size: 0.9rem;
+        width: 100%;
     }
 
     .icons{
@@ -178,6 +180,7 @@
         font-size: 1.3rem;
         justify-content: center;
         align-items: center;
+        text-align: center;
         margin-left: 0px;
         margin-top: 40px;
         color:#270641;
@@ -207,6 +210,7 @@
         justify-content: center;
         align-items: center;
         margin-left: 0px;
+        text-align: center;
         margin-top: 40px;
         color:#270641;
         margin-right: 0px !important;

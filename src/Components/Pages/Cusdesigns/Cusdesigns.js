@@ -71,9 +71,16 @@ export const Cusdesigns = () => {
   const fileonchange = (e) => {
     const files = e.target.files;
     const file = files[0];
-    setfile(file);
-    setImginputloader(true);
-    console.log(file);
+    console.log(file.name);
+    if (file.name.endsWith(".jpeg") || file.name.endsWith(".jpg") || file.name.endsWith(".png")) {
+      setfile(file);
+      setImginputloader(true);
+      console.log(file);
+    } else {
+      setfile();
+      toast.error("Only allowed formats - jpeg, jpg, png");
+      return false;
+    }
   };
 
   const [nameerr, setNameerr] = useState(false);
@@ -103,11 +110,19 @@ export const Cusdesigns = () => {
       setContacterr(true);
     }
 
+    // if () {
+    //   toast.error("Please fill in mandatory fields");
+    // }
+
+    if ((agecat1 == false && agecat2 == false && agecat3 == false) || (isownfab1 == false && isownfab2 == false)) {
+      toast.error("Please fill in mandatory fields");
+    }
+
     if (!validator.isEmail(formData.email)) {
       setEmailerr(true);
     }
 
-    if (formData.ownDesign == "true") {
+    if (owndesign1 == "true") {
       if (file == undefined || file == null) {
         toast.error("Upload Design");
         return 0;
@@ -120,7 +135,9 @@ export const Cusdesigns = () => {
       formData.contact == "" ||
       formData.gender == "" ||
       formData.typeOfAttire == "" ||
-      !validator.isEmail(formData.email)
+      !validator.isEmail(formData.email) ||
+      (isownfab1 == false && isownfab2 == false) ||
+      (agecat1 == false && agecat2 == false && agecat3 == false)
     ) {
       return 0;
     }
@@ -166,6 +183,9 @@ export const Cusdesigns = () => {
   const [contact, setcontact] = React.useState("+91");
 
   const handleContact = (newValue) => {
+    if (newValue.length > 4) {
+      setContacterr(false);
+    }
     setcontact(newValue);
     setformData({ ...formData, contact: newValue });
   };
@@ -179,6 +199,7 @@ export const Cusdesigns = () => {
     window.addEventListener("resize", updateWidthAndHeight);
     return () => window.removeEventListener("resize", updateWidthAndHeight);
   });
+
 
   return (
     <div
@@ -417,7 +438,7 @@ export const Cusdesigns = () => {
 
               <input
                 hidden
-                accept="image/*"
+                accept="image/png,image/jpeg"
                 multiple
                 type="file"
                 onChange={(e) => {
@@ -497,6 +518,7 @@ export const Cusdesigns = () => {
           /> */}
           <MuiTelInput
             label="Contact *"
+            error={contacterr}
             sx={{
               "@media (max-width: 700px)": {
                 width: "90%",
@@ -535,11 +557,7 @@ export const Cusdesigns = () => {
 						</Stack>
 					</LocalizationProvider> */}
           <p>* Mandatory Fields</p>
-          <button
-            style={{ marginBottom: "50px", cursor: "pointer" }}
-            className="weddingbookbtn"
-            onClick={handleFormSubmit}
-          >
+          <button style={{ cursor: "pointer" }} className="weddingbookbtn" onClick={handleFormSubmit}>
             Book
           </button>
         </div>

@@ -31,7 +31,7 @@
   background-color: #270641;
   margin-top: 20px;
   /* margin-bottom: 20px; */
-  padding: 30px;
+  padding: 15px;
 }
 
 .caroimg{
@@ -128,7 +128,7 @@
   font-size: 35px;
 }
 
-@media only screen and (max-width:650px){
+@media only screen and (max-width:750px){
   .imgfabrow1{
     flex-direction: column;
   }
@@ -143,6 +143,223 @@
   .fabricscaro{
     height: 350px;
 
+  }
+  .bgFabrics{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+    flex-direction: column;
+    background-image: url('../../About/bg.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .fabricsheader2{
+    text-align: center;
+
+  }
+
+  .textcontainer{
+    width:95%;
+  }
+  .textcontainer>p{
+    text-align: center !important;
+    width: 100%;
+  }
+
+  
+  .imgfabrows{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 10px;
+  }
+
+  .imgfabrow1 img{
+    height: auto;
+    width: 325px;
+  }
+
+  .imgfabrow1{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .imgfabrow2{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+
+
+  .imgfabrowinner>p{
+    font-size: 1.5rem;
+    text-align: center !important;
+    font-family: 'Poppins', sans-serif;
+  }
+
+
+  .imgfabrow2 img{
+    height: auto;
+    width: 325px;
+  }
+
+  .imgfabrow2{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    text-align: center;
+
+  }
+
+  .imgfabrowinner{
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .imgfabrowinner span{
+    font-weight: 600;
+    font-size: 35px;
+    text-align: center !important;
+  }
+
+
+  
+}
+
+
+
+@media only screen and (max-width:1200px){
+  /* .imgfabrow1{
+    flex-direction: column;
+  }
+  .imgfabrow2{
+    flex-direction: column;
+  } */
+  .caroimg{
+    height: 300px;
+    width: 100%;
+    /* margin-top: 500px, */
+  }
+  .fabricscaro{
+    height: 350px;
+
+  }
+  .bgFabrics{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+    flex-direction: column;
+    background-image: url('../../About/bg.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .fabricsheader2{
+    text-align: center;
+
+  }
+
+  .textcontainer{
+    width:95%;
+  }
+  .textcontainer>p{
+    text-align: center !important;
+    width: 100%;
+  }
+
+  
+  .imgfabrows{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 10px;
+  }
+
+  .imgfabrow1 img{
+    height: auto;
+    width: 325px;
+  }
+
+  .imgfabrow1{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .imgfabrow2{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+
+
+  .imgfabrowinner>p{
+    font-size: 1.5rem;
+    text-align: center !important;
+    font-family: 'Poppins', sans-serif;
+  }
+
+
+  .imgfabrow2 img{
+    height: auto;
+    width: 325px;
+  }
+
+  .imgfabrow2{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    text-align: center;
+
+  }
+
+  .imgfabrowinner{
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .imgfabrowinner span{
+    font-weight: 600;
+    font-size: 35px;
+    text-align: center !important;
+  }
+
+
+  
+}
+
+
+@media only screen and (max-width:550px){
+  .imgfabrow1{
+    flex-direction: column;
+  }
+  .imgfabrow2{
+    flex-direction: column;
+  }
+  .caroimg{
+    height: 230px;
+    width: 100%;
+    /* margin-top: 500px, */
+  }
+  .fabricscaro{
+   align-content: center;
+    align-items: center;
+    height: 240px;
+    padding: 5px;
   }
   .bgFabrics{
     display: flex;

@@ -11,6 +11,11 @@ import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import validator from "validator";
 import { MuiTelInput } from "mui-tel-input";
+import hoarding from "./hoard.png";
+import { Carousel } from "3d-react-carousal";
+import res1 from "./res1.png";
+import res2 from "./res2.png";
+import res3 from "./res3.png";
 
 const backendUrl = "http://3.88.157.171:8080";
 // const backendUrl = "http://localhost:3001";
@@ -93,22 +98,51 @@ export const Contactus = () => {
     return () => window.removeEventListener("resize", updateWidthAndHeight);
   });
 
+  let slides = [
+    <img className="caroimg" src={res1} alt="1" />,
+    <img className="caroimg" src={res2} alt="2" />,
+    <img className="caroimg" src={res3} alt="3" />,
+  ];
+
   return (
     <div className="contactuspage">
       <div
-        style={{ minHeight: "250px", maxHeight: "600px", width: "100%", height: width - height + 420 }}
-        className="weddingbanner"
+        style={{
+          minHeight: "250px",
+          maxHeight: "600px",
+          width: "100%",
+          height: "600px",
+        }}
+        className="contactbanner"
       >
         <img
-          style={{ width: "105%", height: "105%" }}
-          src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20720.png?alt=media&token=246930de-5f92-4014-b256-93983bcd27d1"
+          style={{
+            "@media (max-width: 700px)": {
+              display: "none",
+            },
+            width: "100%",
+            height: "105%",
+            marginTop: "15px",
+            marginLeft: "-15px",
+          }}
+          src={hoarding}
         />
+        <div className="fabricscaro">
+          <Carousel
+            style={{
+              width: "100%",
+              height: "100%",
+            }}
+            slides={slides}
+            autoplay={true}
+            interval={5000}
+          />
+        </div>
       </div>
       <div className="bgcontact">
         <div className="mainsection">
           <div className="mainsectionleft">
             <span className="msl1">Get in Touch</span>
-
             <img className="clogo" style={{ marginTop: "50px" }} src={logoforcontact} alt="" />
             <span className="msl3">THE DESIGN HOUSE</span>
             <div className="loca">

@@ -98,6 +98,9 @@ export const Wedding = () => {
   const [value, setValue] = React.useState("+91");
 
   const handleChange = (newValue) => {
+    if (newValue.length > 4) {
+      setContacterr(false);
+    }
     setValue(newValue);
     setformData({ ...formData, contact: newValue });
   };
@@ -228,6 +231,7 @@ export const Wedding = () => {
           />
 
           <MuiTelInput
+            error={contacterr}
             label="Contact *"
             sx={{
               "@media (max-width: 700px)": {

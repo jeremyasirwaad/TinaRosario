@@ -5,6 +5,10 @@
     align-items: center;
     justify-content: center;
     background-image: url('../../About/bg.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+
    
 }
 
