@@ -145,17 +145,17 @@ export const Navbar = () => {
 							if (e.value == "Handloom") {
 								navigate("/handloom");
 							}
-							if (e.value == "Shirt ") {
-								navigate("/menswear");
+							if (e.value == "Shirt") {
+								navigate("/Menswear");
 							}
 							if (e.value == "Accessories") {
 								navigate("/exclusiveaccessories");
 							}
 							if (e.value == "Hoodies") {
-								navigate("/menswear");
+								navigate("/Menswear");
 							}
 							if (e.value == "T- Shirt") {
-								navigate("/menswear");
+								navigate("/Menswear");
 							}
 							if (e.value == "Kids' Collection") {
 								navigate("/kidswear");
@@ -176,7 +176,7 @@ export const Navbar = () => {
 								navigate("/womenswear");
 							}
 							if (e.value == "Men's Collection") {
-								navigate("/menswear");
+								navigate("/Menswear");
 							}
 							if (e.value == "Women's Collection") {
 								navigate("/womenswear");
@@ -185,7 +185,7 @@ export const Navbar = () => {
 								navigate("/DesignerCollections");
 							}
 							if (e.value == "Skirt") {
-								navigate("/Designer Collection");
+								navigate("/DesignerCollections");
 							}
 						}}
 					></Select>
