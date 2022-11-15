@@ -85,6 +85,9 @@ export const Getpampered = () => {
   const [contact, setcontact] = React.useState("+91");
 
   const handleContact = (newValue) => {
+    if (newValue.length > 4) {
+      setContacterr(false);
+    }
     setcontact(newValue);
     setformData({ ...formData, contact: newValue });
   };
@@ -320,6 +323,7 @@ export const Getpampered = () => {
             }}
           /> */}
           <MuiTelInput
+            error={contacterr}
             label="Contact *"
             sx={{
               "@media (max-width: 700px)": {

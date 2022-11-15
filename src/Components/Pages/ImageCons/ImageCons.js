@@ -16,7 +16,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import axios from "axios";
 import validator from "validator";
 
-import { Toaster } from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { MuiTelInput } from "mui-tel-input";
 import resimg from "./resimg.png";
@@ -74,7 +74,17 @@ const ImageCons = () => {
       setEmailerr(true);
     }
 
-    if (formData.name == "" || formData.email == "" || formData.contact == "" || !validator.isEmail(formData.email)) {
+    if (isownfab1 == false && isownfab2 == false) {
+      toast.error("Please fill in mandatory fields");
+    }
+
+    if (
+      formData.name == "" ||
+      (isownfab1 == false && isownfab2 == false) ||
+      formData.email == "" ||
+      formData.contact == "" ||
+      !validator.isEmail(formData.email)
+    ) {
       return 0;
     }
     const data = await axios.post(`${url}/formData`, {
@@ -90,6 +100,9 @@ const ImageCons = () => {
   const [contact, setcontact] = React.useState("+91");
 
   const handleContact = (newValue) => {
+    if (newValue.length > 4) {
+      setContacterr(false);
+    }
     setcontact(newValue);
     setformData({ ...formData, contact: newValue });
   };
@@ -223,6 +236,7 @@ const ImageCons = () => {
             }}
           /> */}
           <MuiTelInput
+            error={contacterr}
             label="Contact *"
             sx={{
               "@media (max-width: 700px)": {
@@ -285,7 +299,7 @@ const ImageCons = () => {
           </LocalizationProvider>
           <p>* Mandatory Fields</p>
           <button
-            style={{ cursor: "pointer", marginBottom: "60px" }}
+            style={{ cursor: "pointer",  }}
             className="weddingbookbtn"
             onClick={handleFormSubmit}
           >

@@ -86,6 +86,11 @@
         width: 100px;
     }
 
+    .navlogocontainer>img{
+        width: 200px !important;
+        height: 100px;
+    }
+
 }
 
 @media screen and (max-width: 900px) {

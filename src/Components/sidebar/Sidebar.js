@@ -112,7 +112,14 @@ export default function Sidebar() {
       {["right"].map((anchor) => (
         <React.Fragment key={anchor}>
           <Button
-            style={{ color: "black", border: "none", "&:focus": { border: "none" } }}
+            sx={{
+              color: "black",
+              border: "none",
+              "&:focus": { border: "none" },
+              "@media (min-width: 800px)": {
+                display: "none",
+              },
+            }}
             onClick={toggleDrawer(anchor, true)}
           >
             <MenuIcon />

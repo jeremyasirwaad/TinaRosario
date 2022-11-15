@@ -44,9 +44,14 @@ export const Feedback = () => {
   const fileonchange = (e) => {
     const files = e.target.files;
     const fil = files[0];
-    setfile(fil);
-    setImginputloader(true);
-    console.log(fil);
+    if (fil.name.endsWith(".jpeg") || fil.name.endsWith(".jpg") || fil.name.endsWith(".png")) {
+      setfile(fil);
+      setImginputloader(true);
+      console.log(file);
+    } else {
+      setfile();
+      toast.error("Only allowed formats - jpeg,jpg,png");
+    }
   };
 
   const [nameerr, setNameerr] = useState(false);
@@ -214,7 +219,7 @@ export const Feedback = () => {
 
             <input
               hidden
-              accept="image/*"
+              accept="image/png,image/jpeg"
               multiple
               type="file"
               onChange={(e) => {
