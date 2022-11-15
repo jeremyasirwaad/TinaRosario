@@ -10,7 +10,7 @@ import Stack from "@mui/material/Stack";
 
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-
+import resimg from "./resimg.png";
 import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
 import wed1 from "./wedd1.svg";
 import wed2 from "./wed2.svg";
@@ -126,13 +126,21 @@ export const Wedding = () => {
       <Toaster />
 
       <div
-        style={{ minHeight: "250px", maxHeight: "600px", width: "100%", height: width - height + 420 }}
+        style={{ minHeight: "350px", maxHeight: "700px", width: "100%", height: width - height + 420 }}
         className="weddingbanner"
       >
         <img
-          style={{ width: "96%", height: "95%" }}
+          className="caroimg1"
+          style={{
+            "@media (max-width: 700px)": {
+              display: "none",
+            },
+            width: "96%",
+            height: "95%",
+          }}
           src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20768.png?alt=media&token=f57e42f0-c5d1-45f6-9c13-a4171e71ace8"
         />
+        <img className="caroimg2" src={resimg} />
       </div>
 
       <div

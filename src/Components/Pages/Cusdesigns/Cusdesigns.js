@@ -23,7 +23,7 @@ import AOS from "aos";
 import img1 from "./img1.svg";
 import img2 from "./img2.svg";
 import img3 from "./img3.svg";
-
+import resimg from "./resimg.png";
 import "./cusforms.css";
 import { LoadingButton } from "@mui/lab";
 import axios from "axios";
@@ -195,10 +195,19 @@ export const Cusdesigns = () => {
         className="weddingbanner"
       >
         <img
-          style={{ width: "97%", height: "96%" }}
+          className="caroimg1"
+          style={{
+            "@media (max-width: 700px)": {
+              display: "none",
+            },
+            width: "97%",
+            height: "96%",
+          }}
           src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/header.png?alt=media&token=6f9cb77f-ed1f-4c1b-ac49-1401cf530e29"
         />
+        <img className="caroimg2" src={resimg} />
       </div>
+
       <div
         style={{
           display: "flex",

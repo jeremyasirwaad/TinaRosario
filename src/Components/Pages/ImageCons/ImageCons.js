@@ -19,6 +19,8 @@ import validator from "validator";
 import { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { MuiTelInput } from "mui-tel-input";
+import resimg from "./resimg.png";
+
 const ImageCons = () => {
   const navigate = useNavigate();
   const url = "http://3.88.157.171:8080";
@@ -107,13 +109,21 @@ const ImageCons = () => {
     <div className="imagecons">
       <Toaster />
       <div
-        style={{ minHeight: "250px", maxHeight: "600px", width: "100%", height: width - height + 420 }}
+        style={{ minHeight: "350px", maxHeight: "700px", width: "100%", height: width - height + 420 }}
         className="weddingbanner"
       >
         <img
-          style={{ width: "98%", height: "98%" }}
+          className="caroimg1"
+          style={{
+            "@media (max-width: 700px)": {
+              display: "none",
+            },
+            width: "96%",
+            height: "95%",
+          }}
           src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20722.png?alt=media&token=ef73764e-cacb-460e-a69a-4f63dd91fd08"
         />
+        <img className="caroimg2" src={resimg} />
       </div>
       <div className="Iweddingbg">
         <div className="icons">
