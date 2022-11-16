@@ -14,7 +14,7 @@ export const Prodcard = (props) => {
 			<div className="prodcarddetails">
 				<span className="prodcardtitle">{props.title}</span>
 				<span className="prodcarddiscription">
-					{props.description.slice(0, 30)}
+					{props.description.slice}
 				</span>
 			</div>
 		</div>

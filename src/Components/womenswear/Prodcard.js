@@ -15,7 +15,7 @@ export const Prodcard = (props) => {
 			{/* <span>{props.}</span> */}
 			<div className="prodcarddetails">
 				<span className="prodcardtitle">{props.title}</span>
-				<span className="prodcarddiscription">{props.Subtitle}</span>
+				<span className="prodcarddiscription">{props.description}</span>
 			</div>
 		</div>
 	);
