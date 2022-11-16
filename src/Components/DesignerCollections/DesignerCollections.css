@@ -161,7 +161,7 @@
 
 .filtercloser
 {
-     
+    /* margin-top: 60px; */
     margin-left: 150px;
     width: 30px;
     height: 30px;
@@ -188,7 +188,8 @@
         box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
         padding: 30px;
         margin-left: -330px;
-        position: absolute;
+        position: fixed;
+        top: 0;
         transition: margin-left 0.5s ease;
     }
 
@@ -250,6 +251,7 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
+      
     }
 
     .prodpaget1{
