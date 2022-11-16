@@ -54,6 +54,7 @@ export const Landing = () => {
 							alignItems: "center",
 							textAlign: "center"
 						}}
+						className="givenmargin"
 					>
 						<svg
 							width="120"
@@ -86,6 +87,7 @@ export const Landing = () => {
 							alignItems: "center",
 							textAlign: "center"
 						}}
+						className="givenmargin"
 					>
 						<svg
 							width="120"
@@ -166,6 +168,7 @@ export const Landing = () => {
 								color: "#270641",
 								fontFamily: "'Poppins', sans-serif"
 							}}
+							className="givenmargin"
 						>
 							Premium quality fabric
 						</p>
@@ -178,6 +181,7 @@ export const Landing = () => {
 							alignItems: "center",
 							textAlign: "center"
 						}}
+						className="givenmargin"
 					>
 						<svg
 							width="120"
@@ -203,6 +207,7 @@ export const Landing = () => {
 							width: "150px",
 							alignItems: "center"
 						}}
+						className="givenmargin"
 					>
 						<svg
 							width="120"
@@ -244,6 +249,7 @@ export const Landing = () => {
 								fontFamily: "'Poppins', sans-serif",
 								textAlign: "center"
 							}}
+							className="givenmargin"
 						>
 							Work Transparency
 						</p>
@@ -256,6 +262,7 @@ export const Landing = () => {
 							alignItems: "center",
 							textAlign: "center"
 						}}
+						className="givenmargin"
 					>
 						<svg
 							width="120"
@@ -367,7 +374,7 @@ export const Landing = () => {
 						style={{ cursor: "pointer" }}
 					/>
 				</div>
-				<div style={{ marginTop: "70px" }} className="servcaro">
+				<div style={{ marginTop: "70px" }} className="servcaro removemargin">
 					<img
 						id="handloomSari"
 						src={
