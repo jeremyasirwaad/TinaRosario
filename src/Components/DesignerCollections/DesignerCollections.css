@@ -14,6 +14,8 @@
     background: rgba(221, 253, 255, 0.8);
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
     padding: 30px;
+    /* position: absolute; */
+
     
 }
 
@@ -180,8 +182,8 @@
     .filter{
         z-index: 10 !important;
         width: 230px !important;
-        height: 100vh;
-        overflow-x: scroll;
+        height: 100% !important;
+        overflow-x: visible !important;
         background: rgba(221, 253, 255) !important;;
         box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
         padding: 30px;
