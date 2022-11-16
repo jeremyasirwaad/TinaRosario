@@ -8,6 +8,7 @@ export const Caro = () => {
 	const navigate = useNavigate();
 	return (
 		<Carousel
+			swipeable={false}
 			emulateTouch={false}
 			style={{ height: "650px", maxHeight: "650px" }}
 			dynamicHeight={true}
