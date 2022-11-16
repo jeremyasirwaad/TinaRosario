@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import Sidebar from "../sidebar/Sidebar";
@@ -6,9 +6,12 @@ import HomeIcon from "@mui/icons-material/Home";
 import navlogo from "./navlogo.svg";
 import Select from "react-select";
 import searchoptions from "./searchoptions.json";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 export const Navbar = () => {
 	const navigate = useNavigate();
+	const [sidenav, setSidenav] = useState(false);
 
 	// const searchoptions = [
 	//   { value: "Kurta", label: "Kurta" },
@@ -35,6 +38,165 @@ export const Navbar = () => {
 
 	return (
 		<div className="navcontainer">
+			<div
+				className={
+					sidenav ? "showsidenav sidenavbarcustom" : "sidenavbarcustom"
+				}
+			>
+				<div
+					className="closearrow"
+					onClick={() => {
+						setSidenav(false);
+					}}
+				>
+					<AiOutlineArrowRight />
+				</div>
+				<div
+					className="slidebarlogo"
+					onClick={() => {
+						navigate("/");
+					}}
+				>
+					<img style={{ cursor: "pointer" }} src={navlogo} />
+				</div>
+				<div style={{ width: "100%", padding: "20px" }}>
+					<Select
+						placeholder="Search"
+						options={searchoptions}
+						onChange={(e) => {
+							if (e.value == "Saree") {
+								navigate("/handloom");
+							}
+							if (e.value == "Kurta") {
+								navigate("/womenswear");
+							}
+							if (e.value == "Lehanga") {
+								navigate("/DesignerCollections");
+							}
+							if (e.value == "Dress") {
+								navigate("/DesignerCollections");
+							}
+							if (e.value == "Handloom") {
+								navigate("/handloom");
+							}
+							if (e.value == "Shirt") {
+								navigate("/Menswear");
+							}
+							if (e.value == "Accessories") {
+								navigate("/exclusiveaccessories");
+							}
+							if (e.value == "Hoodies") {
+								navigate("/Menswear");
+							}
+							if (e.value == "T- Shirt") {
+								navigate("/Menswear");
+							}
+							if (e.value == "Kids' Collection") {
+								navigate("/kidswear");
+							}
+							if (e.value == "Blazer") {
+								navigate("/DesignerCollections");
+							}
+							if (e.value == "Salwar") {
+								navigate("/womenswear");
+							}
+							if (e.value == "Western wear") {
+								navigate("/womenswear");
+							}
+							if (e.value == "Gown") {
+								navigate("/womenswear");
+							}
+							if (e.value == "blouse") {
+								navigate("/womenswear");
+							}
+							if (e.value == "Men's Collection") {
+								navigate("/Menswear");
+							}
+							if (e.value == "Women's Collection") {
+								navigate("/womenswear");
+							}
+							if (e.value == "Pant") {
+								navigate("/DesignerCollections");
+							}
+							if (e.value == "Skirt") {
+								navigate("/DesignerCollections");
+							}
+						}}
+					></Select>
+				</div>
+				<span
+					className="sidebarlinks"
+					onClick={() => {
+						navigate("/");
+					}}
+				>
+					Home
+				</span>
+				<span
+					className="sidebarlinks"
+					onClick={() => {
+						navigate("/about");
+					}}
+				>
+					About Us
+				</span>
+				<span
+					className="sidebarlinks"
+					onClick={() => {
+						navigate("/gallerycaro");
+					}}
+				>
+					Gallery
+				</span>
+				<span
+					className="sidebarlinks"
+					onClick={async () => {
+						await navigate("/");
+						// document.getElementById("contactusdiv").scrollIntoView();
+						document.getElementById("services").scrollIntoView({
+							behavior: "smooth"
+						});
+					}}
+				>
+					Services
+				</span>
+				<span
+					className="sidebarlinks"
+					onClick={async () => {
+						await navigate("/");
+						// document.getElementById("contactusdiv").scrollIntoView();
+						document.getElementById("products").scrollIntoView({
+							behavior: "smooth"
+						});
+					}}
+				>
+					Products
+				</span>
+				<span
+					className="sidebarlinks"
+					onClick={async () => {
+						await navigate("/");
+						// document.getElementById("contactusdiv").scrollIntoView();
+						document.getElementById("Landingtesti").scrollIntoView({
+							behavior: "smooth"
+						});
+					}}
+				>
+					Testimonials
+				</span>
+				<span
+					className="sidebarlinks"
+					onClick={async () => {
+						await navigate("/contact");
+						// document.getElementById("contactusdiv").scrollIntoView();
+						document.getElementById("contactusdiv").scrollIntoView({
+							behavior: "smooth"
+						});
+					}}
+				>
+					Contact Us
+				</span>
+			</div>
 			<div className="navinnercontainer">
 				<div
 					className="navlogocontainer"
@@ -127,95 +289,80 @@ export const Navbar = () => {
 						class="fa-solid fa-magnifying-glass"
 						style={{ marginRight: "10px" }}
 					></i>
-					<Select
-						options={searchoptions}
-						onChange={(e) => {
-							if (e.value == "Saree") {
-								navigate("/handloom");
-							}
-							if (e.value == "Kurta") {
-								navigate("/womenswear");
-							}
-							if (e.value == "Lehanga") {
-								navigate("/DesignerCollections");
-							}
-							if (e.value == "Dress") {
-								navigate("/DesignerCollections");
-							}
-							if (e.value == "Handloom") {
-								navigate("/handloom");
-							}
-							if (e.value == "Shirt") {
-								navigate("/Menswear");
-							}
-							if (e.value == "Accessories") {
-								navigate("/exclusiveaccessories");
-							}
-							if (e.value == "Hoodies") {
-								navigate("/Menswear");
-							}
-							if (e.value == "T- Shirt") {
-								navigate("/Menswear");
-							}
-							if (e.value == "Kids' Collection") {
-								navigate("/kidswear");
-							}
-							if (e.value == "Blazer") {
-								navigate("/DesignerCollections");
-							}
-							if (e.value == "Salwar") {
-								navigate("/womenswear");
-							}
-							if (e.value == "Western wear") {
-								navigate("/womenswear");
-							}
-							if (e.value == "Gown") {
-								navigate("/womenswear");
-							}
-							if (e.value == "blouse") {
-								navigate("/womenswear");
-							}
-							if (e.value == "Men's Collection") {
-								navigate("/Menswear");
-							}
-							if (e.value == "Women's Collection") {
-								navigate("/womenswear");
-							}
-							if (e.value == "Pant") {
-								navigate("/DesignerCollections");
-							}
-							if (e.value == "Skirt") {
-								navigate("/DesignerCollections");
-							}
-						}}
-					></Select>
-					{/* <input
-						type="text"
-						style={{
-							width: "500px",
-							height: "40px",
-							borderRadius: "10px",
-							border: "1px solid black"
-						}}
-					/> */}
-					{/* <select>
-						<option value="A">Apple</option>
-						<option value="B">Banana</option>
-						<option value="C">Cranberry</option>
-					</select> */}
-					{/* <i class="fa-solid fa-cart-shopping"></i> */}
-					{/* <i class="fa-solid fa-user"></i> */}
+					<div style={{ width: "100%" }}>
+						<Select
+							placeholder="Search"
+							options={searchoptions}
+							onChange={(e) => {
+								if (e.value == "Saree") {
+									navigate("/handloom");
+								}
+								if (e.value == "Kurta") {
+									navigate("/womenswear");
+								}
+								if (e.value == "Lehanga") {
+									navigate("/DesignerCollections");
+								}
+								if (e.value == "Dress") {
+									navigate("/DesignerCollections");
+								}
+								if (e.value == "Handloom") {
+									navigate("/handloom");
+								}
+								if (e.value == "Shirt") {
+									navigate("/Menswear");
+								}
+								if (e.value == "Accessories") {
+									navigate("/exclusiveaccessories");
+								}
+								if (e.value == "Hoodies") {
+									navigate("/Menswear");
+								}
+								if (e.value == "T- Shirt") {
+									navigate("/Menswear");
+								}
+								if (e.value == "Kids' Collection") {
+									navigate("/kidswear");
+								}
+								if (e.value == "Blazer") {
+									navigate("/DesignerCollections");
+								}
+								if (e.value == "Salwar") {
+									navigate("/womenswear");
+								}
+								if (e.value == "Western wear") {
+									navigate("/womenswear");
+								}
+								if (e.value == "Gown") {
+									navigate("/womenswear");
+								}
+								if (e.value == "blouse") {
+									navigate("/womenswear");
+								}
+								if (e.value == "Men's Collection") {
+									navigate("/Menswear");
+								}
+								if (e.value == "Women's Collection") {
+									navigate("/womenswear");
+								}
+								if (e.value == "Pant") {
+									navigate("/DesignerCollections");
+								}
+								if (e.value == "Skirt") {
+									navigate("/DesignerCollections");
+								}
+							}}
+						></Select>
+					</div>
 				</div>
-
-				<div
-					style={{
-						"@media (min-width: 700px)": {
-							display: "none"
-						}
+				<GiHamburgerMenu
+				className="hamburger"
+					onClick={() => {
+						setSidenav(true);
 					}}
-				>
-					<Sidebar />
-				</div>
+					style={{ fontSize: "30px" }}
+					size="30"
+				/>
 			</div>
 		</div>
 	);

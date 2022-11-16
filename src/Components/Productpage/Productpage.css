@@ -114,6 +114,15 @@
     border-radius: 20px;
 }
 
+.productname1
+{
+    display: none;
+}
+
+.productprice1{
+    display: none;
+}
+
 @media only screen and (max-width:1024px) {
     .mainimg{
         width: 320px;
