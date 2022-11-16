@@ -39,7 +39,9 @@ export const Caro = () => {
 				<img
 					style={{ borderRadius: "30px" }}
 					src={
-						"https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/875%20(1).png?alt=media&token=35b5cb14-4625-4bf6-b6fb-10fb10024bf1"
+						window.innerWidth <= 600
+							? "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20790.png?alt=media&token=b14cabdb-6fd7-455e-bbf8-72dc10e4a04a"
+							: "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/875%20(1).png?alt=media&token=35b5cb14-4625-4bf6-b6fb-10fb10024bf1"
 					}
 					height={"650px"}
 				/>
