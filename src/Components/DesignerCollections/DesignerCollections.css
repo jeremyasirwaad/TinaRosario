@@ -14,6 +14,7 @@
     background: rgba(221, 253, 255, 0.8);
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
     padding: 30px;
+    
 }
 
 
@@ -141,8 +142,124 @@
     font-size: 20px;
 }
 
+.filtericon{
+    position: absolute;
+    top: 150px;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.filtercloser
+{
+     
+    margin-left: 150px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: none;
+
+}
 
 
+@media only screen and (max-width:700px)
+{
+    .filter{
+        z-index: 10 !important;
+        width: 230px !important;
+        height: 100vh;
+        overflow-x: scroll;
+        background: rgba(221, 253, 255) !important;;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+        padding: 30px;
+        margin-left: -330px;
+        position: absolute;
+        transition: margin-left 0.5s ease;
+    }
+
+    .filteropen{
+        margin-left: 0px;
+        transition: margin-left 0.5s ease;
+
+
+    }
+
+    .prodpaget1div{
+        flex-direction: column;
+    }
+
+    .prodpaget1{
+        font-size: 28px !important;
+        font-weight: 600;
+    }
+    
+    .prodpaget2{
+        font-size: 15px !important;
+        /* font-weight: 600; */
+    }
+
+    .prodcard{
+        margin-top: 20px;
+     
+        display: flex;
+        flex-direction: column;
+        background: rgba(221, 253, 255, 0.8);
+        border-radius: 14.8103px;
+        box-shadow: 0px 3.94942px 14.8103px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+    }
+
+    .filtericon{
+        position: absolute;
+        top: 140px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .prodpaget1{
+        font-size: 30px;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+
+    .filtercloser
+    {
+         
+        margin-left: 150px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+ 
+    
+    }
+}
 
 
 

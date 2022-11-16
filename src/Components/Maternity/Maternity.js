@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import "./DesignerCollections.css";
+// import "./DesignerCollections.css";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import rectimg from "./Rectimg.svg";
 import { Prodcard } from "./Prodcard";
 import MoonLoader from "react-spinners/ClipLoader";
 import { height } from "@mui/system";
 import axios from "axios";
+import { AiFillFilter, AiOutlineArrowLeft } from "react-icons/ai";
 
 export const Maternity = () => {
 	const [subcatoptions, setSubcatoptions] = useState(false);
@@ -18,7 +19,7 @@ export const Maternity = () => {
 	const [pricefilter, setpricefilter] = useState(0);
 	const [colorfilter, setColorfilter] = useState("");
 	const [loading2, setLoading2] = useState(true);
-
+	const [filteropen, setFilteropen] = useState(false);
 	const [subcatfilter, setSubcatfilter] = useState("");
 	const [state, setState] = useState({
 		ip: "",
@@ -158,7 +159,15 @@ export const Maternity = () => {
 
 	return (
 		<div className="designercollections">
-			<div className="filter">
+			<div className={filteropen ? "filter filteropen" : "filter"}>
+				<div
+					className="filtercloser"
+					onClick={() => {
+						setFilteropen(false);
+					}}
+				>
+					<AiOutlineArrowLeft />
+				</div>
 				{
 					(state.countryName = "India" ? (
 						<div className="subfilter">
@@ -622,7 +631,16 @@ export const Maternity = () => {
 						justifyContent: "flex-start",
 						alignItems: "center"
 					}}
+					className="prodpaget1div"
 				>
+					<div
+						className="filtericon"
+						onClick={() => {
+							setFilteropen(true);
+						}}
+					>
+						<AiFillFilter />
+					</div>
 					<span className="prodpaget1">Maternity Collections - </span>
 					<span className="prodpaget2">
 						“Specially designed to make you feel comfortable”

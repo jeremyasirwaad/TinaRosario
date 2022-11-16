@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./DesignerCollections.css";
+// import "./DesignerCollections.css";
 
 import { Prodcard } from "./Prodcard";
 import MoonLoader from "react-spinners/ClipLoader";
 import axios from "axios";
+import { AiFillFilter, AiOutlineArrowLeft } from "react-icons/ai";
 
 export const Weddingcollections = () => {
 	const [subcatoptions, setSubcatoptions] = useState(false);
@@ -14,7 +15,7 @@ export const Weddingcollections = () => {
 	const [backupagedata, setBackupagedata] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [loading2, setLoading2] = useState(true);
-
+	const [filteropen, setFilteropen] = useState(false);
 	const [pricefilter, setpricefilter] = useState(0);
 	const [colorfilter, setColorfilter] = useState("");
 
@@ -166,7 +167,15 @@ export const Weddingcollections = () => {
 
 	return (
 		<div className="designercollections">
-			<div className="filter">
+			<div className={filteropen ? "filter filteropen" : "filter"}>
+				<div
+					className="filtercloser"
+					onClick={() => {
+						setFilteropen(false);
+					}}
+				>
+					<AiOutlineArrowLeft />
+				</div>
 				<div className="subfilter">
 					<div className="subinner">
 						<div
@@ -252,217 +261,215 @@ export const Weddingcollections = () => {
 						</div>
 					</div>
 				</div>
-				{
-					(state.countryName == "India" ? (
-						<div className="subfilter">
-							<div className="subinner">
-								<div
-									className="subinner2"
-									onClick={() => {
-										setSubpriceoptions(!subpriceoptions);
-									}}
-								>
-									<span className="subinnertitle">Price</span>
+				{state.countryName == "India" ? (
+					<div className="subfilter">
+						<div className="subinner">
+							<div
+								className="subinner2"
+								onClick={() => {
+									setSubpriceoptions(!subpriceoptions);
+								}}
+							>
+								<span className="subinnertitle">Price</span>
 
-									<i
-										class={
-											subpriceoptions
-												? "fa-solid fa-chevron-up rotate"
-												: "fa-solid fa-chevron-up "
-										}
-									></i>
-								</div>
-								<div
-									className={subpriceoptions ? "fildiv displaynone" : "fildiv"}
-								></div>
-								<div
-									className={
+								<i
+									class={
 										subpriceoptions
-											? "fliterchoicediv displaynone"
-											: "fliterchoicediv"
+											? "fa-solid fa-chevron-up rotate"
+											: "fa-solid fa-chevron-up "
 									}
-								>
-									<div className="fliterchoice" style={{ marginTop: "10px" }}>
-										<input
-											type="checkbox"
-											name="pricebox"
-											checked={pricefilter == 1}
-											onChange={() => {
-												if (pricefilter == 1) {
-													setpricefilter(0);
-													setPagedata(backupagedata);
-												} else {
-													setpricefilter(1);
-												}
-											}}
-										/>
-										<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-											Less than 5000
-										</span>
-									</div>
-									<div className="fliterchoice">
-										<input
-											type="checkbox"
-											name="pricebox"
-											checked={pricefilter == 2}
-											onChange={() => {
-												if (pricefilter == 2) {
-													setpricefilter(0);
-													setPagedata(backupagedata);
-												} else {
-													setpricefilter(2);
-												}
-											}}
-										/>
-										<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-											5001 - 10000
-										</span>
-									</div>
-									<div className="fliterchoice">
-										<input
-											type="checkbox"
-											name="pricebox"
-											checked={pricefilter == 3}
-											onChange={() => {
-												if (pricefilter == 3) {
-													setpricefilter(0);
-													setPagedata(backupagedata);
-												} else {
-													setpricefilter(3);
-												}
-											}}
-										/>
-										<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-											more than 10000
-										</span>
-									</div>
+								></i>
+							</div>
+							<div
+								className={subpriceoptions ? "fildiv displaynone" : "fildiv"}
+							></div>
+							<div
+								className={
+									subpriceoptions
+										? "fliterchoicediv displaynone"
+										: "fliterchoicediv"
+								}
+							>
+								<div className="fliterchoice" style={{ marginTop: "10px" }}>
+									<input
+										type="checkbox"
+										name="pricebox"
+										checked={pricefilter == 1}
+										onChange={() => {
+											if (pricefilter == 1) {
+												setpricefilter(0);
+												setPagedata(backupagedata);
+											} else {
+												setpricefilter(1);
+											}
+										}}
+									/>
+									<span style={{ marginLeft: "10px", marginTop: "2px" }}>
+										Less than 5000
+									</span>
+								</div>
+								<div className="fliterchoice">
+									<input
+										type="checkbox"
+										name="pricebox"
+										checked={pricefilter == 2}
+										onChange={() => {
+											if (pricefilter == 2) {
+												setpricefilter(0);
+												setPagedata(backupagedata);
+											} else {
+												setpricefilter(2);
+											}
+										}}
+									/>
+									<span style={{ marginLeft: "10px", marginTop: "2px" }}>
+										5001 - 10000
+									</span>
+								</div>
+								<div className="fliterchoice">
+									<input
+										type="checkbox"
+										name="pricebox"
+										checked={pricefilter == 3}
+										onChange={() => {
+											if (pricefilter == 3) {
+												setpricefilter(0);
+												setPagedata(backupagedata);
+											} else {
+												setpricefilter(3);
+											}
+										}}
+									/>
+									<span style={{ marginLeft: "10px", marginTop: "2px" }}>
+										more than 10000
+									</span>
 								</div>
 							</div>
 						</div>
-					) : (
-						<div className="subfilter">
-							<div className="subinner">
-								<div
-									className="subinner2"
-									onClick={() => {
-										setSubpriceoptions(!subpriceoptions);
-									}}
-								>
-									<span className="subinnertitle">Price($)</span>
+					</div>
+				) : (
+					<div className="subfilter">
+						<div className="subinner">
+							<div
+								className="subinner2"
+								onClick={() => {
+									setSubpriceoptions(!subpriceoptions);
+								}}
+							>
+								<span className="subinnertitle">Price($)</span>
 
-									<i
-										class={
-											subpriceoptions
-												? "fa-solid fa-chevron-up rotate"
-												: "fa-solid fa-chevron-up "
-										}
-									></i>
-								</div>
-								<div
-									className={subpriceoptions ? "fildiv displaynone" : "fildiv"}
-								></div>
-								<div
-									className={
+								<i
+									class={
 										subpriceoptions
-											? "fliterchoicediv displaynone"
-											: "fliterchoicediv"
+											? "fa-solid fa-chevron-up rotate"
+											: "fa-solid fa-chevron-up "
 									}
-								>
-									<div className="fliterchoice" style={{ marginTop: "10px" }}>
-										<input
-											type="checkbox"
-											name="pricebox"
-											checked={pricefilter == 1}
-											onChange={() => {
-												if (pricefilter == 1) {
-													setpricefilter(0);
-													setPagedata(backupagedata);
-												} else {
-													setpricefilter(1);
-												}
-											}}
-										/>
-										<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-											Less than 50
-										</span>
-									</div>
-									<div className="fliterchoice">
-										<input
-											type="checkbox"
-											name="pricebox"
-											checked={pricefilter == 2}
-											onChange={() => {
-												if (pricefilter == 2) {
-													setpricefilter(0);
-													setPagedata(backupagedata);
-												} else {
-													setpricefilter(2);
-												}
-											}}
-										/>
-										<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-											51 - 100
-										</span>
-									</div>
-									<div className="fliterchoice">
-										<input
-											type="checkbox"
-											name="pricebox"
-											checked={pricefilter == 3}
-											onChange={() => {
-												if (pricefilter == 3) {
-													setpricefilter(0);
-													setPagedata(backupagedata);
-												} else {
-													setpricefilter(3);
-												}
-											}}
-										/>
-										<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-											101 - 150
-										</span>
-									</div>
-									<div className="fliterchoice">
-										<input
-											type="checkbox"
-											name="pricebox"
-											checked={pricefilter == 4}
-											onChange={() => {
-												if (pricefilter == 4) {
-													setpricefilter(0);
-													setPagedata(backupagedata);
-												} else {
-													setpricefilter(4);
-												}
-											}}
-										/>
-										<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-											151-200
-										</span>
-									</div>
-									<div className="fliterchoice">
-										<input
-											type="checkbox"
-											name="pricebox"
-											checked={pricefilter == 5}
-											onChange={() => {
-												if (pricefilter == 5) {
-													setpricefilter(0);
-													setPagedata(backupagedata);
-												} else {
-													setpricefilter(5);
-												}
-											}}
-										/>
-										<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-											More than 200
-										</span>
-									</div>
+								></i>
+							</div>
+							<div
+								className={subpriceoptions ? "fildiv displaynone" : "fildiv"}
+							></div>
+							<div
+								className={
+									subpriceoptions
+										? "fliterchoicediv displaynone"
+										: "fliterchoicediv"
+								}
+							>
+								<div className="fliterchoice" style={{ marginTop: "10px" }}>
+									<input
+										type="checkbox"
+										name="pricebox"
+										checked={pricefilter == 1}
+										onChange={() => {
+											if (pricefilter == 1) {
+												setpricefilter(0);
+												setPagedata(backupagedata);
+											} else {
+												setpricefilter(1);
+											}
+										}}
+									/>
+									<span style={{ marginLeft: "10px", marginTop: "2px" }}>
+										Less than 50
+									</span>
+								</div>
+								<div className="fliterchoice">
+									<input
+										type="checkbox"
+										name="pricebox"
+										checked={pricefilter == 2}
+										onChange={() => {
+											if (pricefilter == 2) {
+												setpricefilter(0);
+												setPagedata(backupagedata);
+											} else {
+												setpricefilter(2);
+											}
+										}}
+									/>
+									<span style={{ marginLeft: "10px", marginTop: "2px" }}>
+										51 - 100
+									</span>
+								</div>
+								<div className="fliterchoice">
+									<input
+										type="checkbox"
+										name="pricebox"
+										checked={pricefilter == 3}
+										onChange={() => {
+											if (pricefilter == 3) {
+												setpricefilter(0);
+												setPagedata(backupagedata);
+											} else {
+												setpricefilter(3);
+											}
+										}}
+									/>
+									<span style={{ marginLeft: "10px", marginTop: "2px" }}>
+										101 - 150
+									</span>
+								</div>
+								<div className="fliterchoice">
+									<input
+										type="checkbox"
+										name="pricebox"
+										checked={pricefilter == 4}
+										onChange={() => {
+											if (pricefilter == 4) {
+												setpricefilter(0);
+												setPagedata(backupagedata);
+											} else {
+												setpricefilter(4);
+											}
+										}}
+									/>
+									<span style={{ marginLeft: "10px", marginTop: "2px" }}>
+										151-200
+									</span>
+								</div>
+								<div className="fliterchoice">
+									<input
+										type="checkbox"
+										name="pricebox"
+										checked={pricefilter == 5}
+										onChange={() => {
+											if (pricefilter == 5) {
+												setpricefilter(0);
+												setPagedata(backupagedata);
+											} else {
+												setpricefilter(5);
+											}
+										}}
+									/>
+									<span style={{ marginLeft: "10px", marginTop: "2px" }}>
+										More than 200
+									</span>
 								</div>
 							</div>
 						</div>
-					))
-				}
+					</div>
+				)}
 
 				<div className="subfilter">
 					<div className="subinner">
@@ -715,7 +722,16 @@ export const Weddingcollections = () => {
 						justifyContent: "flex-start",
 						alignItems: "center"
 					}}
+					className="prodpaget1div"
 				>
+					<div
+						className="filtericon"
+						onClick={() => {
+							setFilteropen(true);
+						}}
+					>
+						<AiFillFilter />
+					</div>
 					<span className="prodpaget1">Wedding Collection - </span>
 					<span className="prodpaget2"> “Look Special”</span>
 				</div>
