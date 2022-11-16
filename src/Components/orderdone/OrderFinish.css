@@ -12,12 +12,17 @@
 }
 .bottomLogo{
     width: 100%;
+    margin-top: 20px;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     margin-right: 100px;
-
     position: relative;
+}
+
+.bottomLogo>img{
+    height: 100px;
+    width: 100px;
 }
 .order-card{
     background-color: #4C2A76;
@@ -74,7 +79,8 @@
 @media only screen and (max-width:450px) {
    
     .order-card{
-        height: 450px;
+        height: 400px;
         width:95%;
+        padding: 20px;
     }
 }
