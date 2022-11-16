@@ -195,3 +195,21 @@
 .feedback_div input{
     background-color: transparent;
 } */
+
+@media only screen and (max-width:688px)
+{
+    .feedback_div{
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+    }
+
+    .feedbackt1{
+        font-size: 28px;
+
+    }
+
+    .feedbackt2{
+        font-size: 28px;
+    }
+}
