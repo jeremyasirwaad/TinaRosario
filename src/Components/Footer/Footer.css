@@ -188,7 +188,7 @@
 
   @media screen and (max-width: 700px) {
     .footercontainer{
-        height: 105vh;
+        height: auto;
         background-color: #270641;
         overflow: hidden;
         width: 100%;
