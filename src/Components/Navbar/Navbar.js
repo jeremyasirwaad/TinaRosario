@@ -55,6 +55,7 @@ export const Navbar = () => {
 					className="slidebarlogo"
 					onClick={() => {
 						navigate("/");
+						setSidenav(false);
 					}}
 				>
 					<img style={{ cursor: "pointer" }} src={navlogo} />
@@ -128,6 +129,7 @@ export const Navbar = () => {
 					className="sidebarlinks"
 					onClick={() => {
 						navigate("/");
+						setSidenav(false);
 					}}
 				>
 					Home
@@ -136,6 +138,7 @@ export const Navbar = () => {
 					className="sidebarlinks"
 					onClick={() => {
 						navigate("/about");
+						setSidenav(false);
 					}}
 				>
 					About Us
@@ -144,6 +147,7 @@ export const Navbar = () => {
 					className="sidebarlinks"
 					onClick={() => {
 						navigate("/gallerycaro");
+						setSidenav(false);
 					}}
 				>
 					Gallery
@@ -156,6 +160,7 @@ export const Navbar = () => {
 						document.getElementById("services").scrollIntoView({
 							behavior: "smooth"
 						});
+						setSidenav(false);
 					}}
 				>
 					Services
@@ -168,6 +173,7 @@ export const Navbar = () => {
 						document.getElementById("products").scrollIntoView({
 							behavior: "smooth"
 						});
+						setSidenav(false);
 					}}
 				>
 					Products
@@ -180,6 +186,7 @@ export const Navbar = () => {
 						document.getElementById("Landingtesti").scrollIntoView({
 							behavior: "smooth"
 						});
+						setSidenav(false);
 					}}
 				>
 					Testimonials
@@ -192,6 +199,7 @@ export const Navbar = () => {
 						document.getElementById("contactusdiv").scrollIntoView({
 							behavior: "smooth"
 						});
+						setSidenav(false);
 					}}
 				>
 					Contact Us
@@ -356,7 +364,7 @@ export const Navbar = () => {
 					</div>
 				</div>
 				<GiHamburgerMenu
-				className="hamburger"
+					className="hamburger"
 					onClick={() => {
 						setSidenav(true);
 					}}
