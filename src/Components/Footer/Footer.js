@@ -12,7 +12,7 @@ export const Footer = () => {
       <div className="footerinnercontainer">
         <div className="fdetails">
           <img className="foot-logo" src={logo2} />
-          <div style={{ marginTop: "20px" }} className="footer-text">
+          <div style={{ marginTop: "23px" }} className="footer-text">
             Let the garms you don, adorn the style within you.
           </div>
         </div>
@@ -32,6 +32,7 @@ export const Footer = () => {
             Services
           </h4>
           <h4
+            className="h4"
             onClick={async () => {
               await navigate("/");
               // document.getElementById("contactusdiv").scrollIntoView();
@@ -49,7 +50,9 @@ export const Footer = () => {
           <h4 onClick={() => navigate("/contact")}>Contact us</h4>
           <h4 onClick={() => navigate("/policies")}>Our Policies</h4>
           <h4 onClick={() => navigate("/terms")}>Terms of Use</h4>
-          <h4 onClick={() => navigate("/feedback")}>Feedback</h4>
+          <h4 className="h4" onClick={() => navigate("/feedback")}>
+            Feedback
+          </h4>
         </div>
         <div className="column faq">
           <p>FAQ's</p>
@@ -57,7 +60,9 @@ export const Footer = () => {
           <h4 onClick={() => navigate("/faq_reg", { state: 2 })}>Pricing & Payment </h4>
           <h4 onClick={() => navigate("/faq_order", { state: 3 })}>Order & Customization</h4>
           <h4 onClick={() => navigate("/faq_deli", { state: 4 })}>Delivery, Return & Refund</h4>
-          <h4 onClick={() => navigate("/faq_ship", { state: 5 })}>Shipping & Tracking</h4>
+          <h4 className="h4" onClick={() => navigate("/faq_ship", { state: 5 })}>
+            Shipping & Tracking
+          </h4>
         </div>
         <div className="column links">
           <p>Catch us on</p>
