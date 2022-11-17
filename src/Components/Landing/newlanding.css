@@ -104,7 +104,17 @@
 
 
 @media only screen and (max-width:1252px)
+
 {
+    .landbgdiv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('./Wedding\ Collection\ \(1\).svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
     .servcaro{
         margin-top: 40px;
         width: 85%;
