@@ -10,26 +10,26 @@
 .carousel-inner{
     width: 90%;
 }
-.carousel-item{
+.caroresfix{
     height: 100%;
     width: 100%;
 }
 
 
 
-.carousel-item>div{
+.caroresfix>div{
    height: 100%;
    display: flex;
    justify-content: center;
    align-items: center;
 }
 
-.carousel-item>div>div{
+.caroresfix>div>div{
     margin-left: 20px;
 }
 
 
-.carousel-item>div>div>p{
+.caroresfix>div>div>p{
     color:#FFB8BC;
     font-size: 25px;
     font-weight: 500;
@@ -37,7 +37,7 @@
     
 
 }
-.carousel-item>div>div>h4{
+.caroresfix>div>div>h4{
     color:#FFB8BC;
     font-size: 30px;
     font-weight: 400;
@@ -86,26 +86,26 @@
     .carousel-inner{
         width: 90%;
     }
-    .carousel-item{
+    .caroresfix{
         height: 100%;
         width: 100%;
     }
 
     
     
-    .carousel-item>div{
+    .caroresfix>div{
        height: 100%;
        display: flex;
        justify-content: center;
        align-items: center;
     }
     
-    .carousel-item>div>div{
+    .caroresfix>div>div{
         margin-left: 20px;
     }
     
     
-    .carousel-item>div>div>p{
+    .caroresfix>div>div>p{
         color:#FFB8BC;
         font-size: 25px;
         font-weight: 500;
@@ -113,14 +113,14 @@
         
     
     }
-    .carousel-item>div>div>h4{
+    .caroresfix>div>div>h4{
         color:#FFB8BC;
         font-size: 30px;
         font-weight: 400;
         margin-left: 5px;
     }
 
-    .carousel-item>div>div>p{
+    .caroresfix>div>div>p{
         color:#FFB8BC;
         font-size: 25px;
         font-weight: 400;
@@ -145,11 +145,11 @@
     }
    
 
-    .carousel-item>div>img{
+    .caroresfix>div>img{
         width: 115px !important;
         height: 400px !important; 
     }
-    .carousel-item>div>div>h4{
+    .caroresfix>div>div>h4{
         font-size: 18px !important;
     }
 

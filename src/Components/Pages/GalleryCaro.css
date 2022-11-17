@@ -60,3 +60,21 @@
     width: auto;
     border-radius: 10px;
   }
+
+  @media only screen and (max-width:700px) {
+    .innercarodiv{
+      width: 100% !important;
+      height: 330px !important; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #270641;
+      padding: 20px;
+    }
+
+    .innercarodiv img{
+      height: 400px;
+      width: auto;
+      border-radius: 10px;
+    }
+  }

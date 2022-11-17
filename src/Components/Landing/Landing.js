@@ -428,7 +428,7 @@ export const Landing = () => {
 						data-ride="carousel"
 					>
 						<div class="carousel-inner">
-							<div class="carousel-item active ">
+							<div class="carousel-item caroresfix active ">
 								<div>
 									<img
 										style={{
