@@ -42,13 +42,12 @@ export const Fabrics = () => {
     />,
   ];
 
- 
   return (
     <div>
       <div className="bgFabrics">
         <span className="fabricsheader">Know your Fabric</span>
         <div className="fabricscaro">
-          <Carousel style={{ width: "98%" }} slides={slides} autoplay={true} interval={5000}  />
+          <Carousel style={{ width: "98%" }} slides={slides} autoplay={true} interval={5000} />
         </div>
         <span className="fabricsheader2">Why use sustainable eco-friendly fabric?</span>
         <div className="textcontainer">
@@ -71,6 +70,15 @@ export const Fabrics = () => {
         {/* <button className="fabbutton">Fabrics</button> */}
         <div className="imgfabrows">
           <div className="imgfabrow1">
+            <span
+              className="reshead1"
+              style={{
+                fontWeight: "600",
+                fontSize: "35px",
+              }}
+            >
+              Cotton <p className="small">“Feel Easy and comfortable”</p>
+            </span>
             <img
               alt=""
               src={
@@ -78,8 +86,16 @@ export const Fabrics = () => {
               }
             />
             <div className="imgfabrowinner">
-              <span>Cotton - “Feel Easy and comfortable”</span>
-              <p>
+              <span
+                className="reshead2"
+                style={{
+                  fontWeight: "600",
+                  fontSize: "35px",
+                }}
+              >
+                Cotton - “Feel Easy and comfortable”
+              </span>
+              <p style={{ marginTop: "15px" }}>
                 This plant based fiber is soft, fresh and has high draping abilities. Cotton is an incredibly suitable
                 choice for summer dresses. It comes in various forms - Kaftans, frocks, timeless kurtas, simple shirts
                 and the list goes on. An easy to care product, it provides a premium feel at attractive prices. People
@@ -88,6 +104,15 @@ export const Fabrics = () => {
             </div>
           </div>
           <div className="imgfabrow2">
+            <span
+              className="reshead1"
+              style={{
+                fontWeight: "600",
+                fontSize: "35px",
+              }}
+            >
+              Jute <p className="small">“The golden fiber”</p>
+            </span>
             <img
               alt=""
               src={
@@ -95,8 +120,16 @@ export const Fabrics = () => {
               }
             />
             <div className="imgfabrowinner">
-              <span>Jute - “The golden fiber”</span>
-              <p>
+              <span
+                className="reshead2"
+                style={{
+                  fontWeight: "600",
+                  fontSize: "35px",
+                }}
+              >
+                Jute - “The golden fiber”
+              </span>
+              <p style={{ marginTop: "15px" }}>
                 Jute is easy to work with fabric. Extremely affordable, they do not need fertilizers or pesticides to
                 grow. Their high tenacity enables rough use. It is usually blended with other fabrics such as rayon or
                 nylon for a soft & shiny feel. One could start styling hats, wraps, throws and sweaters. Well-knit jute
@@ -105,6 +138,15 @@ export const Fabrics = () => {
             </div>
           </div>
           <div className="imgfabrow1">
+            <span
+              className="reshead1"
+              style={{
+                fontWeight: "600",
+                fontSize: "35px",
+              }}
+            >
+              Khadi <p className="small">“Strings of freedom”</p>
+            </span>
             <img
               src={
                 "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%2036.png?alt=media&token=1c9c018a-4177-40a1-a543-c0246b95b0fd"
@@ -112,8 +154,16 @@ export const Fabrics = () => {
               alt=""
             />
             <div className="imgfabrowinner">
-              <span>Khadi - “Strings of freedom”</span>
-              <p>
+              <span
+                className="reshead2"
+                style={{
+                  fontWeight: "600",
+                  fontSize: "35px",
+                }}
+              >
+                Khadi - “Strings of freedom”
+              </span>
+              <p style={{ marginTop: "15px" }}>
                 The hand-spun threads of austerity and quality are deeply connected with the spirit of Indian freedom.
                 These interlaced fiber threads come in various textures and thickness. Shirts and dhotis adorn men;
                 kurtas and elegant salwars crown women. Considered an all season fabric, keeps you warm in winter and
@@ -123,6 +173,15 @@ export const Fabrics = () => {
           </div>
 
           <div className="imgfabrow2">
+            <span
+              className="reshead1"
+              style={{
+                fontWeight: "600",
+                fontSize: "35px",
+              }}
+            >
+              Linen <p className="small">“Get royal with lavish linen”</p>
+            </span>
             <img
               src={
                 "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%2077.png?alt=media&token=f2cad193-b654-408b-876c-542db4180246"
@@ -130,8 +189,16 @@ export const Fabrics = () => {
               alt=""
             />
             <div className="imgfabrowinner">
-              <span>Linen- “Get royal with lavish linen”</span>
-              <p>
+              <span
+                className="reshead2"
+                style={{
+                  fontWeight: "600",
+                  fontSize: "35px",
+                }}
+              >
+                Linen - “Get royal with lavish linen”
+              </span>
+              <p style={{ marginTop: "15px" }}>
                 Linen is a naturally moth resistant and biodegradable fabric. They have a lower thread count and are
                 less-likely to trap dust particles from the environment. The inherent white color reflects heat-inducing
                 solar rays. Considered luxury, it gets softer after each wash and can last up to 30 years. An extensive
@@ -150,6 +217,15 @@ export const Fabrics = () => {
         </span>
         <div className="imgfabrows" style={{ marginBottom: "90px" }}>
           <div className="imgfabrow2">
+            <span
+              className="reshead1"
+              style={{
+                fontWeight: "600",
+                fontSize: "35px",
+              }}
+            >
+              Ikat <p className="small">“A delicate mix”</p>
+            </span>
             <img
               alt=""
               src={
@@ -157,8 +233,16 @@ export const Fabrics = () => {
               }
             />
             <div className="imgfabrowinner">
-              <span>Ikat - “A delicate mix”</span>
-              <p>
+              <span
+                className="reshead2"
+                style={{
+                  fontWeight: "600",
+                  fontSize: "35px",
+                }}
+              >
+                Ikat - “A delicate mix”
+              </span>
+              <p style={{ marginTop: "15px" }}>
                 The name denotes both the fabric and the pattern. Ikat, meaning “tie,” is an ancient loom-woven fabric
                 made by weaving both cotton and silk in a complex traditional manner. Its unique vertical symmetry and
                 geometric motifs lend to many natural patterns - chevron, diamond, stripes & checks. Many parts of India
@@ -172,6 +256,15 @@ export const Fabrics = () => {
             </div>
           </div>
           <div className="imgfabrow1">
+            <span
+              className="reshead1"
+              style={{
+                fontWeight: "600",
+                fontSize: "35px",
+              }}
+            >
+              Kalamkari <p className="small">“Subtle art of pen”</p>
+            </span>
             <img
               src={
                 "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%2077%20(1).png?alt=media&token=4f0b6805-eb6f-4186-be9d-ddefd90d1284"
@@ -179,8 +272,16 @@ export const Fabrics = () => {
               alt=""
             />
             <div className="imgfabrowinner">
-              <span>Kalamkari - “Subtle art of pen”</span>
-              <p>
+              <span
+                className="reshead2"
+                style={{
+                  fontWeight: "600",
+                  fontSize: "35px",
+                }}
+              >
+                Kalamkari - “Subtle art of pen”
+              </span>
+              <p style={{ marginTop: "15px" }}>
                 Even art historians do not know exactly when Kalamkari began, however it is believed to have originated
                 in the modern-day states of Andhra Pradesh and Telangana several hundred years ago. Deriving its name
                 from the word ‘kalam,’ which means pen, ‘Kalamkari’ refers to a particular, intricate style of

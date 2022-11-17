@@ -154,7 +154,7 @@ const ImageCons = () => {
           </div>
         </div>
         <div className="img-row">
-          <img
+          <img 
             src={
               "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20197.png?alt=media&token=4ad2419a-b42d-48a4-b58c-45fa68bdb3cd"
             }

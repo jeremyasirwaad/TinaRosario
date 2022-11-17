@@ -49,6 +49,7 @@ export const Getpampered = () => {
   const [nameerr, setNameerr] = useState(false);
   const [emailerr, setEmailerr] = useState(false);
   const [contacterr, setContacterr] = useState(false);
+  const [addresserr, setaddresserr] = useState(false);
 
   const handleFormSubmit = async () => {
     if (formData.name == "") {
@@ -62,12 +63,21 @@ export const Getpampered = () => {
     if (formData.contact == "") {
       setContacterr(true);
     }
+    if (formData.address == "") {
+      setaddresserr(true);
+    }
 
     if (!validator.isEmail(formData.email)) {
       setEmailerr(true);
     }
 
-    if (formData.name == "" || formData.email == "" || formData.contact == "" || !validator.isEmail(formData.email)) {
+    if (
+      formData.name == "" ||
+      formData.email == "" ||
+      formData.contact == "" ||
+      !validator.isEmail(formData.email) ||
+      formData.address == ""
+    ) {
       return 0;
     }
 
@@ -124,10 +134,10 @@ export const Getpampered = () => {
         <img className="caroimg2" src={resimg} />
       </div>
       <div className="backgroundforgetpam">
-        <span className="getpamtitle2" style={{ color: "#270641" }}>
+        <span className="getpamtitle2" style={{ color: "#270641", marginTop: "60px" }}>
           Exclusively for Chennai Vaasies!!!
         </span>
-        <div className="img-row">
+        <div style={{ marginBottom: "20px" }} className="img-row">
           <img
             src={
               "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20197%20(1).png?alt=media&token=b72fda9b-d214-40e2-9908-d372d667faf2"
@@ -254,11 +264,22 @@ export const Getpampered = () => {
         <span className="getpamlines" style={{ marginTop: "30px", color: "#270641" }}>
           We look forward to meet you at your place of{" "}
         </span>
-        <span className="getpamlines" style={{ color: "#270641" }}>
-          comfort and discuss further.
+        <span
+          className="getpamlines gpl2"
+          style={{
+            color: "#270641",
+          }}
+        >
+          comfort and design your attire.
         </span>
         <div className="weddingforms">
-          <span className="weddingt2" style={{ color: "#270641" }}>
+          <span
+            className="weddingt2"
+            style={{
+              color: "#270641",
+              marginTop: "-50px",
+            }}
+          >
             To discuss further, provide your{" "}
           </span>
           <TextField
@@ -337,6 +358,7 @@ export const Getpampered = () => {
             onChange={handleContact}
           />
           <TextField
+            error={addresserr}
             id="outlined-basic"
             label="Address *"
             a
@@ -351,7 +373,13 @@ export const Getpampered = () => {
               marginTop: "30px",
             }}
             value={formData.address}
-            onChange={(e) => setformData({ ...formData, address: e.target.value })}
+            onChange={(e) => {
+              if (e.target.value != "") {
+                setaddresserr(false);
+              }
+
+              setformData({ ...formData, address: e.target.value });
+            }}
           />
           <TextField
             id="outlined-basic"
@@ -379,7 +407,7 @@ export const Getpampered = () => {
           </LocalizationProvider> */}
           <p>* Mandatory Fields</p>
           <button
-            style={{ cursor: "pointer", marginBottom: "-40px" }}
+            style={{ cursor: "pointer", marginBottom: "0px" }}
             onClick={handleFormSubmit}
             className="weddingbookbtn"
           >

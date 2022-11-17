@@ -151,7 +151,7 @@
     border: none;
     background-color: #4C2A76;
     color: #FFB8BC;
-    margin-top: 30px;
+    margin-top: 20px;
     padding: 10px 40px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -159,7 +159,7 @@
 }
 
 .weddingforms{
-    margin-bottom: 100px;
+    margin-bottom: 40px;
     color:#270641;
 }
 
@@ -245,6 +245,9 @@
     .caroimg1{
         display: none;
     }
+    .weddingforms{
+        margin-top: 10px;
+    }
     .caroimg2{
         display: flex;
         justify-content: center;
@@ -256,11 +259,18 @@
         object-fit: contain;
     }
     .weddingbanner{
-        min-height: 600px !important;
+        height: 510px !important;
     }
 
     .weddingbanner1{
         min-height: 300px !important;
         height: 300px  !important;
     }
+    .weddingt2{
+        font-family: 'Poppins', sans-serif;
+        font-size: 25px;
+        color:#270641;
+        /* align-self: flex-start; */
+    }
+    
 }
