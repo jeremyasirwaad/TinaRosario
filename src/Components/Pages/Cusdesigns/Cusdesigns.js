@@ -65,7 +65,7 @@ export const Cusdesigns = () => {
     email: "",
     contact: "",
     note: "",
-    ownDesign: "true",
+    ownDesign: "false",
   });
 
   const fileonchange = (e) => {
@@ -82,6 +82,8 @@ export const Cusdesigns = () => {
       return false;
     }
   };
+
+  console.log(file);
 
   const [nameerr, setNameerr] = useState(false);
   const [emailerr, setEmailerr] = useState(false);
@@ -114,7 +116,11 @@ export const Cusdesigns = () => {
     //   toast.error("Please fill in mandatory fields");
     // }
 
-    if ((agecat1 == false && agecat2 == false && agecat3 == false) || (isownfab1 == false && isownfab2 == false)) {
+    if (
+      (agecat1 == false && agecat2 == false && agecat3 == false) ||
+      (isownfab1 == false && isownfab2 == false) ||
+      (owndesign1 == false && owndesign2 == false)
+    ) {
       toast.error("Please fill in mandatory fields");
     }
 
@@ -122,8 +128,8 @@ export const Cusdesigns = () => {
       setEmailerr(true);
     }
 
-    if (owndesign1 == "true") {
-      if (file == undefined || file == null) {
+    if (formData.ownDesign == "true") {
+      if (file === undefined || file == null) {
         toast.error("Upload Design");
         return 0;
       }
@@ -137,6 +143,7 @@ export const Cusdesigns = () => {
       formData.typeOfAttire == "" ||
       !validator.isEmail(formData.email) ||
       (isownfab1 == false && isownfab2 == false) ||
+      (owndesign1 == false && owndesign2 == false) ||
       (agecat1 == false && agecat2 == false && agecat3 == false)
     ) {
       return 0;
@@ -200,7 +207,6 @@ export const Cusdesigns = () => {
     return () => window.removeEventListener("resize", updateWidthAndHeight);
   });
 
-
   return (
     <div
       style={{
@@ -212,7 +218,12 @@ export const Cusdesigns = () => {
       }}
     >
       <div
-        style={{ minHeight: "250px", maxHeight: "600px", width: "100%", height: width - height + 420 }}
+        style={{
+          minHeight: "250px",
+          maxHeight: "600px",
+          width: "100%",
+          height: width - height + 420,
+        }}
         className="weddingbanner"
       >
         <img
@@ -238,7 +249,7 @@ export const Cusdesigns = () => {
         }}
         className="weddingbg"
       >
-        <div className="icons">
+        <div style={{ marginTop: "10px" }} className="icons">
           <div className="icon-holder">
             <img src={img1} />
             <span>Bored of repeating trends?</span>
@@ -259,7 +270,7 @@ export const Cusdesigns = () => {
               "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20706.png?alt=media&token=f531cd3b-455f-491d-975a-035ffa6fec61"
             }
           />
-          <p style={{ marginRight: "60px", alignContent: "flex-end" }}>
+          <p style={{ marginRight: "60px", alignContent: "flex-end", textAlign: "center" }}>
             We believe each individual’s notion of style is different. Often choosing the right platform can satiate all
             your needs. Choose THE DESIGN HOUSE to discover it.
           </p>
@@ -268,13 +279,13 @@ export const Cusdesigns = () => {
         <div className="steps">
           <img src={steps} />
           <a href="https://www.google.com" target="_blank">
-            <img style={{ marginTop: "10px", marginLeft: "-20px" }} src={video} />
+            <img style={{ marginTop: "10px", marginLeft: "-20px", marginBottom: "50px" }} src={video} />
           </a>
         </div>
-        <div className="steps">
+        <div className="steps smile">
           <img src={smilebar} />
         </div>
-        <div style={{}} className="weddingforms imageform">
+        <div style={{ marginTop: "-20px" }} className="weddingforms imageform">
           <span className="weddingt2">To discuss further, provide your </span>
           <TextField
             error={gendererr}

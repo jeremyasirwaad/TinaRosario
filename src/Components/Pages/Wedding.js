@@ -129,7 +129,13 @@ export const Wedding = () => {
       <Toaster />
 
       <div
-        style={{ minHeight: "350px", maxHeight: "700px", width: "100%", height: width - height + 420 }}
+        style={{
+          minHeight: "350px",
+          maxHeight: "700px",
+          width: "100%",
+          height: width - height + 420,
+          
+        }}
         className="weddingbanner"
       >
         <img
@@ -286,11 +292,7 @@ export const Wedding = () => {
             </Stack>
           </LocalizationProvider>
           <p>* Mandatory Fields</p>
-          <button
-            style={{ cursor: "pointer", marginBottom: "-20px" }}
-            className="weddingbookbtn"
-            onClick={handleFormSubmit}
-          >
+          <button style={{ cursor: "pointer" }} className="weddingbookbtn" onClick={handleFormSubmit}>
             Book
           </button>
         </div>
