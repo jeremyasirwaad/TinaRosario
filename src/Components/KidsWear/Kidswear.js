@@ -50,13 +50,15 @@ export const Kidswear = () => {
 	};
 
 	const getdata = async () => {
-		const data = await fetch("http://products.tinarosario.com/api/Products")
+		const data = await fetch(
+			"http://products.tinarosario.com/api/Products?filters[Main_Category][$eq]=Kids' Wear"
+		)
 			.then((res) => res.json())
 			.then((result) => {
-				const temp = result.data;
-				const data = temp.filter(
-					(e) => e.attributes.Main_Category == "Kids' Wear"
-				);
+				const data = result.data;
+				// const data = temp.filter(
+				// 	(e) => e.attributes.Main_Category == "Kids' Wear"
+				// );
 				setPagedata(data);
 				setBackupagedata(data);
 				setLoading(false);

@@ -51,13 +51,15 @@ export const Exclusiveaccessory = () => {
 	};
 
 	const getdata = async () => {
-		const data = await fetch("http://products.tinarosario.com/api/Products")
+		const data = await fetch(
+			"http://products.tinarosario.com/api/Products?filters[Main_Category][$eq]=Exclusive Accessories"
+		)
 			.then((res) => res.json())
 			.then((result) => {
-				const temp = result.data;
-				const data = temp.filter(
-					(e) => e.attributes.Main_Category == "Exclusive Accessories"
-				);
+				const data = result.data;
+				// const data = temp.filter(
+				// 	(e) => e.attributes.Main_Category == "Exclusive Accessories"
+				// );
 				setPagedata(data);
 				setBackupagedata(data);
 

@@ -51,13 +51,15 @@ export const Womanswear = () => {
 	};
 
 	const getdata = async () => {
-		const data = await fetch("http://products.tinarosario.com/api/Products")
+		const data = await fetch(
+			"http://products.tinarosario.com/api/Products?filters[Main_Category][$eq]=Women's Wear"
+		)
 			.then((res) => res.json())
 			.then((result) => {
-				const temp = result.data;
-				const data = temp.filter(
-					(e) => e.attributes.Main_Category == "Women's Wear"
-				);
+				const data = result.data;
+				// const data = temp.filter(
+				// 	(e) => e.attributes.Main_Category == "Women's Wear"
+				// );
 				setPagedata(data);
 				setBackupagedata(data);
 				setLoading(false);

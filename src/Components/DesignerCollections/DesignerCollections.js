@@ -49,14 +49,18 @@ export const DesignerCollections = () => {
 	};
 
 	const getdata = async () => {
-		const data = await fetch("http://products.tinarosario.com/api/Products")
+		const data = await fetch(
+			"http://products.tinarosario.com/api/Products?filters[Main_Category][$eq]=Designer Collection"
+		)
 			.then((res) => res.json())
 			.then((result) => {
-				const temp = result.data;
-				const data = temp.filter(
-					(e) => e.attributes.Main_Category == "Designer Collection"
-				);
+				const data = result.data;
+				// const data = temp.filter(
+				// 	(e) => e.attributes.Main_Category == "Designer Collection"
+				// );
 				setPagedata(data);
+				console.log(data);
+
 				setBackupagedata(data);
 				setLoading(false);
 			});
