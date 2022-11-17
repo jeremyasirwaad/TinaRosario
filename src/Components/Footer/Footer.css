@@ -26,11 +26,12 @@
 }
 
 .foot-logo{
-    width:200px;
-    height: 150px;
+    width:170px;
+    height: 135px;
+    margin-top: 10px;
 }
 .fdetails{
-    margin-top: -30px;
+    margin-top: -10px;
 }
 
 .fdetails > h3{
@@ -146,6 +147,14 @@
         margin: 0px;
     }
   }
+
+  .fdetails>div{
+    margin-bottom: 20px;
+}
+
+    .h4{
+        margin-bottom: 20px;
+    }
 
 
   @media screen and (max-width: 500px) {
