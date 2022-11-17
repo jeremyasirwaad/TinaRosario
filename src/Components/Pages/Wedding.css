@@ -13,6 +13,22 @@
   
 }
 
+.weddingbanner1{
+    /* height: 600px;
+    width: 100%; */
+    /* background-image: url('https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20768.png?alt=media&token=f57e42f0-c5d1-45f6-9c13-a4171e71ace8'); */
+    display: flex;
+    background-color: #270641;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url(path-to-file/img.jpg); */
+    background-repeat:no-repeat;
+    background-position: center ;
+    background-size: contain;
+    /* margin-bottom: 40px; */
+  
+}
+
 .weddingbannerinner{
     width: 100%;
     height: 100%;
@@ -241,5 +257,10 @@
     }
     .weddingbanner{
         min-height: 600px !important;
+    }
+
+    .weddingbanner1{
+        min-height: 300px !important;
+        height: 300px  !important;
     }
 }

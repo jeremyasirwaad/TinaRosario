@@ -183,6 +183,7 @@
 
 .abtus5title {
   font-size: 45px;
+  margin-top: 40px;
 }
 
 .abtus5titlesub {
@@ -349,7 +350,7 @@
     padding: 10px;
     justify-content: space-between;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 10px;
   }
 
   .sec3abtus {
@@ -359,8 +360,8 @@
     flex-direction: column;
     align-items: center;
     width: 80%;
-    margin-bottom: 70px;
-    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
 
   .lsec3 {
@@ -405,6 +406,7 @@
   
     .abtus5title { 
     text-align: center;
+    margin-top: 40px;
   }
   
   .abtus5titlesub {
@@ -414,5 +416,11 @@
 
 
 
-  
+  .aboutContainer {
+    background-image: url("./Wedding\ Collection\ \(3\).svg") !important;
+    background-repeat: repeat;
+    background-size: contain;
+    
+   
+  }
 }
