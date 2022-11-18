@@ -222,6 +222,7 @@
         text-align: center;
         margin-top: 40px;
         color:#270641;
+        margin-bottom: 0px !important;
         margin-right: 0px !important;
         font-family: 'Poppins', sans-serif;
     }
