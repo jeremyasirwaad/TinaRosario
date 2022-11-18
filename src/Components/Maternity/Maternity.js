@@ -622,6 +622,42 @@ export const Maternity = () => {
 									Shades of Grey
 								</span>
 							</div>
+							<div className="fliterchoice">
+								<input
+									type="checkbox"
+									name="colorfilter"
+									checked={colorfilter == "Shades of Black"}
+									onChange={() => {
+										if (colorfilter == "Shades of Black") {
+											setColorfilter("");
+											setPagedata(backupagedata);
+										} else {
+											setColorfilter("Shades of Black");
+										}
+									}}
+								/>
+								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
+									Shades of Black
+								</span>
+							</div>
+							<div className="fliterchoice">
+								<input
+									type="checkbox"
+									name="colorfilter"
+									checked={colorfilter == "Shades of White"}
+									onChange={() => {
+										if (colorfilter == "Shades of White") {
+											setColorfilter("");
+											setPagedata(backupagedata);
+										} else {
+											setColorfilter("Shades of White");
+										}
+									}}
+								/>
+								<span style={{ marginLeft: "10px", marginTop: "2px" }}>
+									Shades of White
+								</span>
+							</div>
 						</div>
 					</div>
 				</div>

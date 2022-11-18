@@ -193,7 +193,7 @@ export default function Productpage() {
 								}}
 								className="resclass"
 							>
-								<div className="washcarediv" style={{ width: "105px" }}>
+								<div className="washcarediv" style={{ width: "115px" }}>
 									<img
 										className="washcareimg"
 										src={washicon}

@@ -35,7 +35,7 @@
     font-style: normal;
     font-weight: 600;
     font-size: 37px;
-    line-height: 75px;
+    /* line-height: 75px; */
     color: #270641;
 
 
@@ -103,6 +103,7 @@
     font-weight: 600;
     font-style: italic;
     text-align: center;
+    margin-top: -28px;
 }
 .getpamdetailsdiv>img{
     width: 115px;
