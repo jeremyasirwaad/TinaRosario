@@ -136,18 +136,25 @@
 
 .steps{
     display: flex;
-   padding: 35px;
+    padding: 5px;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
     margin-bottom: -60px;
+
 }
 .steps1 >img{
-    margin-top: 70px;
+    margin-top: 40px;
     width: 1400px;
     
 }
 
+.steps>a>img{
+    margin-bottom: 120px;
+}
+
+.smile{
+    margin-bottom: 10px;
+}
 
 
 
@@ -254,9 +261,13 @@
     }
 
     .smile{
-        margin-top: -20px;
+        margin-top: -100px;
         margin-bottom: 20px;
     }
+    .steps>a>img{
+        margin-bottom: 50px;
+    }
+    
     
 }
 

@@ -277,12 +277,20 @@ export const Cusdesigns = () => {
         </div>
 
         <div className="steps">
-          <img src={steps} />
-          <a href="https://www.google.com" target="_blank">
-            <img style={{ marginTop: "10px", marginLeft: "-20px", marginBottom: "50px" }} src={video} />
+          <img style={{ zIndex: "100" }} src={steps} />
+          <a style={{ marginTop: "20px" }} href="https://www.google.com" target="_blank">
+            <img
+              style={{
+                marginLeft: "-20px",
+                
+                zIndex: "100",
+                
+              }}
+              src={video}
+            />
           </a>
         </div>
-        <div className="steps smile">
+        <div style={{ marginTop: "70px" }} className="steps smile">
           <img src={smilebar} />
         </div>
         <div style={{ marginTop: "-20px" }} className="weddingforms imageform">
