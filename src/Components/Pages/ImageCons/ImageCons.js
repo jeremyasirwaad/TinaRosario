@@ -183,7 +183,7 @@ const ImageCons = () => {
           <img src={smilebar} />
         </div>
         <div style={{}} className="weddingforms imageform">
-          <span className="weddingt2">To discuss further, provide your </span>
+          <span className="weddingt2">To discuss further...</span>
           <TextField
             id="outlined-basic"
             label="Name *"
@@ -304,6 +304,7 @@ const ImageCons = () => {
                 renderInput={(params) => <TextField {...params} />}
                 className="datewidth"
                 disablePast
+                maxDate={dayjs().add(2, "months")}
               />
             </Stack>
           </LocalizationProvider>

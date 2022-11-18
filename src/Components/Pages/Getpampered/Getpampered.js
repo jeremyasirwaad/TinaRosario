@@ -186,13 +186,13 @@ export const Getpampered = () => {
                 it's such a time sink?
               </span>
               <br />
-              <span style={{ color: "#270641" }}>Well, we've got your back.. </span>
+              <span style={{ color: "#270641" }}>Well, we've got your back.</span>
               <br />
-              <span style={{ color: "#270641" }}>Get your designer wear from the comfort of your home... </span>
+              <span style={{ color: "#270641" }}>Get your designer wear from the comfort of your home.</span>
               <br />
-              <span style={{ color: "#270641" }}>No more grueling visits to the shop.. </span>
+              <span style={{ color: "#270641" }}>No more grueling visits to the shop.</span>
               <br />
-              <span style={{ color: "#270641" }}>We're just a call away..</span>
+              <span style={{ color: "#270641" }}>We're just a call away.</span>
             </p>
           </p>
         </div>
@@ -312,7 +312,7 @@ export const Getpampered = () => {
               marginTop: "-50px",
             }}
           >
-            To discuss further, provide your{" "}
+            To discuss further...
           </span>
           <TextField
             id="outlined-basic"
