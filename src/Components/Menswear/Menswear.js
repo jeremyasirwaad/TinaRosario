@@ -336,69 +336,38 @@ export const Menswear = () => {
             </div>
             <div className={subcolor ? "fildiv displaynone" : "fildiv"}></div>
             <div className={subcolor ? "fliterchoicediv displaynone" : "fliterchoicediv"}>
-              <div className="fliterchoice" style={{ marginTop: "10px" }}>
+              
+            <div className="fliterchoice">
                 <input
                   type="checkbox"
                   name="colorfilter"
-                  checked={colorfilter == "White"}
+                  checked={colorfilter == "Shades of Gold"}
                   onChange={() => {
-                    if (colorfilter == "White") {
+                    if (colorfilter == "Shades of Gold") {
                       setColorfilter("");
                       setPagedata(backupagedata);
                     } else {
-                      setColorfilter("White");
+                      setColorfilter("Shades of Gold");
                     }
                   }}
                 />
-                <span style={{ marginLeft: "10px", marginTop: "2px" }}>White</span>
+                <span style={{ marginLeft: "10px", marginTop: "2px" }}>Shades of Gold</span>
               </div>
               <div className="fliterchoice">
                 <input
                   type="checkbox"
                   name="colorfilter"
-                  checked={colorfilter == "Black"}
+                  checked={colorfilter == "Shades of Silver"}
                   onChange={() => {
-                    if (colorfilter == "Black") {
+                    if (colorfilter == "Shades of Silver") {
                       setColorfilter("");
                       setPagedata(backupagedata);
                     } else {
-                      setColorfilter("Black");
+                      setColorfilter("Shades of Silver");
                     }
                   }}
                 />
-                <span style={{ marginLeft: "10px", marginTop: "2px" }}>Black</span>
-              </div>
-              <div className="fliterchoice">
-                <input
-                  type="checkbox"
-                  name="colorfilter"
-                  checked={colorfilter == "Gold"}
-                  onChange={() => {
-                    if (colorfilter == "Gold") {
-                      setColorfilter("");
-                      setPagedata(backupagedata);
-                    } else {
-                      setColorfilter("Gold");
-                    }
-                  }}
-                />
-                <span style={{ marginLeft: "10px", marginTop: "2px" }}>Gold</span>
-              </div>
-              <div className="fliterchoice">
-                <input
-                  type="checkbox"
-                  name="colorfilter"
-                  checked={colorfilter == "Silver"}
-                  onChange={() => {
-                    if (colorfilter == "Silver") {
-                      setColorfilter("");
-                      setPagedata(backupagedata);
-                    } else {
-                      setColorfilter("Silver");
-                    }
-                  }}
-                />
-                <span style={{ marginLeft: "10px", marginTop: "2px" }}>Silver</span>
+                <span style={{ marginLeft: "10px", marginTop: "2px" }}>Shades of Silver</span>
               </div>
               <div className="fliterchoice">
                 <input

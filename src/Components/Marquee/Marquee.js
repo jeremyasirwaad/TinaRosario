@@ -14,8 +14,9 @@ export const Marqueeline = () => {
 			}}
 		>
 			<Marquee gradient={false} style={{ color: "white" }} speed={80}>
-				Welcome! Payment integration will be launched shortly. Meanwhile explore
-				our services and products
+				Welcome ! Payment integration will be launched shortly. Meanwhile
+				explore our services and products
+				<div style={{ width: "400px" }}></div>
 			</Marquee>
 			{/* <h1>Hello</h1> */}
 		</div>

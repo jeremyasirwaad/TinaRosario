@@ -217,6 +217,8 @@
     
     .prodpaget2{
         font-size: 15px !important;
+        margin-bottom: 13px;
+      
         /* font-weight: 600; */
     }
 
@@ -263,7 +265,7 @@
     .prodpaget1{
         font-size: 30px;
         font-weight: 600;
-        margin-top: 20px;
+        /* margin-top: 20px; */
     }
 
     .filtercloser
