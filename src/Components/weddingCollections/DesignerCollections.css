@@ -42,7 +42,21 @@
     transform: rotateX(180deg);
 }
 
+.prodpaget1{
+    font-size: 64px;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+}
 
+.prodpaget2{
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+
+    margin-bottom: 40px;
+    /* font-weight: 600; */
+}
 .fa-chevron-up{
     margin-right: 20px;
     transition: all 0.1s ease-in;

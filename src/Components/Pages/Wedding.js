@@ -116,6 +116,11 @@ export const Wedding = () => {
     return () => window.removeEventListener("resize", updateWidthAndHeight);
   });
 
+  const date = new Date();
+  function disableWeekends() {
+    return date.getDay() === 0 || date.getDay() === 6;
+  }
+
   return (
     <div
       style={{
@@ -134,7 +139,6 @@ export const Wedding = () => {
           maxHeight: "700px",
           width: "100%",
           height: width - height + 420,
-          
         }}
         className="weddingbanner"
       >
@@ -192,7 +196,7 @@ export const Wedding = () => {
           </div>
         </div>
         <div className="weddingforms">
-          <span className="weddingt2">To discuss further, provide your </span>
+          <span className="weddingt2">To discuss further...</span>
           <TextField
             fluid
             id="outlined-basic"
@@ -260,6 +264,7 @@ export const Wedding = () => {
                 renderInput={(params) => <TextField {...params} />}
                 className="datewidth"
                 disablePast
+                
               />
             </Stack>
           </LocalizationProvider>
@@ -276,7 +281,7 @@ export const Wedding = () => {
               },
               width: "500px",
               marginTop: "30px",
-            }}
+          }}
           />
           <LocalizationProvider dateAdapter={AdapterDayjs} className="datewidth">
             <Stack spacing={3} className="datewidth">
@@ -284,6 +289,7 @@ export const Wedding = () => {
                 label="Appointment Date *"
                 inputFormat="DD/MM/YYYY"
                 value={appointDate}
+                maxDate={dayjs().add(2, "months")}
                 onChange={selectappoint}
                 renderInput={(params) => <TextField {...params} />}
                 className="datewidth"

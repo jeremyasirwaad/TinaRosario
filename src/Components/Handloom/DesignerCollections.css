@@ -91,6 +91,8 @@
 }
 
 .prodpaget1{
+    text-align: center;
+    width: 100%;
     font-size: 1.6rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -98,6 +100,8 @@
 
 .prodpaget2{
     font-size: 1.4rem;
+    text-align: center;
+    width: 100%;
     font-family: 'Poppins', sans-serif;
     font-style: italic;
     /* font-weight: 600; */

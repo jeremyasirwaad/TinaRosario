@@ -12,6 +12,11 @@ export const Fabrics = () => {
     />,
     <img
       className="caroimg"
+      src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20747.png?alt=media&token=5cac343d-1540-498f-9e93-cf76df26318e"
+      alt="3"
+    />,
+    <img
+      className="caroimg"
       src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20745.png?alt=media&token=f29b4a8b-8fe0-4cfb-acc2-c34f4643c429"
       alt="5"
     />,
@@ -20,11 +25,7 @@ export const Fabrics = () => {
       src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20746.png?alt=media&token=c2b80a6a-6730-46df-812c-4600f7d23e53"
       alt="2"
     />,
-    <img
-      className="caroimg"
-      src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20747.png?alt=media&token=5cac343d-1540-498f-9e93-cf76df26318e"
-      alt="3"
-    />,
+
     <img
       className="caroimg"
       src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20750.png?alt=media&token=075f3835-10f2-4132-b59f-9fe04ba6d945"
@@ -167,7 +168,7 @@ export const Fabrics = () => {
                 The hand-spun threads of austerity and quality are deeply connected with the spirit of Indian freedom.
                 These interlaced fiber threads come in various textures and thickness. Shirts and dhotis adorn men;
                 kurtas and elegant salwars crown women. Considered an all season fabric, keeps you warm in winter and
-                cool in summer.They get enhanced with every wash!
+                cool in summer. They get enhanced with every wash!
               </p>
             </div>
           </div>
@@ -203,7 +204,7 @@ export const Fabrics = () => {
                 less-likely to trap dust particles from the environment. The inherent white color reflects heat-inducing
                 solar rays. Considered luxury, it gets softer after each wash and can last up to 30 years. An extensive
                 array lines up - blazers, jackets, formal pants and blouses, trendy jumpsuits, and other designer
-                silhouettes.They dry quickly and a simple wash gives back the fresh look. It’s often referred to as the
+                silhouettes. They dry quickly and a simple wash gives back the fresh look. It’s often referred to as the
                 ROYAL LINEN!
               </p>
             </div>
@@ -285,7 +286,7 @@ export const Fabrics = () => {
                 Even art historians do not know exactly when Kalamkari began, however it is believed to have originated
                 in the modern-day states of Andhra Pradesh and Telangana several hundred years ago. Deriving its name
                 from the word ‘kalam,’ which means pen, ‘Kalamkari’ refers to a particular, intricate style of
-                hand-painting onto cloth.A twenty three stepped making process, Kalamkari is an exclusive piece of
+                hand-painting onto cloth. A twenty three stepped making process, Kalamkari is an exclusive piece of
                 fabric that depicts history. It is just not the ancient making process, but the scenes from mythological
                 epics and sacred texts add depth. Natural dyes are used to make this intricate art that requires
                 meticulous detailing. Silk and cotton are the often used fabrics. These clothes contain a special odor

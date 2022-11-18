@@ -271,7 +271,7 @@ export const Cusdesigns = () => {
             }
           />
           <p style={{ marginRight: "60px", alignContent: "flex-end", textAlign: "center" }}>
-            We believe each individual’s notion of style is different. Often choosing the right platform can satiate all
+            We believe each individual’s notion of style is different. Often deciding the right platform can satiate all
             your needs. Choose THE DESIGN HOUSE to discover it.
           </p>
         </div>
@@ -282,9 +282,8 @@ export const Cusdesigns = () => {
             <img
               style={{
                 marginLeft: "-20px",
-                
+
                 zIndex: "100",
-                
               }}
               src={video}
             />
@@ -294,7 +293,7 @@ export const Cusdesigns = () => {
           <img src={smilebar} />
         </div>
         <div style={{ marginTop: "-20px" }} className="weddingforms imageform">
-          <span className="weddingt2">To discuss further, provide your </span>
+          <span className="weddingt2">To discuss further...</span>
           <TextField
             error={gendererr}
             className="image-textfield"
