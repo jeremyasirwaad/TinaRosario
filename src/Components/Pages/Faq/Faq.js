@@ -590,7 +590,7 @@ const FAQ = () => {
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography>Delivery, return and refund</Typography>
+            <Typography>DELIVERY, RETURN AND REFUND</Typography>
           </AccordionSummary>
           <AccordionDetails sx={bigAccordianDetail}>
             <Accordion sx={{ display: "none" }} className="outeraccordion">
@@ -675,7 +675,7 @@ const FAQ = () => {
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography>Shipping and tracking</Typography>
+            <Typography>SHIPPING AND TRACKING</Typography>
           </AccordionSummary>
           <AccordionDetails sx={bigAccordianDetail}>
             <Accordion sx={{ display: "none" }} className="outeraccordion">
