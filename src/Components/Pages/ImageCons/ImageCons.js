@@ -12,7 +12,7 @@ import { MobileDatePicker } from "@mui/x-date-pickers";
 import { Stack } from "@mui/system";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-
+import newcaro from "./newcaro.png";
 import axios from "axios";
 import validator from "validator";
 
@@ -139,14 +139,26 @@ const ImageCons = () => {
             width: "96%",
             height: "95%",
           }}
-          src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20722.png?alt=media&token=ef73764e-cacb-460e-a69a-4f63dd91fd08"
+          src={newcaro}
         />
+        {/* <img
+          className="caroimg1"
+          style={{
+            "@media (max-width: 700px)": {
+              display: "none",
+            },
+            width: "96%",
+            height: "95%",
+          }}
+          src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20722.png?alt=media&token=ef73764e-cacb-460e-a69a-4f63dd91fd08"
+        /> */}
         <img
           className="caroimg2"
           src={
             "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20787resimg.png?alt=media&token=8a08e892-4cd8-43cf-9116-417a176999cf"
           }
         />
+        {/* <img className="caroimg2" src={newcaro} /> */}
       </div>
       <div className="Iweddingbg">
         <div className="icons">

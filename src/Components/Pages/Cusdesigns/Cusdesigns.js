@@ -220,7 +220,7 @@ export const Cusdesigns = () => {
       <div
         style={{
           minHeight: "250px",
-          maxHeight: "500px",
+          maxHeight: "600px",
           width: "100%",
           height: width - height + 420,
         }}
@@ -234,6 +234,7 @@ export const Cusdesigns = () => {
             },
             width: "97%",
             height: "96%",
+            
           }}
           src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/header.png?alt=media&token=6f9cb77f-ed1f-4c1b-ac49-1401cf530e29"
         />
