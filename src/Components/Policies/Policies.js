@@ -125,7 +125,7 @@ export const Policies = () => {
           <Typography sx={{ alignSelf: "center", fontWeight: "bold", fontSize: "22px" }}>PAYMENT</Typography>
         </AccordionSummary>
         <AccordionDetails sx={accordionDetail}>
-          <Typography sx={{ fontSize: "18px" }}>
+          <Typography className="star" sx={{ fontSize: "18px" }}>
             We offer the following payment methods: <br />
             <ul>
               <li>Account transfer</li>
@@ -254,7 +254,7 @@ export const Policies = () => {
           <Typography sx={{ alignSelf: "center", fontWeight: "bold", fontSize: "22px" }}>WASHCARE</Typography>
         </AccordionSummary>
         <AccordionDetails sx={accordionDetail}>
-          <Typography sx={{ fontSize: "18px" }}>
+          <Typography className="star" sx={{ fontSize: "18px" }}>
             Our products are mostly designed with the notion of being easy to maintain. Clothing tags would indicate if
             the fabric can be dry cleaned or hand washed.
             <br />
