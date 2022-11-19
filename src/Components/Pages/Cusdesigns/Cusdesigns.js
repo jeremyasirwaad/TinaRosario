@@ -220,7 +220,7 @@ export const Cusdesigns = () => {
       <div
         style={{
           minHeight: "250px",
-          maxHeight: "600px",
+          maxHeight: "500px",
           width: "100%",
           height: width - height + 420,
         }}

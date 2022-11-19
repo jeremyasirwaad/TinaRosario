@@ -132,21 +132,39 @@
   display: none;
 }
 
-ul {
+.textcontainer>ul {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
 }
 
-li {
+.textcontainer>ul>li {
   padding-left: 1em;
   text-indent: -1em;
 }
 
-li:before {
+.textcontainer>ul>li:before {
   content: "★";
   padding-right: 5px;
 }
+
+
+.star>ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.star>ul>li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+.star>ul>li:before {
+  content: "★";
+  padding-right: 5px;
+}
+
 
 @media only screen and (max-width:750px){
   .imgfabrow1{
@@ -331,22 +349,6 @@ li:before {
     font-size: 1.5rem;
     text-align: center !important;
     font-family: 'Poppins', sans-serif;
-  }
-
-  ul {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-  }
-  
-  li {
-    padding-left: 1em;
-    text-indent: -1em;
-  }
-  
-  li:before {
-    content: "★";
-    padding-right: 5px;
   }
 
   .imgfabrow2 img{
