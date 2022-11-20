@@ -43,7 +43,7 @@ export const Caro = () => {
 					src={
 						window.innerWidth <= 600
 							? "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20790.png?alt=media&token=b14cabdb-6fd7-455e-bbf8-72dc10e4a04a"
-							: "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/875%20(1).png?alt=media&token=35b5cb14-4625-4bf6-b6fb-10fb10024bf1"
+							: "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20814.png?alt=media&token=ff728c49-e8c9-4674-ab3b-70d88504c199"
 					}
 					height={"650px"}
 				/>
@@ -129,8 +129,8 @@ export const Caro = () => {
 					style={{ borderRadius: "30px", height: "650px" }}
 					src={
 						window.innerWidth <= 600
-							? "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20793.png?alt=media&token=2db012e6-5a5e-43a5-b5ba-88fd0d7fd183"
-							: "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/879.png?alt=media&token=02658554-1e8b-4531-a93d-809a059f15d2"
+							? "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20824.png?alt=media&token=b65945e8-4ad2-4884-986b-6679ff73bfbb"
+							: "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20811.png?alt=media&token=c5c28e92-9f2f-4e37-ad2c-bf8c82d6651d"
 					}
 					height={"650px"}
 				/>
@@ -216,8 +216,8 @@ export const Caro = () => {
 					style={{ borderRadius: "30px", height: "650px" }}
 					src={
 						window.innerWidth <= 600
-							? "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20796.png?alt=media&token=f3b5b869-a3a3-4116-bf3b-b5b0f82a4173"
-							: "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/877.png?alt=media&token=f668b848-e98e-4b9f-9bd0-beb9f0f68377"
+							? "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20827.png?alt=media&token=9da239af-2426-43c5-92f0-468026d4dcfa"
+							: "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20808.png?alt=media&token=239ff70b-b01d-4bef-bf80-c59cf6faf343"
 					}
 					height={"650px"}
 				/>
