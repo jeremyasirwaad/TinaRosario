@@ -83,7 +83,9 @@ export default function Productpage() {
 								INR {pagedata.attributes.price}
 							</span>
 						) : (
-							<span>USD {pagedata.attributes.priceinUSD}</span>
+							<span className="productprice1">
+								USD {pagedata.attributes.priceinUSD}
+							</span>
 						)}
 					</div>
 					<div className="productspages">
