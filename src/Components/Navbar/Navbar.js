@@ -66,7 +66,7 @@ export const Navbar = () => {
 						options={searchoptions}
 						onChange={(e) => {
 							if (e.value == "Coupled") {
-								navigate("/wedding");
+								navigate("/Weddingproduct");
 							}
 							if (e.value == "Like wearing a Saree") {
 								navigate("/handloom");
@@ -77,14 +77,14 @@ export const Navbar = () => {
 							if (e.value == "Dictated") {
 								navigate("/kidswear");
 							}
-							if (e.value == "Dress") {
-								navigate("/DesignerCollections");
+							if (e.value == "Masculine") {
+								navigate("/Masculine");
 							}
-							if (e.value == "Handloom") {
-								navigate("/handloom");
+							if (e.value == "Feminine") {
+								navigate("/Feminine");
 							}
-							if (e.value == "Shirt") {
-								navigate("/Menswear");
+							if (e.value == "Traditional") {
+								navigate("/traditional");
 							}
 							if (e.value == "Accessories") {
 								navigate("/exclusiveaccessories");
@@ -306,7 +306,7 @@ export const Navbar = () => {
 							options={searchoptions}
 							onChange={(e) => {
 								if (e.value == "Coupled") {
-									navigate("/wedding");
+									navigate("/Weddingproduct");
 								}
 								if (e.value == "Like wearing a Saree") {
 									navigate("/handloom");
