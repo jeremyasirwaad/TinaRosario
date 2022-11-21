@@ -46,6 +46,7 @@ import { Feminine } from "./Components/SearchPages/Feminine/Feminine";
 import { Masculine } from "./Components/SearchPages/Masculine/Masculine";
 
 function App() {
+
 	return (
 		<div className="App">
 			<BrowserRouter>
@@ -474,6 +475,7 @@ function App() {
 			</BrowserRouter>
 		</div>
 	);
+
 }
 
 export default App;
