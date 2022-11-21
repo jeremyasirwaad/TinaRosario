@@ -8,6 +8,7 @@ import Select from "react-select";
 import searchoptions from "./searchoptions.json";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import sidenav1 from "./sidenav.png";
 import ham from "./ham.svg";
 export const Navbar = () => {
   const navigate = useNavigate();
@@ -36,7 +37,6 @@ export const Navbar = () => {
   //   { value: "vanilla", label: "Wedding" },
   // ];
 
-
   return (
     <div className="navcontainer">
       <div className={sidenav ? "showsidenav sidenavbarcustom" : "sidenavbarcustom"}>
@@ -55,7 +55,7 @@ export const Navbar = () => {
             setSidenav(false);
           }}
         >
-          <img style={{ cursor: "pointer" }} src={navlogo} />
+          <img style={{ cursor: "pointer" }} src={sidenav1} />
         </div>
         <div className="search">
           <Select
@@ -289,11 +289,9 @@ export const Navbar = () => {
       </div>
     </div>
   );
-
 };
 
-
-  /* 
+/* 
 {/* 
 
 //       <div className="navinnercontainer">
@@ -379,7 +377,7 @@ export const Navbar = () => {
 //             Contact Us
 //           </span>
 //           {/* <span className="navlink5">Testimonials</span> */
-}
+
 //         </div>
 //         <div className="navicons">
 //           <i class="fa-solid fa-magnifying-glass" style={{ marginRight: "10px" }}></i>
