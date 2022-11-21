@@ -41,6 +41,9 @@ import { Womanswear } from "./Components/womenswear/Womanswear";
 import { Menswear } from "./Components/Menswear/Menswear";
 import { Maternity } from "./Components/Maternity/Maternity";
 import { Exclusiveaccessory } from "./Components/Exclusiveacc/Exclusiveaccessory";
+import { Traditional } from "./Components/SearchPages/Traditional/Traditional";
+import { Feminine } from "./Components/SearchPages/Feminine/Feminine";
+import { Masculine } from "./Components/SearchPages/Masculine/Masculine";
 
 function App() {
 	return (
@@ -421,6 +424,39 @@ function App() {
 								<Marqueeline /> <PreNav></PreNav>
 								<Navbar></Navbar>
 								<GalleryCaro />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/traditional"
+						element={
+							<>
+								<Marqueeline /> <PreNav></PreNav>
+								<Navbar></Navbar>
+								<Traditional />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/Masculine"
+						element={
+							<>
+								<Marqueeline /> <PreNav></PreNav>
+								<Navbar></Navbar>
+								<Masculine />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/Feminine"
+						element={
+							<>
+								<Marqueeline /> <PreNav></PreNav>
+								<Navbar></Navbar>
+								<Feminine />
 								<Footer></Footer>
 							</>
 						}

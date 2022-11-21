@@ -8,7 +8,7 @@ import { height } from "@mui/system";
 import axios from "axios";
 import { AiFillFilter, AiOutlineArrowLeft } from "react-icons/ai";
 
-export const Womanswear = () => {
+export const Masculine = () => {
 	const [subcatoptions, setSubcatoptions] = useState(false);
 	const [subpriceoptions, setSubpriceoptions] = useState(true);
 	const [subfabric, setSubfabric] = useState(true);
@@ -52,7 +52,7 @@ export const Womanswear = () => {
 
 	const getdata = async () => {
 		const data = await fetch(
-			"http://products.tinarosario.com/api/Products?filters[Main_Category][$eq]=Women's Wear"
+			"http://products.tinarosario.com/api/Products?filters[Gender][$eq]=Male"
 		)
 			.then((res) => res.json())
 			.then((result) => {
@@ -632,7 +632,8 @@ export const Womanswear = () => {
 					style={{
 						display: "flex",
 						justifyContent: "flex-start",
-						alignItems: "center"
+						alignItems: "center",
+						flexDirection: "column"
 					}}
 					className="prodpaget1div"
 				>
@@ -644,10 +645,10 @@ export const Womanswear = () => {
 					>
 						<AiFillFilter />
 					</div>
-					<span className="prodpaget1">Women's Wear - </span>
-					<span className="prodpaget2">
-						"Specially designed to enhance your style"
-					</span>
+
+					<p className="prodpaget1">Masculine </p>
+
+					<p className="prodpaget2"> "Specially made for you"</p>
 				</div>
 				{loading == true || loading2 == true ? (
 					<div

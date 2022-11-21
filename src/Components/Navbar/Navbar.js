@@ -62,17 +62,20 @@ export const Navbar = () => {
 				</div>
 				<div style={{ width: "100%", padding: "20px" }}>
 					<Select
-						placeholder="Search"
+						placeholder="I feel"
 						options={searchoptions}
 						onChange={(e) => {
-							if (e.value == "Saree") {
+							if (e.value == "Coupled") {
+								navigate("/wedding");
+							}
+							if (e.value == "Like wearing a Saree") {
 								navigate("/handloom");
 							}
-							if (e.value == "Kurta") {
-								navigate("/womenswear");
+							if (e.value == "Like Accessorizing") {
+								navigate("/exclusiveaccessories");
 							}
-							if (e.value == "Lehanga") {
-								navigate("/DesignerCollections");
+							if (e.value == "Dictated") {
+								navigate("/kidswear");
 							}
 							if (e.value == "Dress") {
 								navigate("/DesignerCollections");
@@ -299,26 +302,29 @@ export const Navbar = () => {
 					></i>
 					<div style={{ width: "100%" }}>
 						<Select
-							placeholder="Search"
+							placeholder="I feel"
 							options={searchoptions}
 							onChange={(e) => {
-								if (e.value == "Saree") {
+								if (e.value == "Coupled") {
+									navigate("/wedding");
+								}
+								if (e.value == "Like wearing a Saree") {
 									navigate("/handloom");
 								}
-								if (e.value == "Kurta") {
-									navigate("/womenswear");
+								if (e.value == "Like Accessorizing") {
+									navigate("/exclusiveaccessories");
 								}
-								if (e.value == "Lehanga") {
-									navigate("/DesignerCollections");
+								if (e.value == "Dictated") {
+									navigate("/kidswear");
 								}
-								if (e.value == "Dress") {
-									navigate("/DesignerCollections");
+								if (e.value == "Masculine") {
+									navigate("/Masculine");
 								}
-								if (e.value == "Handloom") {
-									navigate("/handloom");
+								if (e.value == "Feminine") {
+									navigate("/Feminine");
 								}
-								if (e.value == "Shirt") {
-									navigate("/Menswear");
+								if (e.value == "Traditional") {
+									navigate("/traditional");
 								}
 								if (e.value == "Accessories") {
 									navigate("/exclusiveaccessories");
