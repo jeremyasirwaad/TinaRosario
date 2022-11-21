@@ -1,11 +1,20 @@
 .landsec1{
     height:650px;
     width: 100%;
-    background-color: #270641;
+   background: transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+}
+
+.landing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('./bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .landsec1>P{
     color: #FFB8BC;
@@ -27,9 +36,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('./bg.png');
+    /* background-image: url('./bg.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
 .landtit{

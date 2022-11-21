@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import "./Faq.css";
 import ControlPointIcon from "@mui/icons-material/ControlPoint";
 import { Link, useLocation } from "react-router-dom";
+import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 
 const FAQ = () => {
   const [outerAcc1, setouterAcc1] = useState(false);
@@ -175,6 +176,12 @@ const FAQ = () => {
     }
   }, [location.state]);
 
+  const [expanded, setExpanded] = React.useState("panel");
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
+
   return (
     <div className="faq-container">
       <h2
@@ -200,24 +207,52 @@ const FAQ = () => {
         <Accordion expanded={expand1} sx={outeraccordionStyle1} className="outeraccordion">
           <AccordionSummary
             onClick={toggleAcordion1}
-            expandIcon={<ControlPointIcon sx={{ color: outerAcc1 ? "#FFB8BC" : "#270641" }} />}
+            expandIcon={
+              !expand1 ? (
+                <ControlPointIcon sx={{ color: outerAcc1 ? "#FFB8BC" : "#270641" }} />
+              ) : (
+                <RemoveCircleOutlineIcon sx={{ color: outerAcc1 ? "#FFB8BC" : "#270641" }} />
+              )
+            }
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
             <Typography>WORKING MODEL</Typography>
           </AccordionSummary>
           <AccordionDetails sx={bigAccordianDetail}>
-            <Accordion sx={{ display: "none" }} className="outeraccordion">
+            <Accordion
+              expanded={expanded === "panel1"}
+              onChange={handleChange("panel1")}
+              sx={{ display: "none" }}
+              className="outeraccordion"
+            >
               <AccordionSummary
-                expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
+                expandIcon={
+                  expanded === "panel1" ? (
+                    <ControlPointIcon sx={{ color: "#270641" }} />
+                  ) : (
+                    <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+                  )
+                }
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               ></AccordionSummary>
               <AccordionDetails></AccordionDetails>
             </Accordion>
-            <Accordion sx={inneraccordionStyle} className="accordion">
+            <Accordion
+              expanded={expanded === "panel0"}
+              onChange={handleChange("panel0")}
+              sx={inneraccordionStyle}
+              className="accordion"
+            >
               <AccordionSummary
-                expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
+                expandIcon={
+                  expanded !== "panel0" ? (
+                    <ControlPointIcon sx={{ color: "#270641" }} />
+                  ) : (
+                    <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+                  )
+                }
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
@@ -257,9 +292,20 @@ const FAQ = () => {
                 </Typography>
               </AccordionDetails>
             </Accordion>
-            <Accordion sx={inneraccordionStyle} className="accordion">
+            <Accordion
+              expanded={expanded === "panel2"}
+              onChange={handleChange("panel2")}
+              sx={inneraccordionStyle}
+              className="accordion"
+            >
               <AccordionSummary
-                expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
+                expandIcon={
+                  !expanded !== "panel2" ? (
+                    <ControlPointIcon sx={{ color: "#270641" }} />
+                  ) : (
+                    <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+                  )
+                }
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
@@ -292,9 +338,20 @@ const FAQ = () => {
                 </Typography>
               </AccordionDetails>
             </Accordion>
-            <Accordion sx={inneraccordionStyle} className="accordion">
+            <Accordion
+              expanded={expanded === "panel3"}
+              onChange={handleChange("panel3")}
+              sx={inneraccordionStyle}
+              className="accordion"
+            >
               <AccordionSummary
-                expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
+                expandIcon={
+                  expanded !== "panel3" ? (
+                    <ControlPointIcon sx={{ color: "#270641" }} />
+                  ) : (
+                    <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+                  )
+                }
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
@@ -323,7 +380,13 @@ const FAQ = () => {
         <Accordion expanded={expand2} sx={outeraccordionStyle2} className="outeraccordion">
           <AccordionSummary
             onClick={toggleAcordion2}
-            expandIcon={<ControlPointIcon sx={{ color: outerAcc2 ? "#FFB8BC" : "#4C2A76" }} />}
+            expandIcon={
+              !expand2 ? (
+                <ControlPointIcon sx={{ color: outerAcc2 ? "#FFB8BC" : "#270641" }} />
+              ) : (
+                <RemoveCircleOutlineIcon sx={{ color: outerAcc2 ? "#FFB8BC" : "#270641" }} />
+              )
+            }
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
@@ -338,9 +401,20 @@ const FAQ = () => {
               ></AccordionSummary>
               <AccordionDetails></AccordionDetails>
             </Accordion>
-            <Accordion sx={inneraccordionStyle} className="accordion">
+            <Accordion
+              expanded={expanded === "panel4"}
+              onChange={handleChange("panel4")}
+              sx={inneraccordionStyle}
+              className="accordion"
+            >
               <AccordionSummary
-                expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
+                expandIcon={
+                  expanded !== "panel4" ? (
+                    <ControlPointIcon sx={{ color: "#270641" }} />
+                  ) : (
+                    <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+                  )
+                }
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
@@ -354,9 +428,20 @@ const FAQ = () => {
                 </Typography>
               </AccordionDetails>
             </Accordion>
-            <Accordion sx={inneraccordionStyle} className="accordion">
+            <Accordion
+              expanded={expanded === "panel5"}
+              onChange={handleChange("panel5")}
+              sx={inneraccordionStyle}
+              className="accordion"
+            >
               <AccordionSummary
-                expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
+                expandIcon={
+                  expanded !== "panel5" ? (
+                    <ControlPointIcon sx={{ color: "#270641" }} />
+                  ) : (
+                    <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+                  )
+                }
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
@@ -366,9 +451,20 @@ const FAQ = () => {
                 <Typography>Currently, we do not have an online payment portal.</Typography>
               </AccordionDetails>
             </Accordion>
-            <Accordion sx={inneraccordionStyle} className="accordion">
+            <Accordion
+              expanded={expanded === "panel6"}
+              onChange={handleChange("panel6")}
+              sx={inneraccordionStyle}
+              className="accordion"
+            >
               <AccordionSummary
-                expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
+                expandIcon={
+                  expanded !== "panel6" ? (
+                    <ControlPointIcon sx={{ color: "#270641" }} />
+                  ) : (
+                    <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+                  )
+                }
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
@@ -386,9 +482,20 @@ const FAQ = () => {
                 </Typography>
               </AccordionDetails>
             </Accordion>
-            <Accordion sx={inneraccordionStyle} className="accordion">
+            <Accordion
+              expanded={expanded === "panel7"}
+              onChange={handleChange("panel7")}
+              sx={inneraccordionStyle}
+              className="accordion"
+            >
               <AccordionSummary
-                expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
+                expandIcon={
+                  expanded !== "panel7" ? (
+                    <ControlPointIcon sx={{ color: "#270641" }} />
+                  ) : (
+                    <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+                  )
+                }
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
@@ -402,9 +509,20 @@ const FAQ = () => {
                 </Typography>
               </AccordionDetails>
             </Accordion>
-            <Accordion sx={inneraccordionStyle} className="accordion">
+            <Accordion
+              expanded={expanded === "panel8"}
+              onChange={handleChange("panel8")}
+              sx={inneraccordionStyle}
+              className="accordion"
+            >
               <AccordionSummary
-                expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
+                expandIcon={
+                  expanded !== "panel8" ? (
+                    <ControlPointIcon sx={{ color: "#270641" }} />
+                  ) : (
+                    <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+                  )
+                }
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
@@ -430,7 +548,13 @@ const FAQ = () => {
         <Accordion expanded={expand3} sx={outeraccordionStyle3} className="outeraccordion">
           <AccordionSummary
             onClick={toggleAcordion3}
-            expandIcon={<ControlPointIcon sx={{ color: outerAcc3 ? "#FFB8BC" : "#4C2A76" }} />}
+            expandIcon={
+              !expand3 ? (
+                <ControlPointIcon sx={{ color: outerAcc3 ? "#FFB8BC" : "#270641" }} />
+              ) : (
+                <RemoveCircleOutlineIcon sx={{ color: outerAcc3 ? "#FFB8BC" : "#270641" }} />
+              )
+            }
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
@@ -586,7 +710,13 @@ const FAQ = () => {
         <Accordion expanded={expand4} sx={outeraccordionStyle4} className="outeraccordion">
           <AccordionSummary
             onClick={toggleAcordion4}
-            expandIcon={<ControlPointIcon sx={{ color: outerAcc4 ? "#FFB8BC" : "#4C2A76" }} />}
+            expandIcon={
+              !expand4 ? (
+                <ControlPointIcon sx={{ color: outerAcc4 ? "#FFB8BC" : "#270641" }} />
+              ) : (
+                <RemoveCircleOutlineIcon sx={{ color: outerAcc4 ? "#FFB8BC" : "#270641" }} />
+              )
+            }
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
@@ -671,7 +801,13 @@ const FAQ = () => {
         <Accordion expanded={expand5} sx={outeraccordionStyle5} className="outeraccordion">
           <AccordionSummary
             onClick={toggleAcordion5}
-            expandIcon={<ControlPointIcon sx={{ color: outerAcc5 ? "#FFB8BC" : "#4C2A76" }} />}
+            expandIcon={
+              !expand5 ? (
+                <ControlPointIcon sx={{ color: outerAcc5 ? "#FFB8BC" : "#270641" }} />
+              ) : (
+                <RemoveCircleOutlineIcon sx={{ color: outerAcc5 ? "#FFB8BC" : "#270641" }} />
+              )
+            }
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
