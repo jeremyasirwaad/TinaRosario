@@ -36,6 +36,7 @@ export const Navbar = () => {
   //   { value: "vanilla", label: "Wedding" },
   // ];
 
+
   return (
     <div className="navcontainer">
       <div className={sidenav ? "showsidenav sidenavbarcustom" : "sidenavbarcustom"}>
@@ -288,9 +289,10 @@ export const Navbar = () => {
       </div>
     </div>
   );
+
 };
 
-{
+
   /* 
 {/* 
 
