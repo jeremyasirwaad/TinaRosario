@@ -15,7 +15,7 @@ export const Marqueeline = () => {
 		>
 			<Marquee gradient={false} style={{ color: "black" }} speed={80}>
 				Welcome! Third-party payment options will be launched shortly.
-				Meanwhile, explore our site and contact us if you like an outfit. Avail
+				Meanwhile, explore and contact us if you like an outfit. Avail
 				10% Off on your first order
 				<div style={{ width: "400px" }}></div>
 			</Marquee>
