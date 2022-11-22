@@ -197,7 +197,7 @@ export const Policies = () => {
             Domestic: 5 - 7days <br />
             International: 10 - 12 days <br />
             <br />
-            For customized orders, it might take a bit longer as mentioned below.
+            For customized orders, we will be able to deliver within the following business days:
             <br />
             Domestic: 10 - 15 days
             <br /> International: 15 - 25 days

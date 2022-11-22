@@ -646,7 +646,7 @@ export const Feminine = () => {
 						<AiFillFilter />
 					</div>
 
-					<p className="prodpaget1">Feminine </p>
+					<p className="prodpaget1">Women's Collection </p>
 
 					<p className="prodpaget2"> "Specially made for you"</p>
 				</div>

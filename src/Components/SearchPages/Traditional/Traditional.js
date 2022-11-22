@@ -646,7 +646,7 @@ export const Traditional = () => {
 						<AiFillFilter />
 					</div>
 
-					<p className="prodpaget1">Traditional </p>
+					<p className="prodpaget1">Traditional Collection </p>
 
 					<p className="prodpaget2"> "Specially made for you"</p>
 				</div>

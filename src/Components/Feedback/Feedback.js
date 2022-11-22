@@ -223,7 +223,7 @@ export const Feedback = () => {
 					/>
 
 					<div className="optionsbtndiv"></div>
-					<span className="feedsub2">Your Picture(Opitonal)</span>
+					<span className="feedsub2">Your Picture(Optional)</span>
 					<LoadingButton
 						disabled={submitted}
 						// loading={imginputloader}

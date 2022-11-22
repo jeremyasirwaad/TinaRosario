@@ -1,31 +1,31 @@
 [
     {
       "value": "Masculine",
-      "label": "Masculine"
+      "label": "Men's Wear"
     },
     {
       "value": "Feminine",
-      "label": "Feminine"
+      "label": "Women's Wear"
     },
     {
       "value": "Dictated",
-      "label": "Dictated"
+      "label": "Kid's Wear"
     },
     {
       "value": "Traditional",
-      "label": "Traditional"
+      "label": "Traditional Outfit"
     },
     {
       "value": "Coupled",
-      "label": "Coupled"
+      "label": "Wedding Collection"
     },
     {
       "value": "Like wearing a Saree",
-      "label": "Like wearing a Saree"
+      "label": "Handloom Saree"
     },
     {
       "value": "Like Accessorizing",
-      "label": "Like Accessorizing"
+      "label": "Exclusive Accessories"
     }
     
   ]

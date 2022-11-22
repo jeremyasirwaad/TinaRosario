@@ -243,9 +243,14 @@ export const Cusdesigns = () => {
 						width: "97%",
 						height: "96%"
 					}}
-					src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/header.png?alt=media&token=6f9cb77f-ed1f-4c1b-ac49-1401cf530e29"
+					src="https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20905.png?alt=media&token=5b70f4b6-efb3-4860-8360-cd179a280d1f"
 				/>
-				<img className="caroimg2" src={resimg} />
+				<img
+					className="caroimg2"
+					src={
+						"https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20946.png?alt=media&token=4313da1b-bc43-459a-b468-6e6328c80da4"
+					}
+				/>
 			</div>
 
 			<div
@@ -271,18 +276,25 @@ export const Cusdesigns = () => {
 						<span>Trouble finding elegant, eco-friendly fabric?</span>
 					</div>
 				</div>
-				<div className="img-row1">
+				<div className="img-row">
 					<img
-						style={{ height: "400px" }}
+						style={{
+							// "@media (max-width: 700px)": {
+							// 	marginBottom: "20px"
+							// },
+							height: "240px",
+							marginBottom: "30px"
+						}}
 						src={
-							"https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20706.png?alt=media&token=f531cd3b-455f-491d-975a-035ffa6fec61"
+							"https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20902.png?alt=media&token=2ca3915a-b638-4c27-acbe-5da33b0b280d"
 						}
 					/>
 					<p
 						style={{
 							marginRight: "60px",
 							alignContent: "flex-end",
-							textAlign: "center"
+							textAlign: "center",
+							fontSize: "20px"
 						}}
 					>
 						We believe each individual’s notion of style is different. Often
@@ -302,7 +314,8 @@ export const Cusdesigns = () => {
 							<img
 								style={{
 									marginLeft: "-20px",
-
+									width: "235px",
+									height: "63px",
 									zIndex: "100"
 								}}
 								src={video}
@@ -310,8 +323,11 @@ export const Cusdesigns = () => {
 						</a>
 					</div>
 				</div>
-				<div style={{ marginTop: "70px" }} className="steps smile">
-					<img src={smilebar} />
+				<div className="steps smile">
+					<img
+						src={smilebar}
+						className="smilebarincus"
+					/>
 				</div>
 				<div style={{ marginTop: "-20px" }} className="weddingforms imageform">
 					<span className="weddingt2">To discuss further...</span>
