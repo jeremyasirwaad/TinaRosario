@@ -44,8 +44,7 @@ export const About = () => {
           width: "100%",
           height: width - height + 420,
           backgroundColor: "#1A032C",
-
-          marginTop: "8px",
+          border: "4px solid #97D9DE",
         }}
         className="weddingbanner1"
       >

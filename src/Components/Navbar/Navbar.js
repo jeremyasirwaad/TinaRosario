@@ -317,7 +317,6 @@ export const Navbar = () => {
 						>
 							Contact Us
 						</span>
-						<span className="navlink5">Testimonials</span>
 					</div>
 					<div className="navicons">
 						<i

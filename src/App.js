@@ -44,6 +44,7 @@ import { Exclusiveaccessory } from "./Components/Exclusiveacc/Exclusiveaccessory
 import { Traditional } from "./Components/SearchPages/Traditional/Traditional";
 import { Feminine } from "./Components/SearchPages/Feminine/Feminine";
 import { Masculine } from "./Components/SearchPages/Masculine/Masculine";
+import GapDiv from "./Components/Navbar/GapDiv";
 
 function App() {
   return (
@@ -59,6 +60,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Feedback />
                 <Footer></Footer>
               </>
@@ -71,6 +73,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Landing />
                 <Footer></Footer>
               </>
@@ -83,6 +86,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Gallery />
                 <Footer></Footer>
               </>
@@ -95,6 +99,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <About />
                 <Footer></Footer>
               </>
@@ -107,6 +112,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Wedding />
                 <Footer></Footer>
               </>
@@ -119,6 +125,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Fabrics></Fabrics>
                 <Footer></Footer>
               </>
@@ -131,6 +138,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Cusdesigns />
                 <Footer></Footer>
               </>
@@ -143,6 +151,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <ImageCons />
                 <Footer></Footer>
               </>
@@ -155,6 +164,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Getpampered />
                 <Footer></Footer>
               </>
@@ -167,6 +177,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Policies />
                 <Footer></Footer>
               </>
@@ -179,6 +190,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Productmsg />
                 <Footer></Footer>
               </>
@@ -191,6 +203,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <DesignerCollections />
                 <Footer></Footer>
               </>
@@ -203,6 +216,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Handloom />
                 <Footer></Footer>
               </>
@@ -215,6 +229,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Weddingcollections />
                 <Footer></Footer>
               </>
@@ -227,6 +242,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Kidswear />
                 <Footer></Footer>
               </>
@@ -239,6 +255,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Womanswear />
                 <Footer></Footer>
               </>
@@ -251,6 +268,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Menswear />
                 <Footer></Footer>
               </>
@@ -263,6 +281,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Maternity />
                 <Footer></Footer>
               </>
@@ -275,6 +294,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Exclusiveaccessory />
                 <Footer></Footer>
               </>
@@ -287,6 +307,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Contactus></Contactus>
                 <Footer></Footer>
               </>
@@ -302,6 +323,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Sidebar />
                 <Footer></Footer>
               </>
@@ -315,6 +337,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Faq />
                 <Footer></Footer>
               </>
@@ -327,6 +350,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Faq />
                 <Footer></Footer>
               </>
@@ -339,6 +363,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Faq />
                 <Footer></Footer>
               </>
@@ -351,6 +376,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Faq />
                 <Footer></Footer>
               </>
@@ -363,6 +389,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <OrderFinish />
                 <Footer></Footer>
               </>
@@ -375,6 +402,7 @@ function App() {
                 <Marqueeline />
 
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Productpage />
                 <Footer></Footer>
               </>
@@ -386,6 +414,7 @@ function App() {
               <>
                 <Marqueeline />
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Terms />
                 <Footer></Footer>
               </>
@@ -397,6 +426,7 @@ function App() {
               <>
                 <Marqueeline />
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <GalleryCaro />
                 <Footer></Footer>
               </>
@@ -408,6 +438,7 @@ function App() {
               <>
                 <Marqueeline />
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Traditional />
                 <Footer></Footer>
               </>
@@ -419,6 +450,7 @@ function App() {
               <>
                 <Marqueeline />
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Masculine />
                 <Footer></Footer>
               </>
@@ -430,6 +462,7 @@ function App() {
               <>
                 <Marqueeline />
                 <Navbar></Navbar>
+                <GapDiv></GapDiv>
                 <Feminine />
                 <Footer></Footer>
               </>

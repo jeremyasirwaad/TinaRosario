@@ -36,15 +36,15 @@ export const Landing = () => {
         flexDirection: "column",
       }}
     >
-      {/* <FloatingWhatsApp
+      <FloatingWhatsApp
         allowClickAway="true"
         statusMessage="Online"
         phoneNumber="917200060540"
         accountName="Tina rosario"
         avatar={avatar}
         chatMessage={"Welcome to The Design House by Tina Rosario. \n How can we help you?"}
-      /> */}
-      <div className="landsec1">
+      />
+      <div  className="landsec1">
         <Caro />
       </div>
 
@@ -415,7 +415,6 @@ export const Landing = () => {
             onClick={() => navigate("/Maternity")}
             style={{
               cursor: "pointer",
-            
             }}
           />
           <img
@@ -427,7 +426,6 @@ export const Landing = () => {
             onClick={() => navigate("/handloom")}
             style={{
               cursor: "pointer",
-            
             }}
           />
           <img

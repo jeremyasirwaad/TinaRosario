@@ -12,6 +12,7 @@ import returns from "./return.svg";
 import esti from "./esti.svg";
 import shipping from "./shipping.svg";
 import gift from "./gift.svg";
+import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 
 export const Policies = () => {
   const [expand1, setExpand1] = React.useState(false);
@@ -73,7 +74,7 @@ export const Policies = () => {
         <AccordionDetails></AccordionDetails>
       </Accordion>
 
-      <Accordion sx={inneraccordionStyle1} className="accordion">
+      <Accordion expanded={expand1} sx={inneraccordionStyle1} className="accordion">
         <AccordionSummary
           onClick={() => setExpand1(!expand1)}
           sx={{
@@ -81,7 +82,13 @@ export const Policies = () => {
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
+          expandIcon={
+            !expand1 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -109,7 +116,7 @@ export const Policies = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion sx={inneraccordionStyle1} className="accordion">
+      <Accordion expanded={expand2} sx={inneraccordionStyle1} className="accordion">
         <AccordionSummary
           onClick={() => setExpand2(!expand2)}
           sx={{
@@ -117,7 +124,13 @@ export const Policies = () => {
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
+          expandIcon={
+            !expand2 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -125,7 +138,7 @@ export const Policies = () => {
           <Typography sx={{ alignSelf: "center", fontWeight: "bold", fontSize: "22px" }}>PAYMENT</Typography>
         </AccordionSummary>
         <AccordionDetails sx={accordionDetail}>
-          <Typography  sx={{ fontSize: "18px" }}>
+          <Typography sx={{ fontSize: "18px" }}>
             We offer the following payment methods: <br />
             <ul>
               <li>Account transfer</li>
@@ -141,7 +154,7 @@ export const Policies = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion sx={inneraccordionStyle1} className="accordion">
+      <Accordion expanded={expand6} sx={inneraccordionStyle1} className="accordion">
         <AccordionSummary
           onClick={() => setExpand6(!expand6)}
           sx={{
@@ -149,7 +162,13 @@ export const Policies = () => {
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
+          expandIcon={
+            !expand6 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -169,7 +188,7 @@ export const Policies = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion sx={inneraccordionStyle1} className="accordion">
+      <Accordion expanded={expand7} sx={inneraccordionStyle1} className="accordion">
         <AccordionSummary
           onClick={() => setExpand7(!expand7)}
           sx={{
@@ -177,7 +196,13 @@ export const Policies = () => {
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
+          expandIcon={
+            !expand7 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -214,7 +239,7 @@ export const Policies = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion sx={inneraccordionStyle1} className="accordion">
+      <Accordion expanded={expand8} sx={inneraccordionStyle1} className="accordion">
         <AccordionSummary
           onClick={() => setExpand8(!expand8)}
           sx={{
@@ -222,7 +247,13 @@ export const Policies = () => {
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
+          expandIcon={
+            !expand8 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -238,7 +269,7 @@ export const Policies = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion sx={inneraccordionStyle1} className="accordion">
+      <Accordion expanded={expand3} sx={inneraccordionStyle1} className="accordion">
         <AccordionSummary
           onClick={() => setExpand3(!expand3)}
           sx={{
@@ -246,7 +277,13 @@ export const Policies = () => {
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
+          expandIcon={
+            !expand3 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -254,7 +291,7 @@ export const Policies = () => {
           <Typography sx={{ alignSelf: "center", fontWeight: "bold", fontSize: "22px" }}>WASHCARE</Typography>
         </AccordionSummary>
         <AccordionDetails sx={accordionDetail}>
-          <Typography  sx={{ fontSize: "18px" }}>
+          <Typography sx={{ fontSize: "18px" }}>
             Our products are mostly designed with the notion of being easy to maintain. Clothing tags would indicate if
             the fabric can be dry cleaned or hand washed.
             <br />
@@ -276,7 +313,7 @@ export const Policies = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion sx={inneraccordionStyle1} className="accordion">
+      <Accordion expanded={expand4} sx={inneraccordionStyle1} className="accordion">
         <AccordionSummary
           onClick={() => setExpand4(!expand4)}
           sx={{
@@ -284,7 +321,13 @@ export const Policies = () => {
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
+          expandIcon={
+            !expand4 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -302,7 +345,7 @@ export const Policies = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion sx={inneraccordionStyle1} className="accordion">
+      <Accordion expanded={expand9} sx={inneraccordionStyle1} className="accordion">
         <AccordionSummary
           onClick={() => setExpand9(!expand9)}
           sx={{
@@ -310,7 +353,13 @@ export const Policies = () => {
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon sx={{ color: "#270641" }} />}
+          expandIcon={
+            !expand9 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
