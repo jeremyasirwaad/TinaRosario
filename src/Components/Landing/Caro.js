@@ -3,9 +3,9 @@ import "./newlanding.css";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Link, useNavigate } from "react-router-dom";
-import joda from "./joda.png";
+import joda from "./joda.svg";
 import mendesigner from "./Mendesigner.svg";
-import men from "./men.png";
+import men from "./men.svg";
 import des from "./des.svg";
 import hand from "./hand.svg";
 import org from "./org.svg";
@@ -238,11 +238,10 @@ export const Caro = () => {
         <div class="carousel-item active">
           <div
             onClick={() => navigate("/Productmsg/Jodha_Caro")}
-            style={{display: "flex", justifyContent: "center", alignItems: "center" }}
+            style={{ display: "flex", justifyContent: "center", alignItems: "center" }}
           >
             <img
               style={{
-                width: "250px",
                 borderRadius: "30px",
                 height: window.innerWidth <= 700 ? "300px" : "630px",
               }}
@@ -261,7 +260,6 @@ export const Caro = () => {
           >
             <img
               style={{
-                width: "250px",
                 borderRadius: "30px",
                 height: window.innerWidth <= 700 ? "300px" : "630px",
               }}
