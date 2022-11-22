@@ -265,15 +265,19 @@ export const Cusdesigns = () => {
 				<div style={{ marginTop: "10px" }} className="icons">
 					<div className="icon-holder">
 						<img src={img1} />
-						<span>Bored of repeating trends?</span>
+						<span style={{ fontSize: "20px" }}>Bored of repeating trends?</span>
 					</div>
 					<div className="icon-holder">
 						<img src={img2} />
-						<span>Struggling to find a perfect fit?</span>
+						<span style={{ fontSize: "20px" }}>
+							Struggling to find a perfect fit?
+						</span>
 					</div>
 					<div className="icon-holder">
 						<img src={img3} />
-						<span>Trouble finding elegant, eco-friendly fabric?</span>
+						<span style={{ fontSize: "20px" }}>
+							Trouble finding elegant, eco-friendly fabric?
+						</span>
 					</div>
 				</div>
 				<div className="img-row">
@@ -324,13 +328,12 @@ export const Cusdesigns = () => {
 					</div>
 				</div>
 				<div className="steps smile">
-					<img
-						src={smilebar}
-						className="smilebarincus"
-					/>
+					<img src={smilebar} className="smilebarincus" />
 				</div>
 				<div style={{ marginTop: "-20px" }} className="weddingforms imageform">
-					<span className="weddingt2">To discuss further...</span>
+					<span className="weddingt2" style={{ fontSize: "30px" }}>
+						To discuss further...
+					</span>
 					<TextField
 						error={gendererr}
 						className="image-textfield"

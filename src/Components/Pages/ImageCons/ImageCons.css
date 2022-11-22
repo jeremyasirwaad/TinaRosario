@@ -72,8 +72,8 @@
     margin-top: 40px;
 }
 .icon-holder >img{
-    height: 160px;
-    width: 160px;
+    height: 104px;
+    width: 100px;
 }
 .icon-holder >span{
     font-size: 22px;
@@ -169,6 +169,7 @@
 
 
 @media only screen and (max-width:700px) {
+   
     .smilebarincus{
         margin-top: -60px !important;
     }

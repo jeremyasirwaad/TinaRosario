@@ -161,9 +161,9 @@ export const Getpampered = () => {
 			<div className="backgroundforgetpam">
 				<span
 					className="getpamtitle2"
-					style={{ color: "#270641", marginTop: "50px" }}
+					style={{ color: "#270641", marginTop: "50px", fontSize: "30px" }}
 				>
-					Exclusively for Chennaites
+					Exclusively for Chennaites!!!
 				</span>
 				<div className="img-row">
 					<img
@@ -176,12 +176,19 @@ export const Getpampered = () => {
 							display: "flex",
 							flexDirection: "column",
 							alignItems: "center",
-							textAlign: "center"
+							textAlign: "center",
+							fontSize: "20px"
 						}}
 					>
 						<p>
 							Hello{" "}
-							<span style={{ fontWeight: "600", color: "#270641" }}>
+							<span
+								style={{
+									fontWeight: "600",
+									color: "#270641",
+									fontSize: "20px"
+								}}
+							>
 								{" "}
 								Chennai makkale...
 							</span>{" "}
@@ -228,7 +235,9 @@ export const Getpampered = () => {
 				<div className="getpamdetailsdiv">
 					<img style={{ width: "115", height: "120" }} src={phone} />
 
-					<span>Fill the form or call +91 72000 60540</span>
+					<span>
+						Fill the form or call <br /> +91 72000 60540
+					</span>
 				</div>
 				<div className="getpamdetailsdiv2">
 					<span>Schedule a pickup</span>
@@ -378,7 +387,8 @@ export const Getpampered = () => {
 						className="weddingt2"
 						style={{
 							color: "#270641",
-							marginTop: "-50px"
+							marginTop: "-50px",
+							fontSize: "30px"
 						}}
 					>
 						To discuss further...
