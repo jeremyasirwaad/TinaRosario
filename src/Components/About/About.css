@@ -293,10 +293,10 @@
   cursor: pointer;
 }
 
-.sec2row{
-    display: flex;
-    width: 50%;
-    justify-content: space-evenly;
+.sec2row {
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
 }
 
 @media only screen and (max-width: 700px) {
@@ -309,9 +309,13 @@
     /* justify-content:  space-between; */
   }
 
-  .box1>img{
+  .box1 > img {
     height: 50px;
     width: 50px;
+  }
+
+  .CCC{
+    font-size: 25px !important;
   }
 
   .box1 p {
@@ -337,11 +341,11 @@
     height: 60px;
   }
 
-  .sec2row{
+  .sec2row {
     display: flex;
     width: 90%;
     justify-content: space-evenly;
-}
+  }
 
   .sec2box {
     display: flex;
@@ -389,13 +393,13 @@
     padding: 10px;
   }
 
-  .sec4abtus>img{
+  .sec4abtus > img {
     width: 350px !important;
     height: 350px !important;
     margin-bottom: 0px !important;
   }
 
-  .sec4abtus>p{
+  .sec4abtus > p {
     padding: 10px;
   }
 
@@ -403,24 +407,19 @@
     margin-top: 40px;
     flex-direction: column;
   }
-  
-    .abtus5title { 
+
+  .abtus5title {
     text-align: center;
-    margin-top: 40px;
+    font-size: 30px !important;
   }
-  
-  .abtus5titlesub {
+  .abtus5title > span {
     text-align: center;
-
+    font-size: 30px !important;
   }
-
-
 
   .aboutContainer {
     background-image: url("./Wedding\ Collection\ \(3\).svg") !important;
     background-repeat: repeat;
     background-size: contain;
-    
-   
   }
 }
