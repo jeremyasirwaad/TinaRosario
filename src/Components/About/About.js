@@ -65,7 +65,7 @@ export const About = () => {
 				<div className="abtussec2">
 					<span className="abtus5title">
 						{" "}
-						<span className="abtus5titlesub" style={{ fontSize: "30px" }}> Why</span> The Design House ?
+						<span className="abtus5titlesub"> Why</span> The Design House ?
 					</span>
 
 
@@ -177,7 +177,7 @@ export const About = () => {
 				<div className="abtussec5">
 					<span className="abtus5title">
 						{" "}
-						<span className="abtus5titlesub" style={{ fontSize: "30px" }}>
+						<span className="abtus5titlesub">
 							The Pioneer
 						</span>{" "}
 						behind the label
