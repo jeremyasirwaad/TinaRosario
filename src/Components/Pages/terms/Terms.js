@@ -7,11 +7,9 @@ import privacy from "./privacy.svg";
 import int from "./int.svg";
 import users from "./user.svg";
 import prohibit from "./prohibit.svg";
-
 import register from "./register.svg";
 import contri from "./contri.svg";
 import license from "./license.svg";
-
 import guide from "./guide.svg";
 import sub from "./sub.svg";
 import site from "./site.svg";
@@ -19,7 +17,6 @@ import copy from "./copy.svg";
 import terms from "./terms.svg";
 import modi from "./modi.svg";
 import gover from "./gover.svg";
-
 import dis from "./dis.svg";
 import correct from "./correct.svg";
 import disclaim from "./disclaim.svg";
@@ -29,8 +26,35 @@ import userdata from "./userdata.svg";
 import elect from "./elect.svg";
 import mis from "./mis.svg";
 import contact from "./contact.svg";
+import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 
 export const Terms = () => {
+  const [expand1, setExpand1] = React.useState(false);
+  const [expand2, setExpand2] = React.useState(false);
+  const [expand3, setExpand3] = React.useState(false);
+  const [expand4, setExpand4] = React.useState(false);
+  const [expand5, setExpand5] = React.useState(false);
+  const [expand6, setExpand6] = React.useState(false);
+  const [expand7, setExpand7] = React.useState(false);
+  const [expand8, setExpand8] = React.useState(false);
+  const [expand9, setExpand9] = React.useState(false);
+
+  const [expand10, setExpand10] = React.useState(false);
+  const [expand11, setExpand11] = React.useState(false);
+  const [expand12, setExpand12] = React.useState(false);
+
+  const [expand13, setExpand13] = React.useState(false);
+  const [expand14, setExpand14] = React.useState(false);
+  const [expand15, setExpand15] = React.useState(false);
+  const [expand16, setExpand16] = React.useState(false);
+  const [expand17, setExpand17] = React.useState(false);
+  const [expand18, setExpand18] = React.useState(false);
+  const [expand19, setExpand19] = React.useState(false);
+  const [expand20, setExpand20] = React.useState(false);
+  const [expand21, setExpand21] = React.useState(false);
+  const [expand22, setExpand22] = React.useState(false);
+  const [expand23, setExpand23] = React.useState(false);
+
   const inneraccordionStyle1 = {
     borderRadius: "20px",
     // backgroundColor: expand1 ? "#270641" : "transparent",
@@ -109,14 +133,21 @@ export const Terms = () => {
         ></AccordionSummary>
         <AccordionDetails></AccordionDetails>
       </Accordion>
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion expanded={expand1} style={inneraccordionStyle1}>
         <AccordionSummary
+          onClick={() => setExpand1(!expand1)}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon />}
+          expandIcon={
+            !expand1 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -147,14 +178,21 @@ export const Terms = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion expanded={expand2} style={inneraccordionStyle1}>
         <AccordionSummary
+          onClick={() => setExpand2(!expand2)}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon />}
+          expandIcon={
+            !expand2 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -191,14 +229,21 @@ export const Terms = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion expanded={expand3} style={inneraccordionStyle1}>
         <AccordionSummary
+          onClick={() => setExpand3(!expand3)}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon />}
+          expandIcon={
+            !expand3 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -232,14 +277,21 @@ export const Terms = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion expanded={expand4} style={inneraccordionStyle1}>
         <AccordionSummary
+          onClick={() => setExpand4(!expand4)}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon />}
+          expandIcon={
+            !expand4 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -265,14 +317,21 @@ export const Terms = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion expanded={expand5} style={inneraccordionStyle1}>
         <AccordionSummary
+          onClick={() => setExpand5(!expand5)}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon />}
+          expandIcon={
+            !expand5 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -376,14 +435,21 @@ export const Terms = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion expanded={expand6} style={inneraccordionStyle1}>
         <AccordionSummary
+          onClick={() => setExpand6(!expand6)}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon />}
+          expandIcon={
+            !expand6 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -464,14 +530,21 @@ export const Terms = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion expanded={expand7} style={inneraccordionStyle1}>
         <AccordionSummary
+          onClick={() => setExpand7(!expand7)}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon />}
+          expandIcon={
+            !expand7 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -519,14 +592,21 @@ export const Terms = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion expanded={expand8} style={inneraccordionStyle1}>
         <AccordionSummary
+          onClick={() => setExpand8(!expand8)}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon />}
+          expandIcon={
+            !expand8 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -565,14 +645,21 @@ export const Terms = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion expanded={expand9} style={inneraccordionStyle1}>
         <AccordionSummary
+          onClick={() => setExpand9(!expand9)}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon />}
+          expandIcon={
+            !expand9 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -600,14 +687,21 @@ export const Terms = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion expanded={expand10} style={inneraccordionStyle1}>
         <AccordionSummary
+          onClick={() => setExpand10(!expand10)}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon />}
+          expandIcon={
+            !expand10 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -636,14 +730,21 @@ export const Terms = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion expanded={expand11} style={inneraccordionStyle1}>
         <AccordionSummary
+          onClick={() => setExpand11(!expand11)}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon />}
+          expandIcon={
+            !expand11 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -672,14 +773,21 @@ export const Terms = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion expanded={expand12} style={inneraccordionStyle1}>
         <AccordionSummary
+          onClick={() => setExpand12(!expand12)}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon />}
+          expandIcon={
+            !expand12 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -712,14 +820,21 @@ export const Terms = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion expanded={expand13} style={inneraccordionStyle1}>
         <AccordionSummary
+          onClick={() => setExpand13(!expand13)}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon />}
+          expandIcon={
+            !expand13 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -754,14 +869,21 @@ export const Terms = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion expanded={expand14} style={inneraccordionStyle1}>
         <AccordionSummary
+          onClick={() => setExpand14(!expand14)}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon />}
+          expandIcon={
+            !expand14 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -784,14 +906,21 @@ export const Terms = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion expanded={expand15} style={inneraccordionStyle1}>
         <AccordionSummary
+          onClick={() => setExpand15(!expand15)}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon />}
+          expandIcon={
+            !expand15 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -846,14 +975,21 @@ export const Terms = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion expanded={expand16} style={inneraccordionStyle1}>
         <AccordionSummary
+          onClick={() => setExpand16(!expand16)}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon />}
+          expandIcon={
+            !expand16 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -877,14 +1013,21 @@ export const Terms = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion expanded={expand17} style={inneraccordionStyle1}>
         <AccordionSummary
+          onClick={() => setExpand17(!expand17)}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon />}
+          expandIcon={
+            !expand17 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -923,14 +1066,21 @@ export const Terms = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion expanded={expand18} style={inneraccordionStyle1}>
         <AccordionSummary
+          onClick={() => setExpand18(!expand18)}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon />}
+          expandIcon={
+            !expand18 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -956,14 +1106,21 @@ export const Terms = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion expanded={expand19} style={inneraccordionStyle1}>
         <AccordionSummary
+          onClick={() => setExpand19(!expand19)}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon />}
+          expandIcon={
+            !expand19 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -996,14 +1153,21 @@ export const Terms = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion expanded={expand20} style={inneraccordionStyle1}>
         <AccordionSummary
+          onClick={() => setExpand20(!expand20)}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon />}
+          expandIcon={
+            !expand20 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -1028,15 +1192,21 @@ export const Terms = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
-
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion expanded={expand21} style={inneraccordionStyle1}>
         <AccordionSummary
+          onClick={() => setExpand21(!expand21)}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon />}
+          expandIcon={
+            !expand21 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -1067,14 +1237,21 @@ export const Terms = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion expanded={expand22} style={inneraccordionStyle1}>
         <AccordionSummary
+          onClick={() => setExpand22(!expand22)}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon />}
+          expandIcon={
+            !expand22 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
@@ -1109,14 +1286,21 @@ export const Terms = () => {
         </AccordionDetails>
       </Accordion>
 
-      <Accordion style={inneraccordionStyle1}>
+      <Accordion expanded={expand23} style={inneraccordionStyle1}>
         <AccordionSummary
+          onClick={() => setExpand23(!expand23)}
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
-          expandIcon={<ControlPointIcon />}
+          expandIcon={
+            !expand23 ? (
+              <ControlPointIcon sx={{ color: "#270641" }} />
+            ) : (
+              <RemoveCircleOutlineIcon sx={{ color: "#270641" }} />
+            )
+          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >

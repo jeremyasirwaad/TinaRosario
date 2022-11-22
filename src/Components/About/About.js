@@ -36,7 +36,6 @@ export const About = () => {
 			}}
 		>
 			{/* <div className="imagesection"></div> */}
-
 			<div
 				style={{
 					minHeight: "350px",
@@ -44,7 +43,7 @@ export const About = () => {
 					width: "100%",
 					height: width - height + 420,
 					backgroundColor: "#1A032C",
-
+          border: "4px solid #97D9DE",
 					marginTop: "8px"
 				}}
 				className="weddingbanner1"
@@ -68,6 +67,7 @@ export const About = () => {
 						{" "}
 						<span className="abtus5titlesub" style={{ fontSize: "30px" }}> Why</span> The Design House ?
 					</span>
+
 
 					<div className="sec2box">
 						<div className="sec2row">

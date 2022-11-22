@@ -233,7 +233,7 @@ export const Caro = () => {
     //   </div>
     // </Carousel>
 
-    <div style={{ marginTop: "20px" }} id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div
@@ -243,7 +243,7 @@ export const Caro = () => {
             <img
               style={{
                 borderRadius: "30px",
-                height: window.innerWidth <= 700 ? "300px" : "630px",
+                height: window.innerWidth <= 700 ? "320px" : "630px",
               }}
               src={
                 window.innerWidth <= 700
@@ -261,7 +261,7 @@ export const Caro = () => {
             <img
               style={{
                 borderRadius: "30px",
-                height: window.innerWidth <= 700 ? "300px" : "630px",
+                height: window.innerWidth <= 700 ? "350px" : "630px",
               }}
               src={
                 window.innerWidth <= 700
@@ -276,7 +276,7 @@ export const Caro = () => {
             <img
               style={{
                 borderRadius: "30px",
-                height: window.innerWidth <= 700 ? "300px" : "630px",
+                height: window.innerWidth <= 700 ? "350px" : "630px",
               }}
               src={
                 window.innerWidth <= 700
@@ -291,7 +291,7 @@ export const Caro = () => {
             <img
               style={{
                 borderRadius: "30px",
-                height: window.innerWidth <= 700 ? "300px" : "630px",
+                height: window.innerWidth <= 700 ? "350px" : "630px",
               }}
               src={
                 window.innerWidth <= 700
@@ -306,7 +306,7 @@ export const Caro = () => {
             <img
               style={{
                 borderRadius: "30px",
-                height: window.innerWidth <= 700 ? "300px" : "630px",
+                height: window.innerWidth <= 700 ? "350px" : "630px",
               }}
               src={
                 window.innerWidth <= 700
@@ -321,7 +321,7 @@ export const Caro = () => {
             <img
               style={{
                 borderRadius: "30px",
-                height: window.innerWidth <= 700 ? "300px" : "630px",
+                height: window.innerWidth <= 700 ? "350px" : "630px",
               }}
               src={
                 window.innerWidth <= 700
@@ -351,7 +351,7 @@ export const Caro = () => {
             <img
               style={{
                 borderRadius: "30px",
-                height: window.innerWidth <= 700 ? "300px" : "630px",
+                height: window.innerWidth <= 700 ? "350px" : "630px",
               }}
               src={
                 window.innerWidth <= 700
