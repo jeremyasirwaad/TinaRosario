@@ -259,7 +259,7 @@ const FAQ = () => {
                 <Typography>How does designing and stitching work at THE DESIGN HOUSE?</Typography>
               </AccordionSummary>
               <AccordionDetails sx={accordionDetail}>
-                <Typography className="star">
+                <Typography>
                   <ul>
                     <li>
                       Based on what you need, choose one of our services - Wedding Planning, Customized Designs, Image
@@ -312,7 +312,7 @@ const FAQ = () => {
                 <Typography>How will the measurements be taken?</Typography>
               </AccordionSummary>
               <AccordionDetails sx={accordionDetail}>
-                <Typography className="star">
+                <Typography>
                   There are four different ways:-
                   <ul>
                     <li>
@@ -471,7 +471,7 @@ const FAQ = () => {
                 <Typography>What are the payment methods?</Typography>
               </AccordionSummary>
               <AccordionDetails sx={accordionDetail}>
-                <Typography className="star">
+                <Typography>
                   We accept the following payment options : -
                   <ul>
                     <li>Account Transfer</li>
