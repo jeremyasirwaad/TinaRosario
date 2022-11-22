@@ -1,19 +1,19 @@
-.bgFabrics{
+.bgFabrics {
   width: 100%;
   align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url('../../About/bg.svg');
+  background-image: url("../../About/bg.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin-bottom: -50px;
 }
 
-.fabricsheader{
-  font-family: 'Poppins', sans-serif;
+.fabricsheader {
+  font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,7 +22,7 @@
   margin-top: 30px;
 }
 
-.fabricscaro{
+.fabricscaro {
   width: 100%;
   height: 600px;
   /* flex-direction: column; */
@@ -34,13 +34,13 @@
   padding: 15px;
 }
 
-.caroimg{
+.caroimg {
   height: 550px;
   width: 100%;
   /* margin-top: 500px, */
 }
 
-.fabricsheader2{
+.fabricsheader2 {
   margin-top: 40px;
   width: 100%;
   font-size: 45px;
@@ -48,372 +48,353 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-.textcontainer{
+.textcontainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 70%;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   margin-top: 40px;
-
 }
 
-.fabbutton{
+.fabbutton {
   outline: none;
   border: none;
   font-size: 32px;
   margin-top: 30px;
-  color: #FFB8BC;
+  color: #ffb8bc;
   width: 240px;
   height: 71px;
-  background: #4C2A76;
+  background: #4c2a76;
   box-shadow: 0px 8px 25px rgba(76, 42, 118, 0.55);
   border-radius: 41px;
 }
 
-.imgfabrows{
+.imgfabrows {
   display: flex;
   flex-direction: column;
   width: 70%;
   margin-top: 10px;
 }
 
-.imgfabrow1 img{
+.imgfabrow1 img {
   height: auto;
   width: 325px;
 }
 
-.imgfabrow1{
+.imgfabrow1 {
   display: flex;
- 
+
   align-items: center;
   margin-top: 30px;
 }
 
-.imgfabrowinner{
+.imgfabrowinner {
   margin-left: 40px;
 }
 
-.imgfabrowinner>p{
+.imgfabrowinner > p {
   font-size: 1.5rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-
-.imgfabrow2 img{
+.imgfabrow2 img {
   height: auto;
   width: 325px;
 }
 
-.imgfabrow2{
-  display:flex;
+.imgfabrow2 {
+  display: flex;
   align-items: center;
   flex-direction: row-reverse;
   margin-top: 30px;
   text-align: right;
-
 }
 
-.imgfabrowinner{
+.imgfabrowinner {
   margin-right: 40px;
 }
 
-.imgfabrowinner span{
+.imgfabrowinner span {
   font-weight: 600;
   font-size: 35px;
 }
 
-.reshead1{
+.reshead1 {
   display: none;
 }
 
-.textcontainer>ul {
+.textcontainer > ul {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
 }
 
-.textcontainer>ul>li {
+.textcontainer > ul > li {
   padding-left: 1em;
   text-indent: -1em;
 }
 
-.textcontainer>ul>li:before {
+.textcontainer > ul > li:before {
   content: "★";
   padding-right: 5px;
 }
 
-
-.star>ul {
+.star > ul {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
 }
 
-.star>ul>li {
+.star > ul > li {
   padding-left: 1em;
   text-indent: -1em;
 }
 
-.star>ul>li:before {
+.star > ul > li:before {
   content: "★";
   padding-right: 5px;
 }
 
+@media only screen and (max-width: 750px) {
+  .imgfabrow1 {
+    flex-direction: column;
+  }
 
-@media only screen and (max-width:750px){
-  .imgfabrow1{
+  .imgfabrowinner > p {
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .textcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    margin-top: 40px;
+  }
+  .imgfabrow2 {
     flex-direction: column;
   }
-  .imgfabrow2{
-    flex-direction: column;
-  }
-  .caroimg{
+  .caroimg {
     height: 300px;
     width: 100%;
     /* margin-top: 500px, */
   }
-  .fabricscaro{
+  .fabricscaro {
     height: 350px;
-
   }
-  .bgFabrics{
+  .bgFabrics {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
-    
+
     flex-direction: column;
-    background-image: url('../../About/bg.svg');
+    background-image: url("../../About/bg.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
   }
 
-  .fabricsheader2{
+  .fabricsheader2 {
     text-align: center;
-
+    font-size: 30px;
   }
 
-  .textcontainer{
-    width:95%;
+  .textcontainer {
+    width: 95%;
   }
-  .textcontainer>p{
+  .textcontainer > p {
     text-align: center !important;
     width: 100%;
   }
 
-  
-  .imgfabrows{
+  .imgfabrows {
     display: flex;
     flex-direction: column;
     width: 90%;
     margin-top: 10px;
   }
 
-  .imgfabrow1 img{
+  .imgfabrow1 img {
     height: auto;
     width: 325px;
   }
 
-  .imgfabrow1{
+  .imgfabrow1 {
     display: flex;
     align-items: center;
     margin-top: 30px;
     text-align: center;
   }
 
-  .imgfabrow2{
+  .imgfabrow2 {
     display: flex;
     align-items: center;
     margin-top: 30px;
     text-align: center;
   }
 
-
-
-  .imgfabrowinner>p{
-    font-size: 1.5rem;
-    text-align: center !important;
-    font-family: 'Poppins', sans-serif;
-  }
-
-
-  .imgfabrow2 img{
+  .imgfabrow2 img {
     height: auto;
     width: 325px;
   }
 
-  .imgfabrow2{
+  .imgfabrow2 {
     display: flex;
     align-items: center;
     margin-top: 30px;
     text-align: center;
-
   }
 
-  .imgfabrowinner{
+  .imgfabrowinner {
     margin-right: 10px;
     margin-left: 10px;
   }
 
-  .imgfabrowinner span{
+  .imgfabrowinner span {
     font-weight: 600;
     font-size: 35px;
     text-align: center !important;
   }
-
-
-  
 }
 
-
-
-@media only screen and (max-width:1200px){
+@media only screen and (max-width: 1200px) {
   /* .imgfabrow1{
     flex-direction: column;
   }
   .imgfabrow2{
     flex-direction: column;
   } */
-  .caroimg{
+  .caroimg {
     height: 300px;
     width: 100%;
     /* margin-top: 500px, */
   }
-  .fabricscaro{
+  .fabricscaro {
     height: 350px;
-
   }
-  .bgFabrics{
+  .bgFabrics {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
-    
+
     flex-direction: column;
-    background-image: url('../../About/bg.svg');
+    background-image: url("../../About/bg.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
   }
 
-  .fabricsheader2{
+  .fabricsheader2 {
     text-align: center;
-
   }
 
-  .textcontainer{
-    width:95%;
+  .textcontainer {
+    width: 95%;
   }
-  .textcontainer>p{
+  .textcontainer > p {
     text-align: center !important;
     width: 100%;
   }
 
-  
-  .imgfabrows{
+  .imgfabrows {
     display: flex;
     flex-direction: column;
     width: 90%;
     margin-top: 10px;
   }
 
-  .imgfabrow1 img{
+  .imgfabrow1 img {
     height: auto;
     width: 325px;
   }
 
-  .imgfabrow1{
+  .imgfabrow1 {
     display: flex;
     align-items: center;
     margin-top: 30px;
     text-align: center;
   }
 
-  .imgfabrow2{
+  .imgfabrow2 {
     display: flex;
     align-items: center;
     margin-top: 30px;
     text-align: center;
   }
 
-
-
-  .imgfabrowinner>p{
-    font-size: 1.5rem;
+  .imgfabrowinner > p {
+   
     text-align: center !important;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
   }
 
-  .imgfabrow2 img{
+  .imgfabrow2 img {
     height: auto;
     width: 325px;
   }
 
-  .imgfabrow2{
+  .imgfabrow2 {
     display: flex;
     align-items: center;
     margin-top: 30px;
     text-align: center;
-
   }
 
-  .imgfabrowinner{
+  .imgfabrowinner {
     margin-right: 10px;
     margin-left: 10px;
   }
 
-  .imgfabrowinner span{
+  .imgfabrowinner span {
     font-weight: 600;
     font-size: 35px;
     text-align: center !important;
   }
-
-
-  
 }
 
-
-@media only screen and (max-width:550px){
-  .imgfabrow1{
+@media only screen and (max-width: 550px) {
+  .imgfabrow1 {
     flex-direction: column;
   }
 
-  .bgFabrics{
+  .bgFabrics {
     background-image: url("../../About/Wedding\ Collection\ \(3\).svg");
     background-size: contain;
     background-repeat: repeat;
   }
 
-  .reshead1{
+  .reshead1 {
     display: block;
   }
 
-  .reshead2{
+  .reshead2 {
     display: none;
   }
-  
-  
-  .imgfabrow2{
+
+  .imgfabrow2 {
     flex-direction: column;
   }
-  .caroimg{
+  .caroimg {
     height: 230px;
     width: 100%;
     /* margin-top: 500px, */
   }
-  .fabricscaro{
-   align-content: center;
+  .fabricscaro {
+    align-content: center;
     align-items: center;
     height: 240px;
     padding: 5px;
   }
-
-  
 }

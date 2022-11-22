@@ -226,17 +226,12 @@ export const Caro = () => {
     //   </div>
     // </Carousel>
 
-    <div
-      style={{ marginTop: "20px", marginBottom: "10px" }}
-      id="carouselExampleIndicators"
-      class="carousel slide"
-      data-ride="carousel"
-    >
+    <div style={{ marginTop: "20px" }} id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div style={{ borderRadius: "30px" }}>
             <img
-              style={{ borderRadius: "30px", height: window.innerWidth <= 700 ? "300px" : "640px" }}
+              style={{ borderRadius: "30px", height: window.innerWidth <= 700 ? "300px" : "630px" }}
               src={
                 window.innerWidth <= 700
                   ? joda
@@ -248,7 +243,7 @@ export const Caro = () => {
         <div class="carousel-item">
           <div style={{ borderRadius: "30px" }}>
             <img
-              style={{ borderRadius: "30px", height: window.innerWidth <= 700 ? "300px" : "650px" }}
+              style={{ borderRadius: "30px", height: window.innerWidth <= 700 ? "300px" : "630px" }}
               src={
                 window.innerWidth <= 700
                   ? joda

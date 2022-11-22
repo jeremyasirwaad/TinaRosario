@@ -39,6 +39,7 @@ export const Landing = () => {
             justifyContent: "center",
             color: "black",
             fontSize: "20px",
+            marginTop: "30px",
           }}
         >
           <span>"The Untold Fashion Destination"</span>
