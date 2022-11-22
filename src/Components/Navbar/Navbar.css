@@ -4,16 +4,36 @@
 
 .navcontainer {
   width: 100%;
-  height: 200px;
   display: flex;
   /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
   justify-content: space-evenly;
   align-items: center;
-  background-color: #270641;
   color: black;
 }
 
-.navinnercontainer {
+.resnav{
+  display: none ;
+
+}
+
+.resnav2{
+  display: flex ;
+  height: 100px;  
+  width: 100%;
+  background-color: #DEFBFF;
+  
+}
+
+
+.navinnercontainer1 {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navinnercontainer2 {
   width: 100%;
   height: 100%;
   display: flex;
@@ -31,9 +51,13 @@
   font-family: "Poppins", sans-serif;
 }
 
+.navinnercontainer1>.navlogo>img{
+  height:150px ;
+  width: 150px;
+}
 .hamburger > p {
   margin-left: 20px;
-  margin-top: 16px;
+  margin-top: 20px;
 }
 
 .navlogocontainer span {
@@ -70,11 +94,12 @@
 
 .sidenavbarcustom {
   position: fixed;
-  right: -250px;
+  right: -500px;
+  /* left: -500px; */
   top: 0;
   width: 250px;
   background-color: #ddfdff;
-  z-index: 10;
+  z-index: 100;
   height: 100vh;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   /* padding: 20px; */
@@ -130,7 +155,7 @@
   padding: 20px;
   display: none;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .search {
     width: 100%;
     padding: 20px;
@@ -159,6 +184,19 @@
     width: 200px !important;
     height: 100px;
   }
+
+  .resnav2{
+    display: none;
+  }
+  .resnav{
+    display: flex;
+    background-color: #270641;
+    height: 120px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -177,7 +215,5 @@
     font-size: 10px;
   }
 
-  .hamburger {
-    display: block;
-  }
+
 }

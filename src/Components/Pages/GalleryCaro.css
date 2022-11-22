@@ -1,37 +1,34 @@
-.galleryCont{
-    height: 100%;
-    width: 100%;
-    background-image: url('./terms/bg.svg');
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-repeat:no-repeat;
-    background-position: center ;
-    background-size: cover;
-    flex-direction: column;
-   
+.galleryCont {
+  height: 100%;
+  width: 100%;
+  background-image: url("./terms/bg.svg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  flex-direction: column;
 }
-.caroImg{
-    height: 400px;
-    width: 100%;
-    /* margin-top: 20px, */
-  }
-  
-  .galleryCaro{
-    background-color: #270641;
-    padding: 30px;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* margin-top: 20px; */
-    margin-bottom: 20px;
-    height: 612px;
-  }
+.caroImg {
+  height: 400px;
+  width: 100%;
+  /* margin-top: 20px, */
+}
 
+.galleryCaro {
+  background-color: #270641;
+  padding: 30px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 20px; */
+  margin-bottom: 20px;
+  height: 612px;
+}
 
-
-  /* .backimg{
+/* .backimg{
     display: flex;
     height: 550px;
     width: 100%;
@@ -45,9 +42,31 @@
     width: 300px;
   } */
 
-  .innercarodiv{
-    width: 100%;
-    height: 700px;
+.innercarodiv {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #270641;
+  padding: 20px;
+}
+
+.innercarodiv img {
+  height: 700px;
+  width: auto;
+  border-radius: 10px;
+}
+
+
+.carousel-control-next, .carousel-control-prev{
+  opacity: 1;
+}
+
+@media only screen and (max-width: 700px) {
+  .innercarodiv {
+    width: 100% !important;
+    height: 330px !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,26 +74,21 @@
     padding: 20px;
   }
 
-  .innercarodiv img{
-    height: 700px;
+  .innercarodiv img {
+    height: 400px;
     width: auto;
     border-radius: 10px;
   }
-
-  @media only screen and (max-width:700px) {
-    .innercarodiv{
-      width: 100% !important;
-      height: 330px !important; 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #270641;
-      padding: 20px;
-    }
-
-    .innercarodiv img{
-      height: 400px;
-      width: auto;
-      border-radius: 10px;
-    }
+  .carousel-control-prev {
+    width: 5%;
+    margin-left: 15px;
+    color: white !important;
   }
+  .carousel-control-next {
+    width: 5%;
+    margin-right: 15px;
+    color: white !important;
+  }
+
+
+}
