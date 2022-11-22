@@ -228,7 +228,6 @@ export const Navbar = () => {
 						className="hamburger"
 					>
 						<img src={ham} />
-						<p>Menu</p>
 					</div>
 				</div>
 			</div>
