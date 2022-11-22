@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import testi from "./testi.svg";
 import "./newlanding.css";
 import { Caro } from "./Caro";
@@ -9,6 +9,25 @@ import avatar from "./avatar.png";
 import mat from "./mat.svg";
 export const Landing = () => {
 	const navigate = useNavigate();
+	const [pagedata, setPagedata] = useState([]);
+	const [loading, setLoading] = useState(true);
+	const getdata = async () => {
+		const data = await fetch("http://products.tinarosario.com/api/Testimonials")
+			.then((res) => res.json())
+			.then((result) => {
+				const data = result.data;
+				// const data = temp.filter(
+				// 	(e) => e.attributes.Main_Category == "Designer Collection"
+				// );
+				setPagedata(data);
+				setLoading(false);
+			});
+	};
+
+	useEffect(() => {
+		getdata();
+	});
+
 	return (
 		<div
 			className="landing"
@@ -463,85 +482,100 @@ export const Landing = () => {
 				>
 					Testimonials
 				</span>
-				<div className="testcont" id="testcont">
-					<div
-						style={{ height: "100%" }}
-						id="carouselExampleControls"
-						class="carousel slide"
-						data-ride="carousel"
-					>
-						<div class="carousel-inner">
-							<div class="carousel-item caroresfix active ">
-								<div>
-									<img
-										style={{
-											width: "200px",
-											height: "300px",
-											borderRadius: "20px"
-										}}
-										className="avatar"
-										src={testi}
-									/>
+				{loading ? (
+					""
+				) : (
+					<div className="testcont" id="testcont">
+						<div
+							style={{ height: "100%" }}
+							id="carouselExampleControls"
+							class="carousel slide"
+							data-ride="carousel"
+						>
+							<div class="carousel-inner">
+								<div class="carousel-item caroresfix active ">
 									<div>
-										<h4 style={{ fontSize: "20px" }}>
-											Thank you Tina Aunty, this dress feels comfortable to wear
-											and I have received a lot of compliments.
-										</h4>
-										<p style={{ textAlign: "right", fontSize: "18px" }}>
-											-Akansha Jose
-										</p>
+										{pagedata[0].attributes.Img == null ? (
+											""
+										) : (
+											<img
+												style={{
+													width: "200px",
+													height: "300px",
+													borderRadius: "20px"
+												}}
+												className="avatar"
+												src={pagedata[0].attributes.Img}
+											/>
+										)}
+
+										<div>
+											<span style={{ fontSize: "20px", color: "#FFB8BC" }}>
+												{pagedata[0].attributes.Text}
+											</span>
+											<p style={{ textAlign: "right", fontSize: "18px" }}>
+												{pagedata[0].attributes.name}
+											</p>
+										</div>
 									</div>
 								</div>
+								{pagedata.slice(1).map((e) => {
+									return (
+										<div class="carousel-item caroresfix  ">
+											<div>
+												{e.attributes.Img == null ? (
+													""
+												) : (
+													<img
+														style={{
+															width: "200px",
+															height: "300px",
+															borderRadius: "20px"
+														}}
+														className="avatar"
+														src={e.attributes.Img}
+													/>
+												)}
+												<div>
+													<span style={{ fontSize: "20px", color: "#FFB8BC" }}>
+														{e.attributes.Text}
+													</span>
+													<p style={{ textAlign: "right", fontSize: "18px" }}>
+														{e.attributes.name}
+													</p>
+												</div>
+											</div>
+										</div>
+									);
+								})}
 							</div>
-							<div class="carousel-item caroresfix  ">
-								<div>
-									<img
-										style={{
-											width: "200px",
-											height: "300px",
-											borderRadius: "20px"
-										}}
-										className="avatar"
-										src={testi}
-									/>
-									<div>
-										<h4 style={{ fontSize: "20px" }}>
-											Thank you Tina Aunty, this dress feels comfortable to wear
-											and I have received a lot of compliments.
-										</h4>
-										<p style={{ textAlign: "right", fontSize: "18px" }}>
-											-Akansha Jose
-										</p>
-									</div>
-								</div>
-							</div>
+							<a
+								class="carousel-control-prev"
+								href="#carouselExampleControls"
+								role="button"
+								data-slide="prev"
+							>
+								<span
+									class="carousel-control-prev-icon"
+									aria-hidden="true"
+								></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a
+								class="carousel-control-next"
+								href="#carouselExampleControls"
+								role="button"
+								data-slide="next"
+							>
+								<span
+									class="carousel-control-next-icon"
+									aria-hidden="true"
+								></span>
+								<span class="sr-only">Next</span>
+							</a>
 						</div>
-						<a
-							class="carousel-control-prev"
-							href="#carouselExampleControls"
-							role="button"
-							data-slide="prev"
-						>
-							<span
-								class="carousel-control-prev-icon"
-								aria-hidden="true"
-							></span>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a
-							class="carousel-control-next"
-							href="#carouselExampleControls"
-							role="button"
-							data-slide="next"
-						>
-							<span
-								class="carousel-control-next-icon"
-								aria-hidden="true"
-							></span>
-							<span class="sr-only">Next</span>
-						</a>
 					</div>
-				</div>
+				)}
 			</div>
 		</div>
 	);

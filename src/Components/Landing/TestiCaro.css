@@ -75,11 +75,12 @@
 }
 
 @media screen and (max-width: 600px) {
+    
     .carousel{
         height: 100%;
         width: 100%;
         display: flex;
-        justify-content: center;
+        /* justify-content: center; */
         align-items: center;
     
     }
@@ -98,6 +99,7 @@
        display: flex;
        justify-content: center;
        align-items: center;
+       flex-direction: column;
     }
     
     .caroresfix>div>div{
@@ -130,17 +132,18 @@
         width: 95%;
         margin: 20px;
         border-radius: 40px;
-        height: 300px;
+        height: 100%;
         padding: 10px;
         
     }
    
 
     .caroresfix>div>img{
-        width: 115px !important;
-        height: 400px !important; 
+        width: 250px !important;
+        height: 300px !important; 
+        margin-bottom: 10px;
     }
-    .caroresfix>div>div>h4{
+    .caroresfix>div>div>span{
         font-size: 18px !important;
     }
 
