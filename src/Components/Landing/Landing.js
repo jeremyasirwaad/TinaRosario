@@ -415,8 +415,7 @@ export const Landing = () => {
             onClick={() => navigate("/Maternity")}
             style={{
               cursor: "pointer",
-              marginLeft: "20px",
-              marginRight: "10px",
+            
             }}
           />
           <img
@@ -428,8 +427,7 @@ export const Landing = () => {
             onClick={() => navigate("/handloom")}
             style={{
               cursor: "pointer",
-              marginLeft: "10px",
-              marginRight: "20px",
+            
             }}
           />
           <img
