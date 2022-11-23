@@ -49,7 +49,7 @@ export default function Productpage() {
 
 	const getdata = async () => {
 		const data = await fetch(
-			"http://products.tinarosario.com/api/Products?filters[Product_id][$eq]=" +
+			"https://tinarosario.com/api/Products?filters[Product_id][$eq]=" +
 				prodid
 		)
 			.then((res) => res.json())
