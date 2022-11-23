@@ -17,7 +17,7 @@ import res1 from "./res1.png";
 import res2 from "./res2.png";
 import res3 from "./res3.png";
 
-const backendUrl = "http://3.88.157.171:8080";
+const backendUrl = "http://localhost:8080";
 // const backendUrl = "http://localhost:3001";
 
 export const Contactus = () => {
