@@ -50,7 +50,7 @@ export const Handloom = () => {
   };
 
   const getdata = async () => {
-    const data = await fetch("http://products.tinarosario.com/api/Products?filters[Main_Category][$eq]=Handloom Sarees")
+    const data = await fetch("https://tinarosario.com/api/Products?filters[Main_Category][$eq]=Handloom Sarees")
       .then((res) => res.json())
       .then((result) => {
         const data = result.data;
@@ -359,7 +359,7 @@ export const Handloom = () => {
             </div>
             <div className={subcolor ? "fildiv displaynone" : "fildiv"}></div>
             <div className={subcolor ? "fliterchoicediv displaynone" : "fliterchoicediv"}>
-            <div className="fliterchoice">
+              <div className="fliterchoice">
                 <input
                   type="checkbox"
                   name="colorfilter"
@@ -574,7 +574,9 @@ export const Handloom = () => {
             <AiFillFilter />
           </div>
           <span className="prodpaget1">Handloom Sarees</span>
-          <span style={{ marginTop: "10px" }} className="prodpaget2">“Drape yourself in a comfy fabric”</span>
+          <span style={{ marginTop: "10px" }} className="prodpaget2">
+            “Drape yourself in a comfy fabric”
+          </span>
         </div>
 
         {loading == true || loading2 == true ? (

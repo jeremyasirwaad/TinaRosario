@@ -50,9 +50,7 @@ export const Maternity = () => {
   };
 
   const getdata = async () => {
-    const data = await fetch(
-      "http://products.tinarosario.com/api/Products?filters[Main_Category][$eq]=Maternity Collection"
-    )
+    const data = await fetch("https://tinarosario.com/api/Products?filters[Main_Category][$eq]=Maternity Collection")
       .then((res) => res.json())
       .then((result) => {
         const data = result.data;
@@ -340,8 +338,7 @@ export const Maternity = () => {
             </div>
             <div className={subcolor ? "fildiv displaynone" : "fildiv"}></div>
             <div className={subcolor ? "fliterchoicediv displaynone" : "fliterchoicediv"}>
-              
-            <div className="fliterchoice">
+              <div className="fliterchoice">
                 <input
                   type="checkbox"
                   name="colorfilter"
@@ -556,7 +553,9 @@ export const Maternity = () => {
             <AiFillFilter />
           </div>
           <span className="prodpaget1">Maternity Collections</span>
-          <span  style={{ marginTop: "10px" }} className="prodpaget2">“Specially designed to make you feel comfortable”</span>
+          <span style={{ marginTop: "10px" }} className="prodpaget2">
+            “Specially designed to make you feel comfortable”
+          </span>
         </div>
 
         {loading == true || loading2 == true ? (

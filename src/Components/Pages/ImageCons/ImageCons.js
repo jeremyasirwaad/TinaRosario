@@ -23,7 +23,7 @@ import resimg from "./resimg.png";
 
 const ImageCons = () => {
 	const navigate = useNavigate();
-	const url = "http://3.88.157.171:8080";
+	const url = "https://tinarosario.com/route";
 	// const url = "http://localhost:3001";
 
 	const days = dayjs();

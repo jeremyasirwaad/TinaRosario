@@ -14,7 +14,7 @@ export const Productmsg = () => {
     toast("Message sent already", {
       icon: "👍",
     });
-  const backendUrl = "http://3.88.157.171:8080";
+  const backendUrl = "https://tinarosario.com/route";
   const [value, setValue] = React.useState("+91");
 
   const { type } = useParams();
@@ -24,7 +24,6 @@ export const Productmsg = () => {
     name: "",
     contact: "+91",
     productName: type,
-    email: "raghavjindal0212@gmail.com",
   });
 
   const handleChange = (newValue) => {
