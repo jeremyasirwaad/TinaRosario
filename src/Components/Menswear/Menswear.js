@@ -50,7 +50,7 @@ export const Menswear = () => {
   };
 
   const getdata = async () => {
-    const data = await fetch("http://products.tinarosario.com/api/Products?filters[Main_Category][$eq]=Men's Wear")
+    const data = await fetch("https://tinarosario.com/api/Products?filters[Main_Category][$eq]=Men's Wear")
       .then((res) => res.json())
       .then((result) => {
         const data = result.data;
@@ -336,8 +336,7 @@ export const Menswear = () => {
             </div>
             <div className={subcolor ? "fildiv displaynone" : "fildiv"}></div>
             <div className={subcolor ? "fliterchoicediv displaynone" : "fliterchoicediv"}>
-              
-            <div className="fliterchoice">
+              <div className="fliterchoice">
                 <input
                   type="checkbox"
                   name="colorfilter"

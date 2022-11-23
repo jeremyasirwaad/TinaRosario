@@ -12,7 +12,7 @@ export const Landing = () => {
   const [pagedata, setPagedata] = useState([]);
   const [loading, setLoading] = useState(true);
   const getdata = async () => {
-    const data = await fetch("http://products.tinarosario.com/api/Testimonials")
+    const data = await fetch("https://tinarosario.com/api/Testimonials")
       .then((res) => res.json())
       .then((result) => {
         const data = result.data;
@@ -26,7 +26,7 @@ export const Landing = () => {
 
   useEffect(() => {
     getdata();
-  });
+  }, []);
 
   return (
     <div
@@ -44,7 +44,7 @@ export const Landing = () => {
         avatar={avatar}
         chatMessage={"Welcome to The Design House by Tina Rosario. \n How can we help you?"}
       />
-      <div  className="landsec1">
+      <div className="landsec1">
         <Caro />
       </div>
 

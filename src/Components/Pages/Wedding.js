@@ -21,7 +21,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { MuiTelInput } from "mui-tel-input";
 
 export const Wedding = () => {
-	const url = "http://3.88.157.171:8080";
+	const url = "https://tinarosario.com/route";
 	// const url = "http://localhost:3001";
 	const navigate = useNavigate();
 
