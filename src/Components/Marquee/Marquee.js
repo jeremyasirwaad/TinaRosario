@@ -13,7 +13,7 @@ export const Marqueeline = () => {
         backgroundColor: "#9ADCE1",
         position: "fixed",
         top: 0,
-        zIndex: 100,
+        zIndex: 1000,
       }}
     >
       <Marquee gradient={false} style={{ color: "black" }} speed={80}>
