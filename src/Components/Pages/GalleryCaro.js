@@ -10,7 +10,7 @@ const GalleryCaro = () => {
   const [pagedata, setPagedata] = useState([]);
 
   const getdata = async () => {
-    const data = await fetch("http://products.tinarosario.com/api/Gallery-images")
+    const data = await fetch("https://tinarosario.com/api/Gallery-images")
       .then((res) => res.json())
       .then((result) => {
         // console.log(result.data[0].attributes.galleryimages.gallery);
