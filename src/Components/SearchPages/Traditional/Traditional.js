@@ -52,7 +52,7 @@ export const Traditional = () => {
 
 	const getdata = async () => {
 		const data = await fetch(
-			"http://products.tinarosario.com/api/Products?filters[Traditional][$eq]=Yes"
+			"https://tinarosario.com/api/Products?filters[Traditional][$eq]=Yes"
 		)
 			.then((res) => res.json())
 			.then((result) => {

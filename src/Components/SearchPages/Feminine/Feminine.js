@@ -52,7 +52,7 @@ export const Feminine = () => {
 
 	const getdata = async () => {
 		const data = await fetch(
-			"http://products.tinarosario.com/api/Products?filters[Gender][$eq]=Female"
+			"https://tinarosario.com/api/Products?filters[Gender][$eq]=Female"
 		)
 			.then((res) => res.json())
 			.then((result) => {
