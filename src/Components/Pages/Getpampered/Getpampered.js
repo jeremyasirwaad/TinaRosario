@@ -215,7 +215,7 @@ export const Getpampered = () => {
               <br />
               <span style={{ color: "#270641" }}>Get your designer wear from the comfort of your home.</span>
               <br />
-              <span style={{ color: "#270641" }}>No more grueling visits to the shop.</span>
+              <span style={{ color: "#270641" }}>No more gruelling visits to the shop.</span>
               <br />
               <span style={{ color: "#270641" }}>We're just a call away.</span>
             </p>
