@@ -1,0 +1,56 @@
+.popuppage{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255, 0.7);
+    position: fixed;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popupinner{
+    width: 450px;
+    height: 450px;
+    background-color: white;
+    margin-top: 40px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: flex-end;
+
+  }
+
+.popupclose{
+    margin-right: 20px;
+    margin-top: 20px;
+    position: absolute;
+    cursor: pointer;
+    
+}
+
+.popupinner img{
+    width: 450px;
+    height: 450px;
+    border-radius: 40px;
+
+}
+
+@media only screen and (max-width: 700px){
+    .popupinner img{
+        width: 300px;
+        height: 300px;
+        border-radius: 40px;
+    
+    }
+
+    .popupinner{
+        width: 300px;
+        height: 300px;
+        background-color: white;
+        margin-top: 40px;
+        border-radius: 40px;
+        display: flex;
+        justify-content: flex-end;
+    
+      }
+}

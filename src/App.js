@@ -6,7 +6,7 @@ import { Marqueeline } from "./Components/Marquee/Marquee";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Wedding } from "./Components/Pages/Wedding";
 import { Fabrics } from "./Components/Pages/fabrics/Fabrics";
-
+import { Popup } from "./Components/Popup/Popup";
 import Scrolltotop from "./Scrolltotop";
 
 import Sidebar from "./Components/sidebar/Sidebar";
@@ -33,7 +33,7 @@ import { Feedback } from "./Components/Feedback/Feedback";
 import Evisiting from "./Components/evisitingcard/Evisiting";
 
 import { DesignerCollections } from "./Components/DesignerCollections/DesignerCollections";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Terms } from "./Components/Pages/terms/Terms";
 import GalleryCaro from "./Components/Pages/GalleryCaro";
 import { Weddingcollections } from "./Components/weddingCollections/Weddingcollections";
@@ -47,434 +47,467 @@ import { Masculine } from "./Components/SearchPages/Masculine/Masculine";
 import GapDiv from "./Components/Navbar/GapDiv";
 
 function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Scrolltotop></Scrolltotop>
+	const [popup, setPopup] = useState(false);
+	const [flyerlink, setflyerlink] = useState("");
 
-        <Routes>
-          <Route
-            path="/feedback"
-            element={
-              <>
-                <Marqueeline />
+	const fetchflyer = async () => {
+		const data = await fetch("https://tinarosario.com/api/flyers")
+			.then((res) => res.json())
+			.then((result) => {
+				const data = result.data;
+				// const data = temp.filter(
+				// 	(e) => e.attributes.Main_Category == "Men's Wear"
+				// );
+				// console.log(result.data[0].attributes.flyerlink);
+				if (result.data[0].attributes.Flyeron_off) {
+					setflyerlink(result.data[0].attributes.flyerlink);
+					setPopup(true);
+				}
+			});
+	};
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Feedback />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/"
-            element={
-              <>
-                <Marqueeline />
+	useEffect(() => {
+		// setTimeout(() => {
+		// 	setPopup(true);
+		// }, 3000);
+		fetchflyer();
+	}, []);
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Landing />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/gallery"
-            element={
-              <>
-                <Marqueeline />
+	return (
+		<div className="App">
+			<BrowserRouter>
+				<Scrolltotop></Scrolltotop>
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Gallery />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/about"
-            element={
-              <>
-                <Marqueeline />
+				<Routes>
+					<Route
+						path="/feedback"
+						element={
+							<>
+								<Marqueeline />
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <About />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/wedding"
-            element={
-              <>
-                <Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Feedback />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/"
+						element={
+							<>
+								<Marqueeline />
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Wedding />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/fabrics"
-            element={
-              <>
-                <Marqueeline />
+								<Popup trigger={popup} close={setPopup} url={flyerlink}></Popup>
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Landing />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/gallery"
+						element={
+							<>
+								<Marqueeline />
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Fabrics></Fabrics>
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/customiseddesigns"
-            element={
-              <>
-                <Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Gallery />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/about"
+						element={
+							<>
+								<Marqueeline />
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Cusdesigns />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/imagecons"
-            element={
-              <>
-                <Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<About />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/wedding"
+						element={
+							<>
+								<Marqueeline />
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <ImageCons />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/getpampered"
-            element={
-              <>
-                <Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Wedding />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/fabrics"
+						element={
+							<>
+								<Marqueeline />
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Getpampered />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/policies"
-            element={
-              <>
-                <Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Fabrics></Fabrics>
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/customiseddesigns"
+						element={
+							<>
+								<Marqueeline />
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Policies />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/Productmsg/:type"
-            element={
-              <>
-                <Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Cusdesigns />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/imagecons"
+						element={
+							<>
+								<Marqueeline />
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Productmsg />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/DesignerCollections"
-            element={
-              <>
-                <Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<ImageCons />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/getpampered"
+						element={
+							<>
+								<Marqueeline />
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <DesignerCollections />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/Handloom"
-            element={
-              <>
-                <Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Getpampered />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/policies"
+						element={
+							<>
+								<Marqueeline />
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Handloom />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/weddingproduct"
-            element={
-              <>
-                <Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Policies />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/Productmsg/:type"
+						element={
+							<>
+								<Marqueeline />
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Weddingcollections />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/Kidswear"
-            element={
-              <>
-                <Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Productmsg />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/DesignerCollections"
+						element={
+							<>
+								<Marqueeline />
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Kidswear />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/womenswear"
-            element={
-              <>
-                <Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<DesignerCollections />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/Handloom"
+						element={
+							<>
+								<Marqueeline />
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Womanswear />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/Menswear"
-            element={
-              <>
-                <Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Handloom />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/weddingproduct"
+						element={
+							<>
+								<Marqueeline />
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Menswear />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/Maternity"
-            element={
-              <>
-                <Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Weddingcollections />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/Kidswear"
+						element={
+							<>
+								<Marqueeline />
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Maternity />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/exclusiveaccessories"
-            element={
-              <>
-                <Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Kidswear />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/womenswear"
+						element={
+							<>
+								<Marqueeline />
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Exclusiveaccessory />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/Contact"
-            element={
-              <>
-                <Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Womanswear />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/Menswear"
+						element={
+							<>
+								<Marqueeline />
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Contactus></Contactus>
-                <Footer></Footer>
-              </>
-            }
-          >
-            {" "}
-          </Route>
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Menswear />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/Maternity"
+						element={
+							<>
+								<Marqueeline />
 
-          <Route
-            path="/sidebar"
-            element={
-              <>
-                <Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Maternity />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/exclusiveaccessories"
+						element={
+							<>
+								<Marqueeline />
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Sidebar />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Exclusiveaccessory />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/Contact"
+						element={
+							<>
+								<Marqueeline />
 
-          <Route
-            path="/faq_reg"
-            element={
-              <>
-                <Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Contactus></Contactus>
+								<Footer></Footer>
+							</>
+						}
+					>
+						{" "}
+					</Route>
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Faq />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/faq_order"
-            element={
-              <>
-                <Marqueeline />
+					<Route
+						path="/sidebar"
+						element={
+							<>
+								<Marqueeline />
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Faq />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/faq_deli"
-            element={
-              <>
-                <Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Sidebar />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Faq />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/faq_ship"
-            element={
-              <>
-                <Marqueeline />
+					<Route
+						path="/faq_reg"
+						element={
+							<>
+								<Marqueeline />
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Faq />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/orderfinish/:type/:name/:d/:m/:y"
-            element={
-              <>
-                <Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Faq />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/faq_order"
+						element={
+							<>
+								<Marqueeline />
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <OrderFinish />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/product/:prodid"
-            element={
-              <>
-                <Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Faq />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/faq_deli"
+						element={
+							<>
+								<Marqueeline />
 
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Productpage />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/terms"
-            element={
-              <>
-                <Marqueeline />
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Terms />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/gallerycaro"
-            element={
-              <>
-                <Marqueeline />
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <GalleryCaro />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/traditional"
-            element={
-              <>
-                <Marqueeline />
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Traditional />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/Masculine"
-            element={
-              <>
-                <Marqueeline />
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Masculine />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route
-            path="/Feminine"
-            element={
-              <>
-                <Marqueeline />
-                <Navbar></Navbar>
-                <GapDiv></GapDiv>
-                <Feminine />
-                <Footer></Footer>
-              </>
-            }
-          ></Route>
-          <Route path="/visiting/ecard" element={<Evisiting></Evisiting>}></Route>
-          <Route path="*" element={<div>{/* <h2>404 Page not found</h2> */}</div>} />
-        </Routes>
-        {/* <Footer></Footer> */}
-      </BrowserRouter>
-    </div>
-  );
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Faq />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/faq_ship"
+						element={
+							<>
+								<Marqueeline />
+
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Faq />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/orderfinish/:type/:name/:d/:m/:y"
+						element={
+							<>
+								<Marqueeline />
+
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<OrderFinish />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/product/:prodid"
+						element={
+							<>
+								<Marqueeline />
+
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Productpage />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/terms"
+						element={
+							<>
+								<Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Terms />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/gallerycaro"
+						element={
+							<>
+								<Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<GalleryCaro />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/traditional"
+						element={
+							<>
+								<Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Traditional />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/Masculine"
+						element={
+							<>
+								<Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Masculine />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/Feminine"
+						element={
+							<>
+								<Marqueeline />
+								<Navbar></Navbar>
+								<GapDiv></GapDiv>
+								<Feminine />
+								<Footer></Footer>
+							</>
+						}
+					></Route>
+					<Route
+						path="/visiting/ecard"
+						element={<Evisiting></Evisiting>}
+					></Route>
+					<Route
+						path="*"
+						element={<div>{/* <h2>404 Page not found</h2> */}</div>}
+					/>
+				</Routes>
+				{/* <Footer></Footer> */}
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default App;

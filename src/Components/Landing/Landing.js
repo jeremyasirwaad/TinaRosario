@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import avatar from "./avatar.png";
 import mat from "./mat.svg";
+import { Popup } from "../Popup/Popup";
 export const Landing = () => {
 	const navigate = useNavigate();
 	const [pagedata, setPagedata] = useState([]);
@@ -33,7 +34,7 @@ export const Landing = () => {
 			className="landing"
 			style={{
 				display: "flex",
-				flexDirection: "column",
+				flexDirection: "column"
 			}}
 		>
 			<FloatingWhatsApp
@@ -46,6 +47,8 @@ export const Landing = () => {
 					"Welcome to The Design House by Tina Rosario. \n How can we help you?"
 				}
 			/>
+
+
 			<div className="landsec1">
 				<Caro />
 			</div>
@@ -59,7 +62,7 @@ export const Landing = () => {
 						alignItems: "center",
 						justifyContent: "center",
 						color: "black",
-						fontSize: "20px",
+						fontSize: "20px"
 						// marginTop: "30px"
 					}}
 				>
@@ -73,7 +76,7 @@ export const Landing = () => {
 							flexDirection: "column",
 							width: "150px",
 							alignItems: "center",
-							textAlign: "center",
+							textAlign: "center"
 						}}
 						className="givenmargin"
 					>
@@ -94,7 +97,7 @@ export const Landing = () => {
 							style={{
 								fontSize: "20px",
 								color: "#270641",
-								fontFamily: "'Poppins', sans-serif",
+								fontFamily: "'Poppins', sans-serif"
 							}}
 						>
 							Customization per your style, desire and comfort
@@ -106,7 +109,7 @@ export const Landing = () => {
 							flexDirection: "column",
 							width: "150px",
 							alignItems: "center",
-							textAlign: "center",
+							textAlign: "center"
 						}}
 						className="givenmargin"
 					>
@@ -187,7 +190,7 @@ export const Landing = () => {
 							style={{
 								fontSize: "20px",
 								color: "#270641",
-								fontFamily: "'Poppins', sans-serif",
+								fontFamily: "'Poppins', sans-serif"
 							}}
 							className="givenmargin"
 						>
@@ -200,7 +203,7 @@ export const Landing = () => {
 							flexDirection: "column",
 							width: "150px",
 							alignItems: "center",
-							textAlign: "center",
+							textAlign: "center"
 						}}
 						className="givenmargin"
 					>
@@ -221,7 +224,7 @@ export const Landing = () => {
 							style={{
 								color: "#270641",
 								fontSize: "20px",
-								fontFamily: "'Poppins', sans-serif",
+								fontFamily: "'Poppins', sans-serif"
 							}}
 						>
 							One Stop platform
@@ -232,7 +235,7 @@ export const Landing = () => {
 							display: "flex",
 							flexDirection: "column",
 							width: "150px",
-							alignItems: "center",
+							alignItems: "center"
 						}}
 						className="givenmargin"
 					>
@@ -274,7 +277,7 @@ export const Landing = () => {
 								fontSize: "20px",
 								color: "#270641",
 								fontFamily: "'Poppins', sans-serif",
-								textAlign: "center",
+								textAlign: "center"
 							}}
 							className="givenmargin"
 						>
@@ -287,7 +290,7 @@ export const Landing = () => {
 							flexDirection: "column",
 							width: "150px",
 							alignItems: "center",
-							textAlign: "center",
+							textAlign: "center"
 						}}
 						className="givenmargin"
 					>
@@ -320,7 +323,7 @@ export const Landing = () => {
 							style={{
 								fontSize: "20px",
 								color: "#270641",
-								fontFamily: "'Poppins', sans-serif",
+								fontFamily: "'Poppins', sans-serif"
 							}}
 						>
 							No sitting back until we see you smile
@@ -346,7 +349,7 @@ export const Landing = () => {
 						alt=""
 						onClick={() => navigate("/wedding")}
 						style={{
-							cursor: "pointer",
+							cursor: "pointer"
 						}}
 					/>
 					{/* <img
@@ -364,7 +367,7 @@ export const Landing = () => {
 						alt=""
 						onClick={() => navigate("/customiseddesigns")}
 						style={{
-							cursor: "pointer",
+							cursor: "pointer"
 						}}
 					/>
 					<img
@@ -374,7 +377,7 @@ export const Landing = () => {
 						alt=""
 						onClick={() => navigate("/imagecons")}
 						style={{
-							cursor: "pointer",
+							cursor: "pointer"
 						}}
 					/>
 					<img
@@ -405,7 +408,7 @@ export const Landing = () => {
 						alt=""
 						onClick={() => navigate("/Weddingproduct")}
 						style={{
-							cursor: "pointer",
+							cursor: "pointer"
 						}}
 					/>
 					<img
@@ -415,7 +418,7 @@ export const Landing = () => {
 						alt=""
 						onClick={() => navigate("/womenswear")}
 						style={{
-							cursor: "pointer",
+							cursor: "pointer"
 						}}
 					/>
 					<img
@@ -454,7 +457,7 @@ export const Landing = () => {
 						alt=""
 						onClick={() => navigate("/Maternity")}
 						style={{
-							cursor: "pointer",
+							cursor: "pointer"
 						}}
 					/>
 					<img
@@ -465,7 +468,7 @@ export const Landing = () => {
 						alt=""
 						onClick={() => navigate("/handloom")}
 						style={{
-							cursor: "pointer",
+							cursor: "pointer"
 						}}
 					/>
 					<img
@@ -506,7 +509,7 @@ export const Landing = () => {
 												style={{
 													width: "200px",
 													height: "300px",
-													borderRadius: "20px",
+													borderRadius: "20px"
 												}}
 												className="avatar"
 												src={pagedata[0].attributes.Img}
@@ -534,7 +537,7 @@ export const Landing = () => {
 														style={{
 															width: "200px",
 															height: "300px",
-															borderRadius: "20px",
+															borderRadius: "20px"
 														}}
 														className="avatar"
 														src={e.attributes.Img}
