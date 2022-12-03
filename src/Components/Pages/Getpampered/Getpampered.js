@@ -451,6 +451,7 @@ export const Getpampered = () => {
             style={{ marginTop: "30px" }}
             value={formData.note}
             onChange={(e) => setformData({ ...formData, note: e.target.value })}
+            
           />
           {/* <LocalizationProvider dateAdapter={AdapterDayjs} className="datewidth">
             <Stack spacing={3} className="datewidth">
