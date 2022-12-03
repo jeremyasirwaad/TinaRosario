@@ -42,7 +42,7 @@ export const Caro = () => {
     //         backgroundColor: "transparent",
     //         width: "350px",
     //         height: "300px",
-    //         marginTop: window.innerWidth <= 600 ? "-150px" : "100px",
+    //         marginTop: window.innerWidth <= 700 ? "-150px" : "100px",
     //         position: "absolute",
     //         cursor: "pointer",
     //       }}
@@ -71,7 +71,7 @@ export const Caro = () => {
     //         backgroundColor: "transparent",
     //         width: "350px",
     //         height: "300px",
-    //         marginTop: window.innerWidth <= 600 ? "-150px" : "100px",
+    //         marginTop: window.innerWidth <= 700 ? "-150px" : "100px",
     //         position: "absolute",
     //         cursor: "pointer",
     //       }}
@@ -79,7 +79,7 @@ export const Caro = () => {
     //     <img
     //       style={{ borderRadius: "30px", height: "650px" }}
     //       src={
-    //         window.innerWidth <= 600
+    //         window.innerWidth <= 700
     //           ? "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20791.png?alt=media&token=13dd502f-c112-4529-bc54-f64b8d11acca"
     //           : "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/880.png?alt=media&token=a852ba99-208a-41be-a685-cc9c0714aa32"
     //       }
@@ -100,7 +100,7 @@ export const Caro = () => {
     //         backgroundColor: "transparent",
     //         width: "350px",
     //         height: "300px",
-    //         marginTop: window.innerWidth <= 600 ? "-150px" : "100px",
+    //         marginTop: window.innerWidth <= 700 ? "-150px" : "100px",
     //         position: "absolute",
     //         cursor: "pointer",
     //       }}
@@ -108,7 +108,7 @@ export const Caro = () => {
     //     <img
     //       style={{ borderRadius: "30px", height: "650px" }}
     //       src={
-    //         window.innerWidth <= 600
+    //         window.innerWidth <= 700
     //           ? "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20792%20(2).png?alt=media&token=40921be0-4539-41d8-983a-9cfed32c46ef"
     //           : "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20812.png?alt=media&token=efd781ba-1762-45ce-98d7-faeba727455a"
     //       }
@@ -129,7 +129,7 @@ export const Caro = () => {
     //         backgroundColor: "transparent",
     //         width: "350px",
     //         height: "300px",
-    //         marginTop: window.innerWidth <= 600 ? "-150px" : "100px",
+    //         marginTop: window.innerWidth <= 700 ? "-150px" : "100px",
     //         position: "absolute",
     //         cursor: "pointer",
     //       }}
@@ -137,7 +137,7 @@ export const Caro = () => {
     //     <img
     //       style={{ borderRadius: "30px", height: "650px" }}
     //       src={
-    //         window.innerWidth <= 600
+    //         window.innerWidth <= 700
     //           ? "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20824.png?alt=media&token=b65945e8-4ad2-4884-986b-6679ff73bfbb"
     //           : "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20811.png?alt=media&token=c5c28e92-9f2f-4e37-ad2c-bf8c82d6651d"
     //       }
@@ -158,7 +158,7 @@ export const Caro = () => {
     //         backgroundColor: "transparent",
     //         width: "350px",
     //         height: "300px",
-    //         marginTop: window.innerWidth <= 600 ? "-150px" : "100px",
+    //         marginTop: window.innerWidth <= 700 ? "-150px" : "100px",
     //         position: "absolute",
     //         cursor: "pointer",
     //       }}
@@ -166,7 +166,7 @@ export const Caro = () => {
     //     <img
     //       style={{ borderRadius: "30px", height: "650px" }}
     //       src={
-    //         window.innerWidth <= 600
+    //         window.innerWidth <= 700
     //           ? "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20794.png?alt=media&token=21c4eb42-8726-43d2-97c6-b1067590fae4"
     //           : "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/881.png?alt=media&token=18f30af8-f282-4413-bcb5-c51f59cdee75"
     //       }
@@ -187,7 +187,7 @@ export const Caro = () => {
     //         backgroundColor: "transparent",
     //         width: "350px",
     //         height: "300px",
-    //         marginTop: window.innerWidth <= 600 ? "-150px" : "100px",
+    //         marginTop: window.innerWidth <= 700 ? "-150px" : "100px",
     //         position: "absolute",
     //         cursor: "pointer",
     //       }}
@@ -195,7 +195,7 @@ export const Caro = () => {
     //     <img
     //       style={{ borderRadius: "30px", height: "650px" }}
     //       src={
-    //         window.innerWidth <= 600
+    //         window.innerWidth <= 700
     //           ? "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20795.png?alt=media&token=4499857c-acd0-4f65-acac-36851e895037"
     //           : "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/878.png?alt=media&token=94c867a3-6eae-465f-b94f-1f64ba14af90"
     //       }
@@ -216,7 +216,7 @@ export const Caro = () => {
     //         backgroundColor: "transparent",
     //         width: "350px",
     //         height: "300px",
-    //         marginTop: window.innerWidth <= 600 ? "-150px" : "100px",
+    //         marginTop: window.innerWidth <= 700 ? "-150px" : "100px",
     //         position: "absolute",
     //         cursor: "pointer",
     //       }}
@@ -224,7 +224,7 @@ export const Caro = () => {
     //     <img
     //       style={{ borderRadius: "30px", height: "650px" }}
     //       src={
-    //         window.innerWidth <= 600
+    //         window.innerWidth <= 700
     //           ? "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20827.png?alt=media&token=9da239af-2426-43c5-92f0-468026d4dcfa"
     //           : "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20808.png?alt=media&token=239ff70b-b01d-4bef-bf80-c59cf6faf343"
     //       }
@@ -236,10 +236,18 @@ export const Caro = () => {
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <div
-            onClick={() => navigate("/Productmsg/Jodha_Caro")}
-            style={{ display: "flex", justifyContent: "center", alignItems: "center" }}
-          >
+          <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <div
+              onClick={() => navigate("/Productmsg/Jodha_Caro")}
+              style={{
+                backgroundColor: "transparent",
+                width: window.innerWidth <= 700 ? "100px" : "350px",
+                height: window.innerWidth <= 700 ? "70px" : "100px",
+                marginTop: window.innerWidth <= 700 ? "-150px" : "120px",
+                position: "absolute",
+                cursor: "pointer",
+              }}
+            ></div>
             <img
               style={{
                 borderRadius: "30px",
@@ -254,10 +262,18 @@ export const Caro = () => {
           </div>
         </div>
         <div class="carousel-item ">
-          <div
-            style={{ borderRadius: "30px", display: "flex", justifyContent: "center", alignItems: "center" }}
-            onClick={() => navigate("/Productmsg/Mendesigner_Caro")}
-          >
+          <div style={{ borderRadius: "30px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <div
+              onClick={() => navigate("/Productmsg/Mendesigner_Caro")}
+              style={{
+                backgroundColor: "transparent",
+                width: window.innerWidth <= 700 ? "100px" : "350px",
+                height: window.innerWidth <= 700 ? "70px" : "120px",
+                marginTop: window.innerWidth <= 700 ? "-150px" : "200px",
+                position: "absolute",
+                cursor: "pointer",
+              }}
+            ></div>
             <img
               style={{
                 borderRadius: "30px",
@@ -272,7 +288,18 @@ export const Caro = () => {
           </div>
         </div>
         <div class="carousel-item">
-          <div onClick={() => navigate("/Productmsg/Deshna_caro")} style={{ borderRadius: "30px" }}>
+          <div style={{ borderRadius: "30px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <div
+              onClick={() => navigate("/Productmsg/Deshna_caro")}
+              style={{
+                backgroundColor: "transparent",
+                width: window.innerWidth <= 700 ? "100px" : "350px",
+                height: window.innerWidth <= 700 ? "70px" : "100px",
+                marginTop: window.innerWidth <= 700 ? "-150px" : "200px",
+                position: "absolute",
+                cursor: "pointer",
+              }}
+            ></div>
             <img
               style={{
                 borderRadius: "30px",
@@ -287,7 +314,19 @@ export const Caro = () => {
           </div>
         </div>
         <div class="carousel-item">
-          <div onClick={() => navigate("/Productmsg/handembroidery_caro")} style={{ borderRadius: "30px" }}>
+          <div style={{ borderRadius: "30px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <div
+              onClick={() => navigate("/Productmsg/handembroidery_caro")}
+              style={{
+                backgroundColor: "transparent",
+                width: window.innerWidth <= 700 ? "100px" : "350px",
+                height: window.innerWidth <= 700 ? "70px" : "100px",
+                marginLeft: window.innerWidth <= 700 ? "0px" : "150px",
+                marginTop: window.innerWidth <= 700 ? "-150px" : "200px",
+                position: "absolute",
+                cursor: "pointer",
+              }}
+            ></div>
             <img
               style={{
                 borderRadius: "30px",
@@ -302,7 +341,19 @@ export const Caro = () => {
           </div>
         </div>
         <div class="carousel-item">
-          <div onClick={() => navigate("/Productmsg/organic_wear_caro")} style={{ borderRadius: "30px" }}>
+          <div style={{ borderRadius: "30px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <div
+              onClick={() => navigate("/Productmsg/organic_wear_caro")}
+              style={{
+                backgroundColor: "transparent",
+                width: window.innerWidth <= 700 ? "100px" : "350px",
+                height: window.innerWidth <= 700 ? "70px" : "100px",
+                marginLeft: window.innerWidth <= 700 ? "0px" : "50px",
+                marginTop: window.innerWidth <= 700 ? "-150px" : "200px",
+                position: "absolute",
+                cursor: "pointer",
+              }}
+            ></div>
             <img
               style={{
                 borderRadius: "30px",
@@ -317,7 +368,19 @@ export const Caro = () => {
           </div>
         </div>
         <div class="carousel-item">
-          <div onClick={() => navigate("/Productmsg/laskshna_caro")} style={{ borderRadius: "30px" }}>
+          <div style={{ borderRadius: "30px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <div
+              onClick={() => navigate("/Productmsg/laskshna_caro")}
+              style={{
+                backgroundColor: "transparent",
+                width: window.innerWidth <= 700 ? "100px" : "350px",
+                height: window.innerWidth <= 700 ? "70px" : "100px",
+                marginLeft: window.innerWidth <= 700 ? "0px" : "50px",
+                marginTop: window.innerWidth <= 700 ? "-150px" : "200px",
+                position: "absolute",
+                cursor: "pointer",
+              }}
+            ></div>
             <img
               style={{
                 borderRadius: "30px",
@@ -347,7 +410,19 @@ export const Caro = () => {
           </div>
         </div> */}
         <div class="carousel-item">
-          <div onClick={() => navigate("/Productmsg/Rambai_caro")} style={{ borderRadius: "30px" }}>
+          <div style={{ borderRadius: "30px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <div
+              onClick={() => navigate("/Productmsg/Rambai_caro")}
+              style={{
+                backgroundColor: "transparent",
+                width: window.innerWidth <= 700 ? "100px" : "350px",
+                height: window.innerWidth <= 700 ? "70px" : "100px",
+                marginLeft: window.innerWidth <= 700 ? "0px" : "0px",
+                marginTop: window.innerWidth <= 700 ? "-150px" : "200px",
+                position: "absolute",
+                cursor: "pointer",
+              }}
+            ></div>
             <img
               style={{
                 borderRadius: "30px",
