@@ -104,8 +104,8 @@ export const Productmsg = () => {
         </button>
         <span className="prodmsgtext3">Or Contact Via</span>
         <div className="prodmsgsocial">
-          <Tooltip title="917200060540">
-            <a href="tel:917200060540">
+          <Tooltip title="+917200060540">
+            <a href="tel:+917200060540">
               <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="20.8865" cy="20.8875" r="20.1131" fill="#4C2A76" />
                 <path

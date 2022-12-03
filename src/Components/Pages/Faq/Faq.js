@@ -220,12 +220,7 @@ const FAQ = () => {
             <Typography>WORKING MODEL</Typography>
           </AccordionSummary>
           <AccordionDetails sx={bigAccordianDetail}>
-            <Accordion
-              expanded={expanded === "panel1"}
-              onChange={handleChange("panel1")}
-              sx={{ display: "none" }}
-              className="outeraccordion"
-            >
+            <Accordion sx={{ display: "none" }} className="outeraccordion">
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon sx={{ color: "#270641" }} />}
                 aria-controls="panel1a-content"
@@ -233,12 +228,7 @@ const FAQ = () => {
               ></AccordionSummary>
               <AccordionDetails></AccordionDetails>
             </Accordion>
-            <Accordion
-              expanded={expanded === "panel0"}
-              onChange={handleChange("panel0")}
-              sx={inneraccordionStyle}
-              className="accordion"
-            >
+            <Accordion sx={inneraccordionStyle} className="accordion">
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon sx={{ color: "#270641" }} />}
                 aria-controls="panel1a-content"
@@ -280,12 +270,7 @@ const FAQ = () => {
                 </Typography>
               </AccordionDetails>
             </Accordion>
-            <Accordion
-              expanded={expanded === "panel2"}
-              onChange={handleChange("panel2")}
-              sx={inneraccordionStyle}
-              className="accordion"
-            >
+            <Accordion sx={inneraccordionStyle} className="accordion">
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon sx={{ color: "#270641" }} />}
                 aria-controls="panel1a-content"
@@ -321,8 +306,7 @@ const FAQ = () => {
               </AccordionDetails>
             </Accordion>
             <Accordion
-              expanded={expanded === "panel3"}
-              onChange={handleChange("panel3")}
+             
               sx={inneraccordionStyle}
               className="accordion"
             >
@@ -378,8 +362,8 @@ const FAQ = () => {
               <AccordionDetails></AccordionDetails>
             </Accordion>
             <Accordion
-              expanded={expanded === "panel4"}
-              onChange={handleChange("panel4")}
+              // expanded={expanded === "panel4"}
+              // onChange={handleChange("panel4")}
               sx={inneraccordionStyle}
               className="accordion"
             >
@@ -399,8 +383,8 @@ const FAQ = () => {
               </AccordionDetails>
             </Accordion>
             <Accordion
-              expanded={expanded === "panel5"}
-              onChange={handleChange("panel5")}
+              // expanded={expanded === "panel5"}
+              // onChange={handleChange("panel5")}
               sx={inneraccordionStyle}
               className="accordion"
             >
@@ -416,8 +400,8 @@ const FAQ = () => {
               </AccordionDetails>
             </Accordion>
             <Accordion
-              expanded={expanded === "panel6"}
-              onChange={handleChange("panel6")}
+              // expanded={expanded === "panel6"}
+              // onChange={handleChange("panel6")}
               sx={inneraccordionStyle}
               className="accordion"
             >
@@ -441,8 +425,8 @@ const FAQ = () => {
               </AccordionDetails>
             </Accordion>
             <Accordion
-              expanded={expanded === "panel7"}
-              onChange={handleChange("panel7")}
+              // expanded={expanded === "panel7"}
+              // onChange={handleChange("panel7")}
               sx={inneraccordionStyle}
               className="accordion"
             >
@@ -462,8 +446,8 @@ const FAQ = () => {
               </AccordionDetails>
             </Accordion>
             <Accordion
-              expanded={expanded === "panel8"}
-              onChange={handleChange("panel8")}
+              // expanded={expanded === "panel8"}
+              // onChange={handleChange("panel8")}
               sx={inneraccordionStyle}
               className="accordion"
             >
