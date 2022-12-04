@@ -8,6 +8,9 @@ import { FloatingWhatsApp } from "react-floating-whatsapp";
 import avatar from "./avatar.png";
 import mat from "./mat.svg";
 import { Popup } from "../Popup/Popup";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export const Landing = () => {
 	const navigate = useNavigate();
 	const [pagedata, setPagedata] = useState([]);
@@ -26,6 +29,10 @@ export const Landing = () => {
 	};
 
 	useEffect(() => {
+		AOS.init({
+			once: "true",
+			duration: 1000
+		});
 		getdata();
 	}, []);
 
@@ -48,7 +55,6 @@ export const Landing = () => {
 				}
 			/>
 
-
 			<div className="landsec1">
 				<Caro />
 			</div>
@@ -66,9 +72,13 @@ export const Landing = () => {
 						// marginTop: "30px"
 					}}
 				>
-					<span className="landtit">The Design house</span>
+					<span className="landtit" data-aos="fade-up">
+						The Design house
+					</span>
 				</div>
-				<span className="untoldclass">"The Untold Fashion Destination"</span>
+				<span className="untoldclass" data-aos="fade-up">
+					"The Untold Fashion Destination"
+				</span>
 				<div className="landiconsdiv">
 					<div
 						style={{
@@ -86,6 +96,7 @@ export const Landing = () => {
 							viewBox="0 0 84 80"
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg"
+							data-aos="fade-up"
 						>
 							<rect width="84" height="80" rx="22" fill="#4C2A76" />
 							<path
@@ -99,6 +110,7 @@ export const Landing = () => {
 								color: "#270641",
 								fontFamily: "'Poppins', sans-serif"
 							}}
+							data-aos="fade-up"
 						>
 							Customization per your style, desire and comfort
 						</p>
@@ -119,6 +131,7 @@ export const Landing = () => {
 							viewBox="0 0 84 80"
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg"
+							data-aos="fade-up"
 						>
 							<rect width="84" height="80" rx="22" fill="#4C2A76" />
 							<path
@@ -193,6 +206,7 @@ export const Landing = () => {
 								fontFamily: "'Poppins', sans-serif"
 							}}
 							className="givenmargin"
+							data-aos="fade-up"
 						>
 							Premium quality fabric
 						</p>
@@ -213,6 +227,7 @@ export const Landing = () => {
 							viewBox="0 0 84 80"
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg"
+							data-aos="fade-up"
 						>
 							<rect width="84" height="80" rx="22" fill="#4C2A76" />
 							<path
@@ -226,6 +241,7 @@ export const Landing = () => {
 								fontSize: "20px",
 								fontFamily: "'Poppins', sans-serif"
 							}}
+							data-aos="fade-up"
 						>
 							One Stop platform
 						</p>
@@ -245,6 +261,7 @@ export const Landing = () => {
 							viewBox="0 0 84 80"
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg"
+							data-aos="fade-up"
 						>
 							<rect width="84" height="80" rx="22" fill="#4C2A76" />
 							<path
@@ -280,6 +297,7 @@ export const Landing = () => {
 								textAlign: "center"
 							}}
 							className="givenmargin"
+							data-aos="fade-up"
 						>
 							Work Transparency
 						</p>
@@ -300,6 +318,7 @@ export const Landing = () => {
 							viewBox="0 0 84 80"
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg"
+							data-aos="fade-up"
 						>
 							<rect width="84" height="80" rx="22" fill="#4C2A76" />
 							<path
@@ -325,12 +344,18 @@ export const Landing = () => {
 								color: "#270641",
 								fontFamily: "'Poppins', sans-serif"
 							}}
+							data-aos="fade-up"
 						>
 							No sitting back until we see you smile
 						</p>
 					</div>
 				</div>
-				<span style={{ marginTop: "100px" }} id="services" className="landser">
+				<span
+					style={{ marginTop: "100px" }}
+					id="services"
+					className="landser"
+					data-aos="flip-up"
+				>
 					Services
 				</span>
 				<div className="servcaro">
@@ -351,6 +376,7 @@ export const Landing = () => {
 						style={{
 							cursor: "pointer"
 						}}
+						data-aos="fade-up"
 					/>
 					{/* <img
             src={
@@ -369,6 +395,7 @@ export const Landing = () => {
 						style={{
 							cursor: "pointer"
 						}}
+						data-aos="fade-up"
 					/>
 					<img
 						src={
@@ -379,6 +406,7 @@ export const Landing = () => {
 						style={{
 							cursor: "pointer"
 						}}
+						data-aos="fade-up"
 					/>
 					<img
 						src={
@@ -387,9 +415,15 @@ export const Landing = () => {
 						alt=""
 						onClick={() => navigate("/getpampered")}
 						style={{ cursor: "pointer" }}
+						data-aos="fade-up"
 					/>
 				</div>
-				<span style={{ marginTop: "100px" }} id="products" className="landser2">
+				<span
+					style={{ marginTop: "100px" }}
+					id="products"
+					className="landser2"
+					data-aos="flip-up"
+				>
 					Products
 				</span>
 				<div className="servcaro">
@@ -400,6 +434,7 @@ export const Landing = () => {
 						alt=""
 						onClick={() => navigate("/DesignerCollections")}
 						style={{ cursor: "pointer" }}
+						data-aos="fade-up"
 					/>
 					<img
 						src={
@@ -410,6 +445,7 @@ export const Landing = () => {
 						style={{
 							cursor: "pointer"
 						}}
+						data-aos="fade-up"
 					/>
 					<img
 						src={
@@ -420,6 +456,7 @@ export const Landing = () => {
 						style={{
 							cursor: "pointer"
 						}}
+						data-aos="fade-up"
 					/>
 					<img
 						src={
@@ -428,6 +465,7 @@ export const Landing = () => {
 						alt=""
 						onClick={() => navigate("/Menswear")}
 						style={{ cursor: "pointer" }}
+						data-aos="fade-up"
 					/>
 				</div>
 				<div style={{ marginTop: "70px" }} className="servcaro removemargin">
@@ -439,6 +477,7 @@ export const Landing = () => {
 						alt=""
 						onClick={() => navigate("/kidswear")}
 						style={{ cursor: "pointer" }}
+						data-aos="fade-up"
 					/>
 					{/* <img
             id="maternity"
@@ -459,6 +498,7 @@ export const Landing = () => {
 						style={{
 							cursor: "pointer"
 						}}
+						data-aos="fade-up"
 					/>
 					<img
 						id="handloomSari"
@@ -470,6 +510,7 @@ export const Landing = () => {
 						style={{
 							cursor: "pointer"
 						}}
+						data-aos="fade-up"
 					/>
 					<img
 						id="exclusive"
@@ -479,10 +520,12 @@ export const Landing = () => {
 						alt=""
 						onClick={() => navigate("/exclusiveaccessories")}
 						style={{ cursor: "pointer" }}
+						data-aos="fade-up"
 					/>
 				</div>
 
 				<span
+					data-aos="flip-up"
 					className="Landingtesti"
 					id="Landingtesti"
 					style={{ fontSize: "40px", fontWeight: "600", color: "#270641" }}
@@ -492,7 +535,7 @@ export const Landing = () => {
 				{loading ? (
 					""
 				) : (
-					<div className="testcont" id="testcont">
+					<div className="testcont" id="testcont" data-aos="flip-up">
 						<div
 							style={{ height: "100%" }}
 							id="carouselExampleControls"
