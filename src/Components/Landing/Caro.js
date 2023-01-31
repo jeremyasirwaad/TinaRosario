@@ -252,6 +252,7 @@ export const Caro = () => {
               style={{
                 borderRadius: "30px",
                 height: window.innerWidth <= 700 ? "500px" : "630px",
+                zIndex:200
               }}
               src={
                 window.innerWidth <= 700
