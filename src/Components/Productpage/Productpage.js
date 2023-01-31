@@ -78,15 +78,6 @@ export default function Productpage() {
 						<span className="productname1">
 							{pagedata.attributes.Product_name}
 						</span>
-// 						{state.countryName == "India" ? (
-// 							<span className="productprice1">
-// 								INR {pagedata.attributes.price}
-// 							</span>
-// 						) : (
-// 							<span className="productprice1">
-// 								USD {pagedata.attributes.priceinUSD}
-// 							</span>
-// 						)}
 					</div>
 					<div className="productspages">
 						<div className="prodpagegalsection">
