@@ -255,8 +255,8 @@ export const Caro = () => {
               }}
               src={
                 window.innerWidth <= 700
-                  ? joda
-                  : "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20814.png?alt=media&token=ff728c49-e8c9-4674-ab3b-70d88504c199"
+                  ? "https://firebasestorage.googleapis.com/v0/b/tinarosario-41753.appspot.com/o/CAROUSEL%20-%20MOBILE%2F1.jpg?alt=media&token=01ed7cba-b7c9-4a99-8e1e-a85ac12a97c3"
+                  : "https://firebasestorage.googleapis.com/v0/b/tinarosario-41753.appspot.com/o/CAROUSEL%20-%20WEBSITE%2F1.jpg?alt=media&token=d5de8222-d361-40c0-8847-6eb0b50d39cb"
               }
             />
           </div>
