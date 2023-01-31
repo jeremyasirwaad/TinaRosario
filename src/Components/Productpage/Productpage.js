@@ -151,15 +151,7 @@ export default function Productpage() {
 							<span className="productname">
 								{pagedata.attributes.Product_name}
 							</span>
-// 							{state.countryName == "India" ? (
-// 								<span className="productprice">
-// 									INR {pagedata.attributes.price}
-// 								</span>
-// 							) : (
-// 								<span className="productprice">
-// 									USD {pagedata.attributes.priceinUSD}
-// 								</span>
-// 							)}
+
 
 							<span className="productdescriptiontitle">
 								Product Description
