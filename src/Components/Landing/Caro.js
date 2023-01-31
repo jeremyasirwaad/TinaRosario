@@ -278,7 +278,7 @@ export const Caro = () => {
             <img
               style={{
                 borderRadius: "30px",
-                height: window.innerWidth <= 700 ? "350px" : "630px",
+                height: window.innerWidth <= 700 ? "500px" : "630px",
               }}
               src={
                 window.innerWidth <= 700
@@ -304,7 +304,7 @@ export const Caro = () => {
             <img
               style={{
                 borderRadius: "30px",
-                height: window.innerWidth <= 700 ? "350px" : "630px",
+                height: window.innerWidth <= 700 ? "500px" : "630px",
               }}
               src={
                 window.innerWidth <= 700
@@ -331,7 +331,7 @@ export const Caro = () => {
             <img
               style={{
                 borderRadius: "30px",
-                height: window.innerWidth <= 700 ? "350px" : "630px",
+                height: window.innerWidth <= 700 ? "500px" : "630px",
               }}
               src={
                 window.innerWidth <= 700
@@ -358,7 +358,7 @@ export const Caro = () => {
             <img
               style={{
                 borderRadius: "30px",
-                height: window.innerWidth <= 700 ? "350px" : "630px",
+                height: window.innerWidth <= 700 ? "500px" : "630px",
               }}
               src={
                 window.innerWidth <= 700
@@ -385,7 +385,7 @@ export const Caro = () => {
             <img
               style={{
                 borderRadius: "30px",
-                height: window.innerWidth <= 700 ? "350px" : "630px",
+                height: window.innerWidth <= 700 ? "500px" : "630px",
               }}
               src={
                 window.innerWidth <= 700
@@ -427,7 +427,7 @@ export const Caro = () => {
             <img
               style={{
                 borderRadius: "30px",
-                height: window.innerWidth <= 700 ? "350px" : "630px",
+                height: window.innerWidth <= 700 ? "500px" : "630px",
               }}
               src={
                 window.innerWidth <= 700
