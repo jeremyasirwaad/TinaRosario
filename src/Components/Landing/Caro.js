@@ -251,7 +251,7 @@ export const Caro = () => {
             <img
               style={{
                 borderRadius: "30px",
-                height: window.innerWidth <= 700 ? "320px" : "630px",
+                height: window.innerWidth <= 700 ? "500px" : "630px",
               }}
               src={
                 window.innerWidth <= 700
