@@ -165,7 +165,7 @@ export const Navbar = () => {
 							await navigate("/");
 							// document.getElementById("contactusdiv").scrollIntoView();
 							document.getElementById("services").scrollIntoView({
-								behavior: "smooth"
+								behavior: "smooth",
 							});
 							setSidenav(false);
 						}}
@@ -178,7 +178,7 @@ export const Navbar = () => {
 							await navigate("/");
 							// document.getElementById("contactusdiv").scrollIntoView();
 							document.getElementById("products").scrollIntoView({
-								behavior: "smooth"
+								behavior: "smooth",
 							});
 							setSidenav(false);
 						}}
@@ -191,7 +191,7 @@ export const Navbar = () => {
 							await navigate("/");
 							// document.getElementById("contactusdiv").scrollIntoView();
 							document.getElementById("Landingtesti").scrollIntoView({
-								behavior: "smooth"
+								behavior: "smooth",
 							});
 							setSidenav(false);
 						}}
@@ -204,7 +204,7 @@ export const Navbar = () => {
 							await navigate("/contact");
 							// document.getElementById("contactusdiv").scrollIntoView();
 							document.getElementById("contactusdiv").scrollIntoView({
-								behavior: "smooth"
+								behavior: "smooth",
 							});
 							setSidenav(false);
 						}}
@@ -275,7 +275,7 @@ export const Navbar = () => {
 								await navigate("/");
 								// document.getElementById("contactusdiv").scrollIntoView();
 								document.getElementById("services").scrollIntoView({
-									behavior: "smooth"
+									behavior: "smooth",
 								});
 							}}
 						>
@@ -287,7 +287,7 @@ export const Navbar = () => {
 								await navigate("/");
 								// document.getElementById("contactusdiv").scrollIntoView();
 								document.getElementById("products").scrollIntoView({
-									behavior: "smooth"
+									behavior: "smooth",
 								});
 							}}
 						>
@@ -299,7 +299,7 @@ export const Navbar = () => {
 								await navigate("/");
 								// document.getElementById("contactusdiv").scrollIntoView();
 								document.getElementById("Landingtesti").scrollIntoView({
-									behavior: "smooth"
+									behavior: "smooth",
 								});
 							}}
 						>
@@ -310,7 +310,7 @@ export const Navbar = () => {
 								await navigate("/contact");
 								// document.getElementById("contactusdiv").scrollIntoView();
 								document.getElementById("contactusdiv").scrollIntoView({
-									behavior: "smooth"
+									behavior: "smooth",
 								});
 							}}
 							className="navlink4"

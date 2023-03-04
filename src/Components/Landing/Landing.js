@@ -9,6 +9,7 @@ import avatar from "./avatar.png";
 import mat from "./mat.svg";
 import { Popup } from "../Popup/Popup";
 import AOS from "aos";
+import testichecker from "./testichecker.jpeg";
 import "aos/dist/aos.css";
 
 export const Landing = () => {
@@ -23,7 +24,8 @@ export const Landing = () => {
 				// const data = temp.filter(
 				// 	(e) => e.attributes.Main_Category == "Designer Collection"
 				// );
-				setPagedata(data.reverse());
+				console.log(data);
+				setPagedata(data);
 				setLoading(false);
 			});
 	};
@@ -532,9 +534,7 @@ export const Landing = () => {
 				>
 					Testimonials
 				</span>
-				{loading ? (
-					""
-				) : (
+				{!loading && (
 					<div className="testcont" id="testcont" data-aos="flip-up">
 						<div
 							style={{ height: "100%" }}
@@ -545,55 +545,28 @@ export const Landing = () => {
 							<div class="carousel-inner">
 								<div class="carousel-item caroresfix active ">
 									<div>
-										{pagedata[0].attributes.Img == null ? (
-											""
-										) : (
-											<img
-												style={{
-													width: "200px",
-													height: "300px",
-													borderRadius: "20px"
-												}}
-												className="avatar"
-												src={pagedata[0].attributes.Img}
-											/>
-										)}
-
-										<div>
-											<span style={{ fontSize: "20px", color: "#FFB8BC" }}>
-												{pagedata[0].attributes.Text}
-											</span>
-											<p style={{ textAlign: "right", fontSize: "18px" }}>
-												{pagedata[0].attributes.name}
-											</p>
-										</div>
+										<img
+											src={
+												window.innerWidth <= 700
+													? pagedata[0].attributes.mobimg
+													: pagedata[0].attributes.pcimg
+											}
+										/>
 									</div>
 								</div>
 								{pagedata.slice(1).map((e) => {
 									return (
 										<div class="carousel-item caroresfix  ">
 											<div>
-												{e.attributes.Img == null ? (
-													""
-												) : (
-													<img
-														style={{
-															width: "200px",
-															height: "300px",
-															borderRadius: "20px"
-														}}
-														className="avatar"
-														src={e.attributes.Img}
-													/>
-												)}
-												<div>
-													<span style={{ fontSize: "20px", color: "#FFB8BC" }}>
-														{e.attributes.Text}
-													</span>
-													<p style={{ textAlign: "right", fontSize: "18px" }}>
-														{e.attributes.name}
-													</p>
-												</div>
+												<img
+													src={
+														window.innerWidth <= 700
+															? e.attributes.mobimg
+															: e.attributes.pcimg
+													}
+													alt=""
+													srcset=""
+												/>
 											</div>
 										</div>
 									);

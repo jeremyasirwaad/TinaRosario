@@ -139,8 +139,8 @@
    
 
     .caroresfix>div>img{
-        width: 100px !important;
-        height: 200px !important; 
+        width: 100% !important;
+        height: 100% !important; 
         margin-bottom: 10px;
     }
     .caroresfix>div>div>span{

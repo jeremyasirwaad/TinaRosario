@@ -12,7 +12,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import resimg from "./Group 786.png";
 import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
-import wed1 from "./wedd1.svg";
+import wed1 from "./wed.svg";
 import wed2 from "./wed2.svg";
 import wed3 from "./wed3.svg";
 import AOS from "aos";
