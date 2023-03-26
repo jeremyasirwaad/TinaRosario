@@ -32,7 +32,7 @@ export const Caro = () => {
 
 	useEffect(() => {
 		getdata();
-		console.log("hi");
+		// console.log("hi");
 	}, []);
 
 	const navigate = useNavigate();

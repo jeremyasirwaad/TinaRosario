@@ -15,7 +15,10 @@ import "aos/dist/aos.css";
 export const Landing = () => {
 	const navigate = useNavigate();
 	const [pagedata, setPagedata] = useState([]);
+	const [landingimagescard, setLandingimagescard] = useState([]);
 	const [loading, setLoading] = useState(true);
+	const [loading2, setLoading2] = useState(true);
+
 	const getdata = async () => {
 		const data = await fetch("https://tinarosario.com/api/Testimonials")
 			.then((res) => res.json())
@@ -24,9 +27,26 @@ export const Landing = () => {
 				// const data = temp.filter(
 				// 	(e) => e.attributes.Main_Category == "Designer Collection"
 				// );
-				console.log(data);
+				// console.log(data);
 				setPagedata(data);
+
 				setLoading(false);
+			});
+	};
+
+	const getdata2 = async () => {
+		const data = await fetch(
+			"https://tinarosario.com/api/landing-page-cards-images"
+		)
+			.then((res) => res.json())
+			.then((result) => {
+				const data = result.data;
+				// const data = temp.filter(
+				// 	(e) => e.attributes.Main_Category == "Designer Collection"
+				// );
+				// console.log(data);
+				setLandingimagescard(data);
+				setLoading2(false);
 			});
 	};
 
@@ -36,6 +56,7 @@ export const Landing = () => {
 			duration: 1000
 		});
 		getdata();
+		getdata2();
 	}, []);
 
 	return (
@@ -360,66 +381,46 @@ export const Landing = () => {
 				>
 					Services
 				</span>
-				<div className="servcaro">
-					{/* <img
-            src={
-              "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20727.png?alt=media&token=dea76624-8a2f-471c-916e-25039dc97493"
-            }
-            alt=""
-            onClick={() => navigate("/wedding")}
-            style={{ cursor: "pointer" }}
-          /> */}
-					<img
-						src={
-							"https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20932.png?alt=media&token=ae6a0d7f-0db2-4b51-9964-4827caa0a896"
-						}
-						alt=""
-						onClick={() => navigate("/wedding")}
-						style={{
-							cursor: "pointer"
-						}}
-						data-aos="fade-up"
-					/>
-					{/* <img
-            src={
-              "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20662.png?alt=media&token=c6da54b1-2d93-4d54-b9fc-843aa5df5979"
-            }
-            alt=""
-            onClick={() => navigate("/customiseddesigns")}
-            style={{ cursor: "pointer" }}
-          /> */}
-					<img
-						src={
-							"https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20933.png?alt=media&token=e0a06fd6-c3b0-46ba-abb6-5ddaff6d00d5"
-						}
-						alt=""
-						onClick={() => navigate("/customiseddesigns")}
-						style={{
-							cursor: "pointer"
-						}}
-						data-aos="fade-up"
-					/>
-					<img
-						src={
-							"https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20934.png?alt=media&token=3a9f1b90-5405-400a-8745-5a201da41ec1 "
-						}
-						alt=""
-						onClick={() => navigate("/imagecons")}
-						style={{
-							cursor: "pointer"
-						}}
-						data-aos="fade-up"
-					/>
-					<img
-						src={
-							"https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20935.png?alt=media&token=ca32bfe1-d147-42dc-a25c-df93ced42151"
-						}
-						alt=""
-						onClick={() => navigate("/getpampered")}
-						style={{ cursor: "pointer" }}
-						data-aos="fade-up"
-					/>
-				</div>
+				{!loading2 && (
+					<div className="servcaro">
+						<img
+							src={landingimagescard[0].attributes.imagelink}
+							alt=""
+							onClick={() => navigate("/wedding")}
+							style={{
+								cursor: "pointer"
+							}}
+							data-aos="fade-up"
+						/>
+
+						<img
+							src={landingimagescard[1].attributes.imagelink}
+							alt=""
+							onClick={() => navigate("/customiseddesigns")}
+							style={{
+								cursor: "pointer"
+							}}
+							data-aos="fade-up"
+						/>
+						<img
+							src={landingimagescard[2].attributes.imagelink}
+							alt=""
+							onClick={() => navigate("/imagecons")}
+							style={{
+								cursor: "pointer"
+							}}
+							data-aos="fade-up"
+						/>
+						<img
+							src={landingimagescard[3].attributes.imagelink}
+							alt=""
+							onClick={() => navigate("/getpampered")}
+							style={{ cursor: "pointer" }}
+							data-aos="fade-up"
+						/>
+					</div>
+				)}
+
 				<span
 					style={{ marginTop: "100px" }}
 					id="products"
@@ -428,103 +429,82 @@ export const Landing = () => {
 				>
 					Products
 				</span>
-				<div className="servcaro">
-					<img
-						src={
-							"https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20939.png?alt=media&token=e4be5c12-6ac2-4e4d-9ec7-15bfd9ed744b"
-						}
-						alt=""
-						onClick={() => navigate("/DesignerCollections")}
-						style={{ cursor: "pointer" }}
-						data-aos="fade-up"
-					/>
-					<img
-						src={
-							"https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20940.png?alt=media&token=309241b0-bbfd-4f12-b9ac-520f68e8eb4d"
-						}
-						alt=""
-						onClick={() => navigate("/Weddingproduct")}
-						style={{
-							cursor: "pointer"
-						}}
-						data-aos="fade-up"
-					/>
-					<img
-						src={
-							"https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20941.png?alt=media&token=7aea59cd-d5d5-48cf-85b4-19beb3c08ae0"
-						}
-						alt=""
-						onClick={() => navigate("/womenswear")}
-						style={{
-							cursor: "pointer"
-						}}
-						data-aos="fade-up"
-					/>
-					<img
-						src={
-							"https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20942%20(1).png?alt=media&token=6be27f4d-05a3-4c96-b0e3-1d830ccf925e"
-						}
-						alt=""
-						onClick={() => navigate("/Menswear")}
-						style={{ cursor: "pointer" }}
-						data-aos="fade-up"
-					/>
-				</div>
-				<div style={{ marginTop: "70px" }} className="servcaro removemargin">
-					<img
-						id="kids"
-						src={
-							"https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20943.png?alt=media&token=07d393f7-78c7-4716-8959-c720af467cf4"
-						}
-						alt=""
-						onClick={() => navigate("/kidswear")}
-						style={{ cursor: "pointer" }}
-						data-aos="fade-up"
-					/>
-					{/* <img
-            id="maternity"
-            src={
-              "https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%2062.png?alt=media&token=74dd93fb-b46d-43eb-8e79-914cc4987e51"
-            }
-            alt=""
-            onClick={() => navigate("/Maternity")}
-            style={{ cursor: "pointer" }}
-          /> */}
-					<img
-						id="maternity"
-						src={
-							"https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20936.png?alt=media&token=f9229840-8db9-4422-a2e6-04fa07f57894"
-						}
-						alt=""
-						onClick={() => navigate("/Maternity")}
-						style={{
-							cursor: "pointer"
-						}}
-						data-aos="fade-up"
-					/>
-					<img
-						id="handloomSari"
-						src={
-							"https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20944.png?alt=media&token=58c83a85-1672-4b72-984e-cb50d0962aaf"
-						}
-						alt=""
-						onClick={() => navigate("/handloom")}
-						style={{
-							cursor: "pointer"
-						}}
-						data-aos="fade-up"
-					/>
-					<img
-						id="exclusive"
-						src={
-							"https://firebasestorage.googleapis.com/v0/b/teenz-fe41d.appspot.com/o/Group%20945.png?alt=media&token=331bee23-9293-4acf-9740-1d2dd6343df9"
-						}
-						alt=""
-						onClick={() => navigate("/exclusiveaccessories")}
-						style={{ cursor: "pointer" }}
-						data-aos="fade-up"
-					/>
-				</div>
+				{!loading2 && (
+					<div className="servcaro">
+						<img
+							src={landingimagescard[4].attributes.imagelink}
+							alt=""
+							onClick={() => navigate("/DesignerCollections")}
+							style={{ cursor: "pointer" }}
+							data-aos="fade-up"
+						/>
+						<img
+							src={landingimagescard[5].attributes.imagelink}
+							alt=""
+							onClick={() => navigate("/Weddingproduct")}
+							style={{
+								cursor: "pointer"
+							}}
+							data-aos="fade-up"
+						/>
+						<img
+							src={landingimagescard[6].attributes.imagelink}
+							alt=""
+							onClick={() => navigate("/womenswear")}
+							style={{
+								cursor: "pointer"
+							}}
+							data-aos="fade-up"
+						/>
+						<img
+							src={landingimagescard[7].attributes.imagelink}
+							alt=""
+							onClick={() => navigate("/Menswear")}
+							style={{ cursor: "pointer" }}
+							data-aos="fade-up"
+						/>
+					</div>
+				)}
+				{!loading2 && (
+					<div style={{ marginTop: "70px" }} className="servcaro removemargin">
+						<img
+							id="kids"
+							src={landingimagescard[8].attributes.imagelink}
+							alt=""
+							onClick={() => navigate("/kidswear")}
+							style={{ cursor: "pointer" }}
+							data-aos="fade-up"
+						/>
+						<img
+							id="maternity"
+							src={landingimagescard[9].attributes.imagelink}
+							alt=""
+							onClick={() => navigate("/Maternity")}
+							style={{
+								cursor: "pointer"
+							}}
+							data-aos="fade-up"
+						/>
+						<img
+							id="handloomSari"
+							src={landingimagescard[10].attributes.imagelink}
+							alt=""
+							onClick={() => navigate("/handloom")}
+							style={{
+								cursor: "pointer"
+							}}
+							data-aos="fade-up"
+						/>
+						<img
+							id="exclusive"
+							src={landingimagescard[11].attributes.imagelink}
+							alt=""
+							onClick={() => navigate("/exclusiveaccessories")}
+							style={{ cursor: "pointer" }}
+							data-aos="fade-up"
+						/>
+					</div>
+				)}
 
 				<span
 					data-aos="flip-up"
