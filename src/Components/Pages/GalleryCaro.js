@@ -74,12 +74,6 @@ const GalleryCaro = () => {
                   </div>
                 );
               })}
-              {/* <div class="carousel-item">
-								<img class="d-block w-100" src="..." alt="Second slide" />
-							</div>
-							<div class="carousel-item">
-								<img class="d-block w-100" src="..." alt="Third slide" />
-							</div> */}
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
               <span style={{ color: "white" }} class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -99,24 +93,6 @@ const GalleryCaro = () => {
             </a>
           </div>
 
-          {/* <div className="galleryCaro" style={{ marginBottom: "80px" }}>
-						<Carousel
-							infiniteLoop
-							useKeyboardArrows
-							autoPlay
-							showThumbs={false}
-							showStatus={false}
-							showIndicators={false}
-							swipeable={true}
-							// transitionTime={0.1}
-						>
-							{pagedata.map((img) => {
-								return (
-									<img src={img23} alt="" width={"500"} height={"500px"} />
-								);
-							})}
-						</Carousel>
-					</div> */}
         </div>
       )}
     </div>
