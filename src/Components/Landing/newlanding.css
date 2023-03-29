@@ -80,6 +80,11 @@
   justify-content: space-evenly;
 }
 
+.servcaro img {
+  width: 270px;
+  height: auto;
+}
+
 .servcarocont {
   display: flex;
   flex-direction: column;
