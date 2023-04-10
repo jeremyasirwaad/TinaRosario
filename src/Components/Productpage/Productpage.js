@@ -18,6 +18,8 @@ export default function Productpage() {
 	const [showimg1, setShowimg1] = useState(true);
 	const [showimg2, setShowimg2] = useState(false);
 	const [showimg3, setShowimg3] = useState(false);
+	const [showimg4, setShowimg4] = useState(false);
+
 
 	const [state, setState] = useState({
 		ip: "",
@@ -89,6 +91,8 @@ export default function Productpage() {
 										setShowimg2(false);
 										setShowimg3(false);
 										setShowimg1(true);
+										setShowimg4(false);
+
 									}}
 								/>
 								<img
@@ -98,6 +102,8 @@ export default function Productpage() {
 										setShowimg2(true);
 										setShowimg3(false);
 										setShowimg1(false);
+										setShowimg4(false);
+
 									}}
 								/>
 								<img
@@ -107,6 +113,19 @@ export default function Productpage() {
 										setShowimg2(false);
 										setShowimg3(true);
 										setShowimg1(false);
+										setShowimg4(false);
+
+									}}
+								/>
+								<img
+									src={pagedata.attributes.Img_4}
+									alt=""
+									onClick={() => {
+										setShowimg2(false);
+										setShowimg3(false);
+										setShowimg1(false);
+										setShowimg4(true);
+
 									}}
 								/>
 							</div>
@@ -131,6 +150,13 @@ export default function Productpage() {
 									<img
 										className="mainimg"
 										src={pagedata.attributes.Img_3}
+										alt=""
+									/>
+								)}
+								{showimg4 && (
+									<img
+										className="mainimg"
+										src={pagedata.attributes.Img_4}
 										alt=""
 									/>
 								)}

@@ -26,7 +26,7 @@ export const Maternity = () => {
 		countryName: "",
 		countryCode: "",
 		city: "",
-		timezone: "",
+		timezone: ""
 	});
 
 	const getGeoInfo = () => {
@@ -40,7 +40,7 @@ export const Maternity = () => {
 					countryName: data.country_name,
 					countryCode: data.country_calling_code,
 					city: data.city,
-					timezone: data.timezone,
+					timezone: data.timezone
 				});
 				setLoading2(false);
 			})
@@ -170,215 +170,6 @@ export const Maternity = () => {
 				>
 					<AiOutlineArrowLeft />
 				</div>
-				{state.countryName == "India" ? (
-					<div className="subfilter">
-						<div className="subinner">
-							<div
-								className="subinner2"
-								onClick={() => {
-									setSubpriceoptions(!subpriceoptions);
-								}}
-							>
-								<span className="subinnertitle">Price</span>
-
-								<i
-									class={
-										subpriceoptions
-											? "fa-solid fa-chevron-up rotate"
-											: "fa-solid fa-chevron-up "
-									}
-								></i>
-							</div>
-							<div
-								className={subpriceoptions ? "fildiv displaynone" : "fildiv"}
-							></div>
-							<div
-								className={
-									subpriceoptions
-										? "fliterchoicediv displaynone"
-										: "fliterchoicediv"
-								}
-							>
-								<div className="fliterchoice" style={{ marginTop: "10px" }}>
-									<input
-										type="checkbox"
-										name="pricebox"
-										checked={pricefilter == 1}
-										onChange={() => {
-											if (pricefilter == 1) {
-												setpricefilter(0);
-												setPagedata(backupagedata);
-											} else {
-												setpricefilter(1);
-											}
-										}}
-									/>
-									<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-										Less than 5000
-									</span>
-								</div>
-								<div className="fliterchoice">
-									<input
-										type="checkbox"
-										name="pricebox"
-										checked={pricefilter == 2}
-										onChange={() => {
-											if (pricefilter == 2) {
-												setpricefilter(0);
-												setPagedata(backupagedata);
-											} else {
-												setpricefilter(2);
-											}
-										}}
-									/>
-									<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-										5001 - 10000
-									</span>
-								</div>
-								<div className="fliterchoice">
-									<input
-										type="checkbox"
-										name="pricebox"
-										checked={pricefilter == 3}
-										onChange={() => {
-											if (pricefilter == 3) {
-												setpricefilter(0);
-												setPagedata(backupagedata);
-											} else {
-												setpricefilter(3);
-											}
-										}}
-									/>
-									<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-										more than 10000
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				) : (
-					<div className="subfilter">
-						<div className="subinner">
-							<div
-								className="subinner2"
-								onClick={() => {
-									setSubpriceoptions(!subpriceoptions);
-								}}
-							>
-								<span className="subinnertitle">Price($)</span>
-
-								<i
-									class={
-										subpriceoptions
-											? "fa-solid fa-chevron-up rotate"
-											: "fa-solid fa-chevron-up "
-									}
-								></i>
-							</div>
-							<div
-								className={subpriceoptions ? "fildiv displaynone" : "fildiv"}
-							></div>
-							<div
-								className={
-									subpriceoptions
-										? "fliterchoicediv displaynone"
-										: "fliterchoicediv"
-								}
-							>
-								<div className="fliterchoice" style={{ marginTop: "10px" }}>
-									<input
-										type="checkbox"
-										name="pricebox"
-										checked={pricefilter == 1}
-										onChange={() => {
-											if (pricefilter == 1) {
-												setpricefilter(0);
-												setPagedata(backupagedata);
-											} else {
-												setpricefilter(1);
-											}
-										}}
-									/>
-									<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-										Less than 50
-									</span>
-								</div>
-								<div className="fliterchoice">
-									<input
-										type="checkbox"
-										name="pricebox"
-										checked={pricefilter == 2}
-										onChange={() => {
-											if (pricefilter == 2) {
-												setpricefilter(0);
-												setPagedata(backupagedata);
-											} else {
-												setpricefilter(2);
-											}
-										}}
-									/>
-									<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-										51 - 100
-									</span>
-								</div>
-								<div className="fliterchoice">
-									<input
-										type="checkbox"
-										name="pricebox"
-										checked={pricefilter == 3}
-										onChange={() => {
-											if (pricefilter == 3) {
-												setpricefilter(0);
-												setPagedata(backupagedata);
-											} else {
-												setpricefilter(3);
-											}
-										}}
-									/>
-									<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-										101 - 150
-									</span>
-								</div>
-								<div className="fliterchoice">
-									<input
-										type="checkbox"
-										name="pricebox"
-										checked={pricefilter == 4}
-										onChange={() => {
-											if (pricefilter == 4) {
-												setpricefilter(0);
-												setPagedata(backupagedata);
-											} else {
-												setpricefilter(4);
-											}
-										}}
-									/>
-									<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-										151-200
-									</span>
-								</div>
-								<div className="fliterchoice">
-									<input
-										type="checkbox"
-										name="pricebox"
-										checked={pricefilter == 5}
-										onChange={() => {
-											if (pricefilter == 5) {
-												setpricefilter(0);
-												setPagedata(backupagedata);
-											} else {
-												setpricefilter(5);
-											}
-										}}
-									/>
-									<span style={{ marginLeft: "10px", marginTop: "2px" }}>
-										More than 200
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				)}
 
 				<div className="subfilter">
 					<div className="subinner">
@@ -630,7 +421,7 @@ export const Maternity = () => {
 						display: "flex",
 						justifyContent: "flex-start",
 						alignItems: "center",
-						flexDirection: "column",
+						flexDirection: "column"
 					}}
 					className="prodpaget1div"
 				>
@@ -655,7 +446,7 @@ export const Maternity = () => {
 							width: "100%",
 							alignItems: "center",
 							justifyContent: "center",
-							height: "30vh",
+							height: "30vh"
 						}}
 					>
 						<MoonLoader color="#4C2A76" size={50} />

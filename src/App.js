@@ -237,7 +237,7 @@ function App() {
 						}
 					></Route>
 					<Route
-						path="/Handloom"
+						path="/traditionalwear"
 						element={
 							<>
 								<Marqueeline />
@@ -315,7 +315,7 @@ function App() {
 						}
 					></Route>
 					<Route
-						path="/exclusiveaccessories"
+						path="/twinningcollections"
 						element={
 							<>
 								<Marqueeline />

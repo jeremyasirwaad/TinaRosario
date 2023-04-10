@@ -448,18 +448,18 @@ export const Landing = () => {
 							data-aos="fade-up"
 						/>
 						<img
-							src={landingimagescard[6].attributes.imagelink}
+							src={landingimagescard[9].attributes.imagelink}
 							alt=""
-							onClick={() => navigate("/womenswear")}
+							onClick={() => navigate("/Maternity")}
 							style={{
 								cursor: "pointer"
 							}}
 							data-aos="fade-up"
 						/>
 						<img
-							src={landingimagescard[7].attributes.imagelink}
+							src={landingimagescard[11].attributes.imagelink}
 							alt=""
-							onClick={() => navigate("/Menswear")}
+							onClick={() => navigate("/twinningcollections")}
 							style={{ cursor: "pointer" }}
 							data-aos="fade-up"
 						/>
@@ -477,9 +477,10 @@ export const Landing = () => {
 						/>
 						<img
 							id="maternity"
-							src={landingimagescard[9].attributes.imagelink}
+							src={landingimagescard[6].attributes.imagelink}
 							alt=""
-							onClick={() => navigate("/Maternity")}
+							// onClick={() => navigate("/Maternity")}
+							onClick={() => navigate("/womenswear")}
 							style={{
 								cursor: "pointer"
 							}}
@@ -487,9 +488,9 @@ export const Landing = () => {
 						/>
 						<img
 							id="handloomSari"
-							src={landingimagescard[10].attributes.imagelink}
+							src={landingimagescard[7].attributes.imagelink}
 							alt=""
-							onClick={() => navigate("/handloom")}
+							onClick={() => navigate("/Menswear")}
 							style={{
 								cursor: "pointer"
 							}}
@@ -497,9 +498,9 @@ export const Landing = () => {
 						/>
 						<img
 							id="exclusive"
-							src={landingimagescard[11].attributes.imagelink}
+							src={landingimagescard[10].attributes.imagelink}
 							alt=""
-							onClick={() => navigate("/exclusiveaccessories")}
+							onClick={() => navigate("/traditionalwear")}
 							style={{ cursor: "pointer" }}
 							data-aos="fade-up"
 						/>
